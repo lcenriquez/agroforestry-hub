@@ -81,6 +81,7 @@ export default function Nav() {
             Sign In
           </Button>
           <Button
+            as="a"
             display={{ base: 'none', md: 'inline-flex' }}
             fontSize="sm"
             fontWeight={600}
