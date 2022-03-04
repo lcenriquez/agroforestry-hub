@@ -5,8 +5,16 @@ const config: ThemeConfig = {
   useSystemColorMode: true
 };
 
+const breakpoints = {
+  sm: "320px",
+  md: "768px",
+  lg: "960px",
+  xl: "1200px",
+}
+
 const theme = extendTheme({
-  config
+  config,
+  breakpoints
 });
 
 export default theme;
