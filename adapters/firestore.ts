@@ -21,6 +21,7 @@ export async function getDocsFromCollection(collectionName: string) {
 }
 
 export async function getSpecies() {
+  const stratums = await getStratums();
   const docRef = doc(database, 'ecologicalZones', country);
   const ecologicalZonesInCountry = (await getDoc(docRef)).data();
 
@@ -31,6 +32,12 @@ export async function getSpecies() {
     const data = await getDocs(q);
     docs = data.docs.map(item => {
       const speciesObject: any = { id: item.id, ...item.data() }
+      // Map stratums
+      speciesObject.stratums = speciesObject.stratums.map((st: any) => {
+        if (stratums) return { id: st, ...stratums[st]}
+        return { id: st };
+      });
+      // Map ecological zones
       speciesObject.ecologicalZones.mx = speciesObject.ecologicalZones.mx.map((ez: any) => {
         if (ecologicalZonesInCountry) return { id: ez, ...ecologicalZonesInCountry[ez]}
         return { id: ez };
@@ -38,6 +45,21 @@ export async function getSpecies() {
       return speciesObject;
     });
     console.log(docs);
+  } catch (error) {
+    console.log(error);
+  }
+  return docs;
+}
+
+export async function getStratums() {
+  let docs: {}[] = [];
+  try {
+    const instance = await collection(database, 'stratums');
+    const q = query(instance);
+    const data = await getDocs(q);
+    docs = data.docs.map(item => {
+      return { id: item.id, ...item.data() };
+    });
   } catch (error) {
     console.log(error);
   }
