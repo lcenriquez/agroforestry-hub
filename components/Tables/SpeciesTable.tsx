@@ -1,4 +1,4 @@
-import { Table, TableCaption, Thead, Tbody, Tr, Th, Td, Box } from '@chakra-ui/react'
+import { Table, TableCaption, Thead, Tbody, Tr, Th, Td, Box, Tooltip } from '@chakra-ui/react'
 
 export default function SpeciesTable({ species }: any) {
   console.log(species);
@@ -29,6 +29,8 @@ export default function SpeciesTable({ species }: any) {
 
 function SingleCharValue({value, name}: any) {
   return (
-    <Box cursor='help' display='inline' title={value.name.es_mx}>{name || value.id}</Box>
+    <Tooltip label={value.name.es_mx}>
+      <Box cursor='default' display='inline'>{name || value.id}</Box>
+    </Tooltip>
   );
 }
