@@ -78,7 +78,7 @@ export default function SmallWithLogoLeft() {
         justify={{ base: 'center', md: 'space-between' }}
         align={{ base: 'center', md: 'center' }}>
         <Logo />
-        <Text>Powered by <Link href="https://ungranitodetierra.org" target="_blank">Un granito de Tierra, A.C.</Link></Text>
+        <Text>En colaboración con <Link href="https://ungranitodetierra.org" target="_blank">Un granito de Tierra, A.C.</Link></Text>
         <Stack direction="row" spacing={6}>
           <SocialButton label="Twitter" href="#">
             <TwitterLogo />
