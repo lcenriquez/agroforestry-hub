@@ -11,6 +11,8 @@ export default function SpeciesTable({ species }: any) {
           <Th>Nombre (científico y común)</Th>
           <Th>Zona ecológica</Th>
           <Th>Estrato</Th>
+          <Th>Altura</Th>
+          <Th>Ancho de copa</Th>
         </Tr>
       </Thead>
       <Tbody>
@@ -23,6 +25,8 @@ export default function SpeciesTable({ species }: any) {
               </Td>
               <Td>{sp.ecologicalZones.mx.map((z: any) => <SingleCharValue key={z.id} value={z} />)}</Td>
               <Td>{sp.stratums.map((s: any) => <SingleCharValue key={s.id} value={s} name={s.name.es_mx[0]} />)}</Td>
+              <Td>{`${sp.height.min}-${sp.height.max}`}</Td>
+              <Td>{`${sp.crownWidth.min}-${sp.crownWidth.max}`}</Td>
             </Tr>)
         })}
       </Tbody>
