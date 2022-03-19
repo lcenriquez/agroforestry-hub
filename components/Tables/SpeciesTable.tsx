@@ -5,7 +5,7 @@ export default function SpeciesTable({ species }: any) {
   console.log(species);
   
   return (
-    <Table variant='striped'>
+    <Table variant='striped' size='sm'>
       <TableCaption>Especies mostradas según región: mx</TableCaption>
       <Thead>
         <Tr>
@@ -24,7 +24,7 @@ export default function SpeciesTable({ species }: any) {
             <Tr key={sp.id}>
               <Td>
                 <Text>{`${sp.taxonomy.genus} ${sp.taxonomy.species}`}</Text>
-                <Text fontSize='small' fontStyle='italic'>{sp.commonNames.es_mx?.join(', ')}</Text>
+                <Text fontSize='0.7rem' fontStyle='italic'>{sp.commonNames.es_mx?.join(', ')}</Text>
               </Td>
               <Td>{sp.ecologicalZones.mx.map((z: any) => <SingleCharRepresentation key={z.id} value={z} />)}</Td>
               <Td>{sp.stratums.map((s: any) => <SingleCharRepresentation key={s.id} value={s} name={s.name.es_mx[0]} />)}</Td>
