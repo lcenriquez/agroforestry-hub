@@ -6,7 +6,7 @@ export default function SpeciesTable({ species }: any) {
   
   return (
     <Table variant='striped' size='sm'>
-      <TableCaption>Especies mostradas según región: mx</TableCaption>
+      <TableCaption>Especies mostradas según región: mx. Todas las medidas están dadas en metros.</TableCaption>
       <Thead>
         <Tr>
           <Th>Nombre (científico y común)</Th>
