@@ -23,6 +23,7 @@ export async function getDocsFromCollection(collectionName: string) {
 export async function getSpecies() {
   const stratums = await getStratums();
   const ecologicalFunctions = await getEcologicalFunctions();
+  const additionalFunctions = await getAdditionalFunctions();
   const docRef = doc(database, 'ecologicalZones', country);
   const ecologicalZonesInCountry = (await getDoc(docRef)).data();
 
@@ -48,6 +49,11 @@ export async function getSpecies() {
         if (ecologicalFunctions) return { id: ef, ...ecologicalFunctions[ef]}
         return { id: ef };
       });
+      // Map additional functions
+      speciesObject.additionalFunctions = speciesObject.additionalFunctions.map((af: any) => {
+        if (additionalFunctions) return { id: af, ...additionalFunctions[af]}
+        return { id: af };
+      });
       return speciesObject;
     });
     console.log(docs);
@@ -61,6 +67,21 @@ export async function getStratums() {
   let docs: {}[] = [];
   try {
     const instance = await collection(database, 'stratums');
+    const q = query(instance);
+    const data = await getDocs(q);
+    docs = data.docs.map(item => {
+      return { id: item.id, ...item.data() };
+    });
+  } catch (error) {
+    console.log(error);
+  }
+  return docs;
+}
+
+export async function getAdditionalFunctions() {
+  let docs: {}[] = [];
+  try {
+    const instance = await collection(database, 'additionalFunctions');
     const q = query(instance);
     const data = await getDocs(q);
     docs = data.docs.map(item => {

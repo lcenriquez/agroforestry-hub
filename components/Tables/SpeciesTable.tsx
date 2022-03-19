@@ -15,6 +15,7 @@ export default function SpeciesTable({ species }: any) {
           <Th>Altura</Th>
           <Th>Ancho de copa</Th>
           <Th>Funciones ecológicas</Th>
+          <Th>Otras funciones</Th>
         </Tr>
       </Thead>
       <Tbody>
@@ -30,6 +31,7 @@ export default function SpeciesTable({ species }: any) {
               <Td>{`${sp.height.min}-${sp.height.max}`}</Td>
               <Td>{`${sp.crownWidth.min}-${sp.crownWidth.max}`}</Td>
               <Td>{sp.ecologicalFunctions.map((f: any) => <EcologicalFunctionIconRepresentation key={f.id} value={f} />)}</Td>
+              <Td>{sp.additionalFunctions.map((f: any) => <AdditionalFunctionIconRepresentation key={f.id} value={f} />)}</Td>
             </Tr>)
         })}
       </Tbody>
