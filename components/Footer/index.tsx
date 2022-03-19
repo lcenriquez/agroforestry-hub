@@ -8,7 +8,7 @@ import {
   useColorModeValue,
   VisuallyHidden,
 } from '@chakra-ui/react';
-import { InstagramLogo, TwitterLogo, YoutubeLogo } from 'phosphor-react';
+import { InstagramLogo, FacebookLogo, YoutubeLogo } from 'phosphor-react';
 import { ReactNode } from 'react';
 
 const Logo = (props: any) => {
@@ -81,8 +81,8 @@ export default function SmallWithLogoLeft() {
         <Logo />
         <Text>En colaboración con <Link href="https://ungranitodetierra.org" target="_blank">Un granito de Tierra, A.C.</Link></Text>
         <Stack direction="row" spacing={6}>
-          <SocialButton label="Twitter" href="#">
-            <TwitterLogo />
+          <SocialButton label="Facebook" href="https://www.facebook.com/ungranitodetierra/">
+            <FacebookLogo />
           </SocialButton>
           <SocialButton label="YouTube" href="#">
             <YoutubeLogo />
