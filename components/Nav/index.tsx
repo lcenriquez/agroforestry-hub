@@ -80,7 +80,7 @@ export default function Nav() {
             fontWeight={400}
             variant='link'
             href='#'>
-            Sign In
+            Iniciar sesión
           </Button>
           <Button
             as='a'
@@ -93,7 +93,7 @@ export default function Nav() {
             _hover={{
               bg: 'pink.300',
             }}>
-            Sign Up
+            Registrarse
           </Button>
         </Stack>
       </Flex>
