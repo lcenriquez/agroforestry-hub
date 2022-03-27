@@ -3,7 +3,7 @@ import { Atom, Butterfly, ForkKnife, Graph, Heartbeat, Horse, Leaf, Mountains, Q
 
 export function EcologicalFunctionIconRepresentation({value}: any) {
   let icon;
-  switch(+value.id) {
+  switch(+value._id) {
     case 0:
       icon = <Leaf /> // Biomass
       break;
@@ -33,7 +33,7 @@ export function EcologicalFunctionIconRepresentation({value}: any) {
 
 export function AdditionalFunctionIconRepresentation({value}: any) {
   let icon;
-  switch(+value.id) {
+  switch(+value._id) {
     case 0:
       icon = <ForkKnife /> // Food
       break;
@@ -61,7 +61,7 @@ export function AdditionalFunctionIconRepresentation({value}: any) {
 export function SingleCharRepresentation({value, name}: any) {
   return (
     <Tooltip label={value.name.es_mx}>
-      <Box cursor='default' display='inline-flex' mx='1px'>{name || value.id}</Box>
+      <Box cursor='default' display='inline-flex' mx='1px'>{name || value._id}</Box>
     </Tooltip>
   );
 }
