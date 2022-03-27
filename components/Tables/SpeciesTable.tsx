@@ -21,7 +21,7 @@ export default function SpeciesTable({ species }: any) {
       <Tbody>
         {species?.map((sp: any) => {
           return (
-            <Tr key={sp.id}>
+            <Tr key={sp._id}>
               <Td>
                 <Text>{`${sp.taxonomy.genus} ${sp.taxonomy.species}`}</Text>
                 <Text fontSize='0.7rem' fontStyle='italic'>{sp.commonNames.es_mx?.join(', ')}</Text>

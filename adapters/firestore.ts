@@ -22,13 +22,13 @@ export async function getDocsFromCollection(collectionName: string) {
 
 export async function getSpecies() {
   let docs: {}[] = [];
-  
+
   try {
     const instance = await collection(database, 'species');
     const q = query(instance, orderBy('taxonomy.genus', 'asc'), orderBy('taxonomy.species', 'asc'));
     const data = await getDocs(q);
     docs = data.docs.map(item => {
-      const speciesObject: any = { id: item.id, ...item.data() }
+      const speciesObject: any = { _id: item.id, ...item.data() }
       return speciesObject;
     });
     console.log(docs);
@@ -45,7 +45,7 @@ export async function getStratums() {
     const q = query(instance);
     const data = await getDocs(q);
     docs = data.docs.map(item => {
-      return { id: item.id, ...item.data() };
+      return { _id: item.id, ...item.data() };
     });
   } catch (error) {
     console.log(error);
@@ -60,7 +60,7 @@ export async function getAdditionalFunctions() {
     const q = query(instance);
     const data = await getDocs(q);
     docs = data.docs.map(item => {
-      return { id: item.id, ...item.data() };
+      return { _id: item.id, ...item.data() };
     });
   } catch (error) {
     console.log(error);
@@ -75,7 +75,7 @@ export async function getEcologicalFunctions() {
     const q = query(instance);
     const data = await getDocs(q);
     docs = data.docs.map(item => {
-      return { id: item.id, ...item.data() };
+      return { _id: item.id, ...item.data() };
     });
   } catch (error) {
     console.log(error);
