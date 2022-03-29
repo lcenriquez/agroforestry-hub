@@ -79,7 +79,7 @@ export default function Nav() {
             fontSize='sm'
             fontWeight={400}
             variant='link'
-            href='#'>
+            href='/signin'>
             Iniciar sesión
           </Button>
           <Button
@@ -89,7 +89,7 @@ export default function Nav() {
             fontWeight={600}
             color='white'
             bg='pink.400'
-            href='#'
+            href='/signup'
             _hover={{
               bg: 'pink.300',
             }}>
