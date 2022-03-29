@@ -14,8 +14,8 @@ import {
   useColorModeValue,
   Link,
 } from '@chakra-ui/react';
-import { useState } from 'react';
 import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
+import { useState } from 'react';
 
 export default function SignupCard() {
   const [showPassword, setShowPassword] = useState(false);
