@@ -1,4 +1,4 @@
-import { collection, getDocs, query, orderBy, where, doc, getDoc } from 'firebase/firestore';
+import { collection, getDocs, query, orderBy } from 'firebase/firestore';
 import { database } from '../firebase-config';
 // import type { SpeciesType } from '../interfaces/Species';
 
