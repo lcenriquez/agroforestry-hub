@@ -15,30 +15,30 @@ export default function useFirebaseAuth() {
   const authStateChanged = async (authState: any) => {
     if (!authState) {
       setAuthUser(null);
-      setLoading(false);
       return;
     }
 
-    setLoading(true);
     var formattedUser = formatAuthUser(authState);
     setAuthUser(formattedUser as any);
-    setLoading(false);
   };
 
   const clear = () => {
     setAuthUser(null);
-    setLoading(true);
+    setLoading(false);
   };
 
   const signIn = (email: string, password: string) => {
+    setLoading(true);
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed in
+        setLoading(false);
         // const user = userCredential.user;
         // user.getIdToken();
         // console.log("User object:", user);
       })
       .catch((error) => {
+        setLoading(false);
         console.log(`Error ${error.code}: ${error.message}`);
       });
   };
@@ -48,6 +48,7 @@ export default function useFirebaseAuth() {
   };
 
   const signOut = () => {
+    setLoading(true);
     auth.signOut().then(clear);
   };
 
