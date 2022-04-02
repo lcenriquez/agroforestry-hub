@@ -3,7 +3,6 @@ import {
   Flex,
   Text,
   IconButton,
-  Button,
   Stack,
   Collapse,
   Icon,
@@ -21,8 +20,8 @@ import {
   ChevronDownIcon,
   ChevronRightIcon,
 } from '@chakra-ui/icons';
-
 import ThemeSwitch from '../Elements/ThemeSwitch';
+import AuthDetails from './AuthDetails';
 
 export default function Nav() {
   const { isOpen, onToggle } = useDisclosure();
@@ -74,27 +73,7 @@ export default function Nav() {
           direction='row'
           spacing={6}>
           <ThemeSwitch />
-          <Button
-            as='a'
-            fontSize='sm'
-            fontWeight={400}
-            variant='link'
-            href='/signin'>
-            Iniciar sesión
-          </Button>
-          <Button
-            as='a'
-            display={{ base: 'none', md: 'inline-flex' }}
-            fontSize='sm'
-            fontWeight={600}
-            color='white'
-            bg='pink.400'
-            href='/signup'
-            _hover={{
-              bg: 'pink.300',
-            }}>
-            Registrarse
-          </Button>
+          <AuthDetails />
         </Stack>
       </Flex>
 
