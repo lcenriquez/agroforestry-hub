@@ -13,5 +13,5 @@ export function AuthUserProvider({ children }: { children: any }) {
   const auth = useFirebaseAuth();
   return <authUserContext.Provider value={auth}>{children}</authUserContext.Provider>;
 }
-// custom hook to use the authUserContext and access authUser and loading
+// Custom hook to use the authUserContext value
 export const useAuth = () => useContext(authUserContext);
