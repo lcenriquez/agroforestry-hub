@@ -43,12 +43,10 @@ export default function SignIn() {
       justify={'center'}
       bg={useColorModeValue('gray.50', 'gray.800')}
     >
-      <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
+      <Stack spacing={5} mx={'auto'} maxW={'lg'} py={12} px={6}>
         <Stack align={'center'}>
-          <Heading fontSize={'4xl'}>Sign in to your account</Heading>
-          <Text fontSize={'lg'} color={'gray.600'}>
-            to enjoy all of our cool <Link color={'blue.400'}>features</Link> ✌️
-          </Text>
+          <Heading fontSize={'4xl'}>Inicia sesión</Heading>
+          <Text>o <Link color={'blue.400'} alignSelf='center' href='/'>volver al inicio</Link></Text>
         </Stack>
         <Box
           rounded={'lg'}
@@ -59,22 +57,15 @@ export default function SignIn() {
           <form onSubmit={(e) => handleSumbit(e)}>
             <Stack spacing={4}>
               <FormControl id='email'>
-                <FormLabel>Email address</FormLabel>
+                <FormLabel>Correo electrónico</FormLabel>
                 <Input type='email' name='email' onChange={(e) => handleChange(e)} />
               </FormControl>
               <FormControl id='password'>
-                <FormLabel>Password</FormLabel>
+                <FormLabel>Contraseña</FormLabel>
                 <Input type='password' name='password' onChange={(e) => handleChange(e)} />
               </FormControl>
-              <Stack spacing={10}>
-                <Stack
-                  direction={{ base: 'column', sm: 'row' }}
-                  align={'start'}
-                  justify={'space-between'}
-                >
-                  <Checkbox>Remember me</Checkbox>
-                  <Link color={'blue.400'}>Forgot password?</Link>
-                </Stack>
+              <Stack spacing={5}>
+                <Link color={'blue.400'}>¿Olvidaste tu contraseña?</Link>
                 <Button
                   type='submit'
                   bg={'blue.400'}
@@ -84,7 +75,7 @@ export default function SignIn() {
                   }}
                   isLoading={loading}
                 >
-                  Sign in
+                  Ingresar
                 </Button>
               </Stack>
             </Stack>
