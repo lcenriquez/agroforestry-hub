@@ -3,7 +3,7 @@ import useFirebaseAuth from '../adapters/auth';
 
 const authUserContext = createContext({
   authUser: null,
-  loading: true,
+  loading: false,
   signIn: (email: string, password: string) => {},
   signUp: (email: string, password: string) => {},
   signOut: () => {}
