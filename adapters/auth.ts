@@ -61,6 +61,7 @@ export default function useFirebaseAuth() {
         updateProfile(userCredential.user, {
           displayName
         })
+        // Documentation: https://firebase.google.com/docs/auth/web/manage-users#send_a_user_a_verification_email
         sendEmailVerification(userCredential.user);
         setLoading(false);
         setError(null);
