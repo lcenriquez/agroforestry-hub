@@ -11,6 +11,7 @@ const formatAuthUser = (user: any) => ({
 export default function useFirebaseAuth() {
   const [authUser, setAuthUser] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<null | {message: string}>(null);
 
   const authStateChanged = async (authState: any) => {
     if (!authState) {
@@ -25,6 +26,7 @@ export default function useFirebaseAuth() {
   const clear = () => {
     setAuthUser(null);
     setLoading(false);
+    setError(null);
   };
 
   const signIn = (email: string, password: string) => {
@@ -33,6 +35,7 @@ export default function useFirebaseAuth() {
       .then((userCredential) => {
         // Signed in
         setLoading(false);
+        setError(null);
         // const user = userCredential.user;
         // user.getIdToken();
         // console.log("User object:", user);
@@ -40,6 +43,9 @@ export default function useFirebaseAuth() {
       .catch((error) => {
         setLoading(false);
         console.log(`Error ${error.code}: ${error.message}`);
+        setError({
+          message: error.code == 'auth/user-not-found' || error.code == 'auth/wrong-password' ? 'Usuario o contraseña incorrecta' : 'Verifica la información ingresada'
+        });
       });
   };
 
@@ -61,6 +67,7 @@ export default function useFirebaseAuth() {
   return {
     authUser,
     loading,
+    error,
     signIn,
     signUp,
     signOut,
