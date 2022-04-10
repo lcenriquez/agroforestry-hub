@@ -57,6 +57,7 @@ export default function useFirebaseAuth() {
     setLoading(true);
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
+        // Documentation: https://firebase.google.com/docs/auth/web/manage-users#update_a_users_profile
         updateProfile(userCredential.user, {
           displayName
         })
