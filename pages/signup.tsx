@@ -1,4 +1,6 @@
 import {
+  Alert,
+  AlertIcon,
   Flex,
   Box,
   FormControl,
@@ -12,86 +14,112 @@ import {
   Heading,
   Text,
   useColorModeValue,
-  Link,
+  Link
 } from '@chakra-ui/react';
 import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useAuth } from '../contexts/AuthContext';
+import { useRouter } from 'next/router';
 
 export default function SignupCard() {
+  const router = useRouter();
+  const [ input, setInput ] = useState({ email: '', password: '' });
   const [showPassword, setShowPassword] = useState(false);
+  const { authUser, loading, error, signUp } = useAuth();
+
+  useEffect(() => {
+    if (!loading && authUser && !error) router.push('/');
+  }, [authUser, loading, error, router])
+
+  function handleSumbit(event: any) {
+    event.preventDefault();
+    signUp(input.email, input.password);
+  }
+
+  function handleChange(event: any) {
+    event.preventDefault();
+    setInput({...input, [event.target.name]: event.target.value})
+  }
 
   return (
     <Flex
-      minH={'100vh'}
-      align={'center'}
-      justify={'center'}
+      minH='100vh'
+      align='center'
+      justify='center'
       bg={useColorModeValue('gray.50', 'gray.800')}>
-      <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
-        <Stack align={'center'}>
-          <Heading fontSize={'4xl'} textAlign={'center'}>
-            Sign up
-          </Heading>
-          <Text fontSize={'lg'} color={'gray.600'}>
-            to enjoy all of our cool features ✌️
-          </Text>
+      <Stack spacing={5} mx='auto' maxW='lg' py={12} px={6}>
+        <Stack align='center'>
+          <Heading fontSize='4xl' textAlign='center'>Regístrate</Heading>
+          <Text>o <Link color='blue.400' alignSelf='center' href='/'>volver al inicio</Link></Text>
         </Stack>
         <Box
-          rounded={'lg'}
+          rounded='lg'
           bg={useColorModeValue('white', 'gray.700')}
-          boxShadow={'lg'}
+          boxShadow='lg'
           p={8}>
-          <Stack spacing={4}>
-            <HStack>
-              <Box>
-                <FormControl id="firstName" isRequired>
-                  <FormLabel>First Name</FormLabel>
-                  <Input type="text" />
-                </FormControl>
-              </Box>
-              <Box>
-                <FormControl id="lastName">
-                  <FormLabel>Last Name</FormLabel>
-                  <Input type="text" />
-                </FormControl>
-              </Box>
-            </HStack>
-            <FormControl id="email" isRequired>
-              <FormLabel>Email address</FormLabel>
-              <Input type="email" />
-            </FormControl>
-            <FormControl id="password" isRequired>
-              <FormLabel>Password</FormLabel>
-              <InputGroup>
-                <Input type={showPassword ? 'text' : 'password'} />
-                <InputRightElement h={'full'}>
-                  <Button
-                    variant={'ghost'}
-                    onClick={() =>
-                      setShowPassword((showPassword) => !showPassword)
-                    }>
-                    {showPassword ? <ViewIcon /> : <ViewOffIcon />}
-                  </Button>
-                </InputRightElement>
-              </InputGroup>
-            </FormControl>
-            <Stack spacing={10} pt={2}>
-              <Button
-                loadingText="Submitting"
-                size="lg"
-                bg={'blue.400'}
-                color={'white'}
-                _hover={{
-                  bg: 'blue.500',
-                }}>
-                Sign up
-              </Button>
+          <form onSubmit={(e) => handleSumbit(e)}>
+            <Stack spacing={4}>
+              <HStack>
+                <Box>
+                  <FormControl id="firstName" isRequired>
+                    <FormLabel>Nombre</FormLabel>
+                    <Input type="text" />
+                  </FormControl>
+                </Box>
+                <Box>
+                  <FormControl id="lastName" isRequired>
+                    <FormLabel>Apellido</FormLabel>
+                    <Input type="text" />
+                  </FormControl>
+                </Box>
+              </HStack>
+              <FormControl id="email" isRequired>
+                <FormLabel>Email</FormLabel>
+                <Input type="email" name='email' required onChange={(e) => handleChange(e)} />
+              </FormControl>
+              <FormControl id="password" isRequired>
+                <FormLabel>Contraseña</FormLabel>
+                <InputGroup>
+                  <Input type={ showPassword ? 'text' : 'password' } name='password' required onChange={(e) => handleChange(e)} />
+                  <InputRightElement h='full'>
+                    <Button
+                      variant='ghost'
+                      onClick={() =>
+                        setShowPassword((showPassword) => !showPassword)
+                      }>
+                      {showPassword ? <ViewIcon /> : <ViewOffIcon />}
+                    </Button>
+                  </InputRightElement>
+                </InputGroup>
+              </FormControl>
+              <Stack spacing={10} pt={2}>
+                { error &&
+                  <Alert status='error'>
+                    <AlertIcon />
+                    <small>{ error.message }</small>
+                  </Alert>
+                }
+                <Button
+                  type='submit'
+                  loadingText="Procesando"
+                  size="lg"
+                  bg='blue.400'
+                  color='white'
+                  _hover={{
+                    bg: 'blue.500',
+                  }}
+                  isLoading={loading}
+                >
+                  Registrarme
+                </Button>
+              </Stack>
+              <Stack pt={6}>
+                <Text align='center'>
+                  ¿Ya tienes cuenta? <Link color='blue.400' href='/signin'>Inicia sesión</Link>
+                </Text>
+              </Stack>
             </Stack>
-            <Stack pt={6}>
-              <Text align={'center'}>
-                Already a user? <Link color={'blue.400'}>Login</Link>
-              </Text>
-            </Stack>
-          </Stack>
+          </form>
         </Box>
       </Stack>
     </Flex>

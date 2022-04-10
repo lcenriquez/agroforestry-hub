@@ -1,6 +1,6 @@
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
-import { useState, useEffect } from "react";
-import { auth } from "../firebase-config";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
+import { useState, useEffect } from 'react';
+import { auth } from '../firebase-config';
 
 const formatAuthUser = (user: any) => ({
   uid: user.uid,
@@ -38,7 +38,7 @@ export default function useFirebaseAuth() {
         setError(null);
         // const user = userCredential.user;
         // user.getIdToken();
-        // console.log("User object:", user);
+        // console.log('User object:', user);
       })
       .catch((error) => {
         setLoading(false);
@@ -50,7 +50,24 @@ export default function useFirebaseAuth() {
   };
 
   const signUp = (email: string, password: string) => {
-    createUserWithEmailAndPassword(auth, email, password);
+    setLoading(true);
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        setLoading(false);
+        setError(null);
+      })
+      .catch((error) => {
+        setLoading(false);
+        console.log(`Error ${error.code}: ${error.message}`);
+        setError({
+          message:
+            error.code == 'auth/email-already-in-use'
+              ? 'El usuario ingresado ya existe'
+              : error.code == 'auth/weak-password'
+              ? 'La contraseña ingresada es demasiado insegura'
+              : 'Verifica la información ingresada',
+        });
+      });
   };
 
   const signOut = () => {
