@@ -23,7 +23,7 @@ import { useRouter } from 'next/router';
 
 export default function SignupCard() {
   const router = useRouter();
-  const [ input, setInput ] = useState({ email: '', password: '' });
+  const [ input, setInput ] = useState({ email: '', password: '', firstName: '', lastName: '' });
   const [showPassword, setShowPassword] = useState(false);
   const { authUser, loading, error, signUp } = useAuth();
 
@@ -33,7 +33,7 @@ export default function SignupCard() {
 
   function handleSumbit(event: any) {
     event.preventDefault();
-    signUp(input.email, input.password);
+    signUp(input.email, input.password, `${input.firstName} ${input.lastName}`);
   }
 
   function handleChange(event: any) {
@@ -61,23 +61,23 @@ export default function SignupCard() {
             <Stack spacing={4}>
               <HStack>
                 <Box>
-                  <FormControl id="firstName" isRequired>
+                  <FormControl id='firstName' isRequired>
                     <FormLabel>Nombre</FormLabel>
-                    <Input type="text" />
+                    <Input type='text' name='firstName' required onChange={(e) => handleChange(e)} />
                   </FormControl>
                 </Box>
                 <Box>
-                  <FormControl id="lastName" isRequired>
+                  <FormControl id='lastName' isRequired>
                     <FormLabel>Apellido</FormLabel>
-                    <Input type="text" />
+                    <Input type='text' name='lastName' required onChange={(e) => handleChange(e)} />
                   </FormControl>
                 </Box>
               </HStack>
-              <FormControl id="email" isRequired>
+              <FormControl id='email' isRequired>
                 <FormLabel>Email</FormLabel>
-                <Input type="email" name='email' required onChange={(e) => handleChange(e)} />
+                <Input type='email' name='email' required onChange={(e) => handleChange(e)} />
               </FormControl>
-              <FormControl id="password" isRequired>
+              <FormControl id='password' isRequired>
                 <FormLabel>Contraseña</FormLabel>
                 <InputGroup>
                   <Input type={ showPassword ? 'text' : 'password' } name='password' required onChange={(e) => handleChange(e)} />
@@ -101,8 +101,8 @@ export default function SignupCard() {
                 }
                 <Button
                   type='submit'
-                  loadingText="Procesando"
-                  size="lg"
+                  loadingText='Procesando'
+                  size='lg'
                   bg='blue.400'
                   color='white'
                   _hover={{

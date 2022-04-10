@@ -15,7 +15,7 @@ interface AuthUserContext {
   loading: boolean;
   error: null | {message: string};
   signIn: (email: string, password: string) => void;
-  signUp: (email: string, password: string) => void;
+  signUp: (email: string, password: string, displayName: string) => void;
   signOut: () => void;
 }
 
