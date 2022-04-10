@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from 'firebase/auth';
+import { createUserWithEmailAndPassword, sendEmailVerification, signInWithEmailAndPassword, updateProfile } from 'firebase/auth';
 import { useState, useEffect } from 'react';
 import { auth } from '../firebase-config';
 
@@ -36,9 +36,9 @@ export default function useFirebaseAuth() {
         // Signed in
         setLoading(false);
         setError(null);
-        // const user = userCredential.user;
+        const user = userCredential.user;
         // user.getIdToken();
-        // console.log('User object:', user);
+        console.log('User object:', user);
       })
       .catch((error) => {
         setLoading(false);
@@ -60,6 +60,7 @@ export default function useFirebaseAuth() {
         updateProfile(userCredential.user, {
           displayName
         })
+        sendEmailVerification(userCredential.user);
         setLoading(false);
         setError(null);
       })
