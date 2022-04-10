@@ -44,7 +44,11 @@ export default function useFirebaseAuth() {
         setLoading(false);
         console.log(`Error ${error.code}: ${error.message}`);
         setError({
-          message: error.code == 'auth/user-not-found' || error.code == 'auth/wrong-password' ? 'Usuario o contraseña incorrecta' : 'Verifica la información ingresada'
+          message:
+            error.code == 'auth/user-not-found' ||
+            error.code == 'auth/wrong-password'
+              ? 'Usuario o contraseña incorrecta'
+              : 'Verifica la información ingresada',
         });
       });
   };
