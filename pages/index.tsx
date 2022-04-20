@@ -2,7 +2,7 @@ import { Container, Heading } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
 import { getSpecies } from '../adapters/firestore'
 import SpeciesTable from '../components/Tables/SpeciesTable';
-import withLayout from '../hocs/withLayout'
+import withLayout from '../hocs/withLayout';
 import type { NextPage } from 'next'
 
 
