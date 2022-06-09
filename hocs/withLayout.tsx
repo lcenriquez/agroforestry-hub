@@ -7,7 +7,7 @@ import { NextComponentType } from 'next';
 export default function withLayout(Component: NextComponentType, title: string) {
   return function PageWithLayout() {
     return (
-      <Box position='relative' height='100vh'>
+      <Box height='100vh' display='flex' flexDirection='column'>
         <Head>
           <title>SAF Hub | {title}</title>
           <meta name='description' content='Información completa para la creación de sistemas agroforestales' />
