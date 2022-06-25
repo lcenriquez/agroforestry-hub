@@ -1,4 +1,4 @@
-import { createContext, useContext } from 'react'
+import { createContext, useContext } from 'react';
 import useFirebaseAuth from '../adapters/auth';
 
 const authUserContext = createContext<AuthUserContext>({
@@ -7,13 +7,18 @@ const authUserContext = createContext<AuthUserContext>({
   error: null,
   signIn: () => {},
   signUp: () => {},
-  signOut: () => {}
+  signOut: () => {},
 });
 
 interface AuthUserContext {
-  authUser: null | {};
+  authUser: null | {
+    uid: string;
+    email: string;
+    accessToken: string;
+    isEmailVerified: string;
+  };
   loading: boolean;
-  error: null | {message: string};
+  error: null | { message: string };
   signIn: (email: string, password: string) => void;
   signUp: (email: string, password: string, displayName: string) => void;
   signOut: () => void;
@@ -21,7 +26,9 @@ interface AuthUserContext {
 
 export function AuthUserProvider({ children }: { children: any }) {
   const auth = useFirebaseAuth();
-  return <authUserContext.Provider value={auth}>{children}</authUserContext.Provider>;
+  return (
+    <authUserContext.Provider value={auth}>{children}</authUserContext.Provider>
+  );
 }
 // Custom hook to use the authUserContext value
 export const useAuth = () => useContext(authUserContext);
