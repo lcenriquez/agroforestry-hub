@@ -1,17 +1,28 @@
-import { createUserWithEmailAndPassword, sendEmailVerification, signInWithEmailAndPassword, updateProfile } from 'firebase/auth';
+import {
+  createUserWithEmailAndPassword,
+  sendEmailVerification,
+  signInWithEmailAndPassword,
+  updateProfile,
+} from 'firebase/auth';
 import { useState, useEffect } from 'react';
 import { auth } from '../firebase-config';
 
-const formatAuthUser = (user: any) => ({
+const formatAuthUser = (user: {
+  uid: string;
+  email: string;
+  accessToken: string;
+  emailVerified: boolean;
+}) => ({
   uid: user.uid,
   email: user.email,
-  accessToken: user.accessToken
+  accessToken: user.accessToken,
+  isEmailVerified: user.emailVerified,
 });
 
 export default function useFirebaseAuth() {
   const [authUser, setAuthUser] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<null | {message: string}>(null);
+  const [error, setError] = useState<null | { message: string }>(null);
 
   const authStateChanged = async (authState: any) => {
     if (!authState) {
@@ -59,8 +70,8 @@ export default function useFirebaseAuth() {
       .then((userCredential) => {
         // Documentation: https://firebase.google.com/docs/auth/web/manage-users#update_a_users_profile
         updateProfile(userCredential.user, {
-          displayName
-        })
+          displayName,
+        });
         // Documentation: https://firebase.google.com/docs/auth/web/manage-users#send_a_user_a_verification_email
         sendEmailVerification(userCredential.user);
         setLoading(false);
