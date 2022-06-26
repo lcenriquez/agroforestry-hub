@@ -21,17 +21,19 @@ const formatAuthUser = (user: {
 
 export default function useFirebaseAuth() {
   const [authUser, setAuthUser] = useState(null);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState<null | { message: string }>(null);
 
   const authStateChanged = async (authState: any) => {
     if (!authState) {
       setAuthUser(null);
+      setLoading(false);
       return;
     }
 
     var formattedUser = formatAuthUser(authState);
     setAuthUser(formattedUser as any);
+    setLoading(false);
   };
 
   const clear = () => {
