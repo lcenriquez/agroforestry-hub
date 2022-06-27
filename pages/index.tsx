@@ -15,15 +15,11 @@ const Home: NextPage = () => {
     firstLoad();
   }, [species]);
 
-  return (
-    <Container maxW='container.xl'>
-      <Heading>Sistemas agroforestales</Heading>
-      {species.length > 0 ? <SpeciesTable species={species} /> : null}
-    </Container>
-  );
+  return <>{species.length > 0 ? <SpeciesTable species={species} /> : null}</>;
 };
 
 export default withPublicLayout(
   Home,
-  'Toda la información que necesitas sobre SAFs'
+  'Toda la información que necesitas sobre SAFs',
+  'Sistemas agroforestales'
 );

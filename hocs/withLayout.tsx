@@ -9,7 +9,11 @@ import LoadingScreen from '../components/Elements/LoadingScreen';
 
 import { NextComponentType } from 'next';
 
-export function withPublicLayout(Component: NextComponentType, title: string) {
+export function withPublicLayout(
+  Component: NextComponentType,
+  title: string,
+  pageTitle?: string
+) {
   const appEnvName = process.env.NEXT_PUBLIC_ENVIRONMENT_NAME
     ? `[${process.env.NEXT_PUBLIC_ENVIRONMENT_NAME}]`
     : '';
@@ -26,7 +30,14 @@ export function withPublicLayout(Component: NextComponentType, title: string) {
           <link rel='icon' href='/favicon.ico' />
         </Head>
         <Nav />
-        <Component />
+        {pageTitle && pageTitle !== '' ? (
+          <Container maxW='container.xl' pb='2em'>
+            <Heading my={{ base: 4 }}>{pageTitle}</Heading>
+            <Component />
+          </Container>
+        ) : (
+          <Component />
+        )}
         <Footer />
       </Box>
     );
