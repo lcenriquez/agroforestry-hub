@@ -1,3 +1,47 @@
 {
-  "extends": "next/core-web-vitals"
+	"extends": ["next/core-web-vitals", "plugin:prettier/recommended", "plugin:react/recommended"],
+	"overrides": [],
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": "latest",
+		"sourceType": "module"
+	},
+	"plugins": ["i18next", "prettier", "react", "react-hooks"],
+	"rules": {
+		// Custom rules
+		"i18next/no-literal-string": "error",
+		"linebreak-style": ["error", "unix"],
+		"no-unused-vars": [
+			"error",
+			{
+				"args": "after-used",
+				"ignoreRestSiblings": true,
+				"vars": "all"
+			}
+		],
+		"prettier/prettier": "error",
+		"react/jsx-no-bind": "warn",
+		"react/jsx-sort-props": [
+			"error",
+			{
+				"callbacksLast": false,
+				"ignoreCase": true,
+				"noSortAlphabetically": false,
+				"shorthandFirst": false,
+				"shorthandLast": false
+			}
+		],
+		"react/prop-types": "off",
+		"react/react-in-jsx-scope": "off",
+		"react-hooks/rules-of-hooks": "error",
+		"react-hooks/exhaustive-deps": "error",
+		"sort-keys": "error"
+	},
+	"settings": {
+		"react": {
+			"version": "detect"
+		}
+	}
 }

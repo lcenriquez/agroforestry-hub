@@ -1,0 +1,10 @@
+{
+	"arrowParens": "avoid",
+	"importOrder": ["^(next|react)(.*)", "<THIRD_PARTY_MODULES>", "@/(.*)", "^[./]", "<TYPES>", "<TYPES>^[.]"],
+	"importOrderSeparation": true,
+	"printWidth": 150,
+	"singleQuote": true,
+	"tabWidth": 2,
+	"trailingComma": "none",
+	"useTabs": true
+}
