@@ -1,77 +1,62 @@
-import { AddIcon } from '@chakra-ui/icons';
-import {
-  Avatar,
-  Button,
-  Menu,
-  MenuButton,
-  MenuDivider,
-  MenuItem,
-  MenuList,
-} from '@chakra-ui/react';
+import Link from 'next/link';
+
+import { Avatar, Button, Menu, Portal } from '@chakra-ui/react';
+
 import { useAuth } from '../../contexts/AuthContext';
 
 export default function AuthDetails() {
-  const { authUser } = useAuth();
+	const { authUser } = useAuth();
 
-  return <>{authUser ? <Authed /> : <NoAuth />}</>;
+	return <>{authUser ? <Authed /> : <NoAuth />}</>;
 }
 
 function NoAuth() {
-  return (
-    <>
-      <Button
-        as='a'
-        fontSize='sm'
-        fontWeight={400}
-        variant='link'
-        href='/signin'
-      >
-        Iniciar sesión
-      </Button>
-      <Button
-        as='a'
-        display={{ base: 'none', md: 'inline-flex' }}
-        fontSize='sm'
-        fontWeight={600}
-        color='white'
-        bg='pink.400'
-        href='/signup'
-        _hover={{
-          bg: 'pink.300',
-        }}
-      >
-        Registrarse
-      </Button>
-    </>
-  );
+	return (
+		<>
+			<Button asChild fontSize="sm" fontWeight={400} variant="plain">
+				<Link href="/signin">Iniciar sesión</Link>
+			</Button>
+			<Button
+				asChild
+				display={{ base: 'none', md: 'inline-flex' }}
+				fontSize="sm"
+				fontWeight={600}
+				color="white"
+				bg="pink.400"
+				_hover={{
+					bg: 'pink.300'
+				}}
+			>
+				<Link href="/signup">Registrarse</Link>
+			</Button>
+		</>
+	);
 }
 
 function Authed() {
-  const { signOut } = useAuth();
+	const { authUser, signOut } = useAuth();
 
-  return (
-    <Menu>
-      <MenuButton
-        as={Button}
-        rounded={'full'}
-        variant={'link'}
-        cursor={'pointer'}
-        minW={0}
-      >
-        <Avatar
-          size={'sm'}
-          // To do: show user's profile picture
-          // src={
-          //   'https://unsplash.com/photos/q4g5quLfNkI/download?force=true&w=640'
-          // }
-        />
-      </MenuButton>
-      <MenuList>
-        <MenuItem>Mi perfil</MenuItem>
-        <MenuItem>Configuración</MenuItem>
-        <MenuDivider />
-        <MenuItem onClick={signOut}>Cerrar sesión</MenuItem>
-      </MenuList>
-    </Menu>
-  );
+	return (
+		<Menu.Root>
+			<Menu.Trigger asChild>
+				<Button rounded="full" variant="plain" cursor="pointer" minW={0}>
+					<Avatar.Root size="sm">
+						<Avatar.Fallback name={authUser?.email ?? undefined} />
+					</Avatar.Root>
+				</Button>
+			</Menu.Trigger>
+			<Portal>
+				<Menu.Positioner>
+					<Menu.Content>
+						<Menu.Item value="profile">Mi perfil</Menu.Item>
+						<Menu.Item value="settings">Configuración</Menu.Item>
+						<Menu.Separator />
+						<Menu.Item value="signout" onClick={signOut}>
+							Cerrar sesión
+						</Menu.Item>
+					</Menu.Content>
+				</Menu.Positioner>
+			</Portal>
+		</Menu.Root>
+	);
 }

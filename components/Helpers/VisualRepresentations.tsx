@@ -1,134 +1,125 @@
-import { Box, Tooltip } from '@chakra-ui/react';
+import { Box, Portal, Tooltip } from '@chakra-ui/react';
 import {
-  Atom,
-  Butterfly,
-  DropHalfBottom,
-  ForkKnife,
-  Graph,
-  Heartbeat,
-  Horse,
-  Leaf,
-  Mountains,
-  Question,
-  Snowflake,
-  Sun,
-  Tree,
-} from 'phosphor-react';
+	Atom,
+	Butterfly,
+	DropHalfBottom,
+	ForkKnife,
+	Graph,
+	Heartbeat,
+	Horse,
+	Leaf,
+	Mountains,
+	Question,
+	Snowflake,
+	Sun,
+	Tree
+} from '@phosphor-icons/react';
+
+function IconTooltip({ label, icon }: { label: string; icon: React.ReactNode }) {
+	return (
+		<Tooltip.Root>
+			<Tooltip.Trigger asChild>
+				<Box cursor="default" display="inline-flex" mx="1px">
+					{icon}
+				</Box>
+			</Tooltip.Trigger>
+			<Portal>
+				<Tooltip.Positioner>
+					<Tooltip.Content>{label}</Tooltip.Content>
+				</Tooltip.Positioner>
+			</Portal>
+		</Tooltip.Root>
+	);
+}
 
 export function EcologicalFunctionIconRepresentation({ value }: any) {
-  let icon;
-  switch (+value._id) {
-    case 0:
-      icon = <Leaf />; // Biomass
-      break;
-    case 1:
-      icon = <Graph />; // Nitrogen fixation
-      break;
-    case 2:
-      icon = <Atom />; // Nutrient accumulation
-      break;
-    case 3:
-      icon = <Mountains />; // Erotion control
-      break;
-    case 4:
-      icon = <Butterfly />; // Pollinators
-      break;
-    default:
-      icon = <Question />;
-      break;
-  }
+	let icon;
+	switch (+value._id) {
+		case 0:
+			icon = <Leaf />; // Biomass
+			break;
+		case 1:
+			icon = <Graph />; // Nitrogen fixation
+			break;
+		case 2:
+			icon = <Atom />; // Nutrient accumulation
+			break;
+		case 3:
+			icon = <Mountains />; // Erosion control
+			break;
+		case 4:
+			icon = <Butterfly />; // Pollinators
+			break;
+		default:
+			icon = <Question />;
+			break;
+	}
 
-  return (
-    <Tooltip label={value.name.es_mx}>
-      <Box cursor='default' display='inline-flex' mx='1px'>
-        {icon}
-      </Box>
-    </Tooltip>
-  );
+	return <IconTooltip label={value.name.es_mx} icon={icon} />;
 }
 
 export function AdditionalFunctionIconRepresentation({ value }: any) {
-  let icon;
-  switch (+value._id) {
-    case 0:
-      icon = <ForkKnife />; // Food
-      break;
-    case 1:
-      icon = <Horse />; // Forage
-      break;
-    case 2:
-      icon = <Tree />; // Wood
-      break;
-    case 3:
-      icon = <Heartbeat />; // Medicinal
-      break;
-    default:
-      icon = <Question />;
-      break;
-  }
+	let icon;
+	switch (+value._id) {
+		case 0:
+			icon = <ForkKnife />; // Food
+			break;
+		case 1:
+			icon = <Horse />; // Forage
+			break;
+		case 2:
+			icon = <Tree />; // Wood
+			break;
+		case 3:
+			icon = <Heartbeat />; // Medicinal
+			break;
+		default:
+			icon = <Question />;
+			break;
+	}
 
-  return (
-    <Tooltip label={value.name.es_mx}>
-      <Box cursor='default' display='inline-flex' mx='1px'>
-        {icon}
-      </Box>
-    </Tooltip>
-  );
+	return <IconTooltip label={value.name.es_mx} icon={icon} />;
 }
 
 export function SingleCharRepresentation({ value, name }: any) {
-  return (
-    <Tooltip label={value.name.es_mx}>
-      <Box cursor='default' display='inline-flex' mx='1px'>
-        {name || value._id}
-      </Box>
-    </Tooltip>
-  );
+	return <IconTooltip label={value.name.es_mx} icon={name || value._id} />;
+}
+
+function levelCaption(value: string, labels: { high: string; medium: string; low: string }) {
+	if (value === 'H') return labels.high;
+	if (value === 'M') return labels.medium;
+	return labels.low;
 }
 
 export function DetailIconRepresentation({ idKey, value }: any) {
-  let icon;
-  let caption: string;
-  switch (idKey) {
-    case 'isFrostResistant':
-      icon = <Snowflake />;
-      caption = 'Resiste heladas';
-      break;
-    case 'lightPreference':
-      icon = <Sun />;
-      value === 'H'
-        ? (caption = 'Prefiere sol')
-        : value === 'M'
-        ? (caption = 'Prefiere media sombra')
-        : (caption = 'Prefiere sombra');
-      break;
-    case 'nutrientExtraction':
-      icon = <Atom />;
-      value === 'H'
-        ? (caption = 'Alta extracción de nutrientes')
-        : value === 'M'
-        ? (caption = 'Extracción media de nutrientes')
-        : (caption = 'Baja extracción de nutrientes');
-      break;
-    case 'humidityPreference':
-      icon = <DropHalfBottom />;
-      value === 'H'
-        ? (caption = 'Prefiere humedad alta')
-        : value === 'M'
-        ? (caption = 'Prefiere humedad media')
-        : (caption = 'Prefiere clima seco');
-      break;
-    default:
-      icon = <Question />;
-      caption = '';
-      break;
-  }
+	let icon;
+	let caption: string;
+	switch (idKey) {
+		case 'isFrostResistant':
+			icon = <Snowflake />;
+			caption = 'Resiste heladas';
+			break;
+		case 'lightPreference':
+			icon = <Sun />;
+			caption = levelCaption(value, { high: 'Prefiere sol', medium: 'Prefiere media sombra', low: 'Prefiere sombra' });
+			break;
+		case 'nutrientExtraction':
+			icon = <Atom />;
+			caption = levelCaption(value, {
+				high: 'Alta extracción de nutrientes',
+				medium: 'Extracción media de nutrientes',
+				low: 'Baja extracción de nutrientes'
+			});
+			break;
+		case 'humidityPreference':
+			icon = <DropHalfBottom />;
+			caption = levelCaption(value, { high: 'Prefiere humedad alta', medium: 'Prefiere humedad media', low: 'Prefiere clima seco' });
+			break;
+		default:
+			icon = <Question />;
+			caption = '';
+			break;
+	}
 
-  return (
-    <Tooltip label={caption}>
-      <Box cursor='default' display='inline-flex' mx='1px'>
-        {icon}
-      </Box>
-    </Tooltip>
-  );
+	return <IconTooltip label={caption} icon={icon} />;
 }

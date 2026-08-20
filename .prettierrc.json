@@ -1,7 +1,7 @@
 {
+	"plugins": ["@ianvs/prettier-plugin-sort-imports"],
 	"arrowParens": "avoid",
-	"importOrder": ["^(next|react)(.*)", "<THIRD_PARTY_MODULES>", "@/(.*)", "^[./]", "<TYPES>", "<TYPES>^[.]"],
-	"importOrderSeparation": true,
+	"importOrder": ["^(next|react)(.*)", "", "<THIRD_PARTY_MODULES>", "", "@/(.*)", "", "^[./]", "", "<TYPES>", "<TYPES>^[.]"],
 	"printWidth": 150,
 	"singleQuote": true,
 	"tabWidth": 2,
