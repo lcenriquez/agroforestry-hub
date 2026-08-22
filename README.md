@@ -13,7 +13,7 @@ El proyecto es desarrollado en colaboración con [Un granito de Tierra, A.C.](ht
 - **[Firebase](https://firebase.google.com/)** (Authentication + Firestore + Storage) como backend
 - **[Phosphor Icons](https://phosphoricons.com/)** y **[Lucide](https://lucide.dev/)** para iconografía
 - **ESLint (flat config) + Prettier** para calidad y formato de código
-- **Firebase Hosting** para el despliegue del sitio estático (aunque, al ser un export estático plano, también puede servirse desde cualquier hosting de archivos estáticos, incluido **Plesk**; ver [Despliegue](#despliegue))
+- **Firebase Hosting** para el despliegue del sitio estático
 
 ## Primeros pasos
 
@@ -118,9 +118,7 @@ Cualquier persona con sesión iniciada puede compartir, por especie (`/species?i
 
 ## Despliegue
 
-El sitio se construye como export estático (`next build` con `output: 'export'` y `trailingSlash: true` en `next.config.js`, que genera `<ruta>/index.html` en vez de `<ruta>.html` para que cualquier servidor estático resuelva `/signin`, `/species`, etc. sirviendo el `index.html` de esa carpeta).
-
-### Firebase Hosting
+El sitio se construye como export estático (`next build` con `output: 'export'` en `next.config.js`) y se publica en **Firebase Hosting**, que sirve la carpeta `out/` (ver `firebase.json`):
 
 ```bash
 npm run build
@@ -133,14 +131,21 @@ Al agregar reglas de Firestore/Storage (necesarias para "Experiencias de la comu
 firebase deploy --only firestore:rules,storage:rules
 ```
 
-### Otro hosting estático (Plesk, Nginx, S3, etc.)
+Un workflow de GitHub Actions (`.github/workflows/firebase-deploy.yml`) hace ambas cosas automáticamente en cada push a `main`; ver la sección siguiente para configurarlo.
 
-Sí se puede: `npm run build` genera en `out/` un sitio 100% estático (HTML/CSS/JS, sin servidor Node ni API routes). Para publicarlo en Plesk (o cualquier hosting de archivos estáticos):
+## Despliegue automático (GitHub Actions)
 
-1. Corre `npm run build` **con las variables de entorno de producción ya configuradas** (Firebase inicializa el SDK apenas se carga la app, así que quedan incrustadas en el build; no se leen en tiempo de ejecución desde el servidor).
-2. Sube el contenido de `out/` (no la carpeta en sí) a la raíz pública del sitio en Plesk (normalmente `httpdocs/`), vía Git, FTP/SFTP o el administrador de archivos de Plesk.
-3. Con `trailingSlash: true` no hace falta configurar reglas de reescritura: Apache/Nginx sirven `index.html` de cada carpeta (`/signin/`, `/species/`, etc.) igual que en cualquier otro sitio estático. Si el hosting redirige `/signin` → `/signin/` automáticamente (comportamiento por defecto de Apache), todo funciona sin tocar nada más.
-4. Configura una página 404 personalizada apuntando a `out/404/index.html` si quieres que Plesk la use en vez de la genérica del servidor (opcional).
+`.github/workflows/firebase-deploy.yml` compila el sitio y despliega hosting + reglas de Firestore/Storage a Firebase en cada push a `main` (y también puede lanzarse manualmente desde la pestaña Actions). Necesita estos secrets en **Settings → Secrets and variables → Actions** del repositorio:
+
+- `FIREBASE_SERVICE_ACCOUNT`: contenido completo del JSON de una service account de Google Cloud con permisos sobre el proyecto de Firebase (ver más abajo cómo generarla).
+- Uno por cada variable de `.env.local` (mismos valores del paso "Configurar variables de entorno"): `NEXT_PUBLIC_FIREBASE_API_KEY`, `NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN`, `NEXT_PUBLIC_FIREBASE_DATABASE_URL`, `NEXT_PUBLIC_FIREBASE_PROJECT_ID`, `NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET`, `NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID`, `NEXT_PUBLIC_FIREBASE_APP_ID`, `NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID`.
+
+### Generar la service account
+
+1. En [Google Cloud Console](https://console.cloud.google.com/iam-admin/serviceaccounts) (con el mismo proyecto que tu app de Firebase), crea una service account nueva.
+2. Asígnale los roles **Firebase Hosting Admin** (`roles/firebasehosting.admin`) y **Firebase Rules Admin** (`roles/firebaserules.admin`) — o simplemente **Firebase Admin** (`roles/firebase.admin`) si prefieres un solo rol más amplio.
+3. Genera una clave JSON para esa service account (pestaña "Keys" → "Add key" → "Create new key" → JSON) y descárgala.
+4. Pega el contenido completo de ese JSON como el secret `FIREBASE_SERVICE_ACCOUNT` en GitHub.
 
 ## Cambios recientes (actualización de dependencias y correcciones)
 
