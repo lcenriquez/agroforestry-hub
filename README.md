@@ -147,6 +147,10 @@ Un workflow de GitHub Actions (`.github/workflows/firebase-deploy.yml`) hace amb
 3. Genera una clave JSON para esa service account (pestaña "Keys" → "Add key" → "Create new key" → JSON) y descárgala.
 4. Pega el contenido completo de ese JSON como el secret `FIREBASE_SERVICE_ACCOUNT` en GitHub.
 
+## Contribuir
+
+Los mensajes de commit deben escribirse en inglés y seguir [Conventional Commits](https://www.conventionalcommits.org/) (`feat: ...`, `fix: ...`, `docs: ...`, etc.). Ver [`CONTRIBUTING.md`](./CONTRIBUTING.md) para el detalle y ejemplos.
+
 ## Cambios recientes (actualización de dependencias y correcciones)
 
 Este proyecto se actualizó de Next.js 12 / React 17 / Chakra UI v1 (de 2022) a las versiones estables más recientes de todo el stack: **Next.js 16, React 19, Chakra UI v3, Firebase 12, TypeScript 6, ESLint 9 (flat config) y Prettier 3**. Además de la migración de dependencias, se corrigieron los siguientes problemas:
