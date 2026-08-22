@@ -7,8 +7,10 @@
 	"firestore": {
 		"rules": "firestore.rules"
 	},
-	"storage": {
-		"bucket": "agroforestry-hub.appspot.com",
-		"rules": "storage.rules"
-	}
+	"storage": [
+		{
+			"bucket": "agroforestry-hub.appspot.com",
+			"rules": "storage.rules"
+		}
+	]
 }
