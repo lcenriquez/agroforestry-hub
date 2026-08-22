@@ -2,7 +2,7 @@
 
 **SAF Hub** es una aplicación web para consultar información sobre especies usadas en **Sistemas Agroforestales (SAF)**: estrato, zona ecológica, altura, ancho de copa, funciones ecológicas y otras funciones (alimento, forraje, madera, medicinal), además de preferencias de luz, humedad y resistencia a heladas. Los datos se muestran en español (variante `es_mx`) y se sirven desde Firestore.
 
-El proyecto es desarrollado en colaboración con [Un granito de Tierra, A.C.](https://ungranitodetierra.org)
+El proyecto es desarrollado en colaboración con [Un granito de Tierra, A.C.](https://ungranitodetierra.antilabs.com.mx)
 
 ## Stack técnico
 

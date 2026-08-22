@@ -35,57 +35,80 @@ function IconTooltip({ label, icon }: { label: string; icon: React.ReactNode }) 
 	);
 }
 
-export function EcologicalFunctionIconRepresentation({ value }: { value: EcologicalFunction }) {
-	let icon;
-	switch (+value._id) {
+export function getEcologicalFunctionIcon(id: string): React.ReactNode {
+	switch (+id) {
 		case 0:
-			icon = <Leaf />; // Biomass
-			break;
+			return <Leaf />; // Biomass
 		case 1:
-			icon = <Graph />; // Nitrogen fixation
-			break;
+			return <Graph />; // Nitrogen fixation
 		case 2:
-			icon = <Atom />; // Nutrient accumulation
-			break;
+			return <Atom />; // Nutrient accumulation
 		case 3:
-			icon = <Mountains />; // Erosion control
-			break;
+			return <Mountains />; // Erosion control
 		case 4:
-			icon = <Butterfly />; // Pollinators
-			break;
+			return <Butterfly />; // Pollinators
 		default:
-			icon = <Question />;
-			break;
+			return <Question />;
 	}
+}
 
-	return <IconTooltip label={value.name.es_mx} icon={icon} />;
+export function EcologicalFunctionIconRepresentation({ value }: { value: EcologicalFunction }) {
+	return <IconTooltip label={value.name.es_mx} icon={getEcologicalFunctionIcon(value._id)} />;
+}
+
+export function getAdditionalFunctionIcon(id: string): React.ReactNode {
+	switch (+id) {
+		case 0:
+			return <ForkKnife />; // Food
+		case 1:
+			return <Horse />; // Forage
+		case 2:
+			return <Tree />; // Wood
+		case 3:
+			return <Heartbeat />; // Medicinal
+		default:
+			return <Question />;
+	}
 }
 
 export function AdditionalFunctionIconRepresentation({ value }: { value: AdditionalFunction }) {
-	let icon;
-	switch (+value._id) {
-		case 0:
-			icon = <ForkKnife />; // Food
-			break;
-		case 1:
-			icon = <Horse />; // Forage
-			break;
-		case 2:
-			icon = <Tree />; // Wood
-			break;
-		case 3:
-			icon = <Heartbeat />; // Medicinal
-			break;
-		default:
-			icon = <Question />;
-			break;
-	}
-
-	return <IconTooltip label={value.name.es_mx} icon={icon} />;
+	return <IconTooltip label={value.name.es_mx} icon={getAdditionalFunctionIcon(value._id)} />;
 }
 
 export function SingleCharRepresentation({ value, name }: { value: Stratum | EcologicalZone; name?: React.ReactNode }) {
 	return <IconTooltip label={value.name.es_mx} icon={name || value._id} />;
+}
+
+export const DETAIL_FIELD_LABELS: Record<string, string> = {
+	isFrostResistant: 'Resistencia a heladas',
+	lightPreference: 'Preferencia de luz',
+	nutrientExtraction: 'Extracción de nutrientes',
+	humidityPreference: 'Preferencia de humedad'
+};
+
+export function formatSpeciesDetail(idKey: string, value: boolean | Level): string {
+	if (idKey === 'isFrostResistant') return 'resiste heladas';
+	const levels: Record<Level, string> = { H: 'alta', M: 'media', L: 'baja' };
+	const level = levels[value as Level] ?? '';
+	if (idKey === 'lightPreference') return `luz ${level}`;
+	if (idKey === 'nutrientExtraction') return `extracción de nutrientes ${level}`;
+	if (idKey === 'humidityPreference') return `humedad ${level}`;
+	return '';
+}
+
+export function getDetailFieldIcon(idKey: string): React.ReactNode {
+	switch (idKey) {
+		case 'isFrostResistant':
+			return <Snowflake />;
+		case 'lightPreference':
+			return <Sun />;
+		case 'nutrientExtraction':
+			return <Atom />;
+		case 'humidityPreference':
+			return <DropHalfBottom />;
+		default:
+			return <Question />;
+	}
 }
 
 function levelCaption(value: Level, labels: { high: string; medium: string; low: string }) {
@@ -95,19 +118,15 @@ function levelCaption(value: Level, labels: { high: string; medium: string; low:
 }
 
 export function DetailIconRepresentation({ idKey, value }: { idKey: string; value: boolean | Level }) {
-	let icon;
 	let caption: string;
 	switch (idKey) {
 		case 'isFrostResistant':
-			icon = <Snowflake />;
 			caption = 'Resiste heladas';
 			break;
 		case 'lightPreference':
-			icon = <Sun />;
 			caption = levelCaption(value as Level, { high: 'Prefiere sol', medium: 'Prefiere media sombra', low: 'Prefiere sombra' });
 			break;
 		case 'nutrientExtraction':
-			icon = <Atom />;
 			caption = levelCaption(value as Level, {
 				high: 'Alta extracción de nutrientes',
 				medium: 'Extracción media de nutrientes',
@@ -115,14 +134,12 @@ export function DetailIconRepresentation({ idKey, value }: { idKey: string; valu
 			});
 			break;
 		case 'humidityPreference':
-			icon = <DropHalfBottom />;
 			caption = levelCaption(value as Level, { high: 'Prefiere humedad alta', medium: 'Prefiere humedad media', low: 'Prefiere clima seco' });
 			break;
 		default:
-			icon = <Question />;
 			caption = '';
 			break;
 	}
 
-	return <IconTooltip label={caption} icon={icon} />;
+	return <IconTooltip label={caption} icon={getDetailFieldIcon(idKey)} />;
 }

@@ -13,7 +13,7 @@ import type { SpeciesDetails, SpeciesType } from '../../interfaces/Species';
 
 export default function SpeciesTable({ species }: { species: SpeciesType[] }) {
 	return (
-		<Table.ScrollArea>
+		<Table.ScrollArea display={{ base: 'none', md: 'block' }}>
 			<Table.Root striped size="sm">
 				<Table.Caption>Especies mostradas según región: mx. Todas las medidas están dadas en metros.</Table.Caption>
 				<Table.Header>

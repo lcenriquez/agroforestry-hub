@@ -2,17 +2,25 @@ import NextLink from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 
-import { Container, Heading, Link, Separator, Stack, Text } from '@chakra-ui/react';
+import { Container, DataList, Heading, Link, Separator, Stack, Text } from '@chakra-ui/react';
 
 import { getExperiencesForSpecies, getSpeciesById } from '../adapters/firestore';
 import LoadingScreen from '../components/Elements/LoadingScreen';
 import ExperienceForm from '../components/Experiences/ExperienceForm';
 import ExperienceList from '../components/Experiences/ExperienceList';
+import { formatSpeciesDetail } from '../components/Helpers/VisualRepresentations';
 import { useAuth } from '../contexts/AuthContext';
 import { withPublicLayout } from '../hocs/withLayout';
 
 import type { Experience } from '../interfaces/Experience';
-import type { SpeciesType } from '../interfaces/Species';
+import type { SpeciesDetails, SpeciesType } from '../interfaces/Species';
+
+function formatDetails(details: SpeciesDetails): string {
+	return (Object.keys(details) as (keyof SpeciesDetails)[])
+		.filter(key => details[key])
+		.map(key => formatSpeciesDetail(key, details[key]!))
+		.join(', ');
+}
 
 function SpeciesDetail() {
 	const router = useRouter();
@@ -51,6 +59,39 @@ function SpeciesDetail() {
 						{species.commonNames.es_mx?.join(', ')}
 					</Text>
 				</Stack>
+
+				<DataList.Root orientation="horizontal" gap={3} maxW="2xl">
+					<DataList.Item>
+						<DataList.ItemLabel>Altura</DataList.ItemLabel>
+						<DataList.ItemValue>{`${species.height.min}-${species.height.max}m`}</DataList.ItemValue>
+					</DataList.Item>
+					<DataList.Item>
+						<DataList.ItemLabel>Ancho de copa</DataList.ItemLabel>
+						<DataList.ItemValue>{`${species.crownWidth.min}-${species.crownWidth.max}m`}</DataList.ItemValue>
+					</DataList.Item>
+					<DataList.Item>
+						<DataList.ItemLabel>Estrato</DataList.ItemLabel>
+						<DataList.ItemValue>{species.stratums.map(s => s.name.es_mx).join(', ') || '—'}</DataList.ItemValue>
+					</DataList.Item>
+					<DataList.Item>
+						<DataList.ItemLabel>Zona ecológica</DataList.ItemLabel>
+						<DataList.ItemValue>{species.ecologicalZones.mx.map(z => z.name.es_mx).join(', ') || '—'}</DataList.ItemValue>
+					</DataList.Item>
+					<DataList.Item>
+						<DataList.ItemLabel>Funciones ecológicas</DataList.ItemLabel>
+						<DataList.ItemValue>{species.ecologicalFunctions.map(f => f.name.es_mx).join(', ') || '—'}</DataList.ItemValue>
+					</DataList.Item>
+					<DataList.Item>
+						<DataList.ItemLabel>Otras funciones</DataList.ItemLabel>
+						<DataList.ItemValue>{species.additionalFunctions.map(f => f.name.es_mx).join(', ') || '—'}</DataList.ItemValue>
+					</DataList.Item>
+					{species.details && (
+						<DataList.Item>
+							<DataList.ItemLabel>Detalles</DataList.ItemLabel>
+							<DataList.ItemValue>{formatDetails(species.details)}</DataList.ItemValue>
+						</DataList.Item>
+					)}
+				</DataList.Root>
 
 				<Separator />
 

@@ -58,7 +58,7 @@ export default function SmallWithLogoLeft() {
 				<Logo />
 				<Text>
 					En colaboración con{' '}
-					<Link href="https://ungranitodetierra.org" target="_blank" rel="noreferrer">
+					<Link href="https://ungranitodetierra.antilabs.com.mx" target="_blank" rel="noreferrer">
 						Un granito de Tierra, A.C.
 					</Link>
 				</Text>
