@@ -1,35 +1,24 @@
-import { useColorMode, Switch, Box } from "@chakra-ui/react";
-import { Moon, Sun } from "phosphor-react";
+import { Switch } from '@chakra-ui/react';
+import { Moon, Sun } from '@phosphor-icons/react';
+
+import { useColorMode } from '../ui/color-mode';
 
 const ThemeSwitch = () => {
-  const { colorMode, toggleColorMode } = useColorMode();
-  const isDark = colorMode === "dark";
-  return (
-    <Switch
-      position={"relative"}
-      size="lg"
-      colorScheme="whiteAlpha"
-      isChecked={isDark}
-      onChange={toggleColorMode}
-    >
-      <Box
-        display={colorMode === "light" ? "none" : ""}
-        position={"absolute"}
-        top="15%"
-        left="5%"
-      >
-        <Sun size={20} color="#e9c46a" weight="fill" />
-      </Box>
-      <Box
-        display={colorMode === "dark" ? "none" : ""}
-        position={"absolute"}
-        top="15%"
-        right="15%"
-      >
-        <Moon size={20} color="#292E1E" weight="fill" />
-      </Box>
-    </Switch>
-  );
+	const { colorMode, toggleColorMode } = useColorMode();
+	const isDark = colorMode === 'dark';
+
+	return (
+		<Switch.Root colorPalette="whiteAlpha" size="lg" checked={isDark} onCheckedChange={toggleColorMode}>
+			<Switch.HiddenInput />
+			<Switch.Control>
+				<Switch.Thumb>
+					<Switch.ThumbIndicator fallback={<Sun color="#e9c46a" size={12} weight="fill" />}>
+						<Moon color="#292E1E" size={12} weight="fill" />
+					</Switch.ThumbIndicator>
+				</Switch.Thumb>
+			</Switch.Control>
+		</Switch.Root>
+	);
 };
 
 export default ThemeSwitch;

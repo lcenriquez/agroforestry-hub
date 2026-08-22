@@ -1,13 +1,14 @@
 // Import the needed functions from the SDKs
-import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
-import { getFirestore } from "firebase/firestore";
+import { initializeApp } from 'firebase/app';
+import { getAuth } from 'firebase/auth';
+import { getFirestore } from 'firebase/firestore';
+
 // Import environment variables
-import envConfig from "./next-env-config";
+import envConfig from './next-env-config';
 
 // Firebase configuration
 const firebaseConfig = {
-  ...envConfig.firebase
+	...envConfig.firebase
 };
 
 // Initialize Firebase
