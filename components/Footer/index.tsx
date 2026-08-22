@@ -49,7 +49,11 @@ export default function SmallWithLogoLeft() {
 				<Text>
 					En colaboración con{' '}
 					<Link href="https://ungranitodetierra.antilabs.com.mx" target="_blank" rel="noreferrer">
-						Un granito de Tierra, A.C.
+						Un Granito de Tierra
+					</Link>{' '}
+					y{' '}
+					<Link href="https://bosquedeniebla.com.mx" target="_blank" rel="noreferrer">
+						Bosque de Niebla
 					</Link>
 				</Text>
 				<Stack direction="row" gap={6}>
