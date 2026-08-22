@@ -1,81 +1,86 @@
-import { collection, getDocs, orderBy, query } from 'firebase/firestore';
+import { addDoc, collection, doc, getDoc, getDocs, orderBy, query, where } from 'firebase/firestore';
 
 import { database } from '../firebase-config';
 
-// import type { SpeciesType } from '../interfaces/Species';
+import type { Experience, NewExperience } from '../interfaces/Experience';
+import type { AdditionalFunction, EcologicalFunction, SpeciesType, Stratum } from '../interfaces/Species';
 
-export async function getDocsFromCollection(collectionName: string) {
-	let docs: any[] = [];
-	try {
-		const instance = await collection(database, collectionName);
-		const data = await getDocs(instance);
-		docs = data.docs.map(item => {
-			return { id: item.id, ...item.data() };
-		});
-	} catch (error) {
-		console.log(error);
-	}
-	return docs;
-}
-
-export async function getSpecies() {
-	let docs: any[] = [];
+export async function getSpecies(): Promise<SpeciesType[]> {
+	let docs: SpeciesType[] = [];
 
 	try {
-		const instance = await collection(database, 'species');
+		const instance = collection(database, 'species');
 		const q = query(instance, orderBy('taxonomy.genus', 'asc'), orderBy('taxonomy.species', 'asc'));
 		const data = await getDocs(q);
-		docs = data.docs.map(item => {
-			const speciesObject: any = { _id: item.id, ...item.data() };
-			return speciesObject;
-		});
+		docs = data.docs.map(item => ({ _id: item.id, ...item.data() }) as SpeciesType);
 	} catch (error) {
 		console.log(error);
 	}
 	return docs;
 }
 
-export async function getStratums() {
-	let docs: any[] = [];
+export async function getSpeciesById(id: string): Promise<SpeciesType | null> {
 	try {
-		const instance = await collection(database, 'stratums');
-		const q = query(instance);
-		const data = await getDocs(q);
-		docs = data.docs.map(item => {
-			return { _id: item.id, ...item.data() };
-		});
+		const snapshot = await getDoc(doc(database, 'species', id));
+		if (!snapshot.exists()) return null;
+		return { _id: snapshot.id, ...snapshot.data() } as SpeciesType;
+	} catch (error) {
+		console.log(error);
+		return null;
+	}
+}
+
+export async function getStratums(): Promise<Stratum[]> {
+	let docs: Stratum[] = [];
+	try {
+		const instance = collection(database, 'stratums');
+		const data = await getDocs(query(instance));
+		docs = data.docs.map(item => ({ _id: item.id, ...item.data() }) as Stratum);
 	} catch (error) {
 		console.log(error);
 	}
 	return docs;
 }
 
-export async function getAdditionalFunctions() {
-	let docs: any[] = [];
+export async function getAdditionalFunctions(): Promise<AdditionalFunction[]> {
+	let docs: AdditionalFunction[] = [];
 	try {
-		const instance = await collection(database, 'additionalFunctions');
-		const q = query(instance);
-		const data = await getDocs(q);
-		docs = data.docs.map(item => {
-			return { _id: item.id, ...item.data() };
-		});
+		const instance = collection(database, 'additionalFunctions');
+		const data = await getDocs(query(instance));
+		docs = data.docs.map(item => ({ _id: item.id, ...item.data() }) as AdditionalFunction);
 	} catch (error) {
 		console.log(error);
 	}
 	return docs;
 }
 
-export async function getEcologicalFunctions() {
-	let docs: any[] = [];
+export async function getEcologicalFunctions(): Promise<EcologicalFunction[]> {
+	let docs: EcologicalFunction[] = [];
 	try {
-		const instance = await collection(database, 'ecologicalFunctions');
-		const q = query(instance);
-		const data = await getDocs(q);
-		docs = data.docs.map(item => {
-			return { _id: item.id, ...item.data() };
-		});
+		const instance = collection(database, 'ecologicalFunctions');
+		const data = await getDocs(query(instance));
+		docs = data.docs.map(item => ({ _id: item.id, ...item.data() }) as EcologicalFunction);
 	} catch (error) {
 		console.log(error);
 	}
 	return docs;
+}
+
+export async function getExperiencesForSpecies(speciesId: string): Promise<Experience[]> {
+	let docs: Experience[] = [];
+	try {
+		const instance = collection(database, 'experiences');
+		const q = query(instance, where('speciesId', '==', speciesId), orderBy('createdAt', 'desc'));
+		const data = await getDocs(q);
+		docs = data.docs.map(item => ({ _id: item.id, ...item.data() }) as Experience);
+	} catch (error) {
+		console.log(error);
+	}
+	return docs;
+}
+
+export async function addExperience(experience: NewExperience): Promise<string> {
+	const instance = collection(database, 'experiences');
+	const created = await addDoc(instance, experience);
+	return created.id;
 }

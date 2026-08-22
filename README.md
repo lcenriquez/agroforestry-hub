@@ -10,10 +10,10 @@ El proyecto es desarrollado en colaboración con [Un granito de Tierra, A.C.](ht
 - **React 19**
 - **TypeScript**
 - **[Chakra UI v3](https://chakra-ui.com/)** para la interfaz, con **next-themes** para el modo claro/oscuro
-- **[Firebase](https://firebase.google.com/)** (Authentication + Firestore) como backend
+- **[Firebase](https://firebase.google.com/)** (Authentication + Firestore + Storage) como backend
 - **[Phosphor Icons](https://phosphoricons.com/)** y **[Lucide](https://lucide.dev/)** para iconografía
 - **ESLint (flat config) + Prettier** para calidad y formato de código
-- **Firebase Hosting** para el despliegue del sitio estático
+- **Firebase Hosting** para el despliegue del sitio estático (aunque, al ser un export estático plano, también puede servirse desde cualquier hosting de archivos estáticos, incluido **Plesk**; ver [Despliegue](#despliegue))
 
 ## Primeros pasos
 
@@ -56,12 +56,12 @@ Abre [http://localhost:3000](http://localhost:3000).
 
 ## Scripts disponibles
 
-| Script          | Descripción                                                                 |
-| --------------- | ---------------------------------------------------------------------------- |
-| `npm run dev`   | Levanta el servidor de desarrollo de Next.js                                 |
-| `npm run build` | Genera el sitio estático en `out/` (`next build` con `output: 'export'`)     |
+| Script          | Descripción                                                                                        |
+| --------------- | -------------------------------------------------------------------------------------------------- |
+| `npm run dev`   | Levanta el servidor de desarrollo de Next.js                                                       |
+| `npm run build` | Genera el sitio estático en `out/` (`next build` con `output: 'export'`)                           |
 | `npm run start` | Sirve el build de producción (modo servidor; no se usa para el despliegue actual, que es estático) |
-| `npm run lint`  | Corre ESLint sobre todo el proyecto                                          |
+| `npm run lint`  | Corre ESLint sobre todo el proyecto                                                                |
 
 Para verificar tipos: `npx tsc --noEmit`.
 Para formatear: `npx prettier --write .`.
@@ -69,9 +69,10 @@ Para formatear: `npx prettier --write .`.
 ## Estructura del proyecto
 
 ```
-adapters/          Acceso a Firebase (auth.ts) y Firestore (firestore.ts)
+adapters/          Acceso a Firebase: auth.ts, firestore.ts (Firestore) y storage.ts (Storage)
 components/
   Elements/         Piezas pequeñas de UI (LoadingScreen, ThemeSwitch)
+  Experiences/       Compartir experiencias por especie (ExperienceForm, ExperienceList, PhotoUploader)
   Footer/            Pie de página
   Helpers/           Representaciones visuales (iconos con tooltip) de las especies
   Nav/               Barra de navegación y menú de usuario
@@ -79,13 +80,15 @@ components/
   ui/                Utilidades de Chakra UI v3 (color-mode: ColorModeProvider/useColorMode/useColorModeValue)
 contexts/           AuthContext: contexto de React para el usuario autenticado
 hocs/               withLayout.tsx: HOCs de layout (público / autenticado / vacío)
-interfaces/         Tipos compartidos (p. ej. SpeciesType)
-pages/              Rutas de Next.js (Pages Router): /, /signin, /signup, /account/action
+interfaces/         Tipos compartidos: Common.ts, Species.ts, Experience.ts
+pages/              Rutas de Next.js (Pages Router): /, /signin, /signup, /account/action, /species
 public/             Assets estáticos (favicon, etc.)
 styles/             Configuración del sistema de diseño de Chakra UI (theme.tsx)
-firebase-config.ts  Inicialización del SDK de Firebase
+firebase-config.ts  Inicialización del SDK de Firebase (app, auth, database, storage)
 next-env-config.ts  Selección de configuración de Firebase según NODE_ENV
-firebase.json       Configuración de Firebase Hosting (sirve la carpeta out/)
+firebase.json       Configuración de Firebase Hosting/Firestore/Storage
+firestore.rules     Reglas de seguridad de Firestore
+storage.rules       Reglas de seguridad de Storage
 ```
 
 ## Autenticación
@@ -100,16 +103,44 @@ El flujo de autenticación (`/signin`, `/signup`) usa Firebase Authentication (c
 
 ## Datos de especies
 
-`adapters/firestore.ts` expone funciones para leer las colecciones `species`, `stratums`, `additionalFunctions` y `ecologicalFunctions`. La página de inicio (`pages/index.tsx`) consulta `getSpecies()` y renderiza el resultado con `components/Tables/SpeciesTable.tsx`.
+`adapters/firestore.ts` expone funciones tipadas para leer las colecciones `species`, `stratums`, `additionalFunctions` y `ecologicalFunctions` (y `getSpeciesById` para una sola especie). La página de inicio (`pages/index.tsx`) consulta `getSpecies()` y renderiza el resultado con `components/Tables/SpeciesTable.tsx`. Los tipos de estas colecciones viven en `interfaces/Species.ts` y `interfaces/Common.ts` (`LocalizedText`, `Level`, etc.); ya no se usa `any` en el camino de datos de Firestore.
+
+## Experiencias de la comunidad
+
+Cualquier persona con sesión iniciada puede compartir, por especie (`/species?id=<id>`), su experiencia real cultivándola: ubicación, clima, tipo de luz que recibe, tipo de suelo, notas y hasta 5 fotos. La lectura es pública (sin necesidad de cuenta) para que el conocimiento circule libremente; sólo compartir requiere sesión.
+
+- `interfaces/Experience.ts` define el tipo `Experience` (colección `experiences`) y `MAX_EXPERIENCE_PHOTOS` (5).
+- `adapters/firestore.ts` agrega `getExperiencesForSpecies(speciesId)` y `addExperience(...)`.
+- `adapters/storage.ts` sube las fotos a Firebase Storage (`uploadExperiencePhotos`), validando en el cliente cantidad (máx. 5), tipo (imagen) y tamaño (máx. 5MB) antes de subir.
+- `components/Experiences/` contiene el formulario (`ExperienceForm`), el listado (`ExperienceList`) y el selector de fotos con previsualización (`PhotoUploader`).
+- `pages/species.tsx` muestra el detalle de una especie, las experiencias existentes y el formulario para compartir la propia (o una invitación a iniciar sesión si no hay usuario autenticado). Se navega a esta página desde la columna "Experiencias" de `SpeciesTable`.
+- `firestore.rules` y `storage.rules` son la validación real (del lado del servidor): cualquiera puede leer, pero sólo un usuario autenticado puede crear una experiencia propia (y sólo puede editar/borrar la suya), con los mismos límites de tamaño/cantidad/tipo de fotos.
 
 ## Despliegue
 
-El sitio se construye como export estático (`next build` con `output: 'export'` en `next.config.js`) y se publica en **Firebase Hosting**, que sirve la carpeta `out/` (ver `firebase.json`):
+El sitio se construye como export estático (`next build` con `output: 'export'` y `trailingSlash: true` en `next.config.js`, que genera `<ruta>/index.html` en vez de `<ruta>.html` para que cualquier servidor estático resuelva `/signin`, `/species`, etc. sirviendo el `index.html` de esa carpeta).
+
+### Firebase Hosting
 
 ```bash
 npm run build
 firebase deploy --only hosting
 ```
+
+Al agregar reglas de Firestore/Storage (necesarias para "Experiencias de la comunidad"), despliégalas también:
+
+```bash
+firebase deploy --only firestore:rules,storage:rules
+```
+
+### Otro hosting estático (Plesk, Nginx, S3, etc.)
+
+Sí se puede: `npm run build` genera en `out/` un sitio 100% estático (HTML/CSS/JS, sin servidor Node ni API routes). Para publicarlo en Plesk (o cualquier hosting de archivos estáticos):
+
+1. Corre `npm run build` **con las variables de entorno de producción ya configuradas** (Firebase inicializa el SDK apenas se carga la app, así que quedan incrustadas en el build; no se leen en tiempo de ejecución desde el servidor).
+2. Sube el contenido de `out/` (no la carpeta en sí) a la raíz pública del sitio en Plesk (normalmente `httpdocs/`), vía Git, FTP/SFTP o el administrador de archivos de Plesk.
+3. Con `trailingSlash: true` no hace falta configurar reglas de reescritura: Apache/Nginx sirven `index.html` de cada carpeta (`/signin/`, `/species/`, etc.) igual que en cualquier otro sitio estático. Si el hosting redirige `/signin` → `/signin/` automáticamente (comportamiento por defecto de Apache), todo funciona sin tocar nada más.
+4. Configura una página 404 personalizada apuntando a `out/404/index.html` si quieres que Plesk la use en vez de la genérica del servidor (opcional).
 
 ## Cambios recientes (actualización de dependencias y correcciones)
 
@@ -130,7 +161,7 @@ Este proyecto se actualizó de Next.js 12 / React 17 / Chakra UI v1 (de 2022) a 
 
 ## Limitaciones conocidas / roadmap
 
-- **Tipado de datos de Firestore:** los datos que vienen de Firestore (`species`, `stratums`, funciones ecológicas/adicionales) se manejan con tipos laxos (`any`) en `adapters/firestore.ts`, `SpeciesTable` y `VisualRepresentations`. `interfaces/Species.ts` sólo define un subconjunto mínimo (`id`, `taxonomy`). Definir un esquema completo de tipos para estas colecciones es la mejora pendiente más importante.
 - El menú de usuario autenticado (`components/Nav/AuthDetails.tsx`) tiene las opciones "Mi perfil" y "Configuración" sin funcionalidad todavía (no están implementadas las páginas correspondientes).
 - No hay pruebas automatizadas (unitarias ni end-to-end).
 - La recuperación de contraseña ("¿Olvidaste tu contraseña?" en `/signin`) es un enlace sin funcionalidad todavía.
+- Las experiencias compartidas no tienen moderación ni reporte de contenido inapropiado todavía; las reglas de Firestore/Storage limitan cantidad/tamaño/tipo de archivo pero no revisan el contenido en sí.
