@@ -1,5 +1,6 @@
-import { Flex, Link, Text } from '@chakra-ui/react';
+import { Flex, HStack, Link, Text } from '@chakra-ui/react';
 
+import Logo from '../Elements/Logo';
 import ThemeSwitch from '../Elements/ThemeSwitch';
 import AuthDetails from './AuthDetails';
 
@@ -19,9 +20,12 @@ export default function Nav() {
 		>
 			<Flex flex={1} justify="start">
 				<Link href="/">
-					<Text fontFamily="heading" fontWeight="bold" color="gray.800" _dark={{ color: 'white' }}>
-						SAF Hub
-					</Text>
+					<HStack gap={2}>
+						<Logo size={28} />
+						<Text fontFamily="heading" fontWeight="bold" color="gray.800" _dark={{ color: 'white' }}>
+							SAF Hub
+						</Text>
+					</HStack>
 				</Link>
 			</Flex>
 

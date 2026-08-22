@@ -19,7 +19,8 @@ export function withPublicLayout(Component: NextComponentType, title: string, pa
 				<Head>
 					<title>{'SAF Hub' + appEnvName + ' | ' + title}</title>
 					<meta name="description" content="Información completa para la creación de sistemas agroforestales" />
-					<link rel="icon" href="/favicon.ico" />
+					<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+					<link rel="alternate icon" href="/favicon.ico" />
 				</Head>
 				<Nav />
 				{pageTitle && pageTitle !== '' ? (
@@ -64,7 +65,8 @@ export function withAuthedLayout(Component: NextComponentType, title: string) {
 				<Head>
 					<title>{'SAF Hub' + appEnvName + ' | ' + title}</title>
 					<meta name="description" content="Información completa para la creación de sistemas agroforestales" />
-					<link rel="icon" href="/favicon.ico" />
+					<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+					<link rel="alternate icon" href="/favicon.ico" />
 				</Head>
 				{!authUser.isEmailVerified && (
 					<Alert.Root status="warning" justifyContent="center">
@@ -92,7 +94,8 @@ export function withEmptyLayout(Component: NextComponentType, title: string) {
 				<Head>
 					<title>{'SAF Hub' + appEnvName + ' | ' + title}</title>
 					<meta name="description" content="Información completa para la creación de sistemas agroforestales" />
-					<link rel="icon" href="/favicon.ico" />
+					<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+					<link rel="alternate icon" href="/favicon.ico" />
 				</Head>
 				<Component />
 			</>
