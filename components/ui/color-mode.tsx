@@ -31,7 +31,9 @@ export function useColorMode(): UseColorModeReturn {
 	};
 }
 
-export function useColorModeValue<T>(light: T, dark: T): T {
-	const { colorMode } = useColorMode();
-	return colorMode === 'dark' ? dark : light;
-}
+// No useColorModeValue helper here on purpose: on the static export, when
+// the OS already prefers dark on first load, Emotion never gets a chance to
+// insert the "dark" class rule (it only saw "light" at build time), so a
+// value resolved through such a hook stays stuck on its light variant. Use
+// Chakra's `_dark={{ ... }}` style prop instead — it's pure CSS driven by
+// the `.dark` class on <html>, so it doesn't depend on a client re-render.

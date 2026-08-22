@@ -77,7 +77,7 @@ components/
   Helpers/           Representaciones visuales (iconos con tooltip) de las especies
   Nav/               Barra de navegación y menú de usuario
   Tables/            Tabla de especies
-  ui/                Utilidades de Chakra UI v3 (color-mode: ColorModeProvider/useColorMode/useColorModeValue)
+  ui/                Utilidades de Chakra UI v3 (color-mode: ColorModeProvider/useColorMode)
 contexts/           AuthContext: contexto de React para el usuario autenticado
 hocs/               withLayout.tsx: HOCs de layout (público / autenticado / vacío)
 interfaces/         Tipos compartidos: Common.ts, Species.ts, Experience.ts

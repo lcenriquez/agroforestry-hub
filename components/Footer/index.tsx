@@ -3,8 +3,6 @@ import { ReactNode, SVGProps } from 'react';
 import { Box, chakra, Link, Stack, Text, VisuallyHidden } from '@chakra-ui/react';
 import { FacebookLogo, InstagramLogo, YoutubeLogo } from '@phosphor-icons/react';
 
-import { useColorModeValue } from '../ui/color-mode';
-
 const Logo = (props: SVGProps<SVGSVGElement>) => {
 	return (
 		<svg height={32} viewBox="0 0 120 28" xmlns="http://www.w3.org/2000/svg" {...props}>
@@ -24,7 +22,7 @@ const SocialButton = ({ children, label, href }: { children: ReactNode; label: s
 	return (
 		<chakra.button
 			asChild
-			bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
+			bg="blackAlpha.100"
 			rounded="full"
 			w={8}
 			h={8}
@@ -33,9 +31,8 @@ const SocialButton = ({ children, label, href }: { children: ReactNode; label: s
 			alignItems="center"
 			justifyContent="center"
 			transition="background 0.3s ease"
-			_hover={{
-				bg: useColorModeValue('blackAlpha.200', 'whiteAlpha.200')
-			}}
+			_hover={{ bg: 'blackAlpha.200' }}
+			_dark={{ bg: 'whiteAlpha.100', _hover: { bg: 'whiteAlpha.200' } }}
 		>
 			<a href={href} target="_blank" rel="noreferrer">
 				<VisuallyHidden>{label}</VisuallyHidden>
@@ -47,7 +44,7 @@ const SocialButton = ({ children, label, href }: { children: ReactNode; label: s
 
 export default function SmallWithLogoLeft() {
 	return (
-		<Box bg={useColorModeValue('gray.50', 'gray.900')} color={useColorModeValue('gray.700', 'gray.200')} mt="auto" width="100%">
+		<Box bg="gray.50" color="gray.700" _dark={{ bg: 'gray.900', color: 'gray.200' }} mt="auto" width="100%">
 			<Stack
 				maxW="6xl"
 				mx="auto"

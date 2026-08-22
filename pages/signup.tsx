@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react';
 import { Alert, Box, Button, Field, Flex, Heading, HStack, Input, InputGroup, Link, Stack, Text } from '@chakra-ui/react';
 import { Eye, EyeOff } from 'lucide-react';
 
-import { useColorModeValue } from '../components/ui/color-mode';
 import { useAuth } from '../contexts/AuthContext';
 
 export default function SignupCard() {
@@ -27,7 +26,7 @@ export default function SignupCard() {
 	}
 
 	return (
-		<Flex minH="100vh" align="center" justify="center" bg={useColorModeValue('gray.50', 'gray.800')}>
+		<Flex minH="100vh" align="center" justify="center" bg="gray.50" _dark={{ bg: 'gray.800' }}>
 			<Stack gap={5} mx="auto" maxW="lg" py={12} px={6}>
 				<Stack align="center">
 					<Heading fontSize="4xl" textAlign="center">
@@ -40,7 +39,7 @@ export default function SignupCard() {
 						</Link>
 					</Text>
 				</Stack>
-				<Box rounded="lg" bg={useColorModeValue('white', 'gray.700')} boxShadow="lg" p={8}>
+				<Box rounded="lg" bg="white" _dark={{ bg: 'gray.700' }} boxShadow="lg" p={8}>
 					<form onSubmit={handleSubmit}>
 						<Stack gap={4}>
 							<HStack>
