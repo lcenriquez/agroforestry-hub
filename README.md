@@ -143,7 +143,7 @@ Un workflow de GitHub Actions (`.github/workflows/firebase-deploy.yml`) hace amb
 ### Generar la service account
 
 1. En [Google Cloud Console](https://console.cloud.google.com/iam-admin/serviceaccounts) (con el mismo proyecto que tu app de Firebase), crea una service account nueva.
-2. Asígnale los roles **Firebase Hosting Admin** (`roles/firebasehosting.admin`) y **Firebase Rules Admin** (`roles/firebaserules.admin`) — o simplemente **Firebase Admin** (`roles/firebase.admin`) si prefieres un solo rol más amplio.
+2. Asígnale los roles **Firebase Hosting Admin** (`roles/firebasehosting.admin`), **Firebase Rules Admin** (`roles/firebaserules.admin`) y **Service Usage Viewer** (`roles/serviceusage.serviceUsageViewer`, necesario para que `firebase-tools` pueda verificar que las APIs de Firestore/Storage están habilitadas antes de desplegar las reglas) — o simplemente **Firebase Admin** (`roles/firebase.admin`) si prefieres un solo rol más amplio.
 3. Genera una clave JSON para esa service account (pestaña "Keys" → "Add key" → "Create new key" → JSON) y descárgala.
 4. Pega el contenido completo de ese JSON como el secret `FIREBASE_SERVICE_ACCOUNT` en GitHub.
 
