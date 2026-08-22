@@ -128,7 +128,7 @@ firebase deploy --only hosting
 Al agregar reglas de Firestore/Storage (necesarias para "Experiencias de la comunidad"), despliégalas también:
 
 ```bash
-firebase deploy --only firestore:rules,storage:rules
+firebase deploy --only firestore:rules,storage
 ```
 
 Un workflow de GitHub Actions (`.github/workflows/firebase-deploy.yml`) hace ambas cosas automáticamente en cada push a `main`; ver la sección siguiente para configurarlo.

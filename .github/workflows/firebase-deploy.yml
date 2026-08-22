@@ -45,5 +45,5 @@ jobs:
           PROJECT_ID: ${{ secrets.NEXT_PUBLIC_FIREBASE_PROJECT_ID }}
         run: |
           echo "$FIREBASE_SERVICE_ACCOUNT" > "$GOOGLE_APPLICATION_CREDENTIALS"
-          npx firebase-tools deploy --only firestore:rules,storage:rules --project "$PROJECT_ID" --non-interactive
+          npx firebase-tools deploy --only firestore:rules,storage --project "$PROJECT_ID" --non-interactive
           rm -f "$GOOGLE_APPLICATION_CREDENTIALS"
