@@ -33,7 +33,7 @@ const ThemeSwitch = () => {
 			<Switch.Control>
 				<Switch.Thumb>
 					<Switch.ThumbIndicator fallback={<Sun color="#e9c46a" size={12} weight="fill" />}>
-						<Moon color="#292E1E" size={12} weight="fill" />
+						<Moon color="#F4F4F5" size={12} weight="fill" />
 					</Switch.ThumbIndicator>
 				</Switch.Thumb>
 			</Switch.Control>
