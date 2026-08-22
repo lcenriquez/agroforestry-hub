@@ -9,6 +9,7 @@ import LoadingScreen from '../components/Elements/LoadingScreen';
 import ExperienceForm from '../components/Experiences/ExperienceForm';
 import ExperienceList from '../components/Experiences/ExperienceList';
 import { formatSpeciesDetail } from '../components/Helpers/VisualRepresentations';
+import SpeciesEditDialog from '../components/Species/SpeciesEditDialog';
 import { useAuth } from '../contexts/AuthContext';
 import { withPublicLayout } from '../hocs/withLayout';
 
@@ -53,11 +54,14 @@ function SpeciesDetail() {
 	return (
 		<Container maxW="container.xl" py="2em">
 			<Stack gap={6}>
-				<Stack gap={0}>
-					<Heading size="lg">{`${species.taxonomy.genus} ${species.taxonomy.species}`}</Heading>
-					<Text fontStyle="italic" color="fg.muted">
-						{species.commonNames.es_mx?.join(', ')}
-					</Text>
+				<Stack gap={2} direction={{ base: 'column', sm: 'row' }} justify="space-between" align={{ sm: 'start' }}>
+					<Stack gap={0}>
+						<Heading size="lg">{`${species.taxonomy.genus} ${species.taxonomy.species}`}</Heading>
+						<Text fontStyle="italic" color="fg.muted">
+							{species.commonNames.es_mx?.join(', ')}
+						</Text>
+					</Stack>
+					<SpeciesEditDialog species={species} onUpdated={setSpecies} />
 				</Stack>
 
 				<DataList.Root orientation="horizontal" gap={3} maxW="2xl">

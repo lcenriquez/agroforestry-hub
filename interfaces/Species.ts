@@ -45,3 +45,7 @@ export interface SpeciesType {
 	additionalFunctions: AdditionalFunction[];
 	details?: SpeciesDetails;
 }
+
+// Campos editables de una especie, sin el id del documento — la forma que
+// llenan tanto el admin (edición directa) como cualquier usuario (sugerencia).
+export type SpeciesInput = Omit<SpeciesType, '_id'>;

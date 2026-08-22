@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 import { Avatar, Button, Menu, Portal } from '@chakra-ui/react';
 
@@ -34,7 +35,8 @@ function NoAuth() {
 }
 
 function Authed() {
-	const { authUser, signOut } = useAuth();
+	const { authUser, signOut, isAdmin } = useAuth();
+	const router = useRouter();
 
 	return (
 		<Menu.Root>
@@ -50,6 +52,11 @@ function Authed() {
 					<Menu.Content>
 						<Menu.Item value="profile">Mi perfil</Menu.Item>
 						<Menu.Item value="settings">Configuración</Menu.Item>
+						{isAdmin && (
+							<Menu.Item value="admin" onClick={() => router.push('/admin')}>
+								Panel de administración
+							</Menu.Item>
+						)}
 						<Menu.Separator />
 						<Menu.Item value="signout" onClick={signOut}>
 							Cerrar sesión

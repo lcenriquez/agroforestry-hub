@@ -1,6 +1,7 @@
+import NextLink from 'next/link';
 import { useEffect, useMemo, useState } from 'react';
 
-import { Stack, Text } from '@chakra-ui/react';
+import { Link, Stack, Text } from '@chakra-ui/react';
 
 import { getSpecies } from '../adapters/firestore';
 import { emptyFilterState, filterSpeciesList, uniqueById } from '../components/Tables/filterSpecies';
@@ -59,6 +60,13 @@ const Home: NextPage = () => {
 				<Text as="strong">SAF Hub</Text> reúne información práctica sobre especies usadas en Sistemas Agroforestales (SAF): estrato, zona ecológica,
 				altura, funciones ecológicas y más, junto con experiencias reales de cultivo compartidas por la comunidad. Explora el catálogo, filtra por lo
 				que buscas y comparte tu propia experiencia con cada especie.
+			</Text>
+
+			<Text>
+				¿No encuentras una especie?{' '}
+				<Link asChild color="blue.400">
+					<NextLink href="/suggest-species">Sugiérela</NextLink>
+				</Link>
 			</Text>
 
 			{!loading && species.length > 0 && (

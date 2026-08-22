@@ -1,9 +1,10 @@
-import { addDoc, collection, doc, getDoc, getDocs, orderBy, query, where } from 'firebase/firestore';
+import { addDoc, collection, doc, getDoc, getDocs, orderBy, query, setDoc, updateDoc, where, writeBatch } from 'firebase/firestore';
 
 import { database } from '../firebase-config';
 
 import type { Experience, NewExperience } from '../interfaces/Experience';
-import type { AdditionalFunction, EcologicalFunction, EcologicalZone, SpeciesType, Stratum } from '../interfaces/Species';
+import type { AdditionalFunction, EcologicalFunction, EcologicalZone, SpeciesInput, SpeciesType, Stratum } from '../interfaces/Species';
+import type { NewSpeciesSuggestion, SpeciesSuggestion } from '../interfaces/SpeciesSuggestion';
 
 // Firestore stores the `_id` of these catalog entries (stratum, ecological
 // zone/function, additional function) as numbers, not strings, even though
@@ -91,6 +92,55 @@ export async function getEcologicalFunctions(): Promise<EcologicalFunction[]> {
 		console.log(error);
 	}
 	return docs;
+}
+
+export async function createSpecies(data: SpeciesInput): Promise<string> {
+	const instance = collection(database, 'species');
+	const created = await addDoc(instance, data);
+	return created.id;
+}
+
+export async function updateSpecies(id: string, data: SpeciesInput): Promise<void> {
+	await setDoc(doc(database, 'species', id), data);
+}
+
+export async function createSpeciesSuggestion(input: NewSpeciesSuggestion): Promise<string> {
+	const instance = collection(database, 'speciesSuggestions');
+	const created = await addDoc(instance, input);
+	return created.id;
+}
+
+export async function getPendingSuggestions(): Promise<SpeciesSuggestion[]> {
+	let docs: SpeciesSuggestion[] = [];
+	try {
+		const instance = collection(database, 'speciesSuggestions');
+		const q = query(instance, where('status', '==', 'pending'), orderBy('createdAt', 'desc'));
+		const data = await getDocs(q);
+		docs = data.docs.map(item => ({ _id: item.id, ...item.data() }) as SpeciesSuggestion);
+	} catch (error) {
+		console.log(error);
+	}
+	return docs;
+}
+
+// Aplica `proposedData` a `species` (update si es una sugerencia de edición,
+// create si es una especie nueva) y marca la sugerencia como aprobada, en un
+// solo batch para que ambas escrituras sean atómicas.
+export async function approveSuggestion(suggestion: SpeciesSuggestion): Promise<void> {
+	const batch = writeBatch(database);
+
+	if (suggestion.type === 'edit' && suggestion.speciesId) {
+		batch.set(doc(database, 'species', suggestion.speciesId), suggestion.proposedData);
+	} else {
+		batch.set(doc(collection(database, 'species')), suggestion.proposedData);
+	}
+	batch.update(doc(database, 'speciesSuggestions', suggestion._id), { status: 'approved', reviewedAt: Date.now() });
+
+	await batch.commit();
+}
+
+export async function rejectSuggestion(id: string): Promise<void> {
+	await updateDoc(doc(database, 'speciesSuggestions', id), { status: 'rejected', reviewedAt: Date.now() });
 }
 
 export async function getExperiencesForSpecies(speciesId: string): Promise<Experience[]> {
