@@ -1,0 +1,17 @@
+rules_version = '2';
+
+service firebase.storage {
+  match /b/{bucket}/o {
+    // Fotos de experiencias compartidas: públicas para lectura, cada usuario
+    // sólo puede subir dentro de su propia carpeta (experiences/{speciesId}/{uid}).
+    // adapters/storage.ts valida además cantidad (máx. 5) y tamaño en el cliente;
+    // estas reglas son la validación real del lado del servidor.
+    match /experiences/{speciesId}/{uid}/{fileName} {
+      allow read: if true;
+      allow write: if request.auth != null
+        && request.auth.uid == uid
+        && request.resource.size <= 5 * 1024 * 1024
+        && request.resource.contentType.matches('image/.*');
+    }
+  }
+}

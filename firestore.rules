@@ -1,0 +1,55 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Catálogo de referencia (species, stratums, ecologicalFunctions,
+    // additionalFunctions): de lectura pública, sólo se escribe desde la
+    // consola/scripts de administración, nunca desde el cliente.
+    match /species/{speciesId} {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    match /stratums/{stratumId} {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    match /ecologicalFunctions/{functionId} {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    match /additionalFunctions/{functionId} {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    // Experiencias compartidas por la comunidad sobre una especie.
+    // Lectura pública para que el conocimiento circule libremente; escritura
+    // sólo para usuarios autenticados sobre su propio registro.
+    match /experiences/{experienceId} {
+      allow read: if true;
+
+      allow create: if request.auth != null
+        && request.resource.data.authorId == request.auth.uid
+        && request.resource.data.authorEmail == request.auth.token.email
+        && request.resource.data.speciesId is string
+        && request.resource.data.speciesId.size() > 0
+        && request.resource.data.location is string
+        && request.resource.data.location.size() > 0
+        && request.resource.data.location.size() <= 200
+        && request.resource.data.climate is string
+        && request.resource.data.climate.size() > 0
+        && request.resource.data.climate.size() <= 200
+        && request.resource.data.lightExposure in ['H', 'M', 'L']
+        && request.resource.data.soilType is string
+        && request.resource.data.soilType.size() > 0
+        && request.resource.data.soilType.size() <= 200
+        && request.resource.data.photoUrls is list
+        && request.resource.data.photoUrls.size() <= 5;
+
+      allow update, delete: if request.auth != null && resource.data.authorId == request.auth.uid;
+    }
+  }
+}

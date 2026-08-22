@@ -5,9 +5,10 @@ import SpeciesTable from '../components/Tables/SpeciesTable';
 import { withPublicLayout } from '../hocs/withLayout';
 
 import type { NextPage } from 'next';
+import type { SpeciesType } from '../interfaces/Species';
 
 const Home: NextPage = () => {
-	const [species, setSpecies] = useState<any[]>([]);
+	const [species, setSpecies] = useState<SpeciesType[]>([]);
 
 	useEffect(() => {
 		const firstLoad = async () => {

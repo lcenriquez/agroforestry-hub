@@ -15,6 +15,9 @@ import {
 	Tree
 } from '@phosphor-icons/react';
 
+import type { Level } from '../../interfaces/Common';
+import type { AdditionalFunction, EcologicalFunction, EcologicalZone, Stratum } from '../../interfaces/Species';
+
 function IconTooltip({ label, icon }: { label: string; icon: React.ReactNode }) {
 	return (
 		<Tooltip.Root>
@@ -32,7 +35,7 @@ function IconTooltip({ label, icon }: { label: string; icon: React.ReactNode }) 
 	);
 }
 
-export function EcologicalFunctionIconRepresentation({ value }: any) {
+export function EcologicalFunctionIconRepresentation({ value }: { value: EcologicalFunction }) {
 	let icon;
 	switch (+value._id) {
 		case 0:
@@ -58,7 +61,7 @@ export function EcologicalFunctionIconRepresentation({ value }: any) {
 	return <IconTooltip label={value.name.es_mx} icon={icon} />;
 }
 
-export function AdditionalFunctionIconRepresentation({ value }: any) {
+export function AdditionalFunctionIconRepresentation({ value }: { value: AdditionalFunction }) {
 	let icon;
 	switch (+value._id) {
 		case 0:
@@ -81,17 +84,17 @@ export function AdditionalFunctionIconRepresentation({ value }: any) {
 	return <IconTooltip label={value.name.es_mx} icon={icon} />;
 }
 
-export function SingleCharRepresentation({ value, name }: any) {
+export function SingleCharRepresentation({ value, name }: { value: Stratum | EcologicalZone; name?: React.ReactNode }) {
 	return <IconTooltip label={value.name.es_mx} icon={name || value._id} />;
 }
 
-function levelCaption(value: string, labels: { high: string; medium: string; low: string }) {
+function levelCaption(value: Level, labels: { high: string; medium: string; low: string }) {
 	if (value === 'H') return labels.high;
 	if (value === 'M') return labels.medium;
 	return labels.low;
 }
 
-export function DetailIconRepresentation({ idKey, value }: any) {
+export function DetailIconRepresentation({ idKey, value }: { idKey: string; value: boolean | Level }) {
 	let icon;
 	let caption: string;
 	switch (idKey) {
@@ -101,11 +104,11 @@ export function DetailIconRepresentation({ idKey, value }: any) {
 			break;
 		case 'lightPreference':
 			icon = <Sun />;
-			caption = levelCaption(value, { high: 'Prefiere sol', medium: 'Prefiere media sombra', low: 'Prefiere sombra' });
+			caption = levelCaption(value as Level, { high: 'Prefiere sol', medium: 'Prefiere media sombra', low: 'Prefiere sombra' });
 			break;
 		case 'nutrientExtraction':
 			icon = <Atom />;
-			caption = levelCaption(value, {
+			caption = levelCaption(value as Level, {
 				high: 'Alta extracción de nutrientes',
 				medium: 'Extracción media de nutrientes',
 				low: 'Baja extracción de nutrientes'
@@ -113,7 +116,7 @@ export function DetailIconRepresentation({ idKey, value }: any) {
 			break;
 		case 'humidityPreference':
 			icon = <DropHalfBottom />;
-			caption = levelCaption(value, { high: 'Prefiere humedad alta', medium: 'Prefiere humedad media', low: 'Prefiere clima seco' });
+			caption = levelCaption(value as Level, { high: 'Prefiere humedad alta', medium: 'Prefiere humedad media', low: 'Prefiere clima seco' });
 			break;
 		default:
 			icon = <Question />;
