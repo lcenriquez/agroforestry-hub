@@ -2,13 +2,13 @@
 
 ## Objetivo
 
-- El admin (por ahora solo `luis3qz@gmail.com`) puede editar cualquier especie del catálogo directamente, y agregar especies nuevas.
+- El admin puede editar cualquier especie del catálogo directamente, y agregar especies nuevas.
 - Cualquier usuario con sesión iniciada puede **sugerir** una edición a una especie existente, o **sugerir** una especie nueva que no esté en el catálogo.
 - Esas sugerencias le llegan al admin en un panel donde puede revisarlas y aprobarlas o rechazarlas. Al aprobar, el cambio se aplica al catálogo.
 
 ## Decisiones de diseño (revisar antes de implementar)
 
-1. **Quién es admin:** un email hardcodeado (`luis3qz@gmail.com`), repetido en dos lugares — una constante en el código (para mostrar/ocultar UI) y literal en `firestore.rules` (para que el permiso real no dependa solo del cliente). No hay tabla de roles ni Firebase Admin SDK/custom claims — es la opción más simple dado que hoy es una sola persona. Agregar un segundo admin más adelante es editar esa lista en dos archivos y redesplegar; no hace falta una UI para gestionar admins en esta primera versión.
+1. **Quién es admin:** un documento por uid en una colección `admins` de Firestore (no un email hardcodeado en el código). Un usuario es admin si existe `admins/{su uid}`; el propio `firestore.rules` lo verifica con `exists()`, así que el permiso real nunca depende solo del cliente. En el cliente, `AuthContext` expone `isAdmin` (se resuelve de forma asíncrona junto con el estado de auth, con un `getDoc` a `admins/{uid}`). Agregar o quitar un admin es crear/borrar ese documento a mano desde la consola de Firebase — sin redeploy y sin Firebase Admin SDK/custom claims. Sigue sin haber una UI para gestionar admins en esta primera versión.
 2. **Qué manda una sugerencia:** el registro **completo** de la especie (taxonomía, nombres comunes, altura, ancho de copa, estrato, zona ecológica, funciones, detalles), no un diff campo por campo. Es decir, tanto para "sugerir edición" como para "sugerir especie nueva" se llena el mismo formulario completo. Es más simple de construir y de revisar (el admin ve el registro propuesto completo) que un sistema de diffs; la desventaja es que si el catálogo real cambió entre que el usuario abrió el formulario y lo mandó, la sugerencia podría pisar esos cambios al aprobarse — aceptable dado el volumen esperado de sugerencias.
 3. **Un solo formulario reutilizado en tres lugares:** editar directo (admin), sugerir edición (usuario, precargado con los datos actuales), sugerir especie nueva (usuario o admin, vacío). Mismo componente, distinto modo de guardado.
 4. **Catálogo cerrado:** estrato, zona ecológica, funciones ecológicas y otras funciones siguen siendo catálogos cerrados (checkboxes sobre las opciones existentes), no campos de texto libre — igual que ya funciona en los filtros de la home. Si alguien necesita un valor de catálogo que no existe todavía (una función ecológica nueva, por ejemplo), queda fuera de alcance de esta iteración: se maneja a mano en Firestore.
@@ -54,20 +54,16 @@ export type NewSpeciesSuggestion = Omit<SpeciesSuggestion, '_id'>;
 
 - `species` (ya existe): ahora editable directamente por el admin (antes de esto era de solo lectura para el cliente).
 - `speciesSuggestions` (nueva): una sugerencia por documento, con el shape de arriba.
+- `admins` (nueva): un documento por uid de usuario admin (contenido irrelevante, solo importa que exista); se crea/borra a mano desde la consola de Firebase.
 
-### `lib/admin.ts` (nuevo, pequeño)
+### `adapters/auth.ts` (ajuste)
 
-```ts
-export const ADMIN_EMAILS = ['luis3qz@gmail.com'];
-
-export function isAdminEmail(email: string | null | undefined): boolean {
-	return !!email && ADMIN_EMAILS.includes(email);
-}
-```
+- `useFirebaseAuth()` ahora también resuelve `isAdmin: boolean`: al cambiar el estado de auth, hace `getDoc(doc(database, 'admins', uid))` y expone `isAdmin = snapshot.exists()` (falso mientras no hay sesión). `AuthContext`/`useAuth()` expone este campo junto a `authUser`.
 
 ## Reglas de Firestore (`firestore.rules`)
 
-- Agregar `function isAdmin() { return request.auth != null && request.auth.token.email in ['luis3qz@gmail.com']; }` (la lista debe coincidir a mano con `ADMIN_EMAILS`).
+- Agregar `function isAdmin() { return request.auth != null && exists(/databases/$(database)/documents/admins/$(request.auth.uid)); }`.
+- `admins/{uid}`: `allow read: if request.auth != null && request.auth.uid == uid;` (cada quien puede leer si es admin), `allow write: if false;` (se gestiona desde la consola).
 - `species`: cambiar `allow write: if false;` por `allow write: if isAdmin();` (lectura sigue pública).
 - `speciesSuggestions` (nueva):
   - `allow read: if isAdmin() || (request.auth != null && resource.data.authorId == request.auth.uid);` (el admin ve todas; el autor puede ver el estado de las suyas).
@@ -77,7 +73,7 @@ export function isAdminEmail(email: string | null | undefined): boolean {
 
 ## Pasos de implementación
 
-1. **Modelo de datos** — `interfaces/Species.ts` (agregar `SpeciesInput`), `interfaces/SpeciesSuggestion.ts` (nuevo), `lib/admin.ts` (nuevo).
+1. **Modelo de datos** — `interfaces/Species.ts` (agregar `SpeciesInput`), `interfaces/SpeciesSuggestion.ts` (nuevo), `adapters/auth.ts`/`contexts/AuthContext.tsx` (agregar `isAdmin`).
 2. **Adapters** (`adapters/firestore.ts`) — agregar:
    - `createSpecies(data: SpeciesInput): Promise<string>` — admin, crea directo en `species`.
    - `updateSpecies(id: string, data: SpeciesInput): Promise<void>` — admin, sobreescribe una especie existente.
@@ -106,12 +102,12 @@ export function isAdminEmail(email: string | null | undefined): boolean {
    - Lista las sugerencias `pending` (`getPendingSuggestions`), mostrando tipo, autor, fecha y una vista previa de `proposedData` (reusar `DataList` como en la ficha de especie).
    - Para `type: 'edit'`, mostrar también el registro actual de la especie al lado, para comparar.
    - Botones "Aprobar" / "Rechazar" por sugerencia, llaman `approveSuggestion`/`rejectSuggestion` y quitan la tarjeta de la lista.
-   - Enlace a este panel en el menú de usuario (`components/Nav/AuthDetails.tsx`), visible solo si `isAdminEmail(authUser.email)`.
+   - Enlace a este panel en el menú de usuario (`components/Nav/AuthDetails.tsx`), visible solo si `isAdmin` (de `useAuth()`).
 8. **Validación** — `tsc`/`eslint`/`prettier`/build, y prueba visual con Playwright usando datos simulados (Firestore real no es alcanzable desde este sandbox) cubriendo: sugerir edición, sugerir especie nueva, aprobar, rechazar, edición directa de admin — en desktop y móvil, claro y oscuro.
 
 ## Fuera de alcance (por ahora)
 
-- Múltiples admins gestionables desde la UI (hoy: lista hardcodeada).
+- Múltiples admins gestionables desde la UI (hoy: se agregan/quitan a mano en Firestore).
 - Notificaciones por correo al admin cuando llega una sugerencia.
 - Historial de cambios / auditoría de quién aprobó qué.
 - Sugerencias como diff campo por campo en vez de registro completo.

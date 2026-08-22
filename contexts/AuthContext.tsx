@@ -4,6 +4,7 @@ import useFirebaseAuth from '../adapters/auth';
 
 const authUserContext = createContext<AuthUserContext>({
 	authUser: null,
+	isAdmin: false,
 	loading: true,
 	error: null,
 	signIn: () => {},
@@ -18,6 +19,9 @@ interface AuthUserContext {
 		accessToken: string;
 		isEmailVerified: boolean;
 	};
+	// Solo válido una vez que `authUser` está resuelto (ver `loading`); se
+	// consulta de forma asíncrona contra la colección `admins` de Firestore.
+	isAdmin: boolean;
 	loading: boolean;
 	error: null | { message: string };
 	signIn: (email: string, password: string) => void;

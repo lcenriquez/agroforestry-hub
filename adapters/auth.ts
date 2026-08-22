@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 
 import { createUserWithEmailAndPassword, sendEmailVerification, signInWithEmailAndPassword, updateProfile } from 'firebase/auth';
+import { doc, getDoc } from 'firebase/firestore';
 
-import { auth } from '../firebase-config';
+import { auth, database } from '../firebase-config';
 
 const formatAuthUser = (user: { uid: string; email: string; accessToken: string; emailVerified: boolean }) => ({
 	uid: user.uid,
@@ -11,25 +12,42 @@ const formatAuthUser = (user: { uid: string; email: string; accessToken: string;
 	isEmailVerified: user.emailVerified
 });
 
+// Un usuario es admin si existe un documento con su uid en la colección
+// `admins` (se crea a mano desde la consola de Firebase, no hay UI para
+// gestionarla). Ver docs/features/admin-y-sugerencias.md.
+async function checkIsAdmin(uid: string): Promise<boolean> {
+	try {
+		const snapshot = await getDoc(doc(database, 'admins', uid));
+		return snapshot.exists();
+	} catch (error) {
+		console.log(error);
+		return false;
+	}
+}
+
 export default function useFirebaseAuth() {
 	const [authUser, setAuthUser] = useState(null);
+	const [isAdmin, setIsAdmin] = useState(false);
 	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState<null | { message: string }>(null);
 
 	const authStateChanged = async (authState: any) => {
 		if (!authState) {
 			setAuthUser(null);
+			setIsAdmin(false);
 			setLoading(false);
 			return;
 		}
 
 		const formattedUser = formatAuthUser(authState);
 		setAuthUser(formattedUser as any);
+		setIsAdmin(await checkIsAdmin(formattedUser.uid));
 		setLoading(false);
 	};
 
 	const clear = () => {
 		setAuthUser(null);
+		setIsAdmin(false);
 		setLoading(false);
 		setError(null);
 	};
@@ -93,6 +111,7 @@ export default function useFirebaseAuth() {
 
 	return {
 		authUser,
+		isAdmin,
 		loading,
 		error,
 		signIn,

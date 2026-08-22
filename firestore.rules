@@ -2,12 +2,26 @@ rules_version = '2';
 
 service cloud.firestore {
   match /databases/{database}/documents {
-    // Catálogo de referencia (species, stratums, ecologicalFunctions,
-    // additionalFunctions): de lectura pública, sólo se escribe desde la
-    // consola/scripts de administración, nunca desde el cliente.
+    // Un usuario es admin si existe un documento con su uid en `admins`.
+    function isAdmin() {
+      return request.auth != null && exists(/databases/$(database)/documents/admins/$(request.auth.uid));
+    }
+
+    // Se crea/borra a mano desde la consola de Firebase, no hay UI para
+    // gestionarla. El propio usuario puede leer su documento (para saber si
+    // es admin); nadie escribe desde el cliente.
+    match /admins/{uid} {
+      allow read: if request.auth != null && request.auth.uid == uid;
+      allow write: if false;
+    }
+
+    // species: de lectura pública. La escritura directa está reservada al
+    // admin (edición y alta de especies); el resto de este catálogo de
+    // referencia (stratums, ecologicalFunctions, additionalFunctions) sigue
+    // siendo de solo lectura, se administra desde la consola/scripts.
     match /species/{speciesId} {
       allow read: if true;
-      allow write: if false;
+      allow write: if isAdmin();
     }
 
     match /stratums/{stratumId} {
@@ -50,6 +64,37 @@ service cloud.firestore {
         && request.resource.data.photoUrls.size() <= 5;
 
       allow update, delete: if request.auth != null && resource.data.authorId == request.auth.uid;
+    }
+
+    // Sugerencias de la comunidad para editar una especie existente o agregar
+    // una nueva. El admin ve y resuelve todas; el autor puede ver el estado
+    // de las suyas. Sin delete: el estado final queda como historial mínimo.
+    match /speciesSuggestions/{suggestionId} {
+      allow read: if isAdmin() || (request.auth != null && resource.data.authorId == request.auth.uid);
+
+      allow create: if request.auth != null
+        && request.resource.data.authorId == request.auth.uid
+        && request.resource.data.authorEmail == request.auth.token.email
+        && request.resource.data.status == 'pending'
+        && request.resource.data.type in ['edit', 'new']
+        && (request.resource.data.type == 'new' || (request.resource.data.speciesId is string && request.resource.data.speciesId.size() > 0))
+        && request.resource.data.proposedData is map
+        && request.resource.data.proposedData.taxonomy is map
+        && request.resource.data.proposedData.taxonomy.genus is string
+        && request.resource.data.proposedData.taxonomy.genus.size() > 0
+        && request.resource.data.proposedData.taxonomy.genus.size() <= 200
+        && request.resource.data.proposedData.taxonomy.species is string
+        && request.resource.data.proposedData.taxonomy.species.size() > 0
+        && request.resource.data.proposedData.taxonomy.species.size() <= 200
+        && request.resource.data.proposedData.commonNames is map
+        && request.resource.data.proposedData.stratums is list
+        && request.resource.data.proposedData.ecologicalZones is map
+        && request.resource.data.proposedData.ecologicalFunctions is list
+        && request.resource.data.proposedData.additionalFunctions is list
+        && request.resource.data.proposedData.height is map
+        && request.resource.data.proposedData.crownWidth is map;
+
+      allow update: if isAdmin();
     }
   }
 }
