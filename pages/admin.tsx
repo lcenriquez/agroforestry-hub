@@ -1,7 +1,8 @@
+import NextLink from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 
-import { Badge, Button, DataList, Heading, Stack, Text } from '@chakra-ui/react';
+import { Badge, Button, DataList, Heading, Link, Stack, Text } from '@chakra-ui/react';
 
 import { approveSuggestion, getPendingSuggestions, getSpeciesById, rejectSuggestion } from '../adapters/firestore';
 import LoadingScreen from '../components/Elements/LoadingScreen';
@@ -97,6 +98,12 @@ function Admin() {
 
 	return (
 		<Stack gap={6}>
+			<Text>
+				<Link asChild color="blue.400">
+					<NextLink href="/admin/import-species">Importar especies desde excel</NextLink>
+				</Link>
+			</Text>
+
 			<Heading size="md">Sugerencias pendientes</Heading>
 			{suggestions.length === 0 ? (
 				<Text color="fg.muted">No hay sugerencias pendientes.</Text>

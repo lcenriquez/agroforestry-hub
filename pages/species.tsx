@@ -8,7 +8,7 @@ import { getExperiencesForSpecies, getSpeciesById } from '../adapters/firestore'
 import LoadingScreen from '../components/Elements/LoadingScreen';
 import ExperienceForm from '../components/Experiences/ExperienceForm';
 import ExperienceList from '../components/Experiences/ExperienceList';
-import { formatSpeciesDetail } from '../components/Helpers/VisualRepresentations';
+import { DISPLAYABLE_DETAIL_KEYS, formatSpeciesDetail } from '../components/Helpers/VisualRepresentations';
 import SpeciesEditDialog from '../components/Species/SpeciesEditDialog';
 import { useAuth } from '../contexts/AuthContext';
 import { withPublicLayout } from '../hocs/withLayout';
@@ -17,8 +17,7 @@ import type { Experience } from '../interfaces/Experience';
 import type { SpeciesDetails, SpeciesType } from '../interfaces/Species';
 
 function formatDetails(details: SpeciesDetails): string {
-	return (Object.keys(details) as (keyof SpeciesDetails)[])
-		.filter(key => details[key])
+	return DISPLAYABLE_DETAIL_KEYS.filter(key => details[key])
 		.map(key => formatSpeciesDetail(key, details[key]!))
 		.join(', ');
 }

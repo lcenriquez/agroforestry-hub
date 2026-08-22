@@ -185,12 +185,37 @@ matchea ningún nombre del catálogo correspondiente, esa referencia se omite pa
 se agrega una fila a la lista de advertencias que ve el admin (especie, columna, valor sin
 match) — la importación **continúa** con el resto de especies y catálogos.
 
+## Cosas que el archivo real no sigue al pie de la letra
+
+Probar contra el excel real (no solo contra el formato documentado) mostró varias
+inconsistencias que el parser tiene que tolerar en vez de asumir el formato limpio de la
+pestaña `Abreviaturas`:
+
+- **Códigos de una letra vs. palabra completa**: `Tolera heladas` casi siempre trae "Sí"/"No"
+  en vez de "S"/"N"; `Fija nitrógeno` mezcla "x" con "Si"/"si"/"N"/"No" en la misma columna.
+- **Varios códigos en una celda**: `Sol o sombra` y `Humedad preferida` a veces traen más de un
+  valor separado por coma (ej. "Sol, Ms") — se toma el primero.
+- **Estrato con más de un valor**: la celda de `Estrato` a veces trae "medio / alto" o
+  "medio/bajo" — se separa por `/` y `,` y se intenta matchear cada uno por separado contra el
+  catálogo, en vez de tratarlo como un solo valor.
+- **Columnas booleanas con texto en vez de "x"**: en `Funciones`, `Nutrimento principal` y
+  `Usos (comestible)` es común que la celda tenga una palabra describiendo el detalle (ej.
+  "raíz", "gallinas", "Sí") en vez de una "x" simple — cuenta igual como verdadero. Solo una
+  celda vacía/"-", o un "no"/"n" explícito, cuenta como falso.
+- **"Altura (metros)" y "Ancho de copa (metros)" no siempre son un número limpio**: buena parte
+  trae texto como "2 a 4", "hasta 15" o "3 mts." — se extraen los números que aparezcan (uno
+  solo se usa como min y max; dos o más, los primeros dos como min/max); sin números, el rango
+  queda en `{min: 0, max: 0}`.
+- **Códigos no documentados**: `Agrupa o salta` tiene además un valor "C" que no está en la
+  pestaña `Abreviaturas` — se deja sin mapear (sin advertencia, no es una referencia a
+  catálogo).
+
 ## Pasos sugeridos
 
 1. Extender `interfaces/Species.ts` con los tipos de la sección "Modelo de datos".
 2. Agregar una dependencia para leer `.xlsx` en el navegador (ej. `xlsx`/SheetJS).
 3. Nueva sección/página en el panel de admin (ej. `pages/admin/import-species.tsx`, enlazada
-   desde `pages/admin.tsx`), visible solo si `isAdminEmail(authUser.email)`.
+   desde `pages/admin.tsx`), visible solo si `isAdmin` (de `useAuth()`).
 4. Input de archivo → leer el `.xlsx` seleccionado (`FileReader`/`ArrayBuffer`) en el cliente,
    tomar la pestaña `ESPECIES`, saltar las 3 filas de encabezado y cualquier fila sin `Id`.
 5. Mapear cada fila según la tabla de arriba, resolviendo catálogos como se describe en la

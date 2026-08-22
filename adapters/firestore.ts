@@ -1,6 +1,7 @@
 import { addDoc, collection, doc, getDoc, getDocs, orderBy, query, setDoc, updateDoc, where, writeBatch } from 'firebase/firestore';
 
 import { database } from '../firebase-config';
+import { taxonomyKey } from '../lib/text';
 
 import type { Experience, NewExperience } from '../interfaces/Experience';
 import type { AdditionalFunction, EcologicalFunction, EcologicalZone, SpeciesInput, SpeciesType, Stratum } from '../interfaces/Species';
@@ -102,6 +103,38 @@ export async function createSpecies(data: SpeciesInput): Promise<string> {
 
 export async function updateSpecies(id: string, data: SpeciesInput): Promise<void> {
 	await setDoc(doc(database, 'species', id), data);
+}
+
+export interface ImportSpeciesResult {
+	created: number;
+	updated: number;
+}
+
+// Upsert masivo por género+especie (ver docs/tasks/carga-masiva-especies-excel.md):
+// actualiza el documento existente si ya hay una especie con ese género+especie,
+// si no crea uno nuevo. `existing` es la lista de especies ya cargadas (evita
+// un getSpecies() adicional cuando el llamador ya la tiene).
+export async function importSpecies(rows: SpeciesInput[], existing: SpeciesType[]): Promise<ImportSpeciesResult> {
+	const existingIdByKey = new Map(existing.map(species => [taxonomyKey(species.taxonomy), species._id]));
+	const result: ImportSpeciesResult = { created: 0, updated: 0 };
+
+	const BATCH_SIZE = 400; // por debajo del límite de 500 escrituras por batch de Firestore.
+	for (let i = 0; i < rows.length; i += BATCH_SIZE) {
+		const batch = writeBatch(database);
+		for (const input of rows.slice(i, i + BATCH_SIZE)) {
+			const existingId = existingIdByKey.get(taxonomyKey(input.taxonomy));
+			if (existingId) {
+				batch.set(doc(database, 'species', existingId), input);
+				result.updated++;
+			} else {
+				batch.set(doc(collection(database, 'species')), input);
+				result.created++;
+			}
+		}
+		await batch.commit();
+	}
+
+	return result;
 }
 
 export async function createSpeciesSuggestion(input: NewSpeciesSuggestion): Promise<string> {

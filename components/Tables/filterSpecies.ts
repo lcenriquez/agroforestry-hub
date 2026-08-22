@@ -1,3 +1,5 @@
+import { normalize } from '../../lib/text';
+
 import type { SpeciesType } from '../../interfaces/Species';
 
 export interface SpeciesFilterState {
@@ -13,13 +15,6 @@ export function emptyFilterState(): SpeciesFilterState {
 
 export function hasActiveFilters(filters: SpeciesFilterState): boolean {
 	return filters.stratumIds.size > 0 || filters.zoneIds.size > 0 || filters.ecoFunctionIds.size > 0 || filters.addFunctionIds.size > 0;
-}
-
-function normalize(text: string): string {
-	return text
-		.normalize('NFD')
-		.replace(/[\u0300-\u036f]/g, '')
-		.toLowerCase();
 }
 
 export function speciesMatchesSearch(species: SpeciesType, search: string): boolean {

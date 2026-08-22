@@ -2,9 +2,9 @@ import NextLink from 'next/link';
 
 import { Badge, Card, Heading, HStack, Link, Stack, Text, Wrap } from '@chakra-ui/react';
 
-import { formatSpeciesDetail } from '../Helpers/VisualRepresentations';
+import { DISPLAYABLE_DETAIL_KEYS, formatSpeciesDetail } from '../Helpers/VisualRepresentations';
 
-import type { SpeciesDetails, SpeciesType } from '../../interfaces/Species';
+import type { SpeciesType } from '../../interfaces/Species';
 
 // Alternativa a la tabla para pantallas chicas: en vez de íconos (que dependen
 // de un tooltip por hover, inútil en táctil), aquí se listan los nombres en
@@ -63,8 +63,7 @@ export default function SpeciesCards({ species }: { species: SpeciesType[] }) {
 								<Text as="span" fontWeight="medium">
 									Detalles:{' '}
 								</Text>
-								{(Object.keys(sp.details) as (keyof SpeciesDetails)[])
-									.filter(key => sp.details![key])
+								{DISPLAYABLE_DETAIL_KEYS.filter(key => sp.details![key])
 									.map(key => formatSpeciesDetail(key, sp.details![key]!))
 									.join(', ')}
 							</Text>

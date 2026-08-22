@@ -79,6 +79,11 @@ export function SingleCharRepresentation({ value, name }: { value: Stratum | Eco
 	return <IconTooltip label={value.name.es_mx} icon={name || value._id} />;
 }
 
+// Únicos campos de `SpeciesDetails` con representación de ícono/texto corto
+// (los demás — nutrientes, usos comestibles, observaciones, etc. — son texto
+// libre u objetos y no encajan en este renderer genérico).
+export const DISPLAYABLE_DETAIL_KEYS = ['isFrostResistant', 'lightPreference', 'nutrientExtraction', 'humidityPreference'] as const;
+
 export const DETAIL_FIELD_LABELS: Record<string, string> = {
 	isFrostResistant: 'Resistencia a heladas',
 	lightPreference: 'Preferencia de luz',

@@ -5,11 +5,12 @@ import { Link, Table, Text } from '@chakra-ui/react';
 import {
 	AdditionalFunctionIconRepresentation,
 	DetailIconRepresentation,
+	DISPLAYABLE_DETAIL_KEYS,
 	EcologicalFunctionIconRepresentation,
 	SingleCharRepresentation
 } from '../Helpers/VisualRepresentations';
 
-import type { SpeciesDetails, SpeciesType } from '../../interfaces/Species';
+import type { SpeciesType } from '../../interfaces/Species';
 
 export default function SpeciesTable({ species }: { species: SpeciesType[] }) {
 	return (
@@ -63,7 +64,7 @@ export default function SpeciesTable({ species }: { species: SpeciesType[] }) {
 								</Table.Cell>
 								<Table.Cell>
 									{sp.details &&
-										(Object.keys(sp.details) as (keyof SpeciesDetails)[]).map(key => (
+										DISPLAYABLE_DETAIL_KEYS.filter(key => sp.details![key]).map(key => (
 											<DetailIconRepresentation key={key} idKey={key} value={sp.details![key]!} />
 										))}
 								</Table.Cell>
