@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-14T19:20:32+00:00",
+ "generatedAt": "2026-10-14T19:22:31+00:00",
  "updates": [
   {
    "id": "OubbfQc8omznQ8xEo7Qu",
@@ -160,6 +160,10 @@
       "Mora azul",
       "Arandano"
      ]
+    },
+    "crownWidth": {
+     "min": 1,
+     "max": 1.5
     }
    }
   },
@@ -174,9 +178,17 @@
       "Morera"
      ]
     },
+    "height": {
+     "min": 5,
+     "max": 15
+    },
+    "crownWidth": {
+     "min": 4,
+     "max": 8
+    },
     "details": {
-     "heightRangeDescription": "hasta 2 mts",
-     "shape": "hierba",
+     "heightRangeDescription": "más de 10 mts",
+     "shape": "árbol",
      "isFrostResistant": true,
      "lightPreference": "H",
      "humidityPreference": "M",
@@ -841,6 +853,926 @@
      "humidityPreference": "M",
      "isFrostResistant": true,
      "heightRangeDescription": "de 5 a 10 mts"
+    }
+   }
+  },
+  {
+   "id": "B2htBSjJcV0cdM0PqvvM",
+   "name": "Trifolium repens (Trebol blanco)",
+   "updateTime": "2026-10-14T17:42:39.241855Z",
+   "fields": {
+    "height": {
+     "min": 0.1,
+     "max": 0.3
+    }
+   }
+  },
+  {
+   "id": "oPQpj7VxJkbo2lc0w6eA",
+   "name": "Desmodium spp. (Pega pega)",
+   "updateTime": "2026-10-14T17:43:04.420871Z",
+   "fields": {
+    "height": {
+     "min": 0.3,
+     "max": 1.5
+    }
+   }
+  },
+  {
+   "id": "YzxJ36uAFj6krJDtn54f",
+   "name": "Sambucus canadensis (Sauco)",
+   "updateTime": "2026-10-14T17:42:53.900246Z",
+   "fields": {
+    "crownWidth": {
+     "min": 1.5,
+     "max": 4
+    },
+    "details": {
+     "growthHabit": "clumping",
+     "humidityPreference": "M",
+     "observations": {
+      "toleratesPruning": true
+     },
+     "shape": "arbusto",
+     "isFrostResistant": true,
+     "heightRangeDescription": "hasta 5 mts",
+     "lightPreference": "H"
+    }
+   }
+  },
+  {
+   "id": "15TiBL05KYQs93m8hHWh",
+   "name": "Citrus aurantium (Limon canario, limon criollo)",
+   "updateTime": "2026-10-14T17:42:34.719158Z",
+   "fields": {
+    "height": {
+     "min": 3,
+     "max": 6
+    }
+   }
+  },
+  {
+   "id": "258WeIbhNRmytPvT1qDq",
+   "name": "Salvia rosmarinus (Romero)",
+   "updateTime": "2026-10-14T17:42:34.907701Z",
+   "fields": {
+    "height": {
+     "min": 0.5,
+     "max": 1.5
+    },
+    "crownWidth": {
+     "min": 0.6,
+     "max": 1.5
+    }
+   }
+  },
+  {
+   "id": "2C0ZNYThR89F295IVI6D",
+   "name": "Dimocarpus longan (Longan, Ojo de dragón)",
+   "updateTime": "2026-10-14T17:42:35.091347Z",
+   "fields": {
+    "height": {
+     "min": 5.5,
+     "max": 12
+    },
+    "crownWidth": {
+     "min": 5,
+     "max": 8
+    }
+   }
+  },
+  {
+   "id": "5heDuf9cWZcBiqV0E4qS",
+   "name": "Rumex mexicanus (Lengua de Vaca)",
+   "updateTime": "2026-10-14T17:42:36.688565Z",
+   "fields": {
+    "height": {
+     "min": 0.4,
+     "max": 1
+    },
+    "crownWidth": {
+     "min": 0.3,
+     "max": 0.6
+    }
+   }
+  },
+  {
+   "id": "5tqMs5emH7EQO1dw3CNc",
+   "name": "Maranta arundinacea (Sagu)",
+   "updateTime": "2026-10-14T17:42:36.858535Z",
+   "fields": {
+    "height": {
+     "min": 0.7,
+     "max": 1.5
+    },
+    "crownWidth": {
+     "min": 0.5,
+     "max": 0.8
+    }
+   }
+  },
+  {
+   "id": "6S7lt2FcTUNq2Ygi04p4",
+   "name": "Piper auritum (Acuyo)",
+   "updateTime": "2026-10-14T17:42:37.195970Z",
+   "fields": {
+    "height": {
+     "min": 2,
+     "max": 5
+    },
+    "crownWidth": {
+     "min": 1.5,
+     "max": 3
+    }
+   }
+  },
+  {
+   "id": "6Wob09Wt7aLFZZiVmwML",
+   "name": "Phoenix dactylifera (Datil)",
+   "updateTime": "2026-10-14T17:42:37.377628Z",
+   "fields": {
+    "height": {
+     "min": 15,
+     "max": 30
+    },
+    "crownWidth": {
+     "min": 6,
+     "max": 12
+    }
+   }
+  },
+  {
+   "id": "6baEOuX1wntkqeXPwFJY",
+   "name": "Solanum nigrum (Hierba mora)",
+   "updateTime": "2026-10-14T17:42:37.707561Z",
+   "fields": {
+    "height": {
+     "min": 0.3,
+     "max": 0.8
+    },
+    "crownWidth": {
+     "min": 0.3,
+     "max": 0.6
+    }
+   }
+  },
+  {
+   "id": "7KW67LMWm7EKgEFBJPuQ",
+   "name": "Salvia officinalis (Salvia)",
+   "updateTime": "2026-10-14T17:42:37.881361Z",
+   "fields": {
+    "height": {
+     "min": 0.5,
+     "max": 1.5
+    },
+    "crownWidth": {
+     "min": 0.6,
+     "max": 2
+    }
+   }
+  },
+  {
+   "id": "7cWA3tqn6utXRUdMw9IY",
+   "name": "Dioscorea bulbifera (Papa Voladora)",
+   "updateTime": "2026-10-14T17:42:38.215940Z",
+   "fields": {
+    "height": {
+     "min": 6,
+     "max": 13
+    }
+   }
+  },
+  {
+   "id": "842fGZ2qynMX9YOnoLlc",
+   "name": "Vigna unguiculata subsp. sesquipedalis (Ejote Cubano)",
+   "updateTime": "2026-10-14T17:42:38.386320Z",
+   "fields": {
+    "height": {
+     "min": 2,
+     "max": 4
+    }
+   }
+  },
+  {
+   "id": "8rvNPj8W7QbsKTp35Kk6",
+   "name": "Citrus reticulata (Mandarina)",
+   "updateTime": "2026-10-14T17:42:38.899165Z",
+   "fields": {
+    "height": {
+     "min": 2,
+     "max": 6
+    },
+    "crownWidth": {
+     "min": 2,
+     "max": 4
+    }
+   }
+  },
+  {
+   "id": "CeWvOA9XA0KrJxH8yldG",
+   "name": "Phyllostachys aurea (Bambu dorado)",
+   "updateTime": "2026-10-14T17:42:40.099163Z",
+   "fields": {
+    "height": {
+     "min": 4,
+     "max": 9
+    },
+    "crownWidth": {
+     "min": 1,
+     "max": 2
+    }
+   }
+  },
+  {
+   "id": "DN4tgZ23BSgls6kDK52P",
+   "name": "Morus nigra (Morera negra)",
+   "updateTime": "2026-10-14T17:42:40.603451Z",
+   "fields": {
+    "height": {
+     "min": 6,
+     "max": 10
+    }
+   }
+  },
+  {
+   "id": "Dxty05zaEqukopEFrJai",
+   "name": "Solanum quitoense (Lulo)",
+   "updateTime": "2026-10-14T17:42:41.125035Z",
+   "fields": {
+    "height": {
+     "min": 1,
+     "max": 2.5
+    },
+    "crownWidth": {
+     "min": 1.5,
+     "max": 2
+    }
+   }
+  },
+  {
+   "id": "EBPATBiXrh8MMsUnJyqt",
+   "name": "Phyllostachys nigra (Bambu negro chico)",
+   "updateTime": "2026-10-14T17:42:41.287325Z",
+   "fields": {
+    "height": {
+     "min": 4,
+     "max": 8
+    },
+    "crownWidth": {
+     "min": 1,
+     "max": 2
+    }
+   }
+  },
+  {
+   "id": "EHZWCbYJExFT30bP2jlD",
+   "name": "Malus domestica (Manzana, apple)",
+   "updateTime": "2026-10-14T17:42:41.455413Z",
+   "fields": {
+    "height": {
+     "min": 3,
+     "max": 8
+    },
+    "crownWidth": {
+     "min": 3,
+     "max": 6
+    }
+   }
+  },
+  {
+   "id": "EOwTjv7LRcLBYmYBbkAO",
+   "name": "Carpobrotus acinaciformis (Flor del cuchillo, diente de dragón)",
+   "updateTime": "2026-10-14T17:42:41.641479Z",
+   "fields": {
+    "height": {
+     "min": 0.1,
+     "max": 0.2
+    }
+   }
+  },
+  {
+   "id": "I1nLKnFPkQb9EcKePuM2",
+   "name": "Elettaria cardamomum (Cardamomo)",
+   "updateTime": "2026-10-14T17:42:44.552123Z",
+   "fields": {
+    "height": {
+     "min": 2,
+     "max": 4
+    },
+    "crownWidth": {
+     "min": 1,
+     "max": 2
+    }
+   }
+  },
+  {
+   "id": "I6qNOy2JaotjNTI3THjO",
+   "name": "Smallanthus sonchifolius (Yacon)",
+   "updateTime": "2026-10-14T17:42:44.718959Z",
+   "fields": {
+    "height": {
+     "min": 1.5,
+     "max": 2.5
+    },
+    "crownWidth": {
+     "min": 0.6,
+     "max": 1
+    }
+   }
+  },
+  {
+   "id": "IFjRp5BiUzbNzy5GS0Rq",
+   "name": "Chamaedorea tepejilote (Tepejilote)",
+   "updateTime": "2026-10-14T17:42:44.887581Z",
+   "fields": {
+    "height": {
+     "min": 2,
+     "max": 5
+    },
+    "crownWidth": {
+     "min": 1.5,
+     "max": 2.5
+    }
+   }
+  },
+  {
+   "id": "Itu8wVTqgZcs2uUDCdkd",
+   "name": "Capsicum pubescens (Chile cera)",
+   "updateTime": "2026-10-14T17:42:45.395518Z",
+   "fields": {
+    "height": {
+     "min": 1,
+     "max": 2
+    },
+    "crownWidth": {
+     "min": 1,
+     "max": 2
+    }
+   }
+  },
+  {
+   "id": "JiZp7QxotQWnArIcig8U",
+   "name": "Allium fistulosum (Cebolla Welsh)",
+   "updateTime": "2026-10-14T17:42:45.911852Z",
+   "fields": {
+    "height": {
+     "min": 0.4,
+     "max": 0.6
+    },
+    "crownWidth": {
+     "min": 0.2,
+     "max": 0.5
+    }
+   }
+  },
+  {
+   "id": "KEGnKY0gQIA2GkFwaAeT",
+   "name": "Cymbopogon citratus (Zacate limon)",
+   "updateTime": "2026-10-14T17:42:46.254337Z",
+   "fields": {
+    "height": {
+     "min": 0.6,
+     "max": 1.5
+    },
+    "crownWidth": {
+     "min": 0.6,
+     "max": 1
+    }
+   }
+  },
+  {
+   "id": "KZzxuHLoDo5EWyk2JoiN",
+   "name": "Moringa stenopetala (Moringa)",
+   "updateTime": "2026-10-14T17:42:46.426791Z",
+   "fields": {
+    "height": {
+     "min": 4,
+     "max": 10
+    }
+   }
+  },
+  {
+   "id": "MNlwakp8xrsg1ooo4nOd",
+   "name": "Allium sp. (Cebollino)",
+   "updateTime": "2026-10-14T17:42:47.294174Z",
+   "fields": {
+    "height": {
+     "min": 0.2,
+     "max": 0.4
+    },
+    "crownWidth": {
+     "min": 0.15,
+     "max": 0.25
+    }
+   }
+  },
+  {
+   "id": "Mzi0816KPs4PypR8HmID",
+   "name": "Pithecellobium dulce (Guamuchil)",
+   "updateTime": "2026-10-14T17:42:47.463508Z",
+   "fields": {
+    "height": {
+     "min": 10,
+     "max": 15
+    },
+    "crownWidth": {
+     "min": 10,
+     "max": 12
+    }
+   }
+  },
+  {
+   "id": "N2fpTxFnoR9zQrru2ERh",
+   "name": "Urtica dioica (Ortiga)",
+   "updateTime": "2026-10-14T17:42:47.632805Z",
+   "fields": {
+    "height": {
+     "min": 0.6,
+     "max": 1.5
+    },
+    "crownWidth": {
+     "min": 0.5,
+     "max": 1
+    }
+   }
+  },
+  {
+   "id": "NDuwU1nWbwan2nP46ozF",
+   "name": "Asparagus officinalis (Esparrago)",
+   "updateTime": "2026-10-14T17:42:47.804920Z",
+   "fields": {
+    "height": {
+     "min": 1,
+     "max": 2
+    },
+    "crownWidth": {
+     "min": 0.6,
+     "max": 1
+    }
+   }
+  },
+  {
+   "id": "NuC9Ra9QRmezjLQtJ9js",
+   "name": "Citrus sinensis (Naranja)",
+   "updateTime": "2026-10-14T17:42:48.309066Z",
+   "fields": {
+    "height": {
+     "min": 4,
+     "max": 10
+    },
+    "crownWidth": {
+     "min": 4,
+     "max": 6
+    }
+   }
+  },
+  {
+   "id": "O5nIxPukCLDJslI3pjBd",
+   "name": "Rubus idaeus (Frambuesa)",
+   "updateTime": "2026-10-14T17:42:48.659217Z",
+   "fields": {
+    "height": {
+     "min": 1,
+     "max": 2
+    },
+    "crownWidth": {
+     "min": 0.5,
+     "max": 1
+    }
+   }
+  },
+  {
+   "id": "T6ahN2M3roEv2I2efVAh",
+   "name": "Salix spp. (Sauce)",
+   "updateTime": "2026-10-14T17:42:51.041276Z",
+   "fields": {
+    "height": {
+     "min": 4,
+     "max": 20
+    },
+    "crownWidth": {
+     "min": 4,
+     "max": 10
+    }
+   }
+  },
+  {
+   "id": "U4EIPBsy5tSqacoHL7fm",
+   "name": "Wisteria sinensis (Glicinia)",
+   "updateTime": "2026-10-14T17:42:51.373929Z",
+   "fields": {
+    "height": {
+     "min": 10,
+     "max": 20
+    }
+   }
+  },
+  {
+   "id": "UcrvgpUfe17QLQPBEHYY",
+   "name": "Ardisia compressa (Capulin de Mayo)",
+   "updateTime": "2026-10-14T17:42:51.705753Z",
+   "fields": {
+    "height": {
+     "min": 1.5,
+     "max": 6
+    },
+    "crownWidth": {
+     "min": 1.5,
+     "max": 3
+    }
+   }
+  },
+  {
+   "id": "VmefiKW4VYs3fXAsMhDj",
+   "name": "Musa paradisiaca (Platano)",
+   "updateTime": "2026-10-14T17:42:52.389221Z",
+   "fields": {
+    "height": {
+     "min": 3,
+     "max": 6
+    },
+    "crownWidth": {
+     "min": 3,
+     "max": 4
+    }
+   }
+  },
+  {
+   "id": "aKPLIHblvRmUneNrcmQP",
+   "name": "Phormium tenax (Fornio)",
+   "updateTime": "2026-10-14T17:42:54.407912Z",
+   "fields": {
+    "height": {
+     "min": 1.5,
+     "max": 3
+    },
+    "crownWidth": {
+     "min": 1.5,
+     "max": 2.5
+    }
+   }
+  },
+  {
+   "id": "akmYEcMy5v45gfVnbxPB",
+   "name": "Casuarina decaisneana (Casuarina del desierto)",
+   "updateTime": "2026-10-14T17:42:54.750685Z",
+   "fields": {
+    "height": {
+     "min": 10,
+     "max": 15
+    }
+   }
+  },
+  {
+   "id": "b4QkSfeBMUQDjVQHczRr",
+   "name": "Heliconia spp. (Platanillo, chilalaca)",
+   "updateTime": "2026-10-14T17:42:54.917461Z",
+   "fields": {
+    "height": {
+     "min": 1.5,
+     "max": 4
+    },
+    "crownWidth": {
+     "min": 1,
+     "max": 2
+    }
+   }
+  },
+  {
+   "id": "cisdgUL8Fmyst5fNkDcC",
+   "name": "Vitis vinifera (Uva, vid, parra)",
+   "updateTime": "2026-10-14T17:42:55.927967Z",
+   "fields": {
+    "height": {
+     "min": 2,
+     "max": 10
+    }
+   }
+  },
+  {
+   "id": "ckUA6ffdZK0ts9YHdrwA",
+   "name": "Annona cherimola (Chirimoya)",
+   "updateTime": "2026-10-14T17:42:56.101473Z",
+   "fields": {
+    "height": {
+     "min": 4,
+     "max": 8
+    }
+   }
+  },
+  {
+   "id": "dIdlCSeguofcNQPqlnJ4",
+   "name": "Enset ventricosum (Enset)",
+   "updateTime": "2026-10-14T17:42:56.607053Z",
+   "fields": {
+    "height": {
+     "min": 4,
+     "max": 10
+    },
+    "crownWidth": {
+     "min": 3,
+     "max": 5
+    }
+   }
+  },
+  {
+   "id": "fqKsJaPUVtlKwF1yiwnK",
+   "name": "Citrus × microcarpa (Limon calamondin)",
+   "updateTime": "2026-10-14T17:42:57.783940Z",
+   "fields": {
+    "height": {
+     "min": 3,
+     "max": 6
+    },
+    "crownWidth": {
+     "min": 2,
+     "max": 4
+    }
+   }
+  },
+  {
+   "id": "g1fGwLW03TJqP3hbCldG",
+   "name": "Chamaecytisus palmensis (Tagasaste)",
+   "updateTime": "2026-10-14T17:42:57.958784Z",
+   "fields": {
+    "height": {
+     "min": 3,
+     "max": 6
+    }
+   }
+  },
+  {
+   "id": "gYDptckll60zyO5OWGB0",
+   "name": "Inga vera (Jinicuil)",
+   "updateTime": "2026-10-14T17:42:58.476534Z",
+   "fields": {
+    "height": {
+     "min": 8,
+     "max": 15
+    },
+    "crownWidth": {
+     "min": 8,
+     "max": 12
+    }
+   }
+  },
+  {
+   "id": "hd5rhvih3I3SOhrqKQfv",
+   "name": "Sapindus saponaria (Jaboncillo, Sululo, pipe, kile)",
+   "updateTime": "2026-10-14T17:42:59.503764Z",
+   "fields": {
+    "crownWidth": {
+     "min": 6,
+     "max": 10
+    }
+   }
+  },
+  {
+   "id": "htWA3aYfOk4oJT3C6F5O",
+   "name": "Berberis aquifolium (Mahonia)",
+   "updateTime": "2026-10-14T17:42:59.673436Z",
+   "fields": {
+    "height": {
+     "min": 0.8,
+     "max": 2
+    },
+    "crownWidth": {
+     "min": 0.5,
+     "max": 1.5
+    }
+   }
+  },
+  {
+   "id": "jCwJrFviGgqYym5S2NG9",
+   "name": "Aloe vera (Sabila, savila)",
+   "updateTime": "2026-10-14T17:43:00.171015Z",
+   "fields": {
+    "height": {
+     "min": 0.5,
+     "max": 0.8
+    },
+    "crownWidth": {
+     "min": 0.5,
+     "max": 0.8
+    }
+   }
+  },
+  {
+   "id": "kckxgI9SgrmXqWejWNY6",
+   "name": "Chrysobalanus icaco (Icaco)",
+   "updateTime": "2026-10-14T17:43:01.366140Z",
+   "fields": {
+    "height": {
+     "min": 1,
+     "max": 5
+    }
+   }
+  },
+  {
+   "id": "l21To32N35ZYrg1eX1RH",
+   "name": "Erythrina edulis (Chachafruto)",
+   "updateTime": "2026-10-14T17:43:01.703845Z",
+   "fields": {
+    "height": {
+     "min": 6,
+     "max": 14
+    },
+    "crownWidth": {
+     "min": 5,
+     "max": 8
+    }
+   }
+  },
+  {
+   "id": "lEC5A4cCWrEapg3eZces",
+   "name": "Zingiber officinale (Jengibre)",
+   "updateTime": "2026-10-14T17:43:01.868363Z",
+   "fields": {
+    "crownWidth": {
+     "min": 0.3,
+     "max": 0.5
+    }
+   }
+  },
+  {
+   "id": "m5fEfFhT97QS7mxk57xu",
+   "name": "Saccharum officinarum (Caña de azucar)",
+   "updateTime": "2026-10-14T17:43:02.386276Z",
+   "fields": {
+    "height": {
+     "min": 3,
+     "max": 5
+    }
+   }
+  },
+  {
+   "id": "m8de9wvfDgZaGYHhNS2m",
+   "name": "Carya illinoinensis (Nogal pecanero, pecan nut, Nuez de la isla, nuez encarcelada, walnut pecan)",
+   "updateTime": "2026-10-14T17:43:02.585761Z",
+   "fields": {
+    "height": {
+     "min": 10,
+     "max": 40
+    },
+    "crownWidth": {
+     "min": 10,
+     "max": 20
+    }
+   }
+  },
+  {
+   "id": "nUb3jDQo300msLEeeL3d",
+   "name": "Casimiroa edulis (Zapote blanco)",
+   "updateTime": "2026-10-14T17:43:03.261095Z",
+   "fields": {
+    "height": {
+     "min": 8,
+     "max": 15
+    },
+    "crownWidth": {
+     "min": 5,
+     "max": 8
+    }
+   }
+  },
+  {
+   "id": "npmixKBBhzPFXGdb3QJa",
+   "name": "Dysphania ambrosioides (Epazote)",
+   "updateTime": "2026-10-14T17:43:03.597558Z",
+   "fields": {
+    "height": {
+     "min": 0.4,
+     "max": 1.2
+    },
+    "crownWidth": {
+     "min": 0.3,
+     "max": 0.6
+    }
+   }
+  },
+  {
+   "id": "oPubgNOxTzg1uih5N1qy",
+   "name": "Curcuma longa (Curcuma)",
+   "updateTime": "2026-10-14T17:43:04.583881Z",
+   "fields": {
+    "height": {
+     "min": 0.6,
+     "max": 1.3
+    },
+    "crownWidth": {
+     "min": 0.5,
+     "max": 1
+    }
+   }
+  },
+  {
+   "id": "on6JwRDS5LGRoxU3MVMu",
+   "name": "Sechium edule (Chayote, pataste)",
+   "updateTime": "2026-10-14T17:43:04.932401Z",
+   "fields": {
+    "height": {
+     "min": 5,
+     "max": 10
+    }
+   }
+  },
+  {
+   "id": "p7hQO502HZ2OFQrJbgfn",
+   "name": "Rumex acetosa (Sorrel)",
+   "updateTime": "2026-10-14T17:43:05.105175Z",
+   "fields": {
+    "crownWidth": {
+     "min": 0.3,
+     "max": 0.5
+    }
+   }
+  },
+  {
+   "id": "s4riudADE2TGAafYIlXA",
+   "name": "Anacardium occidentale (Marañon, cayu)",
+   "updateTime": "2026-10-14T17:43:05.781746Z",
+   "fields": {
+    "crownWidth": {
+     "min": 8,
+     "max": 12
+    }
+   }
+  },
+  {
+   "id": "vKFBx5Ud3x2QSsFIu8ye",
+   "name": "Artocarpus altilis (Arbol del pan, frutipan, breadfruit, pan de fruta)",
+   "updateTime": "2026-10-14T17:43:07.826757Z",
+   "fields": {
+    "crownWidth": {
+     "min": 9,
+     "max": 12
+    }
+   }
+  },
+  {
+   "id": "w7YCGhrpdRMz65COilsK",
+   "name": "Erythrina americana (Colorin)",
+   "updateTime": "2026-10-14T17:43:08.357451Z",
+   "fields": {
+    "crownWidth": {
+     "min": 6,
+     "max": 8
+    }
+   }
+  },
+  {
+   "id": "wFaCOKxi4kkOdAQCQbVn",
+   "name": "Annona diversifolia (Ilama)",
+   "updateTime": "2026-10-14T17:43:08.528891Z",
+   "fields": {
+    "height": {
+     "min": 6,
+     "max": 10
+    },
+    "crownWidth": {
+     "min": 5,
+     "max": 7
+    }
+   }
+  },
+  {
+   "id": "xEU6nsOYA2ctEH9O1wAc",
+   "name": "Equisetum arvense (Cola de caballo, equiseto)",
+   "updateTime": "2026-10-14T17:43:09.208740Z",
+   "fields": {
+    "crownWidth": {
+     "min": 0.3,
+     "max": 0.5
+    }
+   }
+  },
+  {
+   "id": "yyPoc7RnhjOUnx8t048n",
+   "name": "Argania spinosa (Argan)",
+   "updateTime": "2026-10-14T17:43:10.929046Z",
+   "fields": {
+    "height": {
+     "min": 8,
+     "max": 10
+    },
+    "crownWidth": {
+     "min": 5,
+     "max": 8
+    }
+   }
+  },
+  {
+   "id": "z97B0j0xo5xm4u9crvLp",
+   "name": "Rubus fruticosus (Zarzamora)",
+   "updateTime": "2026-10-14T17:43:11.088713Z",
+   "fields": {
+    "height": {
+     "min": 1,
+     "max": 3
+    },
+    "crownWidth": {
+     "min": 1,
+     "max": 2
     }
    }
   }

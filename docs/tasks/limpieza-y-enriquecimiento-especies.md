@@ -819,11 +819,11 @@ node scripts/species-cleanup/apply-species-cleanup.mjs --file=scripts/species-cl
 - Vaccinium sp. (Arandano): Vaccinium sp. (grupo dudoso)
 - Selaginella sp. (Doradilla): Selaginella sp. (grupo dudoso)
 
-## Tercera pasada: grupos dudosos resueltos (2026-10-14)
+## Tercera pasada: grupos dudosos y errores evidentes (2026-10-14)
 
 La pasada 2 se aplicó en Firestore el 2026-10-14 (217 escrituras correctas).
 
-Decisiones del responsable sobre los grupos dudosos, en `scripts/species-cleanup/changes-pass3.json`. El registro que se conserva hereda nombres comunes y los campos que le faltaban. Los registros de *Musa* se conservan por cultivar; sólo se eliminaron los genéricos que mezclaban varios cultivares.
+Decisiones del responsable sobre los grupos dudosos, en `scripts/species-cleanup/changes-pass3.json`. El registro que se conserva hereda nombres comunes y los campos que le faltaban. Los registros de *Musa* se conservan por cultivar; sólo se eliminaron los genéricos que mezclaban varios cultivares. También se corrigen valores evidentemente erróneos (alturas imposibles, formas incorrectas) y los rangos con mínimo igual a máximo se convierten en rangos típicos, ampliados para incluir siempre el valor original.
 
 | Tipo | Registro | Resultado | Motivo |
 | --- | --- | --- | --- |
@@ -843,5 +843,120 @@ Decisiones del responsable sobre los grupos dudosos, en `scripts/species-cleanup
 | fusión | Musa sp. (bananas silver, bread, tropical apple) | repartido entre Plateado, Manzano y banana bread | Registro que mezclaba tres cultivares |
 | corrección | Musa acuminata (plátano malayo, rojo, nanica) | "plátano rojo" → cv. Morado; "banana nanica" → cv. Enano | Cada nombre pertenece a un cultivar que ya tiene su registro |
 | corrección | Prunus sp. (Albaricoque japonés, ciruela china, japanese plum) | Prunus mume; se quitan "ciruela china" y "japanese plum" (son P. salicina) | Decisión del responsable |
+| corrección | Trifolium repens (Trebol blanco) | height: 10–10 → 0.1–0.3 | Altura de 10 m imposible para un trébol (probable error de unidades) |
+| corrección | Desmodium spp. (Pega pega) | height: 40–40 → 0.3–1.5 | Altura de 40 m imposible para Desmodium (probable error de unidades) |
+| corrección | Morus alba (Morera para hoja, blacberry (silkworm)) | height: 2–2 → 5–15 | Morus alba es árbol de 5–15 m |
+| corrección | Morus alba (Morera para hoja, blacberry (silkworm)) | crownWidth: 1–1 → 4–8 | Copa típica de árbol adulto |
+| corrección | Morus alba (Morera para hoja, blacberry (silkworm)) | forma: hierba → árbol | Es un árbol |
+| corrección | Sambucus canadensis (Sauco) | forma: hierba → arbusto | Es un arbusto |
+| corrección | Citrus aurantium (Limon canario, limon criollo) | height: 4 → 3–6 | Valor único convertido al rango típico |
+| corrección | Salvia rosmarinus (Romero) | height: 1.5 → 0.5–1.5 | Valor único convertido al rango típico |
+| corrección | Salvia rosmarinus (Romero) | crownWidth: 1.5 → 0.6–1.5 | Valor único convertido al rango típico |
+| corrección | Dimocarpus longan (Longan, Ojo de dragón) | height: 5.5–5.5 → 5.5–12 | Valor único convertido a rango (se amplía para incluir el valor original) |
+| corrección | Dimocarpus longan (Longan, Ojo de dragón) | crownWidth: 5 → 5–8 | Valor único convertido al rango típico |
+| corrección | Rumex mexicanus (Lengua de Vaca) | height: 0.4 → 0.4–1 | Valor único convertido al rango típico |
+| corrección | Rumex mexicanus (Lengua de Vaca) | crownWidth: 0.6 → 0.3–0.6 | Valor único convertido al rango típico |
+| corrección | Maranta arundinacea (Sagu) | height: 0.7 → 0.7–1.5 | Valor único convertido al rango típico |
+| corrección | Maranta arundinacea (Sagu) | crownWidth: 0.5 → 0.5–0.8 | Valor único convertido al rango típico |
+| corrección | Piper auritum (Acuyo) | height: 2 → 2–5 | Valor único convertido al rango típico |
+| corrección | Piper auritum (Acuyo) | crownWidth: 1.5 → 1.5–3 | Valor único convertido al rango típico |
+| corrección | Phoenix dactylifera (Datil) | height: 30 → 15–30 | Valor único convertido al rango típico |
+| corrección | Phoenix dactylifera (Datil) | crownWidth: 12–12 → 6–12 | Valor único convertido a rango (se amplía para incluir el valor original) |
+| corrección | Solanum nigrum (Hierba mora) | height: 0.6 → 0.3–0.8 | Valor único convertido al rango típico |
+| corrección | Solanum nigrum (Hierba mora) | crownWidth: 0.6 → 0.3–0.6 | Valor único convertido al rango típico |
+| corrección | Salvia officinalis (Salvia) | height: 1.5–1.5 → 0.5–1.5 | Valor único convertido a rango (se amplía para incluir el valor original) |
+| corrección | Salvia officinalis (Salvia) | crownWidth: 2–2 → 0.6–2 | Valor único convertido a rango (se amplía para incluir el valor original) |
+| corrección | Dioscorea bulbifera (Papa Voladora) | height: 13 → 6–13 | Valor único convertido al rango típico |
+| corrección | Vigna unguiculata subsp. sesquipedalis (Ejote Cubano) | height: 2.5 → 2–4 | Valor único convertido al rango típico |
+| corrección | Citrus reticulata (Mandarina) | height: 4 → 2–6 | Valor único convertido al rango típico |
+| corrección | Citrus reticulata (Mandarina) | crownWidth: 3.6 → 2–4 | Valor único convertido al rango típico |
+| corrección | Phyllostachys aurea (Bambu dorado) | height: 9 → 4–9 | Valor único convertido al rango típico |
+| corrección | Phyllostachys aurea (Bambu dorado) | crownWidth: 2 → 1–2 | Valor único convertido al rango típico |
+| corrección | Morus nigra (Morera negra) | height: 9 → 6–10 | Valor único convertido al rango típico |
+| corrección | Solanum quitoense (Lulo) | height: 2 → 1–2.5 | Valor único convertido al rango típico |
+| corrección | Solanum quitoense (Lulo) | crownWidth: 1.5 → 1.5–2 | Valor único convertido al rango típico |
+| corrección | Phyllostachys nigra (Bambu negro chico) | height: 8 → 4–8 | Valor único convertido al rango típico |
+| corrección | Phyllostachys nigra (Bambu negro chico) | crownWidth: 2 → 1–2 | Valor único convertido al rango típico |
+| corrección | Malus domestica (Manzana, apple) | height: 4 → 3–8 | Valor único convertido al rango típico |
+| corrección | Malus domestica (Manzana, apple) | crownWidth: 5 → 3–6 | Valor único convertido al rango típico |
+| corrección | Carpobrotus acinaciformis (Flor del cuchillo, diente de dragón) | height: 0.2 → 0.1–0.2 | Valor único convertido al rango típico |
+| corrección | Elettaria cardamomum (Cardamomo) | height: 2 → 2–4 | Valor único convertido al rango típico |
+| corrección | Elettaria cardamomum (Cardamomo) | crownWidth: 2 → 1–2 | Valor único convertido al rango típico |
+| corrección | Smallanthus sonchifolius (Yacon) | height: 1.5 → 1.5–2.5 | Valor único convertido al rango típico |
+| corrección | Smallanthus sonchifolius (Yacon) | crownWidth: 0.6 → 0.6–1 | Valor único convertido al rango típico |
+| corrección | Chamaedorea tepejilote (Tepejilote) | height: 2.5 → 2–5 | Valor único convertido al rango típico |
+| corrección | Chamaedorea tepejilote (Tepejilote) | crownWidth: 1.5 → 1.5–2.5 | Valor único convertido al rango típico |
+| corrección | Capsicum pubescens (Chile cera) | height: 2 → 1–2 | Valor único convertido al rango típico |
+| corrección | Capsicum pubescens (Chile cera) | crownWidth: 2 → 1–2 | Valor único convertido al rango típico |
+| corrección | Allium fistulosum (Cebolla Welsh) | height: 0.6 → 0.4–0.6 | Valor único convertido al rango típico |
+| corrección | Allium fistulosum (Cebolla Welsh) | crownWidth: 0.5–0.5 → 0.2–0.5 | Valor único convertido a rango (se amplía para incluir el valor original) |
+| corrección | Cymbopogon citratus (Zacate limon) | height: 0.6 → 0.6–1.5 | Valor único convertido al rango típico |
+| corrección | Cymbopogon citratus (Zacate limon) | crownWidth: 0.6 → 0.6–1 | Valor único convertido al rango típico |
+| corrección | Moringa stenopetala (Moringa) | height: 4–4 → 4–10 | Valor único convertido a rango (se amplía para incluir el valor original) |
+| corrección | Allium sp. (Cebollino) | height: 0.2 → 0.2–0.4 | Valor único convertido al rango típico |
+| corrección | Allium sp. (Cebollino) | crownWidth: 0.25 → 0.15–0.25 | Valor único convertido al rango típico |
+| corrección | Pithecellobium dulce (Guamuchil) | height: 10 → 10–15 | Valor único convertido al rango típico |
+| corrección | Pithecellobium dulce (Guamuchil) | crownWidth: 10 → 10–12 | Valor único convertido al rango típico |
+| corrección | Urtica dioica (Ortiga) | height: 0.6 → 0.6–1.5 | Valor único convertido al rango típico |
+| corrección | Urtica dioica (Ortiga) | crownWidth: 0.6 → 0.5–1 | Valor único convertido al rango típico |
+| corrección | Asparagus officinalis (Esparrago) | height: 1 → 1–2 | Valor único convertido al rango típico |
+| corrección | Asparagus officinalis (Esparrago) | crownWidth: 0.6 → 0.6–1 | Valor único convertido al rango típico |
+| corrección | Citrus sinensis (Naranja) | height: 4–4 → 4–10 | Valor único convertido a rango (se amplía para incluir el valor original) |
+| corrección | Citrus sinensis (Naranja) | crownWidth: 5 → 4–6 | Valor único convertido al rango típico |
+| corrección | Rubus idaeus (Frambuesa) | height: 1.2 → 1–2 | Valor único convertido al rango típico |
+| corrección | Rubus idaeus (Frambuesa) | crownWidth: 1 → 0.5–1 | Valor único convertido al rango típico |
+| corrección | Salix spp. (Sauce) | height: 4–4 → 4–20 | Valor único convertido a rango (se amplía para incluir el valor original) |
+| corrección | Salix spp. (Sauce) | crownWidth: 4 → 4–10 | Valor único convertido al rango típico |
+| corrección | Wisteria sinensis (Glicinia) | height: 10 → 10–20 | Valor único convertido al rango típico |
+| corrección | Ardisia compressa (Capulin de Mayo) | height: 1.5 → 1.5–6 | Valor único convertido al rango típico |
+| corrección | Ardisia compressa (Capulin de Mayo) | crownWidth: 1.5 → 1.5–3 | Valor único convertido al rango típico |
+| corrección | Musa paradisiaca (Platano) | height: 5 → 3–6 | Valor único convertido al rango típico |
+| corrección | Musa paradisiaca (Platano) | crownWidth: 4 → 3–4 | Valor único convertido al rango típico |
+| corrección | Sambucus canadensis (Sauco) | crownWidth: 1.5–1.5 → 1.5–4 | Valor único convertido a rango (se amplía para incluir el valor original) |
+| corrección | Phormium tenax (Fornio) | height: 2.5 → 1.5–3 | Valor único convertido al rango típico |
+| corrección | Phormium tenax (Fornio) | crownWidth: 2.5 → 1.5–2.5 | Valor único convertido al rango típico |
+| corrección | Casuarina decaisneana (Casuarina del desierto) | height: 15 → 10–15 | Valor único convertido al rango típico |
+| corrección | Heliconia spp. (Platanillo, chilalaca) | height: 2.2 → 1.5–4 | Valor único convertido al rango típico |
+| corrección | Heliconia spp. (Platanillo, chilalaca) | crownWidth: 1.5 → 1–2 | Valor único convertido al rango típico |
+| corrección | Vitis vinifera (Uva, vid, parra) | height: 10 → 2–10 | Valor único convertido al rango típico |
+| corrección | Annona cherimola (Chirimoya) | height: 4.2 → 4–8 | Valor único convertido al rango típico |
+| corrección | Enset ventricosum (Enset) | height: 5 → 4–10 | Valor único convertido al rango típico |
+| corrección | Enset ventricosum (Enset) | crownWidth: 5 → 3–5 | Valor único convertido al rango típico |
+| corrección | Citrus × microcarpa (Limon calamondin) | height: 4 → 3–6 | Valor único convertido al rango típico |
+| corrección | Citrus × microcarpa (Limon calamondin) | crownWidth: 3.5 → 2–4 | Valor único convertido al rango típico |
+| corrección | Chamaecytisus palmensis (Tagasaste) | height: 5 → 3–6 | Valor único convertido al rango típico |
+| corrección | Inga vera (Jinicuil) | height: 15 → 8–15 | Valor único convertido al rango típico |
+| corrección | Inga vera (Jinicuil) | crownWidth: 8 → 8–12 | Valor único convertido al rango típico |
+| corrección | Sapindus saponaria (Jaboncillo, Sululo, pipe, kile) | crownWidth: 6 → 6–10 | Valor único convertido al rango típico |
+| corrección | Berberis aquifolium (Mahonia) | height: 0.8–0.8 → 0.8–2 | Valor único convertido a rango (se amplía para incluir el valor original) |
+| corrección | Berberis aquifolium (Mahonia) | crownWidth: 0.5–0.5 → 0.5–1.5 | Valor único convertido a rango (se amplía para incluir el valor original) |
+| corrección | Aloe vera (Sabila, savila) | height: 0.5 → 0.5–0.8 | Valor único convertido al rango típico |
+| corrección | Aloe vera (Sabila, savila) | crownWidth: 0.5 → 0.5–0.8 | Valor único convertido al rango típico |
+| corrección | Chrysobalanus icaco (Icaco) | height: 3 → 1–5 | Valor único convertido al rango típico |
+| corrección | Erythrina edulis (Chachafruto) | height: 8 → 6–14 | Valor único convertido al rango típico |
+| corrección | Erythrina edulis (Chachafruto) | crownWidth: 6 → 5–8 | Valor único convertido al rango típico |
+| corrección | Zingiber officinale (Jengibre) | crownWidth: 0.4 → 0.3–0.5 | Valor único convertido al rango típico |
+| corrección | Saccharum officinarum (Caña de azucar) | height: 3 → 3–5 | Valor único convertido al rango típico |
+| corrección | Carya illinoinensis (Nogal pecanero, pecan nut, Nuez de la isla, nuez encarcelada, walnut pecan) | height: 10–10 → 10–40 | Valor único convertido a rango (se amplía para incluir el valor original) |
+| corrección | Carya illinoinensis (Nogal pecanero, pecan nut, Nuez de la isla, nuez encarcelada, walnut pecan) | crownWidth: 10 → 10–20 | Valor único convertido al rango típico |
+| corrección | Casimiroa edulis (Zapote blanco) | height: 8 → 8–15 | Valor único convertido al rango típico |
+| corrección | Casimiroa edulis (Zapote blanco) | crownWidth: 5 → 5–8 | Valor único convertido al rango típico |
+| corrección | Dysphania ambrosioides (Epazote) | height: 0.7 → 0.4–1.2 | Valor único convertido al rango típico |
+| corrección | Dysphania ambrosioides (Epazote) | crownWidth: 0.6 → 0.3–0.6 | Valor único convertido al rango típico |
+| corrección | Curcuma longa (Curcuma) | height: 1.3 → 0.6–1.3 | Valor único convertido al rango típico |
+| corrección | Curcuma longa (Curcuma) | crownWidth: 1 → 0.5–1 | Valor único convertido al rango típico |
+| corrección | Sechium edule (Chayote, pataste) | height: 10 → 5–10 | Valor único convertido al rango típico |
+| corrección | Rumex acetosa (Sorrel) | crownWidth: 0.5 → 0.3–0.5 | Valor único convertido al rango típico |
+| corrección | Anacardium occidentale (Marañon, cayu) | crownWidth: 8 → 8–12 | Valor único convertido al rango típico |
+| corrección | Vaccinium corymbosum (Mora azul) | crownWidth: 1.5 → 1–1.5 | Valor único convertido al rango típico |
+| corrección | Artocarpus altilis (Arbol del pan, frutipan, breadfruit, pan de fruta) | crownWidth: 9 → 9–12 | Valor único convertido al rango típico |
+| corrección | Erythrina americana (Colorin) | crownWidth: 6 → 6–8 | Valor único convertido al rango típico |
+| corrección | Annona diversifolia (Ilama) | height: 8 → 6–10 | Valor único convertido al rango típico |
+| corrección | Annona diversifolia (Ilama) | crownWidth: 7 → 5–7 | Valor único convertido al rango típico |
+| corrección | Equisetum arvense (Cola de caballo, equiseto) | crownWidth: 0.4 → 0.3–0.5 | Valor único convertido al rango típico |
+| corrección | Argania spinosa (Argan) | height: 8 → 8–10 | Valor único convertido al rango típico |
+| corrección | Argania spinosa (Argan) | crownWidth: 5 → 5–8 | Valor único convertido al rango típico |
+| corrección | Rubus fruticosus (Zarzamora) | height: 1.5 → 1–3 | Valor único convertido al rango típico |
+| corrección | Rubus fruticosus (Zarzamora) | crownWidth: 1 → 1–2 | Valor único convertido al rango típico |
 
 Se conservan separados por decisión del responsable: *Amaranthus hypochondriacus* (Amaranto, grano) y *Amaranthus* sp. (Quelites, verdura); *Pyrus communis* (Perón) y *Pyrus* sp. (Pera); *Selaginella martensii* y *S. lepidophylla*. Los registros 'babosa', 'Caferana', 'Cosamalu', 'Huevo de chivo' y 'Menta de matón' ya habían sido eliminados desde el panel de admin.
