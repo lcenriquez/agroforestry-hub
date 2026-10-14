@@ -36,7 +36,7 @@ export default function Nav() {
 					<NextLink href="/">
 						<HStack gap={2}>
 							<Logo size={28} />
-							<Text fontFamily="heading" fontWeight="bold" color="gray.800" _dark={{ color: 'white' }}>
+							<Text fontFamily="heading" fontWeight="bold" whiteSpace="nowrap" color="gray.800" _dark={{ color: 'white' }}>
 								SAF Hub
 							</Text>
 						</HStack>

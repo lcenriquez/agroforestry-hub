@@ -73,15 +73,18 @@ adapters/          Acceso a Firebase: auth.ts, firestore.ts (Firestore) y storag
 components/
   Elements/         Piezas pequeñas de UI (LoadingScreen, ThemeSwitch)
   Experiences/       Compartir experiencias por especie (ExperienceForm, ExperienceList, PhotoUploader)
+  Designer/          Diseñador de SAF (/disenador): vistas en planta y perfil, análisis en vivo, guardado
   Footer/            Pie de página
   Helpers/           Representaciones visuales (iconos con tooltip) de las especies
+  Home/              Banner ilustrado (SVG) y resumen de SAF de la página de inicio
   Nav/               Barra de navegación y menú de usuario
+  Saf/               Guía "¿Qué es un SAF?" (/saf): contenido con fuentes en content.ts
   Tables/            Tabla de especies
   ui/                Utilidades de Chakra UI v3 (color-mode: ColorModeProvider/useColorMode)
 contexts/           AuthContext: contexto de React para el usuario autenticado
 hocs/               withLayout.tsx: HOCs de layout (público / autenticado / vacío)
 interfaces/         Tipos compartidos: Common.ts, Species.ts, Experience.ts
-pages/              Rutas de Next.js (Pages Router): /, /signin, /signup, /account/action, /species
+pages/              Rutas de Next.js (Pages Router): /, /saf, /disenador, /signin, /signup, /account/action, /species
 public/             Assets estáticos (favicon, etc.)
 styles/             Configuración del sistema de diseño de Chakra UI (theme.tsx)
 firebase-config.ts  Inicialización del SDK de Firebase (app, auth, database, storage)
@@ -115,6 +118,22 @@ Cualquier persona con sesión iniciada puede compartir, por especie (`/species?i
 - `components/Experiences/` contiene el formulario (`ExperienceForm`), el listado (`ExperienceList`) y el selector de fotos con previsualización (`PhotoUploader`).
 - `pages/species.tsx` muestra el detalle de una especie, las experiencias existentes y el formulario para compartir la propia (o una invitación a iniciar sesión si no hay usuario autenticado). Se navega a esta página desde la columna "Experiencias" de `SpeciesTable`.
 - `firestore.rules` y `storage.rules` son la validación real (del lado del servidor): cualquiera puede leer, pero sólo un usuario autenticado puede crear una experiencia propia (y sólo puede editar/borrar la suya), con los mismos límites de tamaño/cantidad/tipo de fotos.
+
+## Guía de SAF (`/saf`)
+
+Página informativa sobre sistemas agroforestales: definición, clasificación, prácticas comunes (con ejemplos de México como MIAF, solar maya, cafetales bajo sombra, Te'lom y chinampas), estratos y sucesión, beneficios, retos, cómo empezar, glosario, preguntas frecuentes y fuentes. Todo el texto vive en `components/Saf/content.ts`; cada afirmación con datos lleva citas (`cites`) que enlazan a la lista de fuentes al final de la página.
+
+## Diseñador de SAF (`/disenador`)
+
+Editor visual en el navegador para diseñar un SAF en tiempo real con las especies del catálogo:
+
+- **Terreno** de ancho × largo en metros, cuadrícula, ajuste a cuadrícula, zoom y desplazamiento (rueda, pellizco o botones).
+- **Vista en planta a escala**: cada planta es un círculo con el ancho de copa del catálogo, coloreado por estrato. Herramientas para seleccionar/mover, plantar con un clic y plantar en línea cada N metros; duplicar, eliminar, deshacer/rehacer (Ctrl/Cmd+Z).
+- **Vista de perfil** lateral a escala con las alturas reales.
+- **Análisis en vivo**: cobertura de copa por estrato frente a la guía orientativa de la agricultura sintrópica (emergente ~20 %, alto ~40 %, medio ~60 %, bajo ~80 %), alertas (estratos vacíos, copas del mismo estrato encimadas, plantas fuera del terreno, especies de sol bajo sombra), funciones ecológicas y adicionales cubiertas y sugerencias de especies.
+- **Guardado**: sin sesión, el borrador se guarda en el navegador (localStorage); con sesión, en la colección `designs` de Firestore ("Mis diseños"). Exporta PNG/SVG del plano y JSON (que también se puede importar).
+
+Cuando falta la altura o el ancho de copa de una especie se usa un tamaño típico de su estrato y se marca con borde punteado. El código vive en `components/Designer/` (lógica pura en `analysis.ts`, `strata.ts`, `useDesignState.ts`, `exporters.ts`), los tipos en `interfaces/Design.ts` y el acceso a Firestore en `adapters/designs.ts`. Las reglas de `designs` en `firestore.rules` sólo permiten a cada autor leer y modificar sus propios diseños (máx. 1000 plantas por diseño).
 
 ## Despliegue
 
