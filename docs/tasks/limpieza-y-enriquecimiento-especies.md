@@ -818,3 +818,30 @@ node scripts/species-cleanup/apply-species-cleanup.mjs --file=scripts/species-cl
 - Morus sp (Morera): Morus sp. (grupo dudoso)
 - Vaccinium sp. (Arandano): Vaccinium sp. (grupo dudoso)
 - Selaginella sp. (Doradilla): Selaginella sp. (grupo dudoso)
+
+## Tercera pasada: grupos dudosos resueltos (2026-10-14)
+
+La pasada 2 se aplicó en Firestore el 2026-10-14 (217 escrituras correctas).
+
+Decisiones del responsable sobre los grupos dudosos, en `scripts/species-cleanup/changes-pass3.json`. El registro que se conserva hereda nombres comunes y los campos que le faltaban. Los registros de *Musa* se conservan por cultivar; sólo se eliminaron los genéricos que mezclaban varios cultivares.
+
+| Tipo | Registro | Resultado | Motivo |
+| --- | --- | --- | --- |
+| fusión | Persea schiedeana (Chinene, Chinini, Anayo, Pahua) | Persea schiedeana (Anayo, aguacate criollo, Chinene, Chinini, Pahua) | Misma especie; Chinene/Chinini/Pahua son nombres comunes de P. schiedeana |
+| fusión | Phaseolus lunatus (Frijol ibes) | Phaseolus lunatus (Frijol lima, fríjol mantequilla) | Ibes es el nombre maya del frijol lima |
+| fusión | Malpighia glabra (Acerola) | Malpighia emarginata (Cerecita, manzanita, semeruco, acerola) | La acerola cultivada es M. emarginata |
+| fusión | Garcinia sp. (Bacupari, bacupari miudo) | Garcinia gardneriana (Bacupari, bacupari-acu) | Decisión del responsable: un solo registro de bacupari |
+| fusión | Garcinia sp. (Mangostan amarillo, mangostao amarelo) | Garcinia gardneriana (Bacupari, bacupari-acu) | Decisión del responsable: un solo registro de bacupari |
+| fusión | Opuntia sp. (Nopal de tuna) | Opuntia ficus-indica (Tuna, Nopal, Nopal tunero) | El nopal de tuna es Opuntia ficus-indica |
+| fusión | Opuntia ficus-indica (Nopal) | Opuntia ficus-indica (Tuna, Nopal, Nopal tunero) | Mismo taxón (O. ficus-indica); nopal y tuna son la misma planta |
+| fusión | Agave sp. (Agave) | Agave sp (Maguey) | Dos registros genéricos de Agave con datos casi idénticos |
+| fusión | Vaccinium sp. (Arandano) | Vaccinium corymbosum (Mora azul) | Mora azul y arándano designan al arándano azul |
+| fusión | Morus sp (Morera) | Morus alba (Morera para hoja, blacberry (silkworm)) | Decisión del responsable: Morus sp. es Morus alba |
+| corrección | Selaginella sp. (Doradilla) | Selaginella lepidophylla; función Maderable → Medicinal | La doradilla de México es S. lepidophylla (planta de resurrección, uso medicinal) |
+| corrección | Pirus sp. (Pera) | Pyrus sp. | Ortografía del género |
+| fusión | Musa sp. (Guineo) | Musa acuminata (platano malayo, platano rojo, banana nanica) | Guineo es el nombre genérico del banano de postre (M. acuminata) |
+| fusión | Musa sp. (bananas silver, bread, tropical apple) | repartido entre Plateado, Manzano y banana bread | Registro que mezclaba tres cultivares |
+| corrección | Musa acuminata (plátano malayo, rojo, nanica) | "plátano rojo" → cv. Morado; "banana nanica" → cv. Enano | Cada nombre pertenece a un cultivar que ya tiene su registro |
+| corrección | Prunus sp. (Albaricoque japonés, ciruela china, japanese plum) | Prunus mume; se quitan "ciruela china" y "japanese plum" (son P. salicina) | Decisión del responsable |
+
+Se conservan separados por decisión del responsable: *Amaranthus hypochondriacus* (Amaranto, grano) y *Amaranthus* sp. (Quelites, verdura); *Pyrus communis* (Perón) y *Pyrus* sp. (Pera); *Selaginella martensii* y *S. lepidophylla*. Los registros 'babosa', 'Caferana', 'Cosamalu', 'Huevo de chivo' y 'Menta de matón' ya habían sido eliminados desde el panel de admin.

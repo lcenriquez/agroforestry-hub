@@ -1,0 +1,922 @@
+{
+ "generatedAt": "2026-10-14T19:20:32+00:00",
+ "updates": [
+  {
+   "id": "OubbfQc8omznQ8xEo7Qu",
+   "name": "Persea schiedeana (Anayo, aguacate criollo, Chinene, Chinini, Pahua)",
+   "updateTime": "2026-10-14T14:37:09.119699Z",
+   "fields": {
+    "commonNames": {
+     "es_mx": [
+      "Anayo, aguacate criollo",
+      "Chinene",
+      "Chinini",
+      "Pahua",
+      "Anayo"
+     ]
+    },
+    "details": {
+     "heightRangeDescription": "de 5 a 10 mts",
+     "shape": "árbol",
+     "lifeCycleDuration": "Hasta 80 años",
+     "growthHabit": "clumping",
+     "isFrostResistant": true,
+     "lightPreference": "H",
+     "humidityPreference": "M",
+     "edibleUses": {
+      "fruit": true
+     },
+     "nutrientContent": {
+      "vitamins": true
+     }
+    }
+   }
+  },
+  {
+   "id": "LDvsFrMNaiJcySoUXjnb",
+   "name": "Phaseolus lunatus (Frijol lima, fríjol mantequilla)",
+   "updateTime": "2026-10-14T17:42:46.591245Z",
+   "fields": {
+    "commonNames": {
+     "es_mx": [
+      "Frijol lima, fríjol mantequilla",
+      "Frijol ibes"
+     ]
+    }
+   }
+  },
+  {
+   "id": "Pz89KNn3tHneyP46erkG",
+   "name": "Malpighia emarginata (Cerecita, manzanita, semeruco, acerola)",
+   "updateTime": "2026-10-14T17:42:49.669911Z",
+   "fields": {
+    "commonNames": {
+     "es_mx": [
+      "Cerecita, manzanita, semeruco, acerola",
+      "Acerola"
+     ]
+    },
+    "details": {
+     "lightPreference": "H",
+     "heightRangeDescription": "hasta 5 mts",
+     "humidityPreference": "M",
+     "shape": "arbusto",
+     "isFrostResistant": false,
+     "edibleUses": {
+      "nutsAndSeeds": true
+     },
+     "growthHabit": "clumping"
+    }
+   }
+  },
+  {
+   "id": "gFOhtU6KJCmh4am3F97l",
+   "name": "Garcinia gardneriana (Bacupari, bacupari-acu)",
+   "updateTime": "2026-10-14T17:42:58.129930Z",
+   "fields": {
+    "commonNames": {
+     "es_mx": [
+      "Bacupari, bacupari-acu",
+      "Bacupari, bacupari miudo",
+      "Mangostan amarillo, mangostao amarelo"
+     ]
+    }
+   }
+  },
+  {
+   "id": "plB49IMLaw1gBhNqGKVy",
+   "name": "Opuntia ficus-indica (Tuna, Nopal, Nopal tunero)",
+   "updateTime": "2026-10-14T14:37:27.685471Z",
+   "fields": {
+    "commonNames": {
+     "es_mx": [
+      "Tuna",
+      "Nopal",
+      "Nopal tunero",
+      "Nopal de tuna"
+     ]
+    },
+    "details": {
+     "growthHabit": "clumping",
+     "lightPreference": "H",
+     "shape": "arbusto",
+     "isFrostResistant": true,
+     "heightRangeDescription": "hasta 5 mts",
+     "humidityPreference": "L",
+     "lifeCycleDuration": "Hasta 80 años"
+    }
+   }
+  },
+  {
+   "id": "BQeItwmcjZns8ZZNTkIP",
+   "name": "Agave sp (Maguey)",
+   "updateTime": "2026-10-14T14:37:00.863599Z",
+   "fields": {
+    "commonNames": {
+     "es_mx": [
+      "Maguey",
+      "Agave"
+     ]
+    },
+    "stratums": [
+     {
+      "_id": "2",
+      "name": {
+       "es_mx": "Medio"
+      }
+     }
+    ],
+    "ecologicalFunctions": [
+     {
+      "_id": "3",
+      "name": {
+       "es_mx": "Control de erosión"
+      }
+     },
+     {
+      "_id": "4",
+      "name": {
+       "es_mx": "Atracción de polinizadores"
+      }
+     }
+    ],
+    "height": {
+     "min": 1,
+     "max": 2
+    },
+    "crownWidth": {
+     "min": 1.5,
+     "max": 3
+    }
+   }
+  },
+  {
+   "id": "ulviLKuxLqvYKVHMOeY8",
+   "name": "Vaccinium corymbosum (Mora azul)",
+   "updateTime": "2026-10-14T17:43:07.152385Z",
+   "fields": {
+    "commonNames": {
+     "es_mx": [
+      "Mora azul",
+      "Arandano"
+     ]
+    }
+   }
+  },
+  {
+   "id": "56AQL5tS9PoKKi8oKTON",
+   "name": "Morus alba (Morera para hoja, blacberry (silkworm))",
+   "updateTime": "2026-10-14T17:42:36.343199Z",
+   "fields": {
+    "commonNames": {
+     "es_mx": [
+      "Morera para hoja, blacberry (silkworm)",
+      "Morera"
+     ]
+    },
+    "details": {
+     "heightRangeDescription": "hasta 2 mts",
+     "shape": "hierba",
+     "isFrostResistant": true,
+     "lightPreference": "H",
+     "humidityPreference": "M",
+     "growthHabit": "clumping",
+     "nutrientContent": {
+      "calories": true
+     },
+     "edibleUses": {
+      "nutsAndSeeds": true
+     }
+    }
+   }
+  },
+  {
+   "id": "pFqr5W1slxMuIghyN58a",
+   "name": "Selaginella sp. (Doradilla)",
+   "updateTime": "2026-08-23T05:23:11.617714Z",
+   "fields": {
+    "taxonomy": {
+     "genus": "Selaginella",
+     "family": "Selaginellaceae",
+     "species": "lepidophylla"
+    },
+    "stratums": [
+     {
+      "_id": "0",
+      "name": {
+       "es_mx": "Rastrero"
+      }
+     }
+    ],
+    "ecologicalZones": {
+     "mx": [
+      {
+       "_id": "6",
+       "name": {
+        "es_mx": "Desierto"
+       }
+      },
+      {
+       "_id": "4",
+       "name": {
+        "es_mx": "Bosque de pino y encino"
+       }
+      }
+     ]
+    },
+    "ecologicalFunctions": [
+     {
+      "_id": "3",
+      "name": {
+       "es_mx": "Control de erosión"
+      }
+     }
+    ],
+    "additionalFunctions": [
+     {
+      "_id": "3",
+      "name": {
+       "es_mx": "Medicinal"
+      }
+     }
+    ],
+    "height": {
+     "min": 0.05,
+     "max": 0.1
+    },
+    "crownWidth": {
+     "min": 0.1,
+     "max": 0.2
+    },
+    "details": {
+     "nutrientContent": {
+      "calories": true
+     },
+     "heightRangeDescription": "hasta 2 mts",
+     "edibleUses": {
+      "nutsAndSeeds": true
+     },
+     "shape": "hierba",
+     "lightPreference": "H",
+     "humidityPreference": "L",
+     "isFrostResistant": true
+    }
+   }
+  },
+  {
+   "id": "cIvPmZoELDskJosk2k1l",
+   "name": "Pirus sp. (Pera)",
+   "updateTime": "2026-08-23T05:23:11.617714Z",
+   "fields": {
+    "taxonomy": {
+     "species": "sp.",
+     "family": "Rosaceae",
+     "genus": "Pyrus"
+    },
+    "ecologicalZones": {
+     "mx": [
+      {
+       "_id": "3",
+       "name": {
+        "es_mx": "Bosque de niebla"
+       }
+      },
+      {
+       "_id": "4",
+       "name": {
+        "es_mx": "Bosque de pino y encino"
+       }
+      },
+      {
+       "_id": "6",
+       "name": {
+        "es_mx": "Desierto"
+       }
+      }
+     ]
+    },
+    "ecologicalFunctions": [
+     {
+      "_id": "4",
+      "name": {
+       "es_mx": "Atracción de polinizadores"
+      }
+     }
+    ],
+    "additionalFunctions": [
+     {
+      "_id": "0",
+      "name": {
+       "es_mx": "Alimento"
+      }
+     }
+    ],
+    "height": {
+     "min": 5,
+     "max": 10
+    },
+    "crownWidth": {
+     "min": 4,
+     "max": 6
+    },
+    "details": {
+     "observations": {
+      "toleratesPruning": true,
+      "accumulatedNutrients": "+ Fósforo  ++ Potasio"
+     },
+     "edibleUses": {
+      "fruit": true
+     },
+     "nutrientContent": {
+      "calories": true,
+      "vitamins": true,
+      "minerals": true
+     },
+     "shape": "árbol",
+     "lightPreference": "H",
+     "humidityPreference": "M",
+     "isFrostResistant": true,
+     "heightRangeDescription": "de 5 a 10 mts"
+    }
+   }
+  },
+  {
+   "id": "HB1pUCYecK7pjobY12my",
+   "name": "Musa acuminata (platano malayo, platano rojo, banana nanica)",
+   "updateTime": "2026-10-14T17:42:43.706030Z",
+   "fields": {
+    "commonNames": {
+     "es_mx": [
+      "Plátano malayo",
+      "Guineo"
+     ]
+    }
+   }
+  },
+  {
+   "id": "qX0LeVyDmudY74HGht7T",
+   "name": "Musa sp. (Platano plateado, silver banana)",
+   "updateTime": "2026-10-14T14:37:28.279543Z",
+   "fields": {
+    "commonNames": {
+     "es_mx": [
+      "Platano plateado, silver banana",
+      "Banana silver"
+     ]
+    },
+    "ecologicalFunctions": [
+     {
+      "_id": "0",
+      "name": {
+       "es_mx": "Producción de biomasa"
+      }
+     }
+    ],
+    "additionalFunctions": [
+     {
+      "_id": "0",
+      "name": {
+       "es_mx": "Alimento"
+      }
+     }
+    ],
+    "height": {
+     "min": 4,
+     "max": 6
+    },
+    "crownWidth": {
+     "min": 2,
+     "max": 4
+    },
+    "details": {
+     "shape": "palma",
+     "lightPreference": "H",
+     "humidityPreference": "H",
+     "isFrostResistant": false,
+     "heightRangeDescription": "de 5 a 10 mts"
+    }
+   }
+  },
+  {
+   "id": "HkNLTAa2SZJXMSRpPXEG",
+   "name": "Musa sp. (Platano manzano, banana apple)",
+   "updateTime": "2026-10-14T14:37:04.471589Z",
+   "fields": {
+    "commonNames": {
+     "es_mx": [
+      "Platano manzano, banana apple",
+      "Tropical apple"
+     ]
+    },
+    "ecologicalFunctions": [
+     {
+      "_id": "0",
+      "name": {
+       "es_mx": "Producción de biomasa"
+      }
+     }
+    ],
+    "additionalFunctions": [
+     {
+      "_id": "0",
+      "name": {
+       "es_mx": "Alimento"
+      }
+     }
+    ],
+    "height": {
+     "min": 4,
+     "max": 6
+    },
+    "crownWidth": {
+     "min": 2,
+     "max": 4
+    },
+    "details": {
+     "edibleUses": {
+      "rootsAndTubers": true
+     },
+     "nutrientContent": {
+      "calories": true
+     },
+     "lifeCycle": "Secundarias 2",
+     "lifeCycleDuration": "Hasta 15 años",
+     "shape": "palma",
+     "lightPreference": "H",
+     "humidityPreference": "H",
+     "isFrostResistant": false,
+     "heightRangeDescription": "de 5 a 10 mts"
+    }
+   }
+  },
+  {
+   "id": "KrROSC9E13vqAJS5kCmh",
+   "name": "Musa sp. (banana bread)",
+   "updateTime": "2026-08-23T05:23:11.617714Z",
+   "fields": {
+    "commonNames": {
+     "es_mx": [
+      "banana bread",
+      "Bread banana"
+     ]
+    },
+    "ecologicalZones": {
+     "mx": [
+      {
+       "_id": "1",
+       "name": {
+        "es_mx": "Selva húmeda"
+       }
+      },
+      {
+       "_id": "3",
+       "name": {
+        "es_mx": "Bosque de niebla"
+       }
+      }
+     ]
+    },
+    "ecologicalFunctions": [
+     {
+      "_id": "0",
+      "name": {
+       "es_mx": "Producción de biomasa"
+      }
+     }
+    ],
+    "additionalFunctions": [
+     {
+      "_id": "0",
+      "name": {
+       "es_mx": "Alimento"
+      }
+     }
+    ],
+    "height": {
+     "min": 3,
+     "max": 5
+    },
+    "crownWidth": {
+     "min": 2,
+     "max": 4
+    },
+    "details": {
+     "shape": "palma",
+     "lightPreference": "H",
+     "humidityPreference": "H",
+     "isFrostResistant": false,
+     "heightRangeDescription": "hasta 5 mts"
+    }
+   }
+  },
+  {
+   "id": "lsANEHtv7MssKLvCSMFQ",
+   "name": "Musa acuminata (Platano morado)",
+   "updateTime": "2026-10-14T14:37:24.756116Z",
+   "fields": {
+    "commonNames": {
+     "es_mx": [
+      "Platano morado",
+      "Plátano rojo"
+     ]
+    },
+    "height": {
+     "min": 4,
+     "max": 7
+    },
+    "crownWidth": {
+     "min": 2,
+     "max": 4
+    },
+    "details": {
+     "lightPreference": "H",
+     "shape": "hierba",
+     "isFrostResistant": false,
+     "edibleUses": {
+      "leaves": true
+     },
+     "nutrientContent": {
+      "vitamins": true,
+      "minerals": true
+     },
+     "humidityPreference": "H",
+     "heightRangeDescription": "de 5 a 10 mts"
+    }
+   }
+  },
+  {
+   "id": "ZKLtx2A2lvWI8SOKIlAI",
+   "name": "Musa acuminata (Platano enano enano)",
+   "updateTime": "2026-10-14T14:37:16.808496Z",
+   "fields": {
+    "commonNames": {
+     "es_mx": [
+      "Platano enano enano",
+      "Banana nanica"
+     ]
+    },
+    "ecologicalFunctions": [
+     {
+      "_id": "0",
+      "name": {
+       "es_mx": "Producción de biomasa"
+      }
+     }
+    ],
+    "additionalFunctions": [
+     {
+      "_id": "0",
+      "name": {
+       "es_mx": "Alimento"
+      }
+     }
+    ],
+    "height": {
+     "min": 1.5,
+     "max": 2.5
+    },
+    "crownWidth": {
+     "min": 2,
+     "max": 4
+    },
+    "details": {
+     "lifeCycle": "Secundarias 1",
+     "lifeCycleDuration": "Hasta 2 años",
+     "shape": "palma",
+     "lightPreference": "H",
+     "humidityPreference": "H",
+     "isFrostResistant": false,
+     "heightRangeDescription": "hasta 5 mts"
+    }
+   }
+  },
+  {
+   "id": "1aZWCce2KcX3ZSzehouY",
+   "name": "Musa acuminata (Platano enano gigante)",
+   "updateTime": "2026-10-14T14:36:55.588437Z",
+   "fields": {
+    "ecologicalFunctions": [
+     {
+      "_id": "0",
+      "name": {
+       "es_mx": "Producción de biomasa"
+      }
+     }
+    ],
+    "additionalFunctions": [
+     {
+      "_id": "0",
+      "name": {
+       "es_mx": "Alimento"
+      }
+     }
+    ],
+    "height": {
+     "min": 2.5,
+     "max": 3.5
+    },
+    "crownWidth": {
+     "min": 2,
+     "max": 4
+    },
+    "details": {
+     "nutrientContent": {
+      "vitamins": true
+     },
+     "edibleUses": {
+      "stemsOrShoots": true
+     },
+     "lifeCycle": "Secundarias 1",
+     "lifeCycleDuration": "Hasta 2 años",
+     "shape": "palma",
+     "lightPreference": "H",
+     "humidityPreference": "H",
+     "isFrostResistant": false,
+     "heightRangeDescription": "hasta 5 mts"
+    }
+   }
+  },
+  {
+   "id": "76i0xoBZoP3UesYt2MUG",
+   "name": "Musa acuminata (Banana, banana da terra)",
+   "updateTime": "2026-10-14T14:36:58.714890Z",
+   "fields": {
+    "ecologicalZones": {
+     "mx": [
+      {
+       "_id": "1",
+       "name": {
+        "es_mx": "Selva húmeda"
+       }
+      },
+      {
+       "_id": "3",
+       "name": {
+        "es_mx": "Bosque de niebla"
+       }
+      }
+     ]
+    },
+    "ecologicalFunctions": [
+     {
+      "_id": "0",
+      "name": {
+       "es_mx": "Producción de biomasa"
+      }
+     }
+    ],
+    "additionalFunctions": [
+     {
+      "_id": "0",
+      "name": {
+       "es_mx": "Alimento"
+      }
+     }
+    ],
+    "height": {
+     "min": 4,
+     "max": 6
+    },
+    "crownWidth": {
+     "min": 2,
+     "max": 4
+    },
+    "details": {
+     "edibleUses": {
+      "fruit": true,
+      "leaves": true,
+      "nutsAndSeeds": true
+     },
+     "shape": "palma",
+     "lightPreference": "H",
+     "humidityPreference": "H",
+     "isFrostResistant": false,
+     "heightRangeDescription": "de 5 a 10 mts"
+    }
+   }
+  },
+  {
+   "id": "hT76faS4crtc7Mr4S178",
+   "name": "Musa sp. (banana gold)",
+   "updateTime": "2026-10-14T14:37:21.394109Z",
+   "fields": {
+    "ecologicalZones": {
+     "mx": [
+      {
+       "_id": "1",
+       "name": {
+        "es_mx": "Selva húmeda"
+       }
+      },
+      {
+       "_id": "3",
+       "name": {
+        "es_mx": "Bosque de niebla"
+       }
+      }
+     ]
+    },
+    "ecologicalFunctions": [
+     {
+      "_id": "0",
+      "name": {
+       "es_mx": "Producción de biomasa"
+      }
+     }
+    ],
+    "additionalFunctions": [
+     {
+      "_id": "0",
+      "name": {
+       "es_mx": "Alimento"
+      }
+     }
+    ],
+    "height": {
+     "min": 3,
+     "max": 5
+    },
+    "crownWidth": {
+     "min": 2,
+     "max": 4
+    },
+    "details": {
+     "shape": "palma",
+     "lightPreference": "H",
+     "humidityPreference": "H",
+     "isFrostResistant": false,
+     "heightRangeDescription": "hasta 5 mts"
+    }
+   }
+  },
+  {
+   "id": "vOuFBWScGSRVHgTOVXlN",
+   "name": "Musa sp. (Platano, banana s. tomé)",
+   "updateTime": "2026-10-14T14:37:31.313568Z",
+   "fields": {
+    "ecologicalFunctions": [
+     {
+      "_id": "0",
+      "name": {
+       "es_mx": "Producción de biomasa"
+      }
+     }
+    ],
+    "additionalFunctions": [
+     {
+      "_id": "0",
+      "name": {
+       "es_mx": "Alimento"
+      }
+     }
+    ],
+    "height": {
+     "min": 3,
+     "max": 5
+    },
+    "crownWidth": {
+     "min": 2,
+     "max": 4
+    },
+    "details": {
+     "shape": "palma",
+     "lightPreference": "H",
+     "humidityPreference": "H",
+     "isFrostResistant": false,
+     "heightRangeDescription": "hasta 5 mts"
+    }
+   }
+  },
+  {
+   "id": "ZwbjlOxPSMaNk51tEnxh",
+   "name": "Prunus sp. (Albaricoque japones, ciruela china , japanese plum)",
+   "updateTime": "2026-08-23T05:23:11.617714Z",
+   "fields": {
+    "taxonomy": {
+     "species": "mume",
+     "family": "Rosaceae",
+     "genus": "Prunus"
+    },
+    "commonNames": {
+     "es_mx": [
+      "Albaricoque japonés",
+      "Ume"
+     ]
+    },
+    "ecologicalZones": {
+     "mx": [
+      {
+       "_id": "4",
+       "name": {
+        "es_mx": "Bosque de pino y encino"
+       }
+      },
+      {
+       "_id": "3",
+       "name": {
+        "es_mx": "Bosque de niebla"
+       }
+      }
+     ]
+    },
+    "ecologicalFunctions": [
+     {
+      "_id": "4",
+      "name": {
+       "es_mx": "Atracción de polinizadores"
+      }
+     }
+    ],
+    "height": {
+     "min": 4,
+     "max": 8
+    },
+    "crownWidth": {
+     "min": 4,
+     "max": 6
+    },
+    "details": {
+     "shape": "árbol",
+     "lightPreference": "H",
+     "humidityPreference": "M",
+     "isFrostResistant": true,
+     "heightRangeDescription": "de 5 a 10 mts"
+    }
+   }
+  }
+ ],
+ "deletes": [
+  {
+   "id": "f2Ln2vUvmdBpnn0dZhpj",
+   "name": "Persea schiedeana (Chinene, Chinini, Anayo, Pahua)",
+   "updateTime": "2026-10-14T14:37:19.635776Z",
+   "mergedInto": "OubbfQc8omznQ8xEo7Qu"
+  },
+  {
+   "id": "0CtvqVAlKchzIsVnsQi2",
+   "name": "Phaseolus lunatus (Frijol ibes)",
+   "updateTime": "2026-10-14T17:42:34.149647Z",
+   "mergedInto": "LDvsFrMNaiJcySoUXjnb"
+  },
+  {
+   "id": "NHUAevaghgtDUxdAgPQ4",
+   "name": "Malpighia glabra (Acerola)",
+   "updateTime": "2026-10-14T17:42:47.971183Z",
+   "mergedInto": "Pz89KNn3tHneyP46erkG"
+  },
+  {
+   "id": "jtMXLa1EfJCI20MuE226",
+   "name": "Garcinia sp. (Bacupari, bacupari miudo)",
+   "updateTime": "2026-08-23T05:23:11.617714Z",
+   "mergedInto": "gFOhtU6KJCmh4am3F97l"
+  },
+  {
+   "id": "by7PIhL9v0BInozy5342",
+   "name": "Garcinia sp. (Mangostan amarillo, mangostao amarelo)",
+   "updateTime": "2026-08-23T05:23:11.617714Z",
+   "mergedInto": "gFOhtU6KJCmh4am3F97l"
+  },
+  {
+   "id": "KFqo6vHeYcsUvVyMrEEA",
+   "name": "Opuntia sp. (Nopal de tuna)",
+   "updateTime": "2026-10-14T14:37:06.636704Z",
+   "mergedInto": "plB49IMLaw1gBhNqGKVy"
+  },
+  {
+   "id": "6fKS5vo7e9NF14KORiif",
+   "name": "Opuntia ficus-indica (Nopal)",
+   "updateTime": "2026-10-14T14:36:58.366518Z",
+   "mergedInto": "plB49IMLaw1gBhNqGKVy"
+  },
+  {
+   "id": "roves24pUM5GtlAHp7zq",
+   "name": "Agave sp. (Agave)",
+   "updateTime": "2026-10-14T14:37:29.204593Z",
+   "mergedInto": "BQeItwmcjZns8ZZNTkIP"
+  },
+  {
+   "id": "m9ceZosLoy0wDpSEX6v8",
+   "name": "Vaccinium sp. (Arandano)",
+   "updateTime": "2026-08-23T05:23:11.617714Z",
+   "mergedInto": "ulviLKuxLqvYKVHMOeY8"
+  },
+  {
+   "id": "wvPL9UnL6ulZ9ZrQQixU",
+   "name": "Morus sp (Morera)",
+   "updateTime": "2026-08-23T05:23:11.617714Z",
+   "mergedInto": "56AQL5tS9PoKKi8oKTON"
+  },
+  {
+   "id": "YsMNy2PnuObVTcY3yco3",
+   "name": "Musa sp. (Guineo)",
+   "updateTime": "2026-08-23T05:23:11.617714Z",
+   "mergedInto": "HB1pUCYecK7pjobY12my"
+  },
+  {
+   "id": "mejS8LqwwpYpxFl3lX0i",
+   "name": "Musa sp. (bananas silver, bread, tropical apple)",
+   "updateTime": "2026-08-23T05:23:11.617714Z",
+   "mergedInto": "qX0LeVyDmudY74HGht7T"
+  }
+ ]
+}
