@@ -4,17 +4,20 @@ import { Box, IconButton, Stack, Text } from '@chakra-ui/react';
 import { CornersOutIcon, MagnifyingGlassMinusIcon, MagnifyingGlassPlusIcon } from '@phosphor-icons/react';
 
 import { clamp } from './analysis';
+import { backgroundSize } from './background';
 import { niceStep } from './exporters';
 import { formatNumber, shortLabel } from './strata';
 
-import type { DesignPlant, DesignPlot } from '../../interfaces/Design';
+import type { DesignBackground, DesignLayers, DesignPlant, DesignPlot } from '../../interfaces/Design';
 import type { PlantSpec } from './strata';
 
 // Vista en planta (de arriba, a escala) del terreno. Todo se dibuja en metros
 // dentro de un <svg> cuyo viewBox define el zoom y el desplazamiento; los
 // trazos usan `non-scaling-stroke` para verse igual a cualquier zoom.
 
-export type DesignerTool = 'select' | 'plant' | 'line';
+export type DesignerTool = 'select' | 'plant' | 'line' | 'calibrate' | 'moveBackground';
+
+type Point = { x: number; y: number };
 
 // Colores del lienzo vía variables CSS de Chakra: cambian solos con el modo
 // claro/oscuro (clase `.dark` en <html>), sin depender de un re-render.
@@ -48,6 +51,7 @@ interface Size {
 }
 
 type Gesture =
+	| { kind: 'bgdrag'; pointerId: number; offX: number; offY: number; startX: number; startY: number; started: boolean }
 	| { kind: 'drag'; pointerId: number; plantId: string; offX: number; offY: number; startX: number; startY: number; started: boolean }
 	| { kind: 'press'; pointerId: number; startX: number; startY: number; lastX: number; lastY: number; panning: boolean }
 	| { kind: 'pinch'; startDist: number; startView: View; worldMid: { x: number; y: number } };
@@ -175,6 +179,13 @@ interface PlanViewProps {
 	onDragStart: () => void;
 	onDragMove: (id: string, x: number, y: number) => void;
 	onDragEnd: () => void;
+	background: DesignBackground | null;
+	layers: DesignLayers;
+	calibrationPoints: Point[];
+	onCalibrationPoint: (point: Point) => void;
+	onBackgroundDragStart: () => void;
+	onBackgroundMove: (x: number, y: number) => void;
+	onBackgroundDragEnd: () => void;
 }
 
 export default function PlanView({
@@ -194,8 +205,18 @@ export default function PlanView({
 	onPlace,
 	onDragStart,
 	onDragMove,
-	onDragEnd
+	onDragEnd,
+	background,
+	layers,
+	calibrationPoints,
+	onCalibrationPoint,
+	onBackgroundDragStart,
+	onBackgroundMove,
+	onBackgroundDragEnd
 }: PlanViewProps) {
+	const showBackground = Boolean(background && layers.background.visible);
+	const backgroundEditable = showBackground && !layers.background.locked;
+	const plantsEditable = layers.plants.visible && !layers.plants.locked;
 	const containerRef = useRef<HTMLDivElement>(null);
 	const svgRef = useRef<SVGSVGElement>(null);
 	const pointers = useRef(new Map<number, { x: number; y: number }>());
@@ -323,8 +344,22 @@ export default function PlanView({
 		}
 		if (pointers.current.size > 2) return;
 
+		if (tool === 'moveBackground' && background && backgroundEditable && event.button === 0) {
+			const world = toWorld(event.clientX, event.clientY);
+			gesture.current = {
+				kind: 'bgdrag',
+				pointerId: event.pointerId,
+				offX: background.x - world.x,
+				offY: background.y - world.y,
+				startX: event.clientX,
+				startY: event.clientY,
+				started: false
+			};
+			return;
+		}
+
 		const target = event.target as Element;
-		const plantElement = tool === 'select' && event.button === 0 ? target.closest('[data-plant-id]') : null;
+		const plantElement = tool === 'select' && plantsEditable && event.button === 0 ? target.closest('[data-plant-id]') : null;
 		const plantId = plantElement?.getAttribute('data-plant-id');
 		const plant = plantId ? plants.find(p => p.id === plantId) : undefined;
 		if (plant) {
@@ -358,7 +393,7 @@ export default function PlanView({
 		if (pointers.current.has(event.pointerId)) pointers.current.set(event.pointerId, { x: event.clientX, y: event.clientY });
 		const current = gesture.current;
 
-		if (event.pointerType === 'mouse' && tool !== 'select' && (!current || current.kind === 'press')) {
+		if (event.pointerType === 'mouse' && tool !== 'select' && tool !== 'moveBackground' && (!current || current.kind === 'press')) {
 			const world = toWorld(event.clientX, event.clientY);
 			setHover({ x: snapValue(world.x), y: snapValue(world.y) });
 		}
@@ -382,6 +417,17 @@ export default function PlanView({
 			return;
 		}
 		if (current.pointerId !== event.pointerId) return;
+
+		if (current.kind === 'bgdrag') {
+			if (!current.started) {
+				if (Math.hypot(event.clientX - current.startX, event.clientY - current.startY) < 4) return;
+				current.started = true;
+				onBackgroundDragStart();
+			}
+			const world = toWorld(event.clientX, event.clientY);
+			onBackgroundMove(world.x + current.offX, world.y + current.offY);
+			return;
+		}
 
 		if (current.kind === 'drag') {
 			if (!current.started) {
@@ -419,6 +465,10 @@ export default function PlanView({
 		gesture.current = null;
 		setPanning(false);
 
+		if (current.kind === 'bgdrag') {
+			if (current.started) onBackgroundDragEnd();
+			return;
+		}
 		if (current.kind === 'drag') {
 			if (current.started) {
 				flushMove();
@@ -427,9 +477,15 @@ export default function PlanView({
 			return;
 		}
 		if (cancelled || current.panning) return;
+		if (tool === 'moveBackground') return;
 
 		const world = toWorld(event.clientX, event.clientY);
 		const point = { x: snapValue(world.x), y: snapValue(world.y) };
+		if (tool === 'calibrate') {
+			// Sin ajuste a la cuadrícula: se marcan puntos de la foto, no del terreno.
+			onCalibrationPoint(world);
+			return;
+		}
 		if (tool === 'select') onSelect(null);
 		else if (!activeSpec) return;
 		else if (tool === 'plant') onPlace([point]);
@@ -466,14 +522,27 @@ export default function PlanView({
 	);
 
 	const preview = useMemo(() => {
-		if (!activeSpec || tool === 'select') return [];
+		if (!activeSpec || (tool !== 'plant' && tool !== 'line')) return [];
 		if (tool === 'line' && lineStart) return hover ? linePoints(lineStart, hover, lineSpacing).slice(0, 200) : [lineStart];
 		return hover ? [hover] : [];
 	}, [activeSpec, tool, lineStart, hover, lineSpacing]);
 
 	const scaleStep = niceStep(100 / ppm);
-	const interactive = tool === 'select';
-	const cursor = panning ? 'grabbing' : tool === 'select' ? 'default' : activeSpec ? 'crosshair' : 'not-allowed';
+	const interactive = tool === 'select' && plantsEditable;
+	const cursor = panning
+		? 'grabbing'
+		: tool === 'select'
+			? 'default'
+			: tool === 'calibrate'
+				? 'crosshair'
+				: tool === 'moveBackground'
+					? backgroundEditable
+						? 'move'
+						: 'not-allowed'
+					: activeSpec
+						? 'crosshair'
+						: 'not-allowed';
+	const bgSize = background ? backgroundSize(background) : null;
 
 	return (
 		<Box
@@ -504,12 +573,24 @@ export default function PlanView({
 			>
 				{size.w > 0 && (
 					<>
+						{background && bgSize && showBackground && (
+							<image
+								href={background.src}
+								x={background.x}
+								y={background.y}
+								width={bgSize.width}
+								height={bgSize.height}
+								opacity={layers.background.opacity}
+								preserveAspectRatio="none"
+								pointerEvents="none"
+							/>
+						)}
 						<rect
 							x={0}
 							y={0}
 							width={plot.width}
 							height={plot.length}
-							fill={CANVAS_COLORS.plotFill}
+							fill={showBackground ? 'none' : CANVAS_COLORS.plotFill}
 							stroke={CANVAS_COLORS.plotStroke}
 							strokeWidth={2}
 							vectorEffect="non-scaling-stroke"
@@ -529,7 +610,7 @@ export default function PlanView({
 								</text>
 							))}
 						</g>
-						<g>
+						<g opacity={layers.plants.opacity} display={layers.plants.visible ? undefined : 'none'}>
 							{ordered.map(({ plant, spec }) => (
 								<PlantShape
 									key={plant.id}
@@ -542,11 +623,39 @@ export default function PlanView({
 								/>
 							))}
 						</g>
-						<g pointerEvents="none">
+						<g pointerEvents="none" display={layers.plants.visible ? undefined : 'none'}>
 							{ordered.map(({ plant, spec }) => (
 								<PlantLabel key={plant.id} plant={plant} spec={spec} ppm={ppm} />
 							))}
 						</g>
+						{calibrationPoints.length > 0 && (
+							<g pointerEvents="none">
+								{calibrationPoints.length === 2 && (
+									<line
+										x1={calibrationPoints[0].x}
+										y1={calibrationPoints[0].y}
+										x2={calibrationPoints[1].x}
+										y2={calibrationPoints[1].y}
+										stroke={CANVAS_COLORS.warning}
+										strokeWidth={2}
+										strokeDasharray="6 4"
+										vectorEffect="non-scaling-stroke"
+									/>
+								)}
+								{calibrationPoints.map((point, index) => (
+									<circle
+										key={index}
+										cx={point.x}
+										cy={point.y}
+										r={5 / ppm}
+										fill={CANVAS_COLORS.warning}
+										stroke={CANVAS_COLORS.halo}
+										strokeWidth={2}
+										vectorEffect="non-scaling-stroke"
+									/>
+								))}
+							</g>
+						)}
 						{activeSpec && preview.length > 0 && (
 							<g pointerEvents="none">
 								{tool === 'line' && lineStart && hover && (
@@ -614,15 +723,27 @@ export default function PlanView({
 				</Box>
 			)}
 
-			{hover && tool !== 'select' && (
+			{hover && tool !== 'select' && tool !== 'moveBackground' && (
 				<Text position="absolute" bottom={2} right={2} fontSize="xs" bg="bg.panel/80" px={2} py={1} borderRadius="sm" pointerEvents="none">
 					x {formatNumber(hover.x, 1)} m · y {formatNumber(hover.y, 1)} m
 				</Text>
 			)}
 
-			{tool !== 'select' && !activeSpec && (
+			{(tool === 'plant' || tool === 'line') && !activeSpec && (
 				<Text position="absolute" top={2} left={2} right={12} fontSize="sm" bg="bg.panel/90" px={2} py={1} borderRadius="sm" pointerEvents="none">
 					Elige una especie en la paleta para empezar a plantar.
+				</Text>
+			)}
+			{tool === 'calibrate' && (
+				<Text position="absolute" top={2} left={2} right={12} fontSize="sm" bg="bg.panel/90" px={2} py={1} borderRadius="sm" pointerEvents="none">
+					{calibrationPoints.length < 2
+						? `Toca ${calibrationPoints.length ? 'el segundo' : 'el primer'} punto de una distancia que conozcas en la imagen.`
+						: 'Escribe la distancia real entre los dos puntos en el panel de capas.'}
+				</Text>
+			)}
+			{tool === 'moveBackground' && (
+				<Text position="absolute" top={2} left={2} right={12} fontSize="sm" bg="bg.panel/90" px={2} py={1} borderRadius="sm" pointerEvents="none">
+					{backgroundEditable ? 'Arrastra para mover la imagen de fondo.' : 'La capa de imagen está oculta o bloqueada.'}
 				</Text>
 			)}
 			{tool === 'line' && activeSpec && (

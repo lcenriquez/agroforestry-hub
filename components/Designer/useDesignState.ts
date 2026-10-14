@@ -2,7 +2,7 @@ import { useCallback, useMemo, useReducer } from 'react';
 
 import { MAX_DESIGN_PLANTS } from '../../interfaces/Design';
 
-import type { DesignContent, DesignPlant, DesignPlot } from '../../interfaces/Design';
+import type { DesignBackground, DesignContent, DesignPlant, DesignPlot } from '../../interfaces/Design';
 
 // Estado del diseño con historial para deshacer/rehacer. Sólo el contenido
 // (terreno + plantas) entra al historial; nombre, selección y vista no.
@@ -27,6 +27,9 @@ export type DesignAction =
 	| { type: 'addPlants'; plants: DesignPlant[] }
 	| { type: 'removePlants'; ids: string[] }
 	| { type: 'movePlants'; moves: { id: string; x: number; y: number }[] }
+	| { type: 'setBackground'; background: DesignBackground | null }
+	| { type: 'moveBackground'; x: number; y: number }
+	| { type: 'replaceBackgroundSrc'; from: string; src: string; storagePath?: string }
 	| { type: 'beginDrag' }
 	| { type: 'endDrag' }
 	| { type: 'load'; content: DesignContent }
@@ -91,6 +94,32 @@ function reducer(state: HistoryState, action: DesignAction): HistoryState {
 			// Durante un arrastre se actualiza en vivo sin tocar el historial.
 			if (state.dragOrigin) return { ...state, present: next };
 			return commit(state, next);
+		}
+		case 'setBackground':
+			return commit(state, { ...present, background: action.background });
+		case 'moveBackground': {
+			const bg = present.background;
+			if (!bg) return state;
+			const x = roundCoord(action.x);
+			const y = roundCoord(action.y);
+			if (x === bg.x && y === bg.y) return state;
+			const next = { ...present, background: { ...bg, x, y } };
+			if (state.dragOrigin) return { ...state, present: next };
+			return commit(state, next);
+		}
+		case 'replaceBackgroundSrc': {
+			// Al subir el data URL a Storage se reemplaza en todo el historial,
+			// para que deshacer no vuelva a meter la imagen pesada en el diseño.
+			const swap = (content: DesignContent): DesignContent =>
+				content.background?.src === action.from
+					? { ...content, background: { ...content.background, src: action.src, storagePath: action.storagePath } }
+					: content;
+			return {
+				past: state.past.map(swap),
+				present: swap(present),
+				future: state.future.map(swap),
+				dragOrigin: state.dragOrigin ? swap(state.dragOrigin) : null
+			};
 		}
 		case 'beginDrag':
 			return state.dragOrigin ? state : { ...state, dragOrigin: present };

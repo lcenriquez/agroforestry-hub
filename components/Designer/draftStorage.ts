@@ -1,7 +1,8 @@
 import { MAX_DESIGN_NAME_LENGTH, MAX_DESIGN_PLANTS } from '../../interfaces/Design';
+import { normalizeBackground } from './background';
 import { PLOT_MAX, PLOT_MIN } from './useDesignState';
 
-import type { DesignContent } from '../../interfaces/Design';
+import type { DesignContent, DesignLayers } from '../../interfaces/Design';
 
 // Borrador local del diseño (localStorage): se guarda solo en cada cambio para
 // no perder el trabajo al recargar, con o sin sesión. Todo acceso va en
@@ -15,6 +16,7 @@ export interface DesignDraft {
 	name: string;
 	description?: string;
 	content: DesignContent;
+	layers?: DesignLayers;
 	// Diseño de la nube que se está editando (y de quién es), si aplica.
 	cloudId: string | null;
 	cloudOwner: string | null;
@@ -57,7 +59,8 @@ export function loadDraft(): DesignDraft | null {
 		return {
 			name: typeof data.name === 'string' ? data.name.slice(0, MAX_DESIGN_NAME_LENGTH) : '',
 			description: typeof data.description === 'string' ? data.description : undefined,
-			content: data.content,
+			content: { ...data.content, background: normalizeBackground(data.content.background) },
+			layers: data.layers,
 			cloudId: typeof data.cloudId === 'string' ? data.cloudId : null,
 			cloudOwner: typeof data.cloudOwner === 'string' ? data.cloudOwner : null,
 			cloudSnapshot: typeof data.cloudSnapshot === 'string' ? data.cloudSnapshot : null,

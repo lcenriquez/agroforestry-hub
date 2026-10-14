@@ -1,6 +1,7 @@
 import { getDownloadURL, ref, uploadBytes } from 'firebase/storage';
 
 import { storage } from '../firebase-config';
+import { MAX_BACKGROUND_BYTES } from '../interfaces/Design';
 import { MAX_EXPERIENCE_PHOTOS } from '../interfaces/Experience';
 
 const MAX_PHOTO_SIZE_BYTES = 5 * 1024 * 1024; // 5MB
@@ -28,4 +29,15 @@ export async function uploadExperiencePhotos(speciesId: string, authorId: string
 	);
 
 	return urls;
+}
+
+// Imagen de fondo de un diseño del Diseñador de SAF. Va en la carpeta del
+// autor (designs/{uid}/...), que sólo él puede leer y escribir (storage.rules).
+export async function uploadDesignBackground(authorId: string, blob: Blob): Promise<{ url: string; path: string }> {
+	if (!blob.type.startsWith('image/')) throw new PhotoValidationError('La imagen de fondo no es válida');
+	if (blob.size > MAX_BACKGROUND_BYTES) throw new PhotoValidationError('La imagen de fondo pesa más de 10MB');
+	const path = `designs/${authorId}/${Date.now()}-${Math.random().toString(36).slice(2, 8)}.jpg`;
+	const fileRef = ref(storage, path);
+	await uploadBytes(fileRef, blob, { contentType: blob.type });
+	return { url: await getDownloadURL(fileRef), path };
 }

@@ -1,8 +1,9 @@
 import { MAX_DESIGN_NAME_LENGTH, MAX_DESIGN_PLANTS } from '../../interfaces/Design';
+import { normalizeBackground } from './background';
 import { formatNumber, shortLabel } from './strata';
 import { newPlantId, PLOT_MAX, PLOT_MIN, roundCoord } from './useDesignState';
 
-import type { DesignContent, DesignPlant, DesignPlot } from '../../interfaces/Design';
+import type { DesignContent, DesignLayers, DesignPlant, DesignPlot } from '../../interfaces/Design';
 import type { PlantSpec, StratumInfo } from './strata';
 
 // Exportación del diseño: SVG/PNG de la vista en planta (generado desde los
@@ -170,9 +171,16 @@ export interface ImportedDesign {
 	name: string;
 	description?: string;
 	content: DesignContent;
+	layers?: unknown;
 }
 
-export function designToJson(name: string, description: string | undefined, content: DesignContent, specFor: (id: string) => PlantSpec): string {
+export function designToJson(
+	name: string,
+	description: string | undefined,
+	content: DesignContent,
+	specFor: (id: string) => PlantSpec,
+	layers?: DesignLayers
+): string {
 	return JSON.stringify(
 		{
 			format: JSON_FORMAT,
@@ -184,7 +192,9 @@ export function designToJson(name: string, description: string | undefined, cont
 			plants: content.plants.map(plant => {
 				const spec = specFor(plant.speciesId);
 				return { speciesId: plant.speciesId, x: plant.x, y: plant.y, species: spec.missing ? undefined : `${spec.name} (${spec.scientificName})` };
-			})
+			}),
+			background: content.background ? { ...content.background, storagePath: undefined } : undefined,
+			layers
 		},
 		null,
 		2
@@ -231,7 +241,9 @@ export function parseDesignJson(text: string): ImportedDesign {
 		description,
 		content: {
 			plot: { width: Math.min(PLOT_MAX, Math.max(PLOT_MIN, width)), length: Math.min(PLOT_MAX, Math.max(PLOT_MIN, length)) },
-			plants
-		}
+			plants,
+			background: normalizeBackground(raw.background)
+		},
+		layers: raw.layers
 	};
 }

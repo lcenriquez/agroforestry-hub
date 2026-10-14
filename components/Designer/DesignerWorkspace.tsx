@@ -22,13 +22,16 @@ import {
 import { CloudArrowUpIcon, DownloadSimpleIcon, FilePlusIcon, FolderOpenIcon, UploadSimpleIcon } from '@phosphor-icons/react';
 
 import { createDesign, updateDesign } from '../../adapters/designs';
+import { uploadDesignBackground } from '../../adapters/storage';
 import { useAuth } from '../../contexts/AuthContext';
 import { MAX_DESIGN_NAME_LENGTH, MAX_DESIGN_PLANTS } from '../../interfaces/Design';
 import { analyzeDesign, buildFunctionCatalog, buildSuggestions } from './analysis';
 import AnalysisPanel from './AnalysisPanel';
+import { calibrateBackground, dataUrlToBlob, initialBackground, normalizeBackground, normalizeLayers, readBackgroundFile } from './background';
 import DesignToolbar from './DesignToolbar';
 import { loadDraft, loadPrefs, saveDraft, savePrefs } from './draftStorage';
 import { buildPlanSvg, designToJson, downloadBlob, parseDesignJson, slugify, svgToPngBlob } from './exporters';
+import LayersPanel from './LayersPanel';
 import PlantInspector from './PlantInspector';
 import PlanView from './PlanView';
 import PlotSettings from './PlotSettings';
@@ -38,7 +41,7 @@ import SpeciesPalette, { StratumDot } from './SpeciesPalette';
 import { buildPlantSpec, buildStrata, missingPlantSpec } from './strata';
 import { DEFAULT_PLOT, emptyContent, newPlantId, PLOT_MAX, PLOT_MIN, useDesignState } from './useDesignState';
 
-import type { Design, DesignContent, DesignPlant } from '../../interfaces/Design';
+import type { Design, DesignContent, DesignLayerId, DesignLayers, DesignLayerState, DesignPlant } from '../../interfaces/Design';
 import type { SpeciesType } from '../../interfaces/Species';
 import type { DesignerTool } from './PlanView';
 import type { PlantSpec } from './strata';
@@ -65,7 +68,8 @@ function contentFromDesign(design: Design): DesignContent {
 			width: Number.isFinite(width) ? Math.min(PLOT_MAX, Math.max(PLOT_MIN, width)) : DEFAULT_PLOT.width,
 			length: Number.isFinite(length) ? Math.min(PLOT_MAX, Math.max(PLOT_MIN, length)) : DEFAULT_PLOT.length
 		},
-		plants
+		plants,
+		background: normalizeBackground(design.background)
 	};
 }
 
@@ -109,6 +113,10 @@ export default function DesignerWorkspace({ species }: { species: SpeciesType[] 
 	const [localSaved, setLocalSaved] = useState<boolean | null>(null);
 	const [saving, setSaving] = useState(false);
 	const [savedOpen, setSavedOpen] = useState(false);
+	const [layers, setLayers] = useState<DesignLayers>(() => normalizeLayers(initial.draft?.layers));
+	const [calibrationPoints, setCalibrationPoints] = useState<{ x: number; y: number }[]>([]);
+	const [loadingImage, setLoadingImage] = useState(false);
+	const background = content.background ?? null;
 	const statusTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 	const fileInput = useRef<HTMLInputElement>(null);
 
@@ -159,19 +167,24 @@ export default function DesignerWorkspace({ species }: { species: SpeciesType[] 
 
 	useEffect(() => {
 		const timer = setTimeout(() => {
-			const ok = saveDraft({
+			const draft = {
 				name,
 				description: description || undefined,
 				content,
+				layers,
 				cloudId: cloud?.id ?? null,
 				cloudOwner: cloud?.owner ?? null,
 				cloudSnapshot,
 				savedAt: Date.now()
-			});
+			};
+			let ok = saveDraft(draft);
+			// Una foto aún no subida (data URL) puede no caber en localStorage:
+			// se guarda el resto del borrador sin ella.
+			if (!ok && content.background?.src.startsWith('data:')) ok = saveDraft({ ...draft, content: { ...content, background: null } });
 			setLocalSaved(ok);
 		}, 400);
 		return () => clearTimeout(timer);
-	}, [name, description, content, cloud, cloudSnapshot]);
+	}, [name, description, content, layers, cloud, cloudSnapshot]);
 
 	useEffect(() => {
 		savePrefs({ hideOnboarding: !showOnboarding, showGrid, snap, gridSpacing });
@@ -223,6 +236,57 @@ export default function DesignerWorkspace({ species }: { species: SpeciesType[] 
 	const handleDragStart = useCallback(() => dispatch({ type: 'beginDrag' }), [dispatch]);
 	const handleDragMove = useCallback((id: string, x: number, y: number) => dispatch({ type: 'movePlants', moves: [{ id, x, y }] }), [dispatch]);
 	const handleDragEnd = useCallback(() => dispatch({ type: 'endDrag' }), [dispatch]);
+	const handleBackgroundMove = useCallback((x: number, y: number) => dispatch({ type: 'moveBackground', x, y }), [dispatch]);
+
+	// --- Capas e imagen de fondo -------------------------------------------
+	const changeTool = useCallback((next: DesignerTool) => {
+		setTool(next);
+		setCalibrationPoints([]);
+	}, []);
+
+	function handleLayerChange(id: DesignLayerId, change: Partial<DesignLayerState>) {
+		setLayers(current => ({ ...current, [id]: { ...current[id], ...change } }));
+		if ((change.visible === false || change.locked === true) && id === 'background' && (tool === 'calibrate' || tool === 'moveBackground'))
+			changeTool('select');
+		if ((change.visible === false || change.locked === true) && id === 'plants') setSelectedId(null);
+	}
+
+	async function handlePickImage(file: File) {
+		setLoadingImage(true);
+		try {
+			const image = await readBackgroundFile(file);
+			const next = background
+				? { ...background, ...image, metersPerPixel: (background.metersPerPixel * background.naturalWidth) / image.naturalWidth }
+				: initialBackground(image, plot);
+			dispatch({ type: 'setBackground', background: { ...next, storagePath: undefined } });
+			setLayers(current => ({ ...current, background: { ...current.background, visible: true } }));
+			changeTool('calibrate');
+			showStatus({ type: 'info', text: 'Imagen cargada. Calíbrala: marca dos puntos con una distancia conocida.' });
+		} catch (error) {
+			showStatus({ type: 'error', text: error instanceof Error ? error.message : 'No se pudo cargar la imagen.' });
+		} finally {
+			setLoadingImage(false);
+		}
+	}
+
+	function handleCalibrationPoint(point: { x: number; y: number }) {
+		setCalibrationPoints(current => (current.length >= 2 ? [point] : [...current, point]));
+	}
+
+	function handleCalibrate(meters: number) {
+		if (!background || calibrationPoints.length < 2) return;
+		dispatch({ type: 'setBackground', background: calibrateBackground(background, calibrationPoints[0], calibrationPoints[1], meters) });
+		changeTool('select');
+		showStatus({ type: 'success', text: 'Escala calibrada. Ahora las copas se ven a tamaño real sobre la imagen.' });
+	}
+
+	function handleFitPlotToImage() {
+		if (!background) return;
+		const width = Math.min(PLOT_MAX, Math.max(PLOT_MIN, Math.round(background.naturalWidth * background.metersPerPixel * 10) / 10));
+		const length = Math.min(PLOT_MAX, Math.max(PLOT_MIN, Math.round(background.naturalHeight * background.metersPerPixel * 10) / 10));
+		dispatch({ type: 'setBackground', background: { ...background, x: 0, y: 0 } });
+		dispatch({ type: 'setPlot', plot: { width, length } });
+	}
 	const selectPlant = useCallback((id: string | null) => setSelectedId(id), []);
 	const focusPlant = useCallback((id: string) => {
 		setSelectedId(id);
@@ -250,9 +314,11 @@ export default function DesignerWorkspace({ species }: { species: SpeciesType[] 
 
 	function loadContent(
 		next: DesignContent,
-		meta: { name: string; description?: string; cloud: { id: string; owner: string } | null; snapshot: string | null }
+		meta: { name: string; description?: string; cloud: { id: string; owner: string } | null; snapshot: string | null; layers?: unknown }
 	) {
 		dispatch({ type: 'load', content: next });
+		setLayers(normalizeLayers(meta.layers));
+		setCalibrationPoints([]);
 		setName(meta.name);
 		setDescription(meta.description ?? '');
 		setCloud(meta.cloud);
@@ -284,7 +350,8 @@ export default function DesignerWorkspace({ species }: { species: SpeciesType[] 
 			name: designName,
 			description: designDescription,
 			cloud: { id: design._id, owner: authUser.uid },
-			snapshot: snapshotOf(designName, designDescription, next)
+			snapshot: snapshotOf(designName, designDescription, next),
+			layers: design.layers
 		});
 		setSavedOpen(false);
 		const missing = next.plants.filter(p => !specs.has(p.speciesId)).length;
@@ -314,9 +381,23 @@ export default function DesignerWorkspace({ species }: { species: SpeciesType[] 
 		const trimmedName = name.trim().slice(0, MAX_DESIGN_NAME_LENGTH) || DEFAULT_NAME;
 		const trimmedDescription = description.trim().slice(0, 2000);
 		const now = Date.now();
-		const data = { name: trimmedName, description: trimmedDescription || undefined, plot, plants, updatedAt: now };
 		setSaving(true);
 		try {
+			let savedContent = content;
+			if (background?.src.startsWith('data:')) {
+				const uploaded = await uploadDesignBackground(authUser.uid, dataUrlToBlob(background.src));
+				dispatch({ type: 'replaceBackgroundSrc', from: background.src, src: uploaded.url, storagePath: uploaded.path });
+				savedContent = { ...content, background: { ...background, src: uploaded.url, storagePath: uploaded.path } };
+			}
+			const data = {
+				name: trimmedName,
+				description: trimmedDescription || undefined,
+				plot,
+				plants,
+				background: savedContent.background ?? null,
+				layers,
+				updatedAt: now
+			};
 			let id = cloudOwnedByUser ? cloud!.id : null;
 			if (id) {
 				try {
@@ -331,7 +412,7 @@ export default function DesignerWorkspace({ species }: { species: SpeciesType[] 
 			setName(trimmedName);
 			setDescription(trimmedDescription);
 			setCloud({ id, owner: authUser.uid });
-			setCloudSnapshot(snapshotOf(trimmedName, trimmedDescription, content));
+			setCloudSnapshot(snapshotOf(trimmedName, trimmedDescription, savedContent));
 			showStatus({ type: 'success', text: 'Diseño guardado en la nube.' });
 		} catch (error) {
 			console.log(error);
@@ -346,7 +427,7 @@ export default function DesignerWorkspace({ species }: { species: SpeciesType[] 
 		const fileBase = slugify(name);
 		try {
 			if (kind === 'json') {
-				downloadBlob(new Blob([designToJson(name, description, content, specFor)], { type: 'application/json' }), `${fileBase}.json`);
+				downloadBlob(new Blob([designToJson(name, description, content, specFor, layers)], { type: 'application/json' }), `${fileBase}.json`);
 				return;
 			}
 			const { svg, width, height } = buildPlanSvg({ name, plot, plants, specFor, strata, gridSpacing: showGrid ? gridSpacing : null });
@@ -362,7 +443,7 @@ export default function DesignerWorkspace({ species }: { species: SpeciesType[] 
 		event.target.value = '';
 		if (!file) return;
 		try {
-			if (file.size > 2_000_000) throw new Error('El archivo es demasiado grande.');
+			if (file.size > 20_000_000) throw new Error('El archivo es demasiado grande.');
 			const imported = parseDesignJson(await file.text());
 			if (
 				plants.length > 0 &&
@@ -370,7 +451,7 @@ export default function DesignerWorkspace({ species }: { species: SpeciesType[] 
 				!window.confirm('¿Reemplazar el diseño actual por el importado? Los cambios que no guardaste se perderán.')
 			)
 				return;
-			loadContent(imported.content, { name: imported.name, description: imported.description, cloud: null, snapshot: null });
+			loadContent(imported.content, { name: imported.name, description: imported.description, cloud: null, snapshot: null, layers: imported.layers });
 			const missing = imported.content.plants.filter(p => !specs.has(p.speciesId)).length;
 			showStatus({
 				type: missing ? 'warning' : 'success',
@@ -571,6 +652,25 @@ export default function DesignerWorkspace({ species }: { species: SpeciesType[] 
 							aria-label="Notas del diseño"
 						/>
 					</Panel>
+					<Panel title="Capas">
+						<LayersPanel
+							layers={layers}
+							onLayerChange={handleLayerChange}
+							background={background}
+							onPickImage={handlePickImage}
+							onRemoveBackground={() => {
+								dispatch({ type: 'setBackground', background: null });
+								if (tool === 'calibrate' || tool === 'moveBackground') changeTool('select');
+							}}
+							onFitPlotToImage={handleFitPlotToImage}
+							loadingImage={loadingImage}
+							tool={tool}
+							onToolChange={changeTool}
+							calibrationCount={calibrationPoints.length}
+							onCalibrate={handleCalibrate}
+							onCancelCalibration={() => setCalibrationPoints([])}
+						/>
+					</Panel>
 					<Panel title="Especies">
 						<SpeciesPalette species={species} specs={specs} strata={strata} activeSpeciesId={activeSpeciesId} onPick={pickSpecies} />
 					</Panel>
@@ -579,7 +679,7 @@ export default function DesignerWorkspace({ species }: { species: SpeciesType[] 
 				<Stack gap={3} display={panelDisplay('diseno', 'flex')} minW={0}>
 					<DesignToolbar
 						tool={tool}
-						onToolChange={setTool}
+						onToolChange={changeTool}
 						lineSpacing={lineSpacing}
 						onLineSpacingChange={setLineSpacing}
 						canUndo={canUndo}
@@ -621,6 +721,13 @@ export default function DesignerWorkspace({ species }: { species: SpeciesType[] 
 						onDragStart={handleDragStart}
 						onDragMove={handleDragMove}
 						onDragEnd={handleDragEnd}
+						background={background}
+						layers={layers}
+						calibrationPoints={tool === 'calibrate' ? calibrationPoints : []}
+						onCalibrationPoint={handleCalibrationPoint}
+						onBackgroundDragStart={handleDragStart}
+						onBackgroundMove={handleBackgroundMove}
+						onBackgroundDragEnd={handleDragEnd}
 					/>
 					{selectedPlant ? (
 						<PlantInspector

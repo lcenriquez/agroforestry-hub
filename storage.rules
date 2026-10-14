@@ -13,5 +13,15 @@ service firebase.storage {
         && request.resource.size <= 5 * 1024 * 1024
         && request.resource.contentType.matches('image/.*');
     }
+
+    // Imagen de fondo (foto aérea/plano) de los diseños del Diseñador de SAF.
+    // Los diseños son privados: sólo su autor lee y escribe su carpeta.
+    match /designs/{uid}/{fileName} {
+      allow read, delete: if request.auth != null && request.auth.uid == uid;
+      allow create, update: if request.auth != null
+        && request.auth.uid == uid
+        && request.resource.size <= 10 * 1024 * 1024
+        && request.resource.contentType.matches('image/.*');
+    }
   }
 }
