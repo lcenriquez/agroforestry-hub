@@ -1,9 +1,11 @@
 import NextLink from 'next/link';
 import { useEffect, useMemo, useState } from 'react';
 
-import { Link, Stack, Text } from '@chakra-ui/react';
+import { Container, Heading, Link, Stack, Text } from '@chakra-ui/react';
 
 import { getSpecies } from '../adapters/firestore';
+import HeroBanner from '../components/Home/HeroBanner';
+import SafSummary from '../components/Home/SafSummary';
 import { emptyFilterState, filterSpeciesList, uniqueById } from '../components/Tables/filterSpecies';
 import SpeciesCards from '../components/Tables/SpeciesCards';
 import SpeciesFilters from '../components/Tables/SpeciesFilters';
@@ -55,47 +57,60 @@ const Home: NextPage = () => {
 	}
 
 	return (
-		<Stack gap={6}>
-			<Text maxW="3xl">
-				<Text as="strong">SAF Hub</Text> reúne información práctica sobre especies usadas en Sistemas Agroforestales (SAF): estrato, zona ecológica,
-				altura, funciones ecológicas y más, junto con experiencias reales de cultivo compartidas por la comunidad. Explora el catálogo, filtra por lo
-				que buscas y comparte tu propia experiencia con cada especie.
-			</Text>
+		<>
+			<HeroBanner />
+			<Container maxW="container.xl" pb="2em" flexShrink={0}>
+				<Stack gap={{ base: 10, md: 14 }} pt={{ base: 8, md: 12 }}>
+					<SafSummary />
 
-			<Text>
-				¿No encuentras una especie?{' '}
-				<Link asChild color="blue.400">
-					<NextLink href="/suggest-species">Sugiérela</NextLink>
-				</Link>
-			</Text>
+					<Stack as="section" id="catalogo" aria-labelledby="catalogo-title" gap={6} scrollMarginTop={4}>
+						<Stack gap={2}>
+							<Heading as="h2" id="catalogo-title" size="2xl">
+								Catálogo de especies
+							</Heading>
+							<Text color="fg.muted" maxW="3xl">
+								Información práctica sobre especies usadas en SAF: estrato, zona ecológica, altura, funciones ecológicas y más, junto con experiencias
+								reales de cultivo compartidas por la comunidad. Filtra por lo que buscas y comparte tu propia experiencia con cada especie.
+							</Text>
+						</Stack>
 
-			{!loading && species.length > 0 && (
-				<SpeciesFilters
-					search={search}
-					onSearchChange={handleSearchChange}
-					filters={filters}
-					onFiltersChange={handleFiltersChange}
-					stratums={stratums}
-					zones={zones}
-					ecoFunctions={ecoFunctions}
-					addFunctions={addFunctions}
-				/>
-			)}
+						<Text>
+							¿No encuentras una especie?{' '}
+							<Link asChild color="blue.400">
+								<NextLink href="/suggest-species">Sugiérela</NextLink>
+							</Link>
+						</Text>
 
-			{loading ? (
-				<SpeciesTableSkeleton />
-			) : filtered.length === 0 ? (
-				<Text color="fg.muted">No encontramos especies con esos filtros.</Text>
-			) : (
-				<>
-					<SpeciesLegend stratums={stratums} zones={zones} ecoFunctions={ecoFunctions} addFunctions={addFunctions} />
-					<SpeciesTable species={paged} />
-					<SpeciesCards species={paged} />
-					<SpeciesPagination count={filtered.length} pageSize={PAGE_SIZE} page={currentPage} onPageChange={setPage} />
-				</>
-			)}
-		</Stack>
+						{!loading && species.length > 0 && (
+							<SpeciesFilters
+								search={search}
+								onSearchChange={handleSearchChange}
+								filters={filters}
+								onFiltersChange={handleFiltersChange}
+								stratums={stratums}
+								zones={zones}
+								ecoFunctions={ecoFunctions}
+								addFunctions={addFunctions}
+							/>
+						)}
+
+						{loading ? (
+							<SpeciesTableSkeleton />
+						) : filtered.length === 0 ? (
+							<Text color="fg.muted">No encontramos especies con esos filtros.</Text>
+						) : (
+							<>
+								<SpeciesLegend stratums={stratums} zones={zones} ecoFunctions={ecoFunctions} addFunctions={addFunctions} />
+								<SpeciesTable species={paged} />
+								<SpeciesCards species={paged} />
+								<SpeciesPagination count={filtered.length} pageSize={PAGE_SIZE} page={currentPage} onPageChange={setPage} />
+							</>
+						)}
+					</Stack>
+				</Stack>
+			</Container>
+		</>
 	);
 };
 
-export default withPublicLayout(Home, 'Toda la información que necesitas sobre SAFs', 'Sistemas agroforestales');
+export default withPublicLayout(Home, 'Toda la información que necesitas sobre SAFs');
