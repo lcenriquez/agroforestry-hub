@@ -2,7 +2,7 @@
 
 Generado: 2026-10-14T12:24:30+00:00 · Catálogo analizado: **465 especies** (colección `species` de Firestore).
 
-> **Estado: parcial.** La investigación en línea tiene un límite de búsquedas por turno; en esta pasada se verificaron **206 de 465** especies. Las **259** restantes quedan como *pendientes de investigar* (listadas abajo) y se completarán en una siguiente pasada. Nada se ha escrito todavía en Firestore.
+> **Estado: parcial.** La investigación en línea tiene un límite de búsquedas por turno; en esta pasada se verificaron **206 de 465** especies. Las **259** restantes quedan como *pendientes de investigar* (listadas abajo) y se completarán en una siguiente pasada. La primera pasada ya se aplicó en Firestore; la segunda está descrita al final.
 
 ## Resumen
 
@@ -484,3 +484,479 @@ Albizzia procera (Siri blanco), Allium fistulosum (Cebolla Welsh), Allium sp. (C
 ## Fuentes
 
 Cada especie se investigó con fuentes como POWO (Kew), Tropicos, GBIF, CONABIO/Enciclovida, World Agroforestry (ICRAF), Useful Tropical Plants, PFAF, Feedipedia, CABI y guías de extensión. Las URL consultadas por especie están en `scripts/species-cleanup/sources.json`.
+
+## Segunda pasada (2026-10-14)
+
+La primera pasada (210 actualizaciones, 22 borrados) ya se aplicó en Firestore el 2026-10-14; el respaldo quedó en un `backup-*.json` local (no versionado).
+
+Esta segunda pasada cubre las especies pendientes restantes. Los cambios están en `scripts/species-cleanup/changes-pass2.json` (217 actualizaciones, sin borrados). Se aplica con el mismo script:
+
+```bash
+node scripts/species-cleanup/apply-species-cleanup.mjs --file=scripts/species-cleanup/changes-pass2.json          # simulación
+node scripts/species-cleanup/apply-species-cleanup.mjs --file=scripts/species-cleanup/changes-pass2.json --apply  # aplicar
+```
+
+> **Importante:** a diferencia de la primera pasada, estos datos **no se verificaron con búsquedas en línea por especie**; provienen de referencias botánicas generales (POWO para nombres aceptados, APG IV para familias) y son tamaños/preferencias típicos del cultivo. Confianza: media. Se siguieron los mismos criterios: sólo se llenan campos vacíos y las únicas modificaciones de valores existentes son las correcciones listadas abajo.
+
+### Especies completadas
+
+| Especie | Campos completados |
+| --- | --- |
+| Phaseolus lunatus (Frijol ibes) | estrato, zonas, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Castanea sativa (Castaño) | funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Selaginella martensii (Selaginela, doradilla) | estrato, funciones ecológicas, ancho de copa, detalles |
+| Citrus aurantium (Limon canario, limon criollo) | funciones ecológicas, funciones adicionales |
+| Rosmarinus officinalis (Romero) | taxonomía, estrato, funciones ecológicas, detalles |
+| Dimocarpus longan (Longan, Ojo de dragón) | taxonomía, funciones ecológicas, funciones adicionales |
+| Hoya sp. (Cinnamon scent) | taxonomía, zonas, funciones ecológicas, altura, ancho de copa, detalles |
+| Phyllanthus acidus (Grosella) | estrato, funciones ecológicas, altura, ancho de copa, detalles |
+| Mucuna pruriens (Frijol nescafe, picapica, frijol terciopelo, nescafé) | funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Ceiba pendrata (Ceiba) | taxonomía, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Physalis peruviana (Uchuva, tomate silvestre) | zonas, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Ruta sp. (Ruda) | estrato, zonas, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Morus alba (Morera para hoja, blacberry (silkworm)) | zonas, funciones ecológicas, funciones adicionales |
+| Ananas cosmosus (Piña) | taxonomía, zonas, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Rumex mexicanus (Lengua de Vaca) | funciones ecológicas, funciones adicionales |
+| Maranta arundinacea (Sagu) | taxonomía, funciones ecológicas |
+| Crotalaria juncea (Crotalaria) | taxonomía, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Piper auritum (Acuyo) | taxonomía, funciones ecológicas, funciones adicionales, detalles |
+| Phoenix datilifera (Datil) | taxonomía, estrato, funciones adicionales, detalles |
+| Musa balbisiana (Platano postre) | funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Solanum nigrum (Hierba mora) | estrato, funciones adicionales, detalles |
+| Salvia officinalis (Salvia) | taxonomía, estrato, funciones ecológicas, funciones adicionales, detalles |
+| Dioscorea sp. (Camote de cerro) | estrato, altura, ancho de copa, detalles |
+| Dioscorea bulbifera (Papa Voladora) | funciones ecológicas, funciones adicionales, ancho de copa, detalles |
+| Vignia sesquipedais (Ejote Cubano) | taxonomía, funciones ecológicas, ancho de copa, detalles |
+| Garcinia mangostana (Mangostan, mangosteen) | taxonomía, altura, detalles |
+| Podocarpus sp. (Podocarpos) | zonas, altura, ancho de copa, detalles |
+| Citrus reticulata (Mandarina) | funciones ecológicas, funciones adicionales |
+| Mentha spicata (Hierbabuena) | estrato, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Trifolium repens (Trebol blanco) | estrato, funciones ecológicas, funciones adicionales, ancho de copa |
+| Guazuma ulmifolia (guazimo, guasima, guacima, caulote, cuaulote (del náhuatl) o majahua, mutamba) | zonas, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Smilax officinalis (Zarzaparrilla) | taxonomía, altura, ancho de copa, detalles |
+| Hylocereus undatus (Pitahaya) | taxonomía, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Heliocarpus americanus (Jonote) | funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Phyllostachis aurea (Bambu dorado) | taxonomía, funciones ecológicas, funciones adicionales |
+| Artemisia absinthium (Ajenjo) | estrato, funciones adicionales, altura, ancho de copa, detalles |
+| Cymbopogon winterianus (Citronela) | funciones ecológicas, altura |
+| Morus nigra (Morera negra) | zonas, funciones ecológicas, funciones adicionales |
+| Árnica sp. (Arnica) | estrato, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Casuarina equisetifolia (Casuarina) | zonas, funciones ecológicas, funciones adicionales |
+| Solanum quitoense (Lulo) | funciones ecológicas, funciones adicionales, detalles |
+| Phyllostachis nigra (Bambu negro chico) | taxonomía, funciones ecológicas, funciones adicionales |
+| Malus communis (Manzana, apple) | taxonomía, funciones ecológicas, funciones adicionales, detalles |
+| Carpobrotus acinaciformis (Flor del cuchillo, diente de dragón) | estrato, funciones ecológicas, funciones adicionales, ancho de copa, detalles |
+| Annona muricata (Guanabana, graviola) | funciones ecológicas, funciones adicionales, detalles |
+| Cedrela odorata (Cedro) | funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Argemone mexicana (Chicalote) | estrato, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Xanthosoma saggitifolium (Macal, Tiquisque morado, Taioba, Hualuza) | taxonomía, funciones adicionales |
+| Gossypium hirsutum (Algodon) | zonas, funciones ecológicas, altura, ancho de copa, detalles |
+| Populus spp. (Alamo, poplar) | estrato, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Citrullus lanatus (Sandia) | taxonomía, zonas, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Artocarpus heterophylus (Yaca, jack, nanka, panapen, jaca) | taxonomía, funciones ecológicas, detalles |
+| Pouteria caimito (Caimito, caimeto, abiu roxo) | zonas, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Cynara scolimus (Alcachofa) | taxonomía, estrato, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Plantago major (Llanten de la india, blond) | zonas, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Musa acuminata (platano malayo, platano rojo, banana nanica) | funciones ecológicas, altura, ancho de copa, detalles |
+| Platanus spp. (Haya, platano) | estrato, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Manihot esculenta (Yuca) | funciones ecológicas, funciones adicionales, detalles |
+| Aloysia citrodora (Cedron) | estrato, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Cinchona officinalis (Quina) | taxonomía, funciones adicionales, altura, ancho de copa, detalles |
+| Elettaria cardamomum (Cardamomo) | taxonomía, funciones adicionales |
+| Smallanthus sonchifolius (Yacon) | funciones ecológicas, detalles |
+| Chamaedorea tepejilote (Tepejilote) | taxonomía, funciones adicionales |
+| Verbesina crocata (Arnica capitaneja, palo espinoso, cachanquillo) | estrato, zonas, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Pinus pinea (Pino piñonero) | estrato, funciones adicionales, altura, ancho de copa, detalles |
+| Capsicum pubescens (Chile cera) | taxonomía, funciones ecológicas, funciones adicionales |
+| Pouteria lucuma (Lucuma) | funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Arracacha xanthorrhiza (Arracacha) | taxonomía, estrato, funciones adicionales, detalles |
+| Allium fistulosum (Cebolla Welsh) | estrato, funciones ecológicas, funciones adicionales |
+| Spondias mombin (Jobo, ciruela tropical, cedrillo) | funciones ecológicas, altura, ancho de copa, detalles |
+| Cymbopogon citratos (Zacate limon) | taxonomía, funciones ecológicas, funciones adicionales |
+| Moringa stenopetala (Moringa) | taxonomía, funciones ecológicas, funciones adicionales, ancho de copa, detalles |
+| Phaseolus lunatus (Frijol lima, fríjol mantequilla) | estrato, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Astronium urundeuva (Arbol de pimienta, Palo fierro, aroeira verdadeira) | zonas, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Cucurbita ficifolia (Chilacayote) | taxonomía, funciones ecológicas, funciones adicionales, ancho de copa, detalles |
+| Pouteria campechiana (Canistel) | funciones ecológicas, funciones adicionales, altura, detalles |
+| Allium sp. (Cebollino) | estrato, funciones ecológicas, funciones adicionales |
+| Pithecellobium dulce (Guamuchil) | funciones ecológicas, funciones adicionales, detalles |
+| Urtica dioica (Ortiga) | taxonomía, funciones ecológicas, funciones adicionales |
+| Asparagus officinalis (Esparrago) | taxonomía, estrato, funciones adicionales |
+| Malpighia glabra (Acerola) | taxonomía, funciones ecológicas, funciones adicionales |
+| Mimosa scabrella (Bracatinga) | taxonomía, funciones ecológicas, altura, ancho de copa, detalles |
+| Citrus sinensis (Naranja) | funciones ecológicas, funciones adicionales, detalles |
+| Simmondsia chinensis (Jojoba) | estrato, funciones ecológicas, altura, ancho de copa, detalles |
+| Rubus idaeus (Frambuesa) | estrato, funciones ecológicas, funciones adicionales |
+| Ilex paraguariensis (Mate, Yerba Mate, erva mate) | zonas, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Araucaria araucana (Araucaria) | altura, ancho de copa, detalles |
+| Grevilea Robusta (Grevilea, grevilia, bredil) | taxonomía, estrato, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Cariniana sp. (yesquero (Bolivia), jequitiba (Brasil), cachimbo (Perú), bacú (Venezuela), jequitibá) | zonas, altura, ancho de copa, detalles |
+| Mauritia flexuosa (Buriti, moriche, canangucha, mirití, aguaje, buriti) | taxonomía, zonas, funciones adicionales, altura, ancho de copa, detalles |
+| Malphigia emarginata (Cerecita, manzanita, semeruco, acerola) | taxonomía, zonas, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Hovenia dulcis (Arbol de las pasas, uva do japao) | taxonomía, zonas, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Scheelea princeps (Motacu) | taxonomía, funciones adicionales, altura, ancho de copa, detalles |
+| Sesamum+C13 indicum (Ajonjoli) | taxonomía, zonas, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Chamaemelum nobile (Manzanilla) | estrato, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Ceratonia siliqua (Algarrobo) | estrato, funciones adicionales, detalles |
+| Araucaria bidwilli (Araucaria australiana) | taxonomía, funciones adicionales, altura, ancho de copa |
+| Sabal mexicana (Guano, bonxaan) | estrato, zonas, funciones adicionales, altura, ancho de copa, detalles |
+| Salix spp. (Sauce) | taxonomía, estrato, funciones ecológicas |
+| Desmodium rensonii (Desmodium rensonii) | estrato, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Wisteria sinensis (Glicinia) | taxonomía, estrato, funciones ecológicas, ancho de copa, detalles |
+| Alnus acuminata (Ilite, aile) | taxonomía, estrato, funciones ecológicas, detalles |
+| Ardisia compressa (Capulin de Mayo) | taxonomía, funciones ecológicas, funciones adicionales |
+| Croton draconoides (Sangre de grado) | funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Cucurbita moschata (Calabaza melona) | taxonomía, zonas, funciones ecológicas, altura, ancho de copa, detalles |
+| Vigna radiata (Frijol mungo) | estrato, zonas, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Musa paradisiaca (Platano) | funciones ecológicas, detalles |
+| Handroanthus heptaphyllus (lapacho rosado, ipe rosa) | zonas, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Gallesia integrifolia (Palo de ajo, Ajo ajo (arbol)) | taxonomía, funciones adicionales, altura, ancho de copa, detalles |
+| Desmodium arbicularis (Engordacabras) | taxonomía, estrato, zonas, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Handroanthus impetiginosus (lapacho rosado, ipe roxo) | zonas, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Aspidosperma polyneuron (palo rosa, perobá, peroba, peroba común, peroba rosa, ybirá romí, ybyra ro'mi, peroba rosa) | zonas, funciones adicionales, altura, ancho de copa, detalles |
+| Inga edulis (Guaba negra, Jinicuil, Chalacahuite, acontope, jacanicuil, guaba, ingá) | zonas, funciones ecológicas, altura, ancho de copa, detalles |
+| Portulaca oleraceae (Verdolaga) | taxonomía, funciones ecológicas, ancho de copa |
+| Uncari tomentosa (Uña de gato) | taxonomía, funciones adicionales, altura, ancho de copa, detalles |
+| Sambucus mexicana (Sauco) | taxonomía, funciones ecológicas, detalles |
+| Dioscorea alata (Ñame) | funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Carica papaya (Papaya, papayón, olocotón, papayo, lechosa, lechoza, papaya) | funciones ecológicas |
+| Phormium tenax (Fornio) | taxonomía, estrato, funciones ecológicas, detalles |
+| Artemisia ludoviciana (Estafiate) | estrato, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Casuarina decaisneana (Casuarina del desierto) | estrato, funciones ecológicas, funciones adicionales, ancho de copa, detalles |
+| Heliconia spp. (Platanillo, chilalaca) | funciones ecológicas, detalles |
+| Spathiphyllum sp. (Cuna de moises, chile de gato) | estrato, altura, ancho de copa, detalles |
+| Caryocar brasiliense (Nuez souari, pequi) | zonas, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Platonia insignis (Bacuri, bacuri) | taxonomía, zonas, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Zea mais (Maiz) | taxonomía, zonas, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Dalbergia paloescrito (Dalbergia) | taxonomía, estrato, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Vitis vinifera (Uva, vid, parra) | funciones ecológicas, ancho de copa, detalles |
+| Annona cherimola (Chirimoya) | funciones ecológicas, funciones adicionales, detalles |
+| Verbascum thapsus (Gordolobo) | taxonomía, estrato, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Sideroxylon capiri (Tempisque) | estrato, zonas, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Enset ventricosum (Enset) | taxonomía, estrato, funciones ecológicas, funciones adicionales |
+| Cucumis melo (Melos) | estrato, zonas, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Trifolium pratense (Trebol rojo) | estrato, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Vainilla planiflora (Vainilla) | taxonomía, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Schinus molle (Pirul) | taxonomía, estrato, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Enterolobium cyclocarpum (Huanacaxtle, guanacastle, parota, guanacaste) | estrato, zonas, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Albizzia procera (Siri blanco) | taxonomía, estrato, funciones ecológicas, funciones adicionales, ancho de copa, detalles |
+| Citrus mitis (Limon calamondin) | taxonomía, funciones ecológicas, funciones adicionales |
+| Chamaecytisus palmensis (Tagasaste) | taxonomía, estrato, zonas, funciones ecológicas, funciones adicionales, detalles |
+| Garcinia gardneriana (Bacupari, bacupari-acu) | zonas, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Annona squamosa (Anona) | funciones ecológicas, funciones adicionales, detalles |
+| Inga vera (Jinicuil) | funciones ecológicas, funciones adicionales, detalles |
+| Senna multiglandulosa (Retama) | taxonomía, estrato, funciones ecológicas, altura, ancho de copa, detalles |
+| Fraxinus uhedi (Fresno) | taxonomía, estrato, funciones adicionales, altura, ancho de copa, detalles |
+| Hibiscus sabdariffa (Jamaica) | funciones ecológicas, altura, ancho de copa, detalles |
+| Genipa americana (Manzana del monte) | taxonomía, funciones ecológicas, altura, ancho de copa, detalles |
+| Vigna ungiculata (Frijol vara) | taxonomía, estrato, zonas, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Sapindus saponaria (Jaboncillo, Sululo, pipe, kile) | funciones ecológicas, funciones adicionales |
+| Mahonia aquifolium (Mahonia) | taxonomía, estrato, funciones ecológicas, funciones adicionales, detalles |
+| Pimienta dioica (Pimienta gorda) | taxonomía, funciones ecológicas, funciones adicionales |
+| Silybum marianum (Cardo mariano) | estrato, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Aloe vera (Sabila, savila) | taxonomía, estrato, funciones adicionales |
+| Sclerocarya birrea (Marula) | estrato, zonas, funciones ecológicas, altura, ancho de copa, detalles |
+| Sauropus androgynus (Katuk) | taxonomía, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Mentha sp. (Menta) | estrato, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Astrocaryum murumuru (Murumuru) | taxonomía, funciones adicionales, altura, ancho de copa, detalles |
+| Sorghum spp. (Sorgo) | zonas, funciones ecológicas, altura, ancho de copa, detalles |
+| Plinia edulis (Cambucá, cambucá) | zonas, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Crisobalamus icacus (Icaco) | taxonomía, estrato, zonas, funciones ecológicas, funciones adicionales, ancho de copa, detalles |
+| Melicoccus bijugatus (Mamon - Guaya) | estrato, zonas, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Erythrina edulis (Chachafruto) | funciones ecológicas, funciones adicionales, detalles |
+| Zingiber officinale (Jengibre) | funciones adicionales, detalles |
+| Vicia faba (Haba) | estrato, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Cucurbita foetidisima (Calabacilla) | taxonomía, estrato, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Sacharum oficinarum (Caña de azucar) | taxonomía, funciones ecológicas, ancho de copa, detalles |
+| Carya illinoensis (Nogal pecanero, pecan nut, Nuez de la isla, nuez encarcelada, walnut pecan) | taxonomía, funciones adicionales, detalles |
+| Mammea americana (Mamey) | taxonomía, funciones ecológicas, funciones adicionales, detalles |
+| Hibiscus rosasinensis (Tulipancillo) | taxonomía, estrato, funciones ecológicas, altura, ancho de copa, detalles |
+| Yucca elephantipes? (Izote) | taxonomía, funciones ecológicas, funciones adicionales, detalles |
+| Casimiroa edulis (Zapote blanco) | taxonomía, funciones ecológicas, detalles |
+| Citrus aurantium (Naranja agria) | funciones ecológicas, altura, ancho de copa, detalles |
+| Chenopodium ambrosioides (Epazote) | taxonomía, detalles |
+| Inga oesterdiana (Chalahuite) | taxonomía, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Erythroxylum coca (Coca) | altura, ancho de copa, detalles |
+| Glicine max (Soya) | taxonomía, zonas, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Desmodium spp. (Pega pega) | funciones ecológicas, funciones adicionales, ancho de copa, detalles |
+| Curcuma longa (Curcuma) | detalles |
+| Dahlia sp. (Dalia) | estrato, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Sechium edule (Chayote, pataste) | funciones ecológicas, ancho de copa, detalles |
+| Rumex acetosa (Sorrel) | estrato, funciones adicionales, altura, detalles |
+| Manguifera indica (Mango) | taxonomía, funciones ecológicas, funciones adicionales, detalles |
+| Dipteryx alata (Baru, Baruzeiro, arbol del Baru, barú) | zonas, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Pinus pinaster (Pino rodeno, pino marítimo , pino rubial​, pino negra, pinheiro bravo) | zonas, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Anacardium occidentale (Marañon, cayu) | funciones ecológicas, funciones adicionales, altura, detalles |
+| Centrolobium tomentosum (Arariba) | zonas, funciones ecológicas, altura, ancho de copa, detalles |
+| Arundo Donax (Carrizo) | taxonomía, estrato, zonas, funciones ecológicas, altura, ancho de copa, detalles |
+| Piper nigrum (Pimienta negra) | funciones adicionales, altura, ancho de copa, detalles |
+| Vitellaria paradoxa (Karite) | estrato, zonas, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Crotolaria longirostrata (Chipilin) | taxonomía, funciones ecológicas, funciones adicionales, detalles |
+| Eryngium foetidum (Cilantro silvestre, culantro silvestre) | zonas, funciones adicionales, altura, ancho de copa, detalles |
+| Arachis hypogaea (Cacahuate, mani) | zonas, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Vaccinium corymbosum (Mora azul) | estrato, funciones ecológicas, funciones adicionales, detalles |
+| Eriobotrya japonica (Nispero, nispero japonis, nespera) | funciones ecológicas, detalles |
+| Diospyros digyna (Zapote negro) | taxonomía, funciones ecológicas, detalles |
+| Phyllostachis edulis (Bambu moso) | taxonomía, estrato, funciones ecológicas, ancho de copa |
+| Artocarpus altilis (Arbol del pan, frutipan, breadfruit, pan de fruta) | funciones ecológicas, funciones adicionales, detalles |
+| Cyphomandra betacea (Tomate de Arbol, berenjenilla) | taxonomía, funciones ecológicas, detalles |
+| Tropaeolum majus (Mastuerzo) | taxonomía, estrato, funciones ecológicas, funciones adicionales, ancho de copa |
+| Erythrina americana (Colorin) | funciones ecológicas, funciones adicionales, detalles |
+| Annona diversifolia (Ilama) | estrato, zonas, funciones ecológicas, funciones adicionales, detalles |
+| Melissa officinalis (Toronjil) | estrato, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Helianthus tuberosa (Alcachofa jerusalmem, tupinambur) | taxonomía, estrato, funciones ecológicas, funciones adicionales, ancho de copa, detalles |
+| Cucurbita sp. (Calabaza) | taxonomía, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Equisetum arvense (Cola de caballo, equiseto) | estrato, funciones ecológicas, funciones adicionales, altura, detalles |
+| Atractocarous fitzalanni (Gardeña o orange randia, yellow mangosteen) | taxonomía, zonas, funciones ecológicas, altura, ancho de copa, detalles |
+| Vigna umbelata (Frijol arroz) | taxonomía, estrato, zonas, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Melia azedarach (Piocha, paraiso, canelo, cinamomo) | estrato, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Hibiscus esculentus (Ocra) | taxonomía, zonas, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Arachis pintoi (Cacahuate forrajero) | funciones ecológicas, funciones adicionales, ancho de copa |
+| Araucaria angustifolia (Araucaria, Pino del Parana, pino misionero, pino Brasil, araucaria misionense o cury) | zonas, funciones adicionales, altura, ancho de copa, detalles |
+| Manilkara zapota (Chicozapote, Chicle, arbol del chicle, sapoti) | zonas, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Medicago sativa (Alfalfa) | estrato, funciones ecológicas, altura, ancho de copa, detalles |
+| Handroanthus albus (lapacho amarillo, ipe amarelo) | zonas, funciones ecológicas, funciones adicionales, altura, ancho de copa, detalles |
+| Argania spinosa (Argan) | taxonomía, estrato, funciones ecológicas, funciones adicionales, detalles |
+| Rubus fruticosus (Zarzamora) | funciones ecológicas |
+| Carapa guianensis (Andiroba, cedro macho, andiroba) | funciones adicionales, altura, ancho de copa, detalles |
+
+### Correcciones de datos existentes (pasada 2)
+
+| Especie | Campo | Antes | Después | Motivo |
+| --- | --- | --- | --- | --- |
+| Rosmarinus officinalis (Romero) | taxonomy | Rosmarinus officinalis | Salvia rosmarinus | Nombre aceptado / corrección ortográfica (POWO) |
+| Ceiba pendrata (Ceiba) | taxonomy | Ceiba pendrata | Ceiba pentandra | Nombre aceptado / corrección ortográfica (POWO) |
+| Ceiba pendrata (Ceiba) | taxonomy.family | Bombacaceae | Malvaceae | Familia aceptada (APG IV / POWO) |
+| Morus alba (Morera para hoja, blacberry (silkworm)) | ecologicalZoneIds | ["1", "3", "4", "6", "6"] | ["1", "3", "4", "6"] | Id duplicado |
+| Ananas cosmosus (Piña) | taxonomy | Ananas cosmosus | Ananas comosus | Nombre aceptado / corrección ortográfica (POWO) |
+| Crotalaria juncea (Crotalaria) | taxonomy.family | fabaceae | Fabaceae | Familia aceptada (APG IV / POWO) |
+| Phoenix datilifera (Datil) | taxonomy | Phoenix datilifera | Phoenix dactylifera | Nombre aceptado / corrección ortográfica (POWO) |
+| Phoenix datilifera (Datil) | taxonomy.family | Palmáceas | Arecaceae | Familia aceptada (APG IV / POWO) |
+| Vignia sesquipedais (Ejote Cubano) | taxonomy | Vignia sesquipedais | Vigna unguiculata subsp. sesquipedalis | Nombre aceptado / corrección ortográfica (POWO) |
+| Garcinia mangostana (Mangostan, mangosteen) | taxonomy.family | Guttiferáceas | Clusiaceae | Familia aceptada (APG IV / POWO) |
+| Hylocereus undatus (Pitahaya) | taxonomy | Hylocereus undatus | Selenicereus undatus | Nombre aceptado / corrección ortográfica (POWO) |
+| Phyllostachis aurea (Bambu dorado) | taxonomy | Phyllostachis aurea | Phyllostachys aurea | Nombre aceptado / corrección ortográfica (POWO) |
+| Morus nigra (Morera negra) | ecologicalZoneIds | ["4", "6", "6"] | ["4", "6"] | Id duplicado |
+| Casuarina equisetifolia (Casuarina) | ecologicalZoneIds | ["1", "3", "4", "6", "6"] | ["1", "3", "4", "6"] | Id duplicado |
+| Phyllostachis nigra (Bambu negro chico) | taxonomy | Phyllostachis nigra | Phyllostachys nigra | Nombre aceptado / corrección ortográfica (POWO) |
+| Malus communis (Manzana, apple) | taxonomy | Malus communis | Malus domestica | Nombre aceptado / corrección ortográfica (POWO) |
+| Xanthosoma saggitifolium (Macal, Tiquisque morado, Taioba, Hualuza) | taxonomy | Xanthosoma saggitifolium | Xanthosoma sagittifolium | Nombre aceptado / corrección ortográfica (POWO) |
+| Citrullus lanatus (Sandia) | taxonomy.family | Cucurbitáceas | Cucurbitaceae | Familia aceptada (APG IV / POWO) |
+| Artocarpus heterophylus (Yaca, jack, nanka, panapen, jaca) | taxonomy | Artocarpus heterophylus | Artocarpus heterophyllus | Nombre aceptado / corrección ortográfica (POWO) |
+| Cynara scolimus (Alcachofa) | taxonomy | Cynara scolimus | Cynara cardunculus var. scolymus | Nombre aceptado / corrección ortográfica (POWO) |
+| Cinchona officinalis (Quina) | taxonomy.family | Rubiacea | Rubiaceae | Familia aceptada (APG IV / POWO) |
+| Cymbopogon citratos (Zacate limon) | taxonomy | Cymbopogon citratos | Cymbopogon citratus | Nombre aceptado / corrección ortográfica (POWO) |
+| Cucurbita ficifolia (Chilacayote) | taxonomy.family | Cucurbitáceas | Cucurbitaceae | Familia aceptada (APG IV / POWO) |
+| Grevilea Robusta (Grevilea, grevilia, bredil) | taxonomy | Grevilea Robusta | Grevillea robusta | Nombre aceptado / corrección ortográfica (POWO) |
+| Malphigia emarginata (Cerecita, manzanita, semeruco, acerola) | taxonomy | Malphigia emarginata | Malpighia emarginata | Nombre aceptado / corrección ortográfica (POWO) |
+| Malphigia emarginata (Cerecita, manzanita, semeruco, acerola) | taxonomy.family | Malphigiaceae | Malpighiaceae | Familia aceptada (APG IV / POWO) |
+| Hovenia dulcis (Arbol de las pasas, uva do japao) | taxonomy.family | Fabaceae | Rhamnaceae | Familia aceptada (APG IV / POWO) |
+| Scheelea princeps (Motacu) | taxonomy | Scheelea princeps | Attalea princeps | Nombre aceptado / corrección ortográfica (POWO) |
+| Scheelea princeps (Motacu) | taxonomy.family | Arecacea | Arecaceae | Familia aceptada (APG IV / POWO) |
+| Sesamum+C13 indicum (Ajonjoli) | taxonomy | Sesamum+C13 indicum | Sesamum indicum | Nombre aceptado / corrección ortográfica (POWO) |
+| Araucaria bidwilli (Araucaria australiana) | taxonomy | Araucaria bidwilli | Araucaria bidwillii | Nombre aceptado / corrección ortográfica (POWO) |
+| Cucurbita moschata (Calabaza melona) | taxonomy.family | Cucurbitáceas | Cucurbitaceae | Familia aceptada (APG IV / POWO) |
+| Gallesia integrifolia (Palo de ajo, Ajo ajo (arbol)) | taxonomy.family | Phytolaccaceae | Petiveriaceae | Familia aceptada (APG IV / POWO) |
+| Desmodium arbicularis (Engordacabras) | taxonomy | Desmodium arbicularis | Desmodium orbiculare | Nombre aceptado / corrección ortográfica (POWO) |
+| Desmodium arbicularis (Engordacabras) | ecologicalZoneIds | ["6", "6"] | ["6"] | Id duplicado |
+| Portulaca oleraceae (Verdolaga) | taxonomy | Portulaca oleraceae | Portulaca oleracea | Nombre aceptado / corrección ortográfica (POWO) |
+| Uncari tomentosa (Uña de gato) | taxonomy | Uncari tomentosa | Uncaria tomentosa | Nombre aceptado / corrección ortográfica (POWO) |
+| Uncari tomentosa (Uña de gato) | taxonomy.family | Rubiacea | Rubiaceae | Familia aceptada (APG IV / POWO) |
+| Sambucus mexicana (Sauco) | taxonomy | Sambucus mexicana | Sambucus canadensis | Nombre aceptado / corrección ortográfica (POWO) |
+| Sambucus mexicana (Sauco) | taxonomy.family | Adoxaceae | Viburnaceae | Familia aceptada (APG IV / POWO) |
+| Zea mais (Maiz) | taxonomy | Zea mais | Zea mays | Nombre aceptado / corrección ortográfica (POWO) |
+| Dalbergia paloescrito (Dalbergia) | taxonomy | Dalbergia paloescrito | Dalbergia palo-escrito | Nombre aceptado / corrección ortográfica (POWO) |
+| Vainilla planiflora (Vainilla) | taxonomy | Vainilla planiflora | Vanilla planifolia | Nombre aceptado / corrección ortográfica (POWO) |
+| Albizzia procera (Siri blanco) | taxonomy | Albizzia procera | Albizia procera | Nombre aceptado / corrección ortográfica (POWO) |
+| Citrus mitis (Limon calamondin) | taxonomy | Citrus mitis | Citrus × microcarpa | Nombre aceptado / corrección ortográfica (POWO) |
+| Chamaecytisus palmensis (Tagasaste) | taxonomy.family | fabaceae | Fabaceae | Familia aceptada (APG IV / POWO) |
+| Chamaecytisus palmensis (Tagasaste) | ecologicalZoneIds | ["4", "6", "6"] | ["4", "6"] | Id duplicado |
+| Fraxinus uhedi (Fresno) | taxonomy | Fraxinus uhedi | Fraxinus uhdei | Nombre aceptado / corrección ortográfica (POWO) |
+| Fraxinus uhedi (Fresno) | taxonomy.family | Olaceae | Oleaceae | Familia aceptada (APG IV / POWO) |
+| Genipa americana (Manzana del monte) | taxonomy.family | Rubiacea | Rubiaceae | Familia aceptada (APG IV / POWO) |
+| Vigna ungiculata (Frijol vara) | taxonomy | Vigna ungiculata | Vigna unguiculata | Nombre aceptado / corrección ortográfica (POWO) |
+| Mahonia aquifolium (Mahonia) | taxonomy | Mahonia aquifolium | Berberis aquifolium | Nombre aceptado / corrección ortográfica (POWO) |
+| Sauropus androgynus (Katuk) | taxonomy | Sauropus androgynus | Breynia androgyna | Nombre aceptado / corrección ortográfica (POWO) |
+| Sauropus androgynus (Katuk) | taxonomy.family | Euphorbiaceae | Phyllanthaceae | Familia aceptada (APG IV / POWO) |
+| Astrocaryum murumuru (Murumuru) | taxonomy.family | Palmae | Arecaceae | Familia aceptada (APG IV / POWO) |
+| Sorghum spp. (Sorgo) | ecologicalZoneIds | ["1", "3", "6", "6"] | ["1", "3", "6"] | Id duplicado |
+| Crisobalamus icacus (Icaco) | taxonomy | Crisobalamus icacus | Chrysobalanus icaco | Nombre aceptado / corrección ortográfica (POWO) |
+| Cucurbita foetidisima (Calabacilla) | taxonomy | Cucurbita foetidisima | Cucurbita foetidissima | Nombre aceptado / corrección ortográfica (POWO) |
+| Cucurbita foetidisima (Calabacilla) | taxonomy.family | Cucurbitáceas | Cucurbitaceae | Familia aceptada (APG IV / POWO) |
+| Sacharum oficinarum (Caña de azucar) | taxonomy | Sacharum oficinarum | Saccharum officinarum | Nombre aceptado / corrección ortográfica (POWO) |
+| Carya illinoensis (Nogal pecanero, pecan nut, Nuez de la isla, nuez encarcelada, walnut pecan) | taxonomy | Carya illinoensis | Carya illinoinensis | Nombre aceptado / corrección ortográfica (POWO) |
+| Carya illinoensis (Nogal pecanero, pecan nut, Nuez de la isla, nuez encarcelada, walnut pecan) | taxonomy.family | Junglandaceae | Juglandaceae | Familia aceptada (APG IV / POWO) |
+| Mammea americana (Mamey) | taxonomy.family | Guttiferáceas | Calophyllaceae | Familia aceptada (APG IV / POWO) |
+| Hibiscus rosasinensis (Tulipancillo) | taxonomy | Hibiscus rosasinensis | Hibiscus rosa-sinensis | Nombre aceptado / corrección ortográfica (POWO) |
+| Yucca elephantipes? (Izote) | taxonomy | Yucca elephantipes? | Yucca gigantea | Nombre aceptado / corrección ortográfica (POWO) |
+| Chenopodium ambrosioides (Epazote) | taxonomy | Chenopodium ambrosioides | Dysphania ambrosioides | Nombre aceptado / corrección ortográfica (POWO) |
+| Inga oesterdiana (Chalahuite) | taxonomy | Inga oesterdiana | Inga oerstediana | Nombre aceptado / corrección ortográfica (POWO) |
+| Glicine max (Soya) | taxonomy | Glicine max | Glycine max | Nombre aceptado / corrección ortográfica (POWO) |
+| Glicine max (Soya) | taxonomy.family | fabaceae | Fabaceae | Familia aceptada (APG IV / POWO) |
+| Manguifera indica (Mango) | taxonomy | Manguifera indica | Mangifera indica | Nombre aceptado / corrección ortográfica (POWO) |
+| Arundo Donax (Carrizo) | taxonomy | Arundo Donax | Arundo donax | Nombre aceptado / corrección ortográfica (POWO) |
+| Arundo Donax (Carrizo) | ecologicalZoneIds | ["4", "6", "6"] | ["4", "6"] | Id duplicado |
+| Crotolaria longirostrata (Chipilin) | taxonomy | Crotolaria longirostrata | Crotalaria longirostrata | Nombre aceptado / corrección ortográfica (POWO) |
+| Diospyros digyna (Zapote negro) | taxonomy.family | Ebanáceas | Ebenaceae | Familia aceptada (APG IV / POWO) |
+| Phyllostachis edulis (Bambu moso) | taxonomy | Phyllostachis edulis | Phyllostachys edulis | Nombre aceptado / corrección ortográfica (POWO) |
+| Cyphomandra betacea (Tomate de Arbol, berenjenilla) | taxonomy | Cyphomandra betacea | Solanum betaceum | Nombre aceptado / corrección ortográfica (POWO) |
+| Helianthus tuberosa (Alcachofa jerusalmem, tupinambur) | taxonomy | Helianthus tuberosa | Helianthus tuberosus | Nombre aceptado / corrección ortográfica (POWO) |
+| Cucurbita sp. (Calabaza) | taxonomy.family | Cucurbitáceas | Cucurbitaceae | Familia aceptada (APG IV / POWO) |
+| Atractocarous fitzalanni (Gardeña o orange randia, yellow mangosteen) | taxonomy | Atractocarous fitzalanni | Atractocarpus fitzalanii | Nombre aceptado / corrección ortográfica (POWO) |
+| Vigna umbelata (Frijol arroz) | taxonomy | Vigna umbelata | Vigna umbellata | Nombre aceptado / corrección ortográfica (POWO) |
+| Hibiscus esculentus (Ocra) | taxonomy | Hibiscus esculentus | Abelmoschus esculentus | Nombre aceptado / corrección ortográfica (POWO) |
+
+### Omitidas (pertenecen a grupos dudosos sin especie definida)
+
+- Musa sp. (banana bread): Musa sp. genérico (grupo dudoso)
+- Musa sp. (Guineo): Musa sp. genérico (grupo dudoso)
+- Musa sp. (bananas silver, bread, tropical apple): Musa sp. genérico (grupo dudoso)
+- Garcinia sp. (Mangostan amarillo, mangostao amarelo): Garcinia sp. (grupo dudoso)
+- Garcinia sp. (Bacupari, bacupari miudo): Garcinia sp. (grupo dudoso)
+- Amaranthus sp. (Quelites): Amaranthus sp. (grupo dudoso)
+- Pirus sp. (Pera): Pirus sp. (grupo dudoso)
+- Morus sp (Morera): Morus sp. (grupo dudoso)
+- Vaccinium sp. (Arandano): Vaccinium sp. (grupo dudoso)
+- Selaginella sp. (Doradilla): Selaginella sp. (grupo dudoso)
+
+## Tercera pasada: grupos dudosos y errores evidentes (2026-10-14)
+
+La pasada 2 se aplicó en Firestore el 2026-10-14 (217 escrituras correctas).
+
+Decisiones del responsable sobre los grupos dudosos, en `scripts/species-cleanup/changes-pass3.json`. El registro que se conserva hereda nombres comunes y los campos que le faltaban. Los registros de *Musa* se conservan por cultivar; sólo se eliminaron los genéricos que mezclaban varios cultivares. También se corrigen valores evidentemente erróneos (alturas imposibles, formas incorrectas) y los rangos con mínimo igual a máximo se convierten en rangos típicos, ampliados para incluir siempre el valor original.
+
+| Tipo | Registro | Resultado | Motivo |
+| --- | --- | --- | --- |
+| fusión | Persea schiedeana (Chinene, Chinini, Anayo, Pahua) | Persea schiedeana (Anayo, aguacate criollo, Chinene, Chinini, Pahua) | Misma especie; Chinene/Chinini/Pahua son nombres comunes de P. schiedeana |
+| fusión | Phaseolus lunatus (Frijol ibes) | Phaseolus lunatus (Frijol lima, fríjol mantequilla) | Ibes es el nombre maya del frijol lima |
+| fusión | Malpighia glabra (Acerola) | Malpighia emarginata (Cerecita, manzanita, semeruco, acerola) | La acerola cultivada es M. emarginata |
+| fusión | Garcinia sp. (Bacupari, bacupari miudo) | Garcinia gardneriana (Bacupari, bacupari-acu) | Decisión del responsable: un solo registro de bacupari |
+| fusión | Garcinia sp. (Mangostan amarillo, mangostao amarelo) | Garcinia gardneriana (Bacupari, bacupari-acu) | Decisión del responsable: un solo registro de bacupari |
+| fusión | Opuntia sp. (Nopal de tuna) | Opuntia ficus-indica (Tuna, Nopal, Nopal tunero) | El nopal de tuna es Opuntia ficus-indica |
+| fusión | Opuntia ficus-indica (Nopal) | Opuntia ficus-indica (Tuna, Nopal, Nopal tunero) | Mismo taxón (O. ficus-indica); nopal y tuna son la misma planta |
+| fusión | Agave sp. (Agave) | Agave sp (Maguey) | Dos registros genéricos de Agave con datos casi idénticos |
+| fusión | Vaccinium sp. (Arandano) | Vaccinium corymbosum (Mora azul) | Mora azul y arándano designan al arándano azul |
+| fusión | Morus sp (Morera) | Morus alba (Morera para hoja, blacberry (silkworm)) | Decisión del responsable: Morus sp. es Morus alba |
+| corrección | Selaginella sp. (Doradilla) | Selaginella lepidophylla; función Maderable → Medicinal | La doradilla de México es S. lepidophylla (planta de resurrección, uso medicinal) |
+| corrección | Pirus sp. (Pera) | Pyrus sp. | Ortografía del género |
+| fusión | Musa sp. (Guineo) | Musa acuminata (platano malayo, platano rojo, banana nanica) | Guineo es el nombre genérico del banano de postre (M. acuminata) |
+| fusión | Musa sp. (bananas silver, bread, tropical apple) | repartido entre Plateado, Manzano y banana bread | Registro que mezclaba tres cultivares |
+| corrección | Musa acuminata (plátano malayo, rojo, nanica) | "plátano rojo" → cv. Morado; "banana nanica" → cv. Enano | Cada nombre pertenece a un cultivar que ya tiene su registro |
+| corrección | Prunus sp. (Albaricoque japonés, ciruela china, japanese plum) | Prunus mume; se quitan "ciruela china" y "japanese plum" (son P. salicina) | Decisión del responsable |
+| corrección | Trifolium repens (Trebol blanco) | height: 10–10 → 0.1–0.3 | Altura de 10 m imposible para un trébol (probable error de unidades) |
+| corrección | Desmodium spp. (Pega pega) | height: 40–40 → 0.3–1.5 | Altura de 40 m imposible para Desmodium (probable error de unidades) |
+| corrección | Morus alba (Morera para hoja, blacberry (silkworm)) | height: 2–2 → 5–15 | Morus alba es árbol de 5–15 m |
+| corrección | Morus alba (Morera para hoja, blacberry (silkworm)) | crownWidth: 1–1 → 4–8 | Copa típica de árbol adulto |
+| corrección | Morus alba (Morera para hoja, blacberry (silkworm)) | forma: hierba → árbol | Es un árbol |
+| corrección | Sambucus canadensis (Sauco) | forma: hierba → arbusto | Es un arbusto |
+| corrección | Citrus aurantium (Limon canario, limon criollo) | height: 4 → 3–6 | Valor único convertido al rango típico |
+| corrección | Salvia rosmarinus (Romero) | height: 1.5 → 0.5–1.5 | Valor único convertido al rango típico |
+| corrección | Salvia rosmarinus (Romero) | crownWidth: 1.5 → 0.6–1.5 | Valor único convertido al rango típico |
+| corrección | Dimocarpus longan (Longan, Ojo de dragón) | height: 5.5–5.5 → 5.5–12 | Valor único convertido a rango (se amplía para incluir el valor original) |
+| corrección | Dimocarpus longan (Longan, Ojo de dragón) | crownWidth: 5 → 5–8 | Valor único convertido al rango típico |
+| corrección | Rumex mexicanus (Lengua de Vaca) | height: 0.4 → 0.4–1 | Valor único convertido al rango típico |
+| corrección | Rumex mexicanus (Lengua de Vaca) | crownWidth: 0.6 → 0.3–0.6 | Valor único convertido al rango típico |
+| corrección | Maranta arundinacea (Sagu) | height: 0.7 → 0.7–1.5 | Valor único convertido al rango típico |
+| corrección | Maranta arundinacea (Sagu) | crownWidth: 0.5 → 0.5–0.8 | Valor único convertido al rango típico |
+| corrección | Piper auritum (Acuyo) | height: 2 → 2–5 | Valor único convertido al rango típico |
+| corrección | Piper auritum (Acuyo) | crownWidth: 1.5 → 1.5–3 | Valor único convertido al rango típico |
+| corrección | Phoenix dactylifera (Datil) | height: 30 → 15–30 | Valor único convertido al rango típico |
+| corrección | Phoenix dactylifera (Datil) | crownWidth: 12–12 → 6–12 | Valor único convertido a rango (se amplía para incluir el valor original) |
+| corrección | Solanum nigrum (Hierba mora) | height: 0.6 → 0.3–0.8 | Valor único convertido al rango típico |
+| corrección | Solanum nigrum (Hierba mora) | crownWidth: 0.6 → 0.3–0.6 | Valor único convertido al rango típico |
+| corrección | Salvia officinalis (Salvia) | height: 1.5–1.5 → 0.5–1.5 | Valor único convertido a rango (se amplía para incluir el valor original) |
+| corrección | Salvia officinalis (Salvia) | crownWidth: 2–2 → 0.6–2 | Valor único convertido a rango (se amplía para incluir el valor original) |
+| corrección | Dioscorea bulbifera (Papa Voladora) | height: 13 → 6–13 | Valor único convertido al rango típico |
+| corrección | Vigna unguiculata subsp. sesquipedalis (Ejote Cubano) | height: 2.5 → 2–4 | Valor único convertido al rango típico |
+| corrección | Citrus reticulata (Mandarina) | height: 4 → 2–6 | Valor único convertido al rango típico |
+| corrección | Citrus reticulata (Mandarina) | crownWidth: 3.6 → 2–4 | Valor único convertido al rango típico |
+| corrección | Phyllostachys aurea (Bambu dorado) | height: 9 → 4–9 | Valor único convertido al rango típico |
+| corrección | Phyllostachys aurea (Bambu dorado) | crownWidth: 2 → 1–2 | Valor único convertido al rango típico |
+| corrección | Morus nigra (Morera negra) | height: 9 → 6–10 | Valor único convertido al rango típico |
+| corrección | Solanum quitoense (Lulo) | height: 2 → 1–2.5 | Valor único convertido al rango típico |
+| corrección | Solanum quitoense (Lulo) | crownWidth: 1.5 → 1.5–2 | Valor único convertido al rango típico |
+| corrección | Phyllostachys nigra (Bambu negro chico) | height: 8 → 4–8 | Valor único convertido al rango típico |
+| corrección | Phyllostachys nigra (Bambu negro chico) | crownWidth: 2 → 1–2 | Valor único convertido al rango típico |
+| corrección | Malus domestica (Manzana, apple) | height: 4 → 3–8 | Valor único convertido al rango típico |
+| corrección | Malus domestica (Manzana, apple) | crownWidth: 5 → 3–6 | Valor único convertido al rango típico |
+| corrección | Carpobrotus acinaciformis (Flor del cuchillo, diente de dragón) | height: 0.2 → 0.1–0.2 | Valor único convertido al rango típico |
+| corrección | Elettaria cardamomum (Cardamomo) | height: 2 → 2–4 | Valor único convertido al rango típico |
+| corrección | Elettaria cardamomum (Cardamomo) | crownWidth: 2 → 1–2 | Valor único convertido al rango típico |
+| corrección | Smallanthus sonchifolius (Yacon) | height: 1.5 → 1.5–2.5 | Valor único convertido al rango típico |
+| corrección | Smallanthus sonchifolius (Yacon) | crownWidth: 0.6 → 0.6–1 | Valor único convertido al rango típico |
+| corrección | Chamaedorea tepejilote (Tepejilote) | height: 2.5 → 2–5 | Valor único convertido al rango típico |
+| corrección | Chamaedorea tepejilote (Tepejilote) | crownWidth: 1.5 → 1.5–2.5 | Valor único convertido al rango típico |
+| corrección | Capsicum pubescens (Chile cera) | height: 2 → 1–2 | Valor único convertido al rango típico |
+| corrección | Capsicum pubescens (Chile cera) | crownWidth: 2 → 1–2 | Valor único convertido al rango típico |
+| corrección | Allium fistulosum (Cebolla Welsh) | height: 0.6 → 0.4–0.6 | Valor único convertido al rango típico |
+| corrección | Allium fistulosum (Cebolla Welsh) | crownWidth: 0.5–0.5 → 0.2–0.5 | Valor único convertido a rango (se amplía para incluir el valor original) |
+| corrección | Cymbopogon citratus (Zacate limon) | height: 0.6 → 0.6–1.5 | Valor único convertido al rango típico |
+| corrección | Cymbopogon citratus (Zacate limon) | crownWidth: 0.6 → 0.6–1 | Valor único convertido al rango típico |
+| corrección | Moringa stenopetala (Moringa) | height: 4–4 → 4–10 | Valor único convertido a rango (se amplía para incluir el valor original) |
+| corrección | Allium sp. (Cebollino) | height: 0.2 → 0.2–0.4 | Valor único convertido al rango típico |
+| corrección | Allium sp. (Cebollino) | crownWidth: 0.25 → 0.15–0.25 | Valor único convertido al rango típico |
+| corrección | Pithecellobium dulce (Guamuchil) | height: 10 → 10–15 | Valor único convertido al rango típico |
+| corrección | Pithecellobium dulce (Guamuchil) | crownWidth: 10 → 10–12 | Valor único convertido al rango típico |
+| corrección | Urtica dioica (Ortiga) | height: 0.6 → 0.6–1.5 | Valor único convertido al rango típico |
+| corrección | Urtica dioica (Ortiga) | crownWidth: 0.6 → 0.5–1 | Valor único convertido al rango típico |
+| corrección | Asparagus officinalis (Esparrago) | height: 1 → 1–2 | Valor único convertido al rango típico |
+| corrección | Asparagus officinalis (Esparrago) | crownWidth: 0.6 → 0.6–1 | Valor único convertido al rango típico |
+| corrección | Citrus sinensis (Naranja) | height: 4–4 → 4–10 | Valor único convertido a rango (se amplía para incluir el valor original) |
+| corrección | Citrus sinensis (Naranja) | crownWidth: 5 → 4–6 | Valor único convertido al rango típico |
+| corrección | Rubus idaeus (Frambuesa) | height: 1.2 → 1–2 | Valor único convertido al rango típico |
+| corrección | Rubus idaeus (Frambuesa) | crownWidth: 1 → 0.5–1 | Valor único convertido al rango típico |
+| corrección | Salix spp. (Sauce) | height: 4–4 → 4–20 | Valor único convertido a rango (se amplía para incluir el valor original) |
+| corrección | Salix spp. (Sauce) | crownWidth: 4 → 4–10 | Valor único convertido al rango típico |
+| corrección | Wisteria sinensis (Glicinia) | height: 10 → 10–20 | Valor único convertido al rango típico |
+| corrección | Ardisia compressa (Capulin de Mayo) | height: 1.5 → 1.5–6 | Valor único convertido al rango típico |
+| corrección | Ardisia compressa (Capulin de Mayo) | crownWidth: 1.5 → 1.5–3 | Valor único convertido al rango típico |
+| corrección | Musa paradisiaca (Platano) | height: 5 → 3–6 | Valor único convertido al rango típico |
+| corrección | Musa paradisiaca (Platano) | crownWidth: 4 → 3–4 | Valor único convertido al rango típico |
+| corrección | Sambucus canadensis (Sauco) | crownWidth: 1.5–1.5 → 1.5–4 | Valor único convertido a rango (se amplía para incluir el valor original) |
+| corrección | Phormium tenax (Fornio) | height: 2.5 → 1.5–3 | Valor único convertido al rango típico |
+| corrección | Phormium tenax (Fornio) | crownWidth: 2.5 → 1.5–2.5 | Valor único convertido al rango típico |
+| corrección | Casuarina decaisneana (Casuarina del desierto) | height: 15 → 10–15 | Valor único convertido al rango típico |
+| corrección | Heliconia spp. (Platanillo, chilalaca) | height: 2.2 → 1.5–4 | Valor único convertido al rango típico |
+| corrección | Heliconia spp. (Platanillo, chilalaca) | crownWidth: 1.5 → 1–2 | Valor único convertido al rango típico |
+| corrección | Vitis vinifera (Uva, vid, parra) | height: 10 → 2–10 | Valor único convertido al rango típico |
+| corrección | Annona cherimola (Chirimoya) | height: 4.2 → 4–8 | Valor único convertido al rango típico |
+| corrección | Enset ventricosum (Enset) | height: 5 → 4–10 | Valor único convertido al rango típico |
+| corrección | Enset ventricosum (Enset) | crownWidth: 5 → 3–5 | Valor único convertido al rango típico |
+| corrección | Citrus × microcarpa (Limon calamondin) | height: 4 → 3–6 | Valor único convertido al rango típico |
+| corrección | Citrus × microcarpa (Limon calamondin) | crownWidth: 3.5 → 2–4 | Valor único convertido al rango típico |
+| corrección | Chamaecytisus palmensis (Tagasaste) | height: 5 → 3–6 | Valor único convertido al rango típico |
+| corrección | Inga vera (Jinicuil) | height: 15 → 8–15 | Valor único convertido al rango típico |
+| corrección | Inga vera (Jinicuil) | crownWidth: 8 → 8–12 | Valor único convertido al rango típico |
+| corrección | Sapindus saponaria (Jaboncillo, Sululo, pipe, kile) | crownWidth: 6 → 6–10 | Valor único convertido al rango típico |
+| corrección | Berberis aquifolium (Mahonia) | height: 0.8–0.8 → 0.8–2 | Valor único convertido a rango (se amplía para incluir el valor original) |
+| corrección | Berberis aquifolium (Mahonia) | crownWidth: 0.5–0.5 → 0.5–1.5 | Valor único convertido a rango (se amplía para incluir el valor original) |
+| corrección | Aloe vera (Sabila, savila) | height: 0.5 → 0.5–0.8 | Valor único convertido al rango típico |
+| corrección | Aloe vera (Sabila, savila) | crownWidth: 0.5 → 0.5–0.8 | Valor único convertido al rango típico |
+| corrección | Chrysobalanus icaco (Icaco) | height: 3 → 1–5 | Valor único convertido al rango típico |
+| corrección | Erythrina edulis (Chachafruto) | height: 8 → 6–14 | Valor único convertido al rango típico |
+| corrección | Erythrina edulis (Chachafruto) | crownWidth: 6 → 5–8 | Valor único convertido al rango típico |
+| corrección | Zingiber officinale (Jengibre) | crownWidth: 0.4 → 0.3–0.5 | Valor único convertido al rango típico |
+| corrección | Saccharum officinarum (Caña de azucar) | height: 3 → 3–5 | Valor único convertido al rango típico |
+| corrección | Carya illinoinensis (Nogal pecanero, pecan nut, Nuez de la isla, nuez encarcelada, walnut pecan) | height: 10–10 → 10–40 | Valor único convertido a rango (se amplía para incluir el valor original) |
+| corrección | Carya illinoinensis (Nogal pecanero, pecan nut, Nuez de la isla, nuez encarcelada, walnut pecan) | crownWidth: 10 → 10–20 | Valor único convertido al rango típico |
+| corrección | Casimiroa edulis (Zapote blanco) | height: 8 → 8–15 | Valor único convertido al rango típico |
+| corrección | Casimiroa edulis (Zapote blanco) | crownWidth: 5 → 5–8 | Valor único convertido al rango típico |
+| corrección | Dysphania ambrosioides (Epazote) | height: 0.7 → 0.4–1.2 | Valor único convertido al rango típico |
+| corrección | Dysphania ambrosioides (Epazote) | crownWidth: 0.6 → 0.3–0.6 | Valor único convertido al rango típico |
+| corrección | Curcuma longa (Curcuma) | height: 1.3 → 0.6–1.3 | Valor único convertido al rango típico |
+| corrección | Curcuma longa (Curcuma) | crownWidth: 1 → 0.5–1 | Valor único convertido al rango típico |
+| corrección | Sechium edule (Chayote, pataste) | height: 10 → 5–10 | Valor único convertido al rango típico |
+| corrección | Rumex acetosa (Sorrel) | crownWidth: 0.5 → 0.3–0.5 | Valor único convertido al rango típico |
+| corrección | Anacardium occidentale (Marañon, cayu) | crownWidth: 8 → 8–12 | Valor único convertido al rango típico |
+| corrección | Vaccinium corymbosum (Mora azul) | crownWidth: 1.5 → 1–1.5 | Valor único convertido al rango típico |
+| corrección | Artocarpus altilis (Arbol del pan, frutipan, breadfruit, pan de fruta) | crownWidth: 9 → 9–12 | Valor único convertido al rango típico |
+| corrección | Erythrina americana (Colorin) | crownWidth: 6 → 6–8 | Valor único convertido al rango típico |
+| corrección | Annona diversifolia (Ilama) | height: 8 → 6–10 | Valor único convertido al rango típico |
+| corrección | Annona diversifolia (Ilama) | crownWidth: 7 → 5–7 | Valor único convertido al rango típico |
+| corrección | Equisetum arvense (Cola de caballo, equiseto) | crownWidth: 0.4 → 0.3–0.5 | Valor único convertido al rango típico |
+| corrección | Argania spinosa (Argan) | height: 8 → 8–10 | Valor único convertido al rango típico |
+| corrección | Argania spinosa (Argan) | crownWidth: 5 → 5–8 | Valor único convertido al rango típico |
+| corrección | Rubus fruticosus (Zarzamora) | height: 1.5 → 1–3 | Valor único convertido al rango típico |
+| corrección | Rubus fruticosus (Zarzamora) | crownWidth: 1 → 1–2 | Valor único convertido al rango típico |
+
+Se conservan separados por decisión del responsable: *Amaranthus hypochondriacus* (Amaranto, grano) y *Amaranthus* sp. (Quelites, verdura); *Pyrus communis* (Perón) y *Pyrus* sp. (Pera); *Selaginella martensii* y *S. lepidophylla*. Los registros 'babosa', 'Caferana', 'Cosamalu', 'Huevo de chivo' y 'Menta de matón' ya habían sido eliminados desde el panel de admin.
