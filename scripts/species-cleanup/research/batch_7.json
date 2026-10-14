@@ -1,0 +1,1151 @@
+[
+ {
+  "id": "FoxlCOvYvDCcUpT2DrRx",
+  "name": "Pouteria sapota (Mamey)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "height": {
+    "min": 12,
+    "max": 25
+   },
+   "stratumIds": [
+    "3"
+   ],
+   "ecologicalZoneIds": [
+    "1"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "2",
+    "3"
+   ],
+   "commonNames": [
+    "Zapote rey, mamey zapote",
+    "Mamey"
+   ],
+   "details.lightPreference": "H",
+   "details.humidityPreference": "M",
+   "details.isFrostResistant": false,
+   "details.shape": "árbol",
+   "details.lifeCycle": "Primarias",
+   "details.lifeCycleDuration": "Mayor a 80 años",
+   "details.heightRangeDescription": "más de 10 mts"
+  },
+  "corrections": [
+   {
+    "field": "details.heightRangeDescription",
+    "old": "de 5 a 10 mts",
+    "new": "más de 10 mts",
+    "reason": "Árbol que alcanza 15-40 m en su hábitat y ~12-18 m en cultivo",
+    "source": "https://apps.worldagroforestry.org/treedb2/speciesprofile.php?Spid=18001"
+   }
+  ],
+  "sources": [
+   "https://apps.worldagroforestry.org/treedb2/speciesprofile.php?Spid=18001",
+   "https://growables.org/information/TropicalFruit/MameySapoteWorldAgroforestry.htm"
+  ],
+  "notes": "Árbol nativo de selvas húmedas del sureste de México; fruto comestible, madera usada localmente y usos medicinales del aceite de semilla (ICRAF). Ciclo y estrato coherentes con el registro 'Pouteri zapota' del catálogo, que parece duplicado de esta especie."
+ },
+ {
+  "id": "rL2cF4iWfzvvHDNRx3Xj",
+  "name": "Neltuma glandulosa (Mezquite dulce)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "taxonomy.genus": "Neltuma",
+   "taxonomy.synonyms": [
+    "Prosopis glandulosa"
+   ],
+   "height": {
+    "min": 3,
+    "max": 9
+   },
+   "crownWidth": {
+    "min": 3,
+    "max": 9
+   },
+   "stratumIds": [
+    "2",
+    "3"
+   ],
+   "ecologicalZoneIds": [
+    "6"
+   ],
+   "ecologicalFunctionIds": [
+    "1",
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "commonNames": [
+    "Mezquite",
+    "Mezquite dulce",
+    "Mezquite de miel"
+   ],
+   "details.lightPreference": "H",
+   "details.humidityPreference": "L",
+   "details.shape": "árbol",
+   "details.heightRangeDescription": "de 5 a 10 mts"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.genus",
+    "old": "Prosopis",
+    "new": "Neltuma",
+    "reason": "Las especies americanas de Prosopis se transfirieron a Neltuma (Hughes et al. 2022); POWO acepta Neltuma glandulosa",
+    "source": "https://powo.science.kew.org/"
+   }
+  ],
+  "sources": [
+   "https://apps.worldagroforestry.org/treedb2/AFTPDFS/Prosopis_glandulosa.PDF",
+   "https://temperate.theferns.info/plant/Prosopis+glandulosa",
+   "https://www.fs.usda.gov/nsl/Wpsm/Prosopis.pdf",
+   "https://winrock.org/honey-mesquite-a-multipurpose-tree-for-arid-lands/"
+  ],
+  "notes": "Árbol/arbusto de 3-9 m de zonas áridas del norte de México. Nodula con Rhizobium (fijador de N), melífero, vainas comestibles y forrajeras, leña. Se actualizó el género a Neltuma (nombre aceptado en POWO); si se prefiere mantener Prosopis por uso común, revisar. Zonas: se eliminó el '6' duplicado."
+ },
+ {
+  "id": "y6aJhz0nilPZ1bhJDLgj",
+  "name": "Neltuma juliflora (Mezquite)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "taxonomy.genus": "Neltuma",
+   "taxonomy.synonyms": [
+    "Prosopis juliflora"
+   ],
+   "height": {
+    "min": 3,
+    "max": 12
+   },
+   "stratumIds": [
+    "3"
+   ],
+   "ecologicalZoneIds": [
+    "6"
+   ],
+   "ecologicalFunctionIds": [
+    "1",
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "details.lightPreference": "H",
+   "details.humidityPreference": "L",
+   "details.isFrostResistant": false,
+   "details.shape": "árbol",
+   "details.heightRangeDescription": "de 5 a 10 mts"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.genus",
+    "old": "Prosopis",
+    "new": "Neltuma",
+    "reason": "Las especies americanas de Prosopis se transfirieron a Neltuma (Hughes et al. 2022); POWO acepta Neltuma juliflora",
+    "source": "https://powo.science.kew.org/"
+   }
+  ],
+  "sources": [
+   "https://apps.worldagroforestry.org/treedb2/AFTPDFS/Prosopis_juliflora.pdf",
+   "https://tropicalforages.info/text/entities/prosopis_juliflora.htm",
+   "https://www.fao.org/4/AD317E/AD317E07.htm"
+  ],
+  "notes": "Árbol de 3-12 m, fija nitrógeno (Rhizobium), vainas forrajeras y comestibles, leña y carbón muy apreciados, melífero. Sensible a heladas (ICRAF). Se eliminó zona '6' duplicada. Posible confusión de nombres: los tres mezquites del catálogo comparten el nombre común 'Mezquite'."
+ },
+ {
+  "id": "ctN61ODcII9u1hL3cXiU",
+  "name": "Neltuma laevigata (Mezquite)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "taxonomy.genus": "Neltuma",
+   "taxonomy.synonyms": [
+    "Prosopis laevigata"
+   ],
+   "ecologicalZoneIds": [
+    "6"
+   ],
+   "ecologicalFunctionIds": [
+    "1",
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "details.humidityPreference": "L"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.genus",
+    "old": "Prosopis",
+    "new": "Neltuma",
+    "reason": "POWO trata Prosopis laevigata como sinónimo de Neltuma laevigata",
+    "source": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:168105-2"
+   }
+  ],
+  "sources": [
+   "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:168105-2",
+   "https://rngr.net/publications/semillas-de-especies-forestales/monografias/prosopis-laevigata-h.-b.-ex-willd.-m.c.-johnst.-fabaceae/at_download/file",
+   "https://corregidora.gob.mx/ecologia/assets/docs/5/ficha_arbol_nat.pdf"
+  ],
+  "notes": "Árbol de hasta ~13 m del centro de México; vainas y follaje forrajeros, harina de vaina comestible, madera para leña/carbón/muebles, especie melífera. Se cambió el género a Neltuma (POWO) y se eliminó zona '6' duplicada."
+ },
+ {
+  "id": "09Rfx9Vki2XFBKjYIjxs",
+  "name": "Prunus armeniaca (Chabacano)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "height": {
+    "min": 4,
+    "max": 8
+   },
+   "crownWidth": {
+    "min": 4,
+    "max": 8
+   },
+   "stratumIds": [
+    "2"
+   ],
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "3"
+   ],
+   "commonNames": [
+    "Chabacano",
+    "Albaricoque"
+   ],
+   "details.humidityPreference": "M"
+  },
+  "sources": [
+   "https://www.rhs.org.uk/plants/13949/prunus-armeniaca/details"
+  ],
+  "notes": "Árbol pequeño de 4-8 m de alto y ancho (RHS); fruto comestible, flores polinizadas por abejas. Estrato Medio, coherente con Prunus domestica y P. persica del catálogo. Nota: 'heightRangeDescription' dice 'hasta 5 mts' (válido para árboles podados en huerto), no se cambió.",
+  "corrections": []
+ },
+ {
+  "id": "uEjWgxEVYtSP5IgK80WM",
+  "name": "Prunus avium (Cereza)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "height": {
+    "min": 10,
+    "max": 25
+   },
+   "crownWidth": {
+    "min": 5,
+    "max": 9
+   },
+   "stratumIds": [
+    "3"
+   ],
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "2"
+   ],
+   "details.lightPreference": "H",
+   "details.humidityPreference": "M",
+   "details.isFrostResistant": true,
+   "details.shape": "árbol",
+   "details.lifeCycleDuration": "Hasta 80 años",
+   "details.heightRangeDescription": "más de 10 mts"
+  },
+  "sources": [
+   "https://ecocrop.apps.fao.org/ecocrop/srv/en/cropView?id=8965",
+   "https://www.nps.gov/shen/learn/nature/sweet_cherry.htm",
+   "https://rhs.org.uk/plants/78986/prunus-avium-van-(f)/details"
+  ],
+  "notes": "Árbol de 10-25 m (Ecocrop), copa 5-9 m; cultivares injertados en huerto son mucho más pequeños. Fruto comestible, madera valiosa para ebanistería, flores visitadas por abejas (RHS Plants for Pollinators). Requiere frío invernal; en México solo en zonas templadas altas.",
+  "corrections": []
+ },
+ {
+  "id": "K0VprQu6cbRhWBhwixj6",
+  "name": "Prunus cerasus (Guinda)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "height": {
+    "min": 3,
+    "max": 8
+   },
+   "crownWidth": {
+    "min": 3,
+    "max": 8
+   },
+   "stratumIds": [
+    "2"
+   ],
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0"
+   ],
+   "commonNames": [
+    "Cereza, guinda (más acido)",
+    "Guinda"
+   ],
+   "details.lightPreference": "H",
+   "details.humidityPreference": "M",
+   "details.isFrostResistant": true,
+   "details.shape": "árbol"
+  },
+  "sources": [
+   "https://www.rhs.org.uk/plants/160703/prunus-cerasus/details",
+   "https://temperate.theferns.info/plant/Prunus+cerasus",
+   "https://easyscape.com/species/Prunus-cerasus(Sour-Cherry)"
+  ],
+  "notes": "Árbol pequeño o arbusto de 3-8 m, rebrota formando matorrales. Fruto ácido comestible, flores melíferas. Muy resistente al frío.",
+  "corrections": []
+ },
+ {
+  "id": "NXvYlxdFkmUQnji5xlZJ",
+  "name": "Prunus domestica (Ciruela)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "1",
+    "0"
+   ]
+  },
+  "sources": [
+   "https://www.rhs.org.uk/plants/84405/prunus-domestica-dc/details",
+   "https://plantselector.botanicgardens.sa.gov.au/Plants/Details/17923"
+  ],
+  "notes": "Datos de tamaño existentes coherentes (RHS 2.5-4 m; 4-5 m en otras fuentes). Se agregó Alimento (fruto) y atracción de polinizadores (flores entomófilas melíferas). La función 'Forraje' existente parece dudosa, se mantuvo.",
+  "corrections": []
+ },
+ {
+  "id": "iZ7PJKsp3s0fQoBLWcPn",
+  "name": "Prunus dulcis (Almendro)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "stratumIds": [
+    "2"
+   ],
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0"
+   ],
+   "details.humidityPreference": "L"
+  },
+  "sources": [
+   "https://landscapeplants.aub.edu.lb/Plants/PlantProfile/3bb6f8ef-b447-49a3-a9d1-16cffdfbec63",
+   "https://extension.usu.edu/treebrowser/catalog/almond"
+  ],
+  "notes": "Árbol de 5-8 m (AUB); más tolerante a sequía que otros frutales (USU). Polinización dependiente de abejas. Semilla (almendra) comestible.",
+  "corrections": []
+ },
+ {
+  "id": "iJfEYRTtvnpnO538fAa2",
+  "name": "Prunus persica (Durazno)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0"
+   ],
+   "commonNames": [
+    "Durazno enano, melocoton",
+    "Durazno"
+   ],
+   "details.lifeCycleDuration": "Hasta 15 años"
+  },
+  "sources": [
+   "https://apps.worldagroforestry.org/treedb2/AFTPDFS/Prunus_persica.PDF",
+   "https://sites.redlands.edu/trees/species-accounts/Peach"
+  ],
+  "notes": "Árbol de vida corta (10-20 años en huerto); flores visitadas por abejas; fruto comestible. Datos de tamaño existentes coherentes con árboles podados (3-4 m).",
+  "corrections": []
+ },
+ {
+  "id": "pOBy0CPUnJQrxXQIxXV1",
+  "name": "Prunus serotina var. salicifolia (Capulín)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "taxonomy.species": "serotina",
+   "taxonomy.subspecies": "var. salicifolia",
+   "taxonomy.synonyms": [
+    "Prunus salicifolia",
+    "Prunus serotina subsp. capuli",
+    "Prunus capuli"
+   ],
+   "stratumIds": [
+    "2",
+    "3"
+   ],
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "2",
+    "3"
+   ],
+   "commonNames": [
+    "Capulin",
+    "Capulín"
+   ]
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.species",
+    "old": "salicifolia",
+    "new": "serotina (var. salicifolia)",
+    "reason": "POWO trata Prunus salicifolia Kunth como sinónimo de Prunus serotina var. salicifolia",
+    "source": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:210885-2"
+   }
+  ],
+  "sources": [
+   "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:210885-2",
+   "https://npgstest.ars-grin.gov/gringlobal/accessiondetail?id=1015715"
+  ],
+  "notes": "Nombre aceptado: Prunus serotina var. salicifolia (capulín). Fruto comestible, madera usada en carpintería, hojas de uso medicinal tradicional (tos), flores melíferas. Datos de tamaño existentes se mantuvieron."
+ },
+ {
+  "id": "ZwbjlOxPSMaNk51tEnxh",
+  "name": "Prunus sp. (Albaricoque japonés / ciruela china)",
+  "status": "not_found",
+  "confidence": "low",
+  "set": {},
+  "notes": "Los nombres comunes son ambiguos: 'albaricoque japonés' corresponde a Prunus mume, mientras que 'ciruela china/japanese plum' corresponde a Prunus salicina. No se puede identificar la especie sin más información; se recomienda que los responsables definan cuál es y separar en dos registros si aplica.",
+  "corrections": [],
+  "sources": []
+ },
+ {
+  "id": "Rfua3Idg015H3jxCktEr",
+  "name": "Psidium cattleyanum (Guayaba fresa)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0"
+   ],
+   "details.lifeCycle": "Secundarias 3",
+   "details.lifeCycleDuration": "Hasta 80 años"
+  },
+  "sources": [
+   "https://edis.ifas.ufl.edu/publication/st529",
+   "https://en.wikipedia.org/wiki/Psidium_cattleyanum"
+  ],
+  "notes": "Árbol pequeño, normalmente 2-4 m (máx. ~13 m); tolera heladas ligeras (~-5 °C). Fruto comestible. Ciclo sucesional igual que P. guajava en el catálogo. Advertencia: especie muy invasora fuera de su área nativa (Brasil).",
+  "corrections": []
+ },
+ {
+  "id": "4sojBTcz0WpORVPr0vGT",
+  "name": "Psidium guajava (Guayaba)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "ecologicalFunctionIds": [
+    "3",
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "2",
+    "3"
+   ]
+  },
+  "sources": [
+   "https://apps.worldagroforestry.org/treedb/AFTPDFS/Psidium_guajava.PDF",
+   "https://apps.worldagroforestry.org/usefultrees/pdflib/Psidium_guajava_TZA.pdf"
+  ],
+  "notes": "ICRAF: árbol de 3-10 m; usos: fruto, leña, postes y mangos de herramientas, medicina (corteza, hojas, raíz), conservación de suelos y cerca viva. Flores visitadas por abejas. Datos existentes coherentes.",
+  "corrections": []
+ },
+ {
+  "id": "rgGlvchtd2EEij8zhDNt",
+  "name": "Psophocarpus tetragonolobus (Ejote alado)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "height": {
+    "min": 3,
+    "max": 4
+   },
+   "ecologicalZoneIds": [
+    "1"
+   ],
+   "ecologicalFunctionIds": [
+    "1"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "1"
+   ],
+   "commonNames": [
+    "Ejote alado",
+    "Frijol alado"
+   ],
+   "details.lightPreference": "H",
+   "details.humidityPreference": "H",
+   "details.isFrostResistant": false,
+   "details.shape": "guía"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Winged_bean",
+   "https://www.echocommunity.org/resources/dcdbcd0b-ade9-4b89-ab64-5d79151fb654"
+  ],
+  "notes": "Enredadera leguminosa fijadora de N, perenne de vida corta cultivada como anual; vainas, hojas, flores, semillas y tubérculos comestibles; también forraje. DUPLICADO: el registro sExBJWjFglRtV6HrkJ4p es la misma especie ('Frijol alado'); se sugiere fusionar.",
+  "corrections": []
+ },
+ {
+  "id": "sExBJWjFglRtV6HrkJ4p",
+  "name": "Psophocarpus tetragonolobus (Frijol alado)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "taxonomy.family": "Fabaceae",
+   "height": {
+    "min": 3,
+    "max": 4
+   },
+   "ecologicalFunctionIds": [
+    "1"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "1"
+   ],
+   "commonNames": [
+    "Frijol alado",
+    "Ejote alado"
+   ],
+   "details.humidityPreference": "H",
+   "details.isFrostResistant": false,
+   "details.lifeCycle": "Pioneras",
+   "details.lifeCycleDuration": "Varios meses"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Winged_bean",
+   "https://www.echocommunity.org/resources/dcdbcd0b-ade9-4b89-ab64-5d79151fb654"
+  ],
+  "notes": "Leguminosa trepadora fijadora de N (3-4 m), cultivada como anual; todas sus partes comestibles. DUPLICADO del registro rgGlvchtd2EEij8zhDNt ('Ejote alado'); se sugiere fusionar. Ciclo de vida tomado del duplicado para mantener coherencia.",
+  "corrections": []
+ },
+ {
+  "id": "wZqBD1O80vFKXQ7pA88o",
+  "name": "Punica granatum (Granada)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "additionalFunctionIds": [
+    "0",
+    "3"
+   ],
+   "details.humidityPreference": "L"
+  },
+  "corrections": [
+   {
+    "field": "details.humidityPreference",
+    "old": "M",
+    "new": "L",
+    "reason": "ICRAF: tolera sequía, apta para forestación en zonas áridas y semiáridas",
+    "source": "https://apps.worldagroforestry.org/treedb2/speciesprofile.php?Spid=18036"
+   }
+  ],
+  "sources": [
+   "https://apps.worldagroforestry.org/treedb2/speciesprofile.php?Spid=18036",
+   "https://plants.ces.ncsu.edu/plants/punica-granatum/"
+  ],
+  "notes": "Arbusto o árbol pequeño de 5-10 m (ICRAF), tolera sequía y heladas hasta ~-11 °C. Fruto comestible; corteza de raíz usada tradicionalmente como antihelmíntico (con toxicidad). Nota: el estrato existente 'Alto' parece elevado para su tamaño (Medio sería más coherente), no se cambió sin más evidencia."
+ },
+ {
+  "id": "W9CKabFkPEgQg8oEtvGS",
+  "name": "Pyrus communis (Pera / Perón)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "stratumIds": [
+    "2",
+    "3"
+   ],
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0"
+   ],
+   "commonNames": [
+    "Perón",
+    "Pera",
+    "Peral"
+   ],
+   "details.lifeCycleDuration": "Mayor a 80 años"
+  },
+  "sources": [
+   "https://plants.ces.ncsu.edu/plants/pyrus-communis/common-name/common-pear",
+   "https://warcapps.usgs.gov/PlantID/Species/Details/1024",
+   "https://lyc-curie-nanterre.ac-versailles.fr/IMG/pdf/poirier.pdf"
+  ],
+  "notes": "Árbol de hasta 12-15 m (menor si injertado), muy longevo (>100 años). Flores polinizadas por abejas. Nota: en México 'perón' suele referirse a una variedad de manzana (Malus domestica); verificar el nombre común.",
+  "corrections": []
+ },
+ {
+  "id": "csFoinCVhj9gqayMHK9S",
+  "name": "Quercus ilex (Encina / encino bellota dulce)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "height": {
+    "min": 12,
+    "max": 21
+   },
+   "crownWidth": {
+    "min": 10,
+    "max": 15
+   },
+   "stratumIds": [
+    "3"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "commonNames": [
+    "Encino bellota dulce",
+    "Encina"
+   ],
+   "details.humidityPreference": "L",
+   "details.lifeCycle": "Primarias",
+   "details.lifeCycleDuration": "Mayor a 80 años"
+  },
+  "sources": [
+   "https://www.gardenershq.com/Quercus-ilex.php",
+   "https://landscapeplants.aub.edu.lb/Plants/PlantProfile/b9445378-484a-42a3-88ff-28e00460e463",
+   "https://www.rhs.org.uk/plants/14264/wd/details"
+  ],
+  "notes": "Encina mediterránea, 12-21 m de alto y 10-15 m de copa en cultivo; tolera sequía una vez establecida. Bellotas comestibles (harina) y forraje para ganado (dehesa); madera dura. La bellota dulce corresponde a la subsp. ballota (Q. rotundifolia), podría precisarse la subespecie.",
+  "corrections": []
+ },
+ {
+  "id": "vvWFWzSsvQy5KFZoM76C",
+  "name": "Quercus insignis (Encino chicalahuatl)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "height": {
+    "min": 15,
+    "max": 30
+   },
+   "stratumIds": [
+    "3",
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "2"
+   ],
+   "details.lifeCycle": "Primarias",
+   "details.lifeCycleDuration": "Mayor a 80 años"
+  },
+  "corrections": [
+   {
+    "field": "height",
+    "old": {
+     "min": 0.15,
+     "max": 0.25
+    },
+    "new": {
+     "min": 15,
+     "max": 30
+    },
+    "reason": "Altura imposible para un encino; probablemente se capturó en otra unidad. Fuentes: 15-20 m (World Plants), hasta 30 m (Wikipedia/Oaks of the World)",
+    "source": "https://en.wikipedia.org/wiki/Quercus_insignis"
+   }
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Quercus_insignis",
+   "https://worldplants.ca/display.php?id=7454",
+   "https://oaksoftheworld.fr/quercus_insignis.htm",
+   "https://mortonarb.org/app/uploads/2024/09/gap_analysis_mesoamerica_profile_insignis_English.pdf"
+  ],
+  "notes": "Encino de bosque mesófilo (1500-2500 m), 15-30 m, con las bellotas más grandes del mundo. En peligro (UICN) por tala para madera y café. Se corrigió la altura."
+ },
+ {
+  "id": "DhmwP4LUvCPLtpYVFw25",
+  "name": "Rheum rhabarbarum (Ruibarbo)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "taxonomy.family": "Polygonaceae",
+   "stratumIds": [
+    "1"
+   ],
+   "additionalFunctionIds": [
+    "3",
+    "0"
+   ],
+   "details.lifeCycleDuration": "Hasta 15 años"
+  },
+  "sources": [
+   "https://www.rhs.org.uk/plants/176312/rheum-rhabarbarum/details",
+   "https://deepgreenpermaculture.com/2026/06/06/rhubarb-growing-guide/"
+  ],
+  "notes": "Herbácea perenne (Polygonaceae) de 0.6-1.5 m, muy resistente al frío. Pecíolos comestibles; hojas tóxicas. Plantas productivas durante ~10-15 años.",
+  "corrections": []
+ },
+ {
+  "id": "ieTfbIiChmILvMLvdK56",
+  "name": "Rhus standleyi (Vara negra)",
+  "status": "updated",
+  "confidence": "low",
+  "set": {
+   "ecologicalZoneIds": [
+    "6",
+    "4"
+   ]
+  },
+  "sources": [
+   "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:219888-2",
+   "https://biokic4.rc.asu.edu/sandbox/dev/taxa/index.php?tid=43289"
+  ],
+  "notes": "Especie aceptada (POWO), endémica de México. Hábitat: laderas secas y rocosas, borde del desierto chihuahuense, matorrales y bosques de encino (1100-1870 m); por ello se añadió la zona 4. No se encontraron datos fiables de altura, usos ni del nombre 'vara negra'; resto sin cambios.",
+  "corrections": []
+ },
+ {
+  "id": "RuLdRbFBrzSjSz6wz3n8",
+  "name": "Ribes hirtellum (Grosella espinosa americana)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "height": {
+    "min": 0.3,
+    "max": 1.2
+   },
+   "crownWidth": {
+    "min": 0.3,
+    "max": 1.2
+   },
+   "additionalFunctionIds": [
+    "0"
+   ],
+   "details.lightPreference": "H",
+   "details.humidityPreference": "M",
+   "details.isFrostResistant": true,
+   "details.shape": "arbusto",
+   "details.lifeCycleDuration": "Hasta 15 años",
+   "details.heightRangeDescription": "hasta 2 mts"
+  },
+  "sources": [
+   "https://temperate.theferns.info/plant/Ribes+hirtellum",
+   "https://trees.umn.edu/pixwell-gooseberry-ribes-hirtellum-pixwell",
+   "https://uaf.edu/ces/garden/landscape-plants/profile.php?id=p302"
+  ],
+  "notes": "Arbusto espinoso de 0.3-1.2 m, muy resistente al frío, vive ~15 años. Fruto comestible. El estrato existente 'Medio' parece alto para su tamaño (Bajo sería más coherente); no se cambió.",
+  "corrections": []
+ },
+ {
+  "id": "SnN6KJqX9QIYA9V0dC4j",
+  "name": "Ribes rubrum (Grosella roja)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "height": {
+    "min": 1,
+    "max": 2
+   },
+   "crownWidth": {
+    "min": 1,
+    "max": 1.5
+   },
+   "additionalFunctionIds": [
+    "0"
+   ],
+   "commonNames": [
+    "Grosella espinoza europea, groselha",
+    "Grosella roja"
+   ],
+   "details.lightPreference": "H",
+   "details.humidityPreference": "M",
+   "details.isFrostResistant": true,
+   "details.shape": "arbusto",
+   "details.heightRangeDescription": "hasta 2 mts"
+  },
+  "sources": [
+   "https://www.rhs.org.uk/plants/47848/ribes-rubrum-red-lake-r/details",
+   "https://www.uksouthwest.net/wildflowers/grossulariaceae/ribes-rubrum.html"
+  ],
+  "notes": "Arbusto de 1-2 m. OJO: el nombre común existente 'grosella espinosa europea' corresponde a Ribes uva-crispa, no a R. rubrum (grosella roja); se añadió 'Grosella roja'. Revisar si el registro pretendía ser R. uva-crispa.",
+  "corrections": []
+ },
+ {
+  "id": "cpgJP2dMIo9FldW3mrf2",
+  "name": "Ricinus communis (Higuerilla)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "ecologicalZoneIds": [
+    "1",
+    "3",
+    "4",
+    "6"
+   ],
+   "ecologicalFunctionIds": [
+    "0",
+    "3"
+   ],
+   "additionalFunctionIds": [
+    "3"
+   ]
+  },
+  "sources": [
+   "https://apps.worldagroforestry.org/usefultrees/pdflib/Ricinus_communis_KEN.pdf",
+   "https://apps.worldagroforestry.org/usefultrees/pdflib/Ricinus_communis_ETH.pdf",
+   "https://www.posta.com.mx/coahuila/plantas-nativas-de-coahuila-conoce-como-la-higuerilla-puede-danar-tu-salud/vl2048157"
+  ],
+  "notes": "Arbusto de 1-5 m de crecimiento rápido; ICRAF lo cita para conservación de suelos, estabilización de riberas, barbecho y abono orgánico. Uso medicinal tradicional en México (raíz, hojas, aceite). Semillas muy tóxicas; exótica invasora. Se eliminó zona '6' duplicada. El 'edibleUses.fruit' existente es incorrecto (semilla tóxica) aunque no es campo de este trabajo.",
+  "corrections": []
+ },
+ {
+  "id": "9ztgG167AMXO9srP3rDP",
+  "name": "Robinia pseudoacacia (Falsa acacia)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "height": {
+    "min": 12,
+    "max": 25
+   },
+   "stratumIds": [
+    "3"
+   ],
+   "ecologicalFunctionIds": [
+    "1",
+    "3",
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "3",
+    "2"
+   ],
+   "commonNames": [
+    "Black locust",
+    "Falsa acacia",
+    "Acacia blanca"
+   ],
+   "details.lightPreference": "H",
+   "details.humidityPreference": "M",
+   "details.isFrostResistant": true,
+   "details.shape": "árbol",
+   "details.heightRangeDescription": "más de 10 mts"
+  },
+  "corrections": [
+   {
+    "field": "details.heightRangeDescription",
+    "old": "de 5 a 10 mts",
+    "new": "más de 10 mts",
+    "reason": "ICRAF: árbol de ~25 m; otras fuentes 9-24 m",
+    "source": "https://apps.worldagroforestry.org/treedb2/speciesprofile.php/docs/policydocument.pdf?Spid=1454"
+   }
+  ],
+  "sources": [
+   "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:30034699-2/general-information",
+   "https://warcapps.usgs.gov/PlantID/Species/Details/1566",
+   "https://srs.fs.usda.gov/pubs/misc/ag_654/volume_2/robinia/pseudoacacia.htm"
+  ],
+  "notes": "Leguminosa fijadora de N, usada para control de erosión, flores muy melíferas; madera muy durable (postes). Partes tóxicas (corteza) para humanos y ganado; invasora en muchas regiones. No es nativa de México."
+ },
+ {
+  "id": "I7KLRK2CPyIde4QKflqf",
+  "name": "Annona mucosa (Biribá)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "taxonomy.genus": "Annona",
+   "taxonomy.synonyms": [
+    "Rollinia mucosa",
+    "Rollinia deliciosa"
+   ],
+   "height": {
+    "min": 4,
+    "max": 15
+   },
+   "ecologicalZoneIds": [
+    "1"
+   ],
+   "additionalFunctionIds": [
+    "0"
+   ],
+   "details.lightPreference": "H",
+   "details.humidityPreference": "H",
+   "details.isFrostResistant": false,
+   "details.shape": "árbol",
+   "details.heightRangeDescription": "más de 10 mts"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.genus",
+    "old": "Rollinia",
+    "new": "Annona",
+    "reason": "Rollinia se fusionó en Annona; POWO acepta Annona mucosa Jacq.",
+    "source": "https://ask.ifas.ufl.edu/publication/HS1523"
+   }
+  ],
+  "sources": [
+   "https://ask.ifas.ufl.edu/publication/HS1523",
+   "https://growables.org/information/TropicalFruit/BiribaJuliaMorton.htm",
+   "https://en.wikipedia.org/wiki/Annona_mucosa"
+  ],
+  "notes": "Árbol tropical de 4-15 m, fruto comestible, sensible al frío, de clima húmedo. Se actualizó el género a Annona (sinónimo Rollinia mucosa)."
+ },
+ {
+  "id": "258WeIbhNRmytPvT1qDq",
+  "name": "Salvia rosmarinus (Romero)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "taxonomy.genus": "Salvia",
+   "taxonomy.species": "rosmarinus",
+   "taxonomy.synonyms": [
+    "Rosmarinus officinalis"
+   ],
+   "height": {
+    "min": 1,
+    "max": 1.8
+   },
+   "crownWidth": {
+    "min": 0.6,
+    "max": 1.5
+   },
+   "stratumIds": [
+    "1"
+   ],
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "details.humidityPreference": "L"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.genus/species",
+    "old": "Rosmarinus officinalis",
+    "new": "Salvia rosmarinus",
+    "reason": "Rosmarinus se incluye en Salvia; POWO acepta Salvia rosmarinus",
+    "source": "https://worldspecies.org/ntaxa/857099"
+   },
+   {
+    "field": "height",
+    "old": {
+     "min": 1.5,
+     "max": 1.5
+    },
+    "new": {
+     "min": 1,
+     "max": 1.8
+    },
+    "reason": "rango típico 0.6-1.8 m según fuentes de extensión",
+    "source": "https://ffl.ifas.ufl.edu/bees/plants/Details/337"
+   },
+   {
+    "field": "crownWidth",
+    "old": {
+     "min": 1.5,
+     "max": 1.5
+    },
+    "new": {
+     "min": 0.6,
+     "max": 1.5
+    },
+    "reason": "rango típico 0.6-1.5 m",
+    "source": "https://www.jerseyyards.org/plant/salvia-rosmarinus/"
+   }
+  ],
+  "sources": [
+   "https://worldspecies.org/ntaxa/857099",
+   "https://ffl.ifas.ufl.edu/bees/plants/Details/337",
+   "https://www.jerseyyards.org/plant/salvia-rosmarinus/"
+  ],
+  "notes": "Nombre aceptado actual Salvia rosmarinus (sinónimo Rosmarinus officinalis). Arbusto de 1-1.8 m, muy tolerante a la sequía y muy visitado por abejas. Estrato bajo. Uso medicinal ya registrado."
+ },
+ {
+  "id": "iGqnen0LFrvyn2zFkllQ",
+  "name": "Salvia rosmarinus Grupo Prostratus (Romero rastrero)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "taxonomy.genus": "Salvia",
+   "taxonomy.species": "rosmarinus",
+   "taxonomy.subspecies": "Grupo Prostratus",
+   "taxonomy.synonyms": [
+    "Rosmarinus officinalis 'Prostratus'"
+   ],
+   "height": {
+    "min": 0.15,
+    "max": 0.5
+   },
+   "crownWidth": {
+    "min": 1,
+    "max": 1.5
+   },
+   "stratumIds": [
+    "0"
+   ],
+   "ecologicalFunctionIds": [
+    "3",
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "3"
+   ],
+   "details.humidityPreference": "L"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy",
+    "old": "Rosmarinus sp.",
+    "new": "Salvia rosmarinus Grupo Prostratus",
+    "reason": "El romero rastrero corresponde a las formas postradas de Salvia rosmarinus (ex Rosmarinus officinalis 'Prostratus')",
+    "source": "https://www.rhs.org.uk/plants/386335/salvia-rosmarinus-prostrata-group-capri-ro/details"
+   },
+   {
+    "field": "height",
+    "old": {
+     "min": 0.4,
+     "max": 0.4
+    },
+    "new": {
+     "min": 0.15,
+     "max": 0.5
+    },
+    "reason": "rango reportado 0.1-0.5 m",
+    "source": "https://www.worldplants.ca/display0.php?id=9904"
+   }
+  ],
+  "sources": [
+   "https://horticopia.info/Plants/050/rosoff001.html",
+   "https://www.evergreentrees.com.au/products/rosmarinus-officinalis-prostratus-prostrate-rosemary.oembed",
+   "https://www.worldplants.ca/display0.php?id=9904",
+   "https://www.rhs.org.uk/plants/386335/salvia-rosmarinus-prostrata-group-capri-ro/details"
+  ],
+  "notes": "Forma postrada del romero: 0.15-0.5 m de alto y 1-1.5 m de extensión, cubresuelo recomendado para taludes secos; tolera sequía, requiere sol y drenaje. Visitado por abejas."
+ },
+ {
+  "id": "z97B0j0xo5xm4u9crvLp",
+  "name": "Rubus fruticosus (Zarzamora)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "additionalFunctionIds": [
+    "0",
+    "3"
+   ],
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "commonNames": [
+    "Zarzamora"
+   ]
+  },
+  "corrections": [
+   {
+    "field": "additionalFunctionIds",
+    "old": [
+     "2"
+    ],
+    "new": [
+     "0",
+     "3"
+    ],
+    "reason": "La zarzamora no es maderable; su fruto es comestible y las hojas tienen uso medicinal",
+    "source": "https://www.gob.mx/cms/uploads/attachment/file/832812/zarzamora.pdf"
+   }
+  ],
+  "sources": [
+   "https://www.gob.mx/cms/uploads/attachment/file/832812/zarzamora.pdf",
+   "https://www.mapa.gob.es/ministerio/pags/Biblioteca/Revistas/pdf_Ferti/Ferti_2005_35_14_16.pdf",
+   "https://www.larioja.org/medio-ambiente/en/reserva-biosfera/desarrollo-sostenible/experiencias-sostenibles/cultivo-experimental-frutos-bosque.files/633859-717186_3_1_Ficha_mora.pdf"
+  ],
+  "notes": "Arbusto espinoso de 2-3 m, fruto comestible, hojas medicinales. Se corrigió función 'Maderable' a Alimento+Medicinal. Flores visitadas por insectos (función polinizadores, confianza media). En México se cultivan sobre todo híbridos de Rubus."
+ },
+ {
+  "id": "O5nIxPukCLDJslI3pjBd",
+  "name": "Rubus idaeus (Frambuesa)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "details.shape": "arbusto",
+   "stratumIds": [
+    "1"
+   ],
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0"
+   ]
+  },
+  "corrections": [
+   {
+    "field": "details.shape",
+    "old": "hierba",
+    "new": "arbusto",
+    "reason": "La frambuesa es un arbusto de cañas leñosas",
+    "source": "https://plants.ces.ncsu.edu/plants/rubus-idaeus-subsp-idaeus/common-name/red-raspberry/"
+   }
+  ],
+  "sources": [
+   "https://plants.ces.ncsu.edu/plants/rubus-idaeus-subsp-idaeus/common-name/red-raspberry/",
+   "https://plantfinder.nativeplanttrust.org/plant/Rubus-ideas",
+   "https://www-dev.bwsr.state.mn.us/sites/default/files/2018-12/February%202017%20FP%20Red%20Raspberry.pdf"
+  ],
+  "notes": "Arbusto de cañas de 1-2.5 m que forma matorrales por rizomas; néctar y polen muy usados por abejas. Fruto comestible. Estrato bajo."
+ },
+ {
+  "id": "p7hQO502HZ2OFQrJbgfn",
+  "name": "Rumex acetosa (Acedera)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "height": {
+    "min": 0.4,
+    "max": 1
+   },
+   "stratumIds": [
+    "1"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "3"
+   ]
+  },
+  "corrections": [],
+  "sources": [
+   "https://temperate.theferns.info/plant/Rumex+acetosa",
+   "https://naturblick.museumfuernaturkunde.berlin/species/portrait/360?lang=en",
+   "https://henriettes-herb.com/eclectic/kings/rumex-acet.html"
+  ],
+  "notes": "Hierba perenne de 0.4-1 m, hojas comestibles (con ácido oxálico, consumir con moderación); uso medicinal tradicional como refrescante y diurético."
+ }
+]

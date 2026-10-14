@@ -1,0 +1,2082 @@
+[
+ {
+  "id": "FoxlCOvYvDCcUpT2DrRx",
+  "taxonomy": {
+   "family": "Sapotaceae",
+   "species": "sapota",
+   "genus": "Pouteria"
+  },
+  "commonNames": [
+   "Zapote rey, mamey zapote"
+  ],
+  "stratumIds": [],
+  "ecologicalZoneIds": [],
+  "ecologicalFunctionIds": [],
+  "additionalFunctionIds": [],
+  "height": {
+   "min": 0,
+   "max": 0
+  },
+  "crownWidth": {
+   "min": 0,
+   "max": 0
+  },
+  "details": {
+   "heightRangeDescription": "de 5 a 10 mts"
+  }
+ },
+ {
+  "id": "rL2cF4iWfzvvHDNRx3Xj",
+  "taxonomy": {
+   "species": "glandulosa",
+   "family": "Fabaceae",
+   "genus": "Prosopis"
+  },
+  "commonNames": [
+   "Mezquite"
+  ],
+  "stratumIds": [],
+  "ecologicalZoneIds": [
+   "6",
+   "6"
+  ],
+  "ecologicalFunctionIds": [],
+  "additionalFunctionIds": [],
+  "height": {
+   "min": 0,
+   "max": 0
+  },
+  "crownWidth": {
+   "min": 0,
+   "max": 0
+  },
+  "details": {
+   "nutrientContent": {
+    "vitamins": true
+   },
+   "edibleUses": {
+    "fruit": true
+   }
+  }
+ },
+ {
+  "id": "y6aJhz0nilPZ1bhJDLgj",
+  "taxonomy": {
+   "family": "Fabaceae",
+   "genus": "Prosopis",
+   "species": "juliflora"
+  },
+  "commonNames": [
+   "Mezquite"
+  ],
+  "stratumIds": [],
+  "ecologicalZoneIds": [
+   "6",
+   "6"
+  ],
+  "ecologicalFunctionIds": [],
+  "additionalFunctionIds": [],
+  "height": {
+   "min": 0,
+   "max": 0
+  },
+  "crownWidth": {
+   "min": 0,
+   "max": 0
+  },
+  "details": {
+   "nutrientContent": {
+    "vitamins": true,
+    "minerals": true
+   },
+   "edibleUses": {
+    "fruit": true
+   }
+  }
+ },
+ {
+  "id": "ctN61ODcII9u1hL3cXiU",
+  "taxonomy": {
+   "genus": "Prosopis",
+   "family": "Fabaceae",
+   "species": "laevigata"
+  },
+  "commonNames": [
+   "Mezquite"
+  ],
+  "stratumIds": [
+   "3"
+  ],
+  "ecologicalZoneIds": [
+   "6",
+   "6"
+  ],
+  "ecologicalFunctionIds": [],
+  "additionalFunctionIds": [
+   "1"
+  ],
+  "height": {
+   "min": 12,
+   "max": 12
+  },
+  "crownWidth": {
+   "min": 0,
+   "max": 0
+  },
+  "details": {
+   "lightPreference": "H",
+   "shape": "árbol",
+   "heightRangeDescription": "más de 10 mts"
+  }
+ },
+ {
+  "id": "09Rfx9Vki2XFBKjYIjxs",
+  "taxonomy": {
+   "species": "armeniaca",
+   "genus": "Prunus",
+   "family": "Rosaceae"
+  },
+  "commonNames": [
+   "Chabacano"
+  ],
+  "stratumIds": [],
+  "ecologicalZoneIds": [
+   "4",
+   "6"
+  ],
+  "ecologicalFunctionIds": [],
+  "additionalFunctionIds": [
+   "3"
+  ],
+  "height": {
+   "max": 0,
+   "min": 0
+  },
+  "crownWidth": {
+   "max": 0,
+   "min": 0
+  },
+  "details": {
+   "isFrostResistant": true,
+   "growthHabit": "clumping",
+   "shape": "árbol",
+   "heightRangeDescription": "hasta 5 mts",
+   "edibleUses": {
+    "stemsOrShoots": true
+   },
+   "lightPreference": "H",
+   "nutrientContent": {
+    "minerals": true,
+    "proteins": true,
+    "vitamins": true
+   }
+  }
+ },
+ {
+  "id": "uEjWgxEVYtSP5IgK80WM",
+  "taxonomy": {
+   "family": "Rosaceae",
+   "genus": "Prunus",
+   "species": "avium"
+  },
+  "commonNames": [
+   "Cereza (las verdaderas cerezas)"
+  ],
+  "stratumIds": [],
+  "ecologicalZoneIds": [
+   "4"
+  ],
+  "ecologicalFunctionIds": [],
+  "additionalFunctionIds": [],
+  "height": {
+   "min": 0,
+   "max": 0
+  },
+  "crownWidth": {
+   "min": 0,
+   "max": 0
+  },
+  "details": {}
+ },
+ {
+  "id": "K0VprQu6cbRhWBhwixj6",
+  "taxonomy": {
+   "family": "Rosaceae",
+   "species": "cerasus",
+   "genus": "Prunus"
+  },
+  "commonNames": [
+   "Cereza, guinda (más acido)"
+  ],
+  "stratumIds": [],
+  "ecologicalZoneIds": [
+   "4"
+  ],
+  "ecologicalFunctionIds": [],
+  "additionalFunctionIds": [],
+  "height": {
+   "min": 0,
+   "max": 0
+  },
+  "crownWidth": {
+   "min": 0,
+   "max": 0
+  },
+  "details": {
+   "heightRangeDescription": "de 5 a 10 mts",
+   "edibleUses": {
+    "nutsAndSeeds": true
+   },
+   "nutrientContent": {
+    "proteins": true
+   },
+   "observations": {
+    "toleratesPruning": true
+   }
+  }
+ },
+ {
+  "id": "NXvYlxdFkmUQnji5xlZJ",
+  "taxonomy": {
+   "genus": "Prunus",
+   "species": "domestica",
+   "family": "Rosaceae"
+  },
+  "commonNames": [
+   "Ciruela roja"
+  ],
+  "stratumIds": [
+   "2"
+  ],
+  "ecologicalZoneIds": [
+   "3",
+   "4",
+   "6"
+  ],
+  "ecologicalFunctionIds": [],
+  "additionalFunctionIds": [
+   "1"
+  ],
+  "height": {
+   "max": 3.5,
+   "min": 3.5
+  },
+  "crownWidth": {
+   "min": 4,
+   "max": 5
+  },
+  "details": {
+   "shape": "árbol",
+   "lightPreference": "H",
+   "humidityPreference": "L",
+   "growthHabit": "clumping",
+   "isFrostResistant": true,
+   "heightRangeDescription": "hasta 5 mts"
+  }
+ },
+ {
+  "id": "iZ7PJKsp3s0fQoBLWcPn",
+  "taxonomy": {
+   "species": "dulcis",
+   "family": "Rosaceae",
+   "genus": "Prunus"
+  },
+  "commonNames": [
+   "Almendro"
+  ],
+  "stratumIds": [],
+  "ecologicalZoneIds": [
+   "4",
+   "6"
+  ],
+  "ecologicalFunctionIds": [],
+  "additionalFunctionIds": [],
+  "height": {
+   "min": 5,
+   "max": 5
+  },
+  "crownWidth": {
+   "min": 3,
+   "max": 4
+  },
+  "details": {
+   "edibleUses": {
+    "nutsAndSeeds": true
+   },
+   "isFrostResistant": true,
+   "shape": "árbol",
+   "heightRangeDescription": "de 5 a 10 mts",
+   "lightPreference": "H"
+  }
+ },
+ {
+  "id": "iJfEYRTtvnpnO538fAa2",
+  "taxonomy": {
+   "species": "persica",
+   "family": "Rosaceae",
+   "genus": "Prunus"
+  },
+  "commonNames": [
+   "Durazno enano, melocoton"
+  ],
+  "stratumIds": [
+   "2"
+  ],
+  "ecologicalZoneIds": [
+   "3",
+   "4",
+   "6"
+  ],
+  "ecologicalFunctionIds": [],
+  "additionalFunctionIds": [],
+  "height": {
+   "min": 3.4,
+   "max": 3.4
+  },
+  "crownWidth": {
+   "min": 3.5,
+   "max": 5
+  },
+  "details": {
+   "growthHabit": "clumping",
+   "isFrostResistant": true,
+   "nutrientContent": {
+    "calories": true
+   },
+   "edibleUses": {
+    "nutsAndSeeds": true
+   },
+   "shape": "árbol",
+   "observations": {
+    "toleratesPruning": true
+   },
+   "lightPreference": "H",
+   "heightRangeDescription": "hasta 5 mts",
+   "humidityPreference": "L"
+  }
+ },
+ {
+  "id": "pOBy0CPUnJQrxXQIxXV1",
+  "taxonomy": {
+   "species": "salicifolia",
+   "genus": "Prunus",
+   "family": "Rosaceae"
+  },
+  "commonNames": [
+   "Capulin"
+  ],
+  "stratumIds": [],
+  "ecologicalZoneIds": [
+   "3",
+   "4",
+   "6"
+  ],
+  "ecologicalFunctionIds": [],
+  "additionalFunctionIds": [],
+  "height": {
+   "min": 6,
+   "max": 8
+  },
+  "crownWidth": {
+   "min": 4,
+   "max": 4
+  },
+  "details": {
+   "humidityPreference": "M",
+   "shape": "árbol",
+   "nutrientContent": {
+    "vitamins": true,
+    "minerals": true
+   },
+   "heightRangeDescription": "de 5 a 10 mts",
+   "growthHabit": "clumping",
+   "isFrostResistant": true,
+   "lightPreference": "H",
+   "edibleUses": {
+    "fruit": true
+   }
+  }
+ },
+ {
+  "id": "ZwbjlOxPSMaNk51tEnxh",
+  "taxonomy": {
+   "family": "Rosaceae",
+   "species": "sp.",
+   "genus": "Prunus"
+  },
+  "commonNames": [
+   "Albaricoque japones, ciruela china , japanese plum"
+  ],
+  "stratumIds": [
+   "2"
+  ],
+  "ecologicalZoneIds": [],
+  "ecologicalFunctionIds": [],
+  "additionalFunctionIds": [
+   "3"
+  ],
+  "height": {
+   "min": 0,
+   "max": 0
+  },
+  "crownWidth": {
+   "min": 0,
+   "max": 0
+  },
+  "details": {}
+ },
+ {
+  "id": "Rfua3Idg015H3jxCktEr",
+  "taxonomy": {
+   "genus": "Psidium",
+   "family": "Myrtaceae",
+   "species": "cattleyanum"
+  },
+  "commonNames": [
+   "Guayaba fresa, guayabita del Perú, araca"
+  ],
+  "stratumIds": [
+   "2",
+   "3"
+  ],
+  "ecologicalZoneIds": [
+   "1",
+   "3",
+   "4",
+   "6"
+  ],
+  "ecologicalFunctionIds": [],
+  "additionalFunctionIds": [],
+  "height": {
+   "max": 3,
+   "min": 3
+  },
+  "crownWidth": {
+   "max": 3,
+   "min": 3
+  },
+  "details": {
+   "shape": "árbol",
+   "humidityPreference": "M",
+   "lightPreference": "H",
+   "growthHabit": "clumping",
+   "heightRangeDescription": "de 5 a 10 mts",
+   "isFrostResistant": true
+  }
+ },
+ {
+  "id": "4sojBTcz0WpORVPr0vGT",
+  "taxonomy": {
+   "family": "Myrtaceae",
+   "species": "guajava",
+   "genus": "Psidium"
+  },
+  "commonNames": [
+   "Guayaba, guava"
+  ],
+  "stratumIds": [
+   "2",
+   "3"
+  ],
+  "ecologicalZoneIds": [
+   "1",
+   "3",
+   "4",
+   "6"
+  ],
+  "ecologicalFunctionIds": [],
+  "additionalFunctionIds": [],
+  "height": {
+   "max": 5,
+   "min": 5
+  },
+  "crownWidth": {
+   "min": 6,
+   "max": 6
+  },
+  "details": {
+   "isFrostResistant": true,
+   "humidityPreference": "M",
+   "growthHabit": "clumping",
+   "heightRangeDescription": "de 5 a 10 mts",
+   "shape": "árbol",
+   "lifeCycleDuration": "Hasta 80 años",
+   "lifeCycle": "Secundarias 3",
+   "nutrientContent": {
+    "vitamins": true
+   },
+   "lightPreference": "H",
+   "edibleUses": {
+    "fruit": true
+   }
+  }
+ },
+ {
+  "id": "rgGlvchtd2EEij8zhDNt",
+  "taxonomy": {
+   "genus": "Psophocarpus",
+   "family": "Fabaceae",
+   "species": "tetragonolobus"
+  },
+  "commonNames": [
+   "Ejote alado"
+  ],
+  "stratumIds": [
+   "3"
+  ],
+  "ecologicalZoneIds": [],
+  "ecologicalFunctionIds": [],
+  "additionalFunctionIds": [],
+  "height": {
+   "min": 0,
+   "max": 0
+  },
+  "crownWidth": {
+   "min": 0,
+   "max": 0
+  },
+  "details": {
+   "edibleUses": {
+    "rootsAndTubers": true
+   },
+   "lifeCycle": "Pioneras",
+   "heightRangeDescription": "enredaderas y trepadoras",
+   "lifeCycleDuration": "Varios meses"
+  }
+ },
+ {
+  "id": "sExBJWjFglRtV6HrkJ4p",
+  "taxonomy": {
+   "genus": "Psophocarpus",
+   "species": "tetragonolobus"
+  },
+  "commonNames": [
+   "Frijol alado"
+  ],
+  "stratumIds": [
+   "3"
+  ],
+  "ecologicalZoneIds": [
+   "1",
+   "3"
+  ],
+  "ecologicalFunctionIds": [],
+  "additionalFunctionIds": [],
+  "height": {
+   "min": 3,
+   "max": 3
+  },
+  "crownWidth": {
+   "min": 0,
+   "max": 0
+  },
+  "details": {
+   "heightRangeDescription": "enredaderas y trepadoras",
+   "lightPreference": "H",
+   "shape": "guía"
+  }
+ },
+ {
+  "id": "wZqBD1O80vFKXQ7pA88o",
+  "taxonomy": {
+   "family": "Lythraceae",
+   "genus": "Punica",
+   "species": "granatum"
+  },
+  "commonNames": [
+   "Granada, pomegranate"
+  ],
+  "stratumIds": [
+   "3"
+  ],
+  "ecologicalZoneIds": [
+   "3",
+   "4",
+   "6"
+  ],
+  "ecologicalFunctionIds": [],
+  "additionalFunctionIds": [],
+  "height": {
+   "min": 3,
+   "max": 6
+  },
+  "crownWidth": {
+   "min": 2,
+   "max": 4
+  },
+  "details": {
+   "growthHabit": "clumping",
+   "isFrostResistant": true,
+   "shape": "árbol",
+   "lightPreference": "H",
+   "humidityPreference": "M",
+   "heightRangeDescription": "de 5 a 10 mts"
+  }
+ },
+ {
+  "id": "W9CKabFkPEgQg8oEtvGS",
+  "taxonomy": {
+   "species": "communis",
+   "family": "Rosaceae",
+   "genus": "Pyrus"
+  },
+  "commonNames": [
+   "Perón"
+  ],
+  "stratumIds": [],
+  "ecologicalZoneIds": [
+   "3",
+   "4",
+   "6"
+  ],
+  "ecologicalFunctionIds": [],
+  "additionalFunctionIds": [],
+  "height": {
+   "max": 8,
+   "min": 8
+  },
+  "crownWidth": {
+   "min": 4,
+   "max": 6
+  },
+  "details": {
+   "shape": "árbol",
+   "humidityPreference": "M",
+   "isFrostResistant": true,
+   "heightRangeDescription": "de 5 a 10 mts",
+   "lightPreference": "H",
+   "growthHabit": "clumping"
+  }
+ },
+ {
+  "id": "csFoinCVhj9gqayMHK9S",
+  "taxonomy": {
+   "species": "ilex",
+   "genus": "Quercus",
+   "family": "Fagaceae"
+  },
+  "commonNames": [
+   "Encino bellota dulce"
+  ],
+  "stratumIds": [],
+  "ecologicalZoneIds": [
+   "4",
+   "6"
+  ],
+  "ecologicalFunctionIds": [],
+  "additionalFunctionIds": [],
+  "height": {
+   "max": 0,
+   "min": 0
+  },
+  "crownWidth": {
+   "min": 0,
+   "max": 0
+  },
+  "details": {
+   "shape": "árbol",
+   "edibleUses": {
+    "stemsOrShoots": true
+   },
+   "lightPreference": "H",
+   "nutrientContent": {
+    "vitamins": true,
+    "minerals": true
+   },
+   "isFrostResistant": true,
+   "heightRangeDescription": "más de 10 mts",
+   "growthHabit": "clumping"
+  }
+ },
+ {
+  "id": "vvWFWzSsvQy5KFZoM76C",
+  "taxonomy": {
+   "genus": "Quercus",
+   "species": "insignis",
+   "family": "Fagaceae"
+  },
+  "commonNames": [
+   "Encino Chicalahuatl"
+  ],
+  "stratumIds": [],
+  "ecologicalZoneIds": [
+   "3"
+  ],
+  "ecologicalFunctionIds": [],
+  "additionalFunctionIds": [],
+  "height": {
+   "min": 0.15,
+   "max": 0.25
+  },
+  "crownWidth": {
+   "min": 10,
+   "max": 10
+  },
+  "details": {
+   "growthHabit": "clumping",
+   "humidityPreference": "H",
+   "isFrostResistant": true,
+   "lightPreference": "H",
+   "shape": "árbol",
+   "heightRangeDescription": "más de 10 mts"
+  }
+ },
+ {
+  "id": "DhmwP4LUvCPLtpYVFw25",
+  "taxonomy": {
+   "species": "rhabarbarum",
+   "genus": "Rheum"
+  },
+  "commonNames": [
+   "Ruibarbo"
+  ],
+  "stratumIds": [],
+  "ecologicalZoneIds": [
+   "3"
+  ],
+  "ecologicalFunctionIds": [],
+  "additionalFunctionIds": [
+   "3"
+  ],
+  "height": {
+   "max": 0.9,
+   "min": 0.6
+  },
+  "crownWidth": {
+   "max": 1,
+   "min": 1
+  },
+  "details": {
+   "humidityPreference": "M",
+   "heightRangeDescription": "hasta 2 mts",
+   "lightPreference": "H",
+   "nutrientContent": {
+    "medicinalCompounds": true
+   },
+   "growthHabit": "clumping",
+   "isFrostResistant": true,
+   "shape": "hierba"
+  }
+ },
+ {
+  "id": "ieTfbIiChmILvMLvdK56",
+  "taxonomy": {
+   "family": "Anacardiaceae",
+   "genus": "Rhus",
+   "species": "standleyi"
+  },
+  "commonNames": [
+   "Vara negra"
+  ],
+  "stratumIds": [],
+  "ecologicalZoneIds": [
+   "6"
+  ],
+  "ecologicalFunctionIds": [],
+  "additionalFunctionIds": [
+   "2"
+  ],
+  "height": {
+   "min": 0,
+   "max": 0
+  },
+  "crownWidth": {
+   "min": 0,
+   "max": 0
+  },
+  "details": {
+   "heightRangeDescription": "hasta 5 mts"
+  }
+ },
+ {
+  "id": "RuLdRbFBrzSjSz6wz3n8",
+  "taxonomy": {
+   "family": "Grossulariaceae",
+   "species": "hirtellum",
+   "genus": "Ribes"
+  },
+  "commonNames": [
+   "Uva espina, goseberry"
+  ],
+  "stratumIds": [
+   "2"
+  ],
+  "ecologicalZoneIds": [],
+  "ecologicalFunctionIds": [],
+  "additionalFunctionIds": [],
+  "height": {
+   "min": 0,
+   "max": 0
+  },
+  "crownWidth": {
+   "max": 0,
+   "min": 0
+  },
+  "details": {}
+ },
+ {
+  "id": "SnN6KJqX9QIYA9V0dC4j",
+  "taxonomy": {
+   "species": "rubrum",
+   "family": "Grossulariaceae",
+   "genus": "Ribes"
+  },
+  "commonNames": [
+   "Grosella espinoza europea, groselha"
+  ],
+  "stratumIds": [
+   "2"
+  ],
+  "ecologicalZoneIds": [],
+  "ecologicalFunctionIds": [],
+  "additionalFunctionIds": [],
+  "height": {
+   "min": 0,
+   "max": 0
+  },
+  "crownWidth": {
+   "max": 0,
+   "min": 0
+  },
+  "details": {}
+ },
+ {
+  "id": "cpgJP2dMIo9FldW3mrf2",
+  "taxonomy": {
+   "family": "Euphorbiaceae",
+   "genus": "Ricinus",
+   "species": "communis"
+  },
+  "commonNames": [
+   "Higuerilla"
+  ],
+  "stratumIds": [
+   "3",
+   "4"
+  ],
+  "ecologicalZoneIds": [
+   "1",
+   "3",
+   "4",
+   "6",
+   "6"
+  ],
+  "ecologicalFunctionIds": [],
+  "additionalFunctionIds": [],
+  "height": {
+   "max": 3,
+   "min": 3
+  },
+  "crownWidth": {
+   "min": 4,
+   "max": 4
+  },
+  "details": {
+   "growthHabit": "invasive",
+   "heightRangeDescription": "hasta 5 mts",
+   "shape": "arbusto",
+   "nutrientContent": {
+    "vitamins": true,
+    "minerals": true
+   },
+   "lightPreference": "H",
+   "lifeCycle": "Secundarias 1",
+   "edibleUses": {
+    "fruit": true
+   },
+   "lifeCycleDuration": "Hasta 2 años",
+   "isFrostResistant": true,
+   "humidityPreference": "M"
+  }
+ },
+ {
+  "id": "9ztgG167AMXO9srP3rDP",
+  "taxonomy": {
+   "family": "Fabaceae",
+   "species": "pseudoacacia",
+   "genus": "Robinia"
+  },
+  "commonNames": [
+   "Black locust"
+  ],
+  "stratumIds": [],
+  "ecologicalZoneIds": [
+   "4"
+  ],
+  "ecologicalFunctionIds": [],
+  "additionalFunctionIds": [
+   "3"
+  ],
+  "height": {
+   "max": 0,
+   "min": 0
+  },
+  "crownWidth": {
+   "max": 0,
+   "min": 0
+  },
+  "details": {
+   "heightRangeDescription": "de 5 a 10 mts"
+  }
+ },
+ {
+  "id": "I7KLRK2CPyIde4QKflqf",
+  "taxonomy": {
+   "family": "Annonaceae",
+   "species": "mucosa",
+   "genus": "Rollinia"
+  },
+  "commonNames": [
+   "Biriba, biriba"
+  ],
+  "stratumIds": [
+   "2",
+   "3"
+  ],
+  "ecologicalZoneIds": [],
+  "ecologicalFunctionIds": [],
+  "additionalFunctionIds": [],
+  "height": {
+   "max": 0,
+   "min": 0
+  },
+  "crownWidth": {
+   "min": 0,
+   "max": 0
+  },
+  "details": {}
+ },
+ {
+  "id": "258WeIbhNRmytPvT1qDq",
+  "taxonomy": {
+   "genus": "Rosmarinus",
+   "species": "officinalis",
+   "family": "Lamiaceae"
+  },
+  "commonNames": [
+   "Romero"
+  ],
+  "stratumIds": [],
+  "ecologicalZoneIds": [
+   "6"
+  ],
+  "ecologicalFunctionIds": [],
+  "additionalFunctionIds": [
+   "3"
+  ],
+  "height": {
+   "min": 1.5,
+   "max": 1.5
+  },
+  "crownWidth": {
+   "max": 1.5,
+   "min": 1.5
+  },
+  "details": {
+   "heightRangeDescription": "hasta 2 mts",
+   "edibleUses": {
+    "leaves": true,
+    "fruit": true,
+    "flowers": true
+   },
+   "isFrostResistant": true,
+   "shape": "arbusto",
+   "lightPreference": "H",
+   "nutrientContent": {
+    "calories": true,
+    "minerals": true
+   },
+   "growthHabit": "invasive"
+  }
+ },
+ {
+  "id": "iGqnen0LFrvyn2zFkllQ",
+  "taxonomy": {
+   "genus": "Rosmarinus",
+   "family": "Lamiaceae",
+   "species": "sp."
+  },
+  "commonNames": [
+   "Romero rastrero"
+  ],
+  "stratumIds": [],
+  "ecologicalZoneIds": [
+   "6"
+  ],
+  "ecologicalFunctionIds": [],
+  "additionalFunctionIds": [],
+  "height": {
+   "min": 0.4,
+   "max": 0.4
+  },
+  "crownWidth": {
+   "min": 0,
+   "max": 0
+  },
+  "details": {
+   "isFrostResistant": true,
+   "growthHabit": "clumping",
+   "lightPreference": "H",
+   "shape": "arbusto",
+   "heightRangeDescription": "coberturas y rastreras"
+  }
+ },
+ {
+  "id": "z97B0j0xo5xm4u9crvLp",
+  "taxonomy": {
+   "family": "Rosaceae",
+   "species": "fruticosus",
+   "genus": "Rubus"
+  },
+  "commonNames": [
+   "Zarzamora"
+  ],
+  "stratumIds": [
+   "2",
+   "3"
+  ],
+  "ecologicalZoneIds": [
+   "3",
+   "4"
+  ],
+  "ecologicalFunctionIds": [],
+  "additionalFunctionIds": [
+   "2"
+  ],
+  "height": {
+   "min": 1.5,
+   "max": 1.5
+  },
+  "crownWidth": {
+   "min": 1,
+   "max": 1
+  },
+  "details": {
+   "lifeCycleDuration": "Hasta 15 años",
+   "lightPreference": "H",
+   "growthHabit": "invasive",
+   "isFrostResistant": true,
+   "lifeCycle": "Secundarias 2",
+   "shape": "arbusto",
+   "heightRangeDescription": "hasta 2 mts",
+   "humidityPreference": "M"
+  }
+ },
+ {
+  "id": "O5nIxPukCLDJslI3pjBd",
+  "taxonomy": {
+   "species": "idaeus",
+   "family": "Rosaceae",
+   "genus": "Rubus"
+  },
+  "commonNames": [
+   "Frambuesa"
+  ],
+  "stratumIds": [],
+  "ecologicalZoneIds": [
+   "3",
+   "4",
+   "6"
+  ],
+  "ecologicalFunctionIds": [],
+  "additionalFunctionIds": [],
+  "height": {
+   "max": 1.2,
+   "min": 1.2
+  },
+  "crownWidth": {
+   "max": 1,
+   "min": 1
+  },
+  "details": {
+   "humidityPreference": "M",
+   "shape": "hierba",
+   "isFrostResistant": true,
+   "growthHabit": "clumping",
+   "lightPreference": "H",
+   "heightRangeDescription": "hasta 2 mts"
+  }
+ },
+ {
+  "id": "p7hQO502HZ2OFQrJbgfn",
+  "taxonomy": {
+   "genus": "Rumex",
+   "family": "Polygonaceae",
+   "species": "acetosa"
+  },
+  "commonNames": [
+   "Sorrel"
+  ],
+  "stratumIds": [],
+  "ecologicalZoneIds": [
+   "3",
+   "4"
+  ],
+  "ecologicalFunctionIds": [],
+  "additionalFunctionIds": [],
+  "height": {
+   "min": 0,
+   "max": 0
+  },
+  "crownWidth": {
+   "min": 0.5,
+   "max": 0.5
+  },
+  "details": {
+   "heightRangeDescription": "hasta 2 mts",
+   "isFrostResistant": true,
+   "shape": "hierba",
+   "growthHabit": "clumping"
+  }
+ },
+ {
+  "id": "5heDuf9cWZcBiqV0E4qS",
+  "taxonomy": {
+   "species": "mexicanus",
+   "genus": "Rumex",
+   "family": "Polygonaceae"
+  },
+  "commonNames": [
+   "Lengua de Vaca"
+  ],
+  "stratumIds": [
+   "2"
+  ],
+  "ecologicalZoneIds": [
+   "1",
+   "3",
+   "4",
+   "6"
+  ],
+  "ecologicalFunctionIds": [],
+  "additionalFunctionIds": [],
+  "height": {
+   "max": 0.4,
+   "min": 0.4
+  },
+  "crownWidth": {
+   "max": 0.6,
+   "min": 0.6
+  },
+  "details": {
+   "lightPreference": "M",
+   "isFrostResistant": true,
+   "growthHabit": "clumping",
+   "humidityPreference": "M",
+   "shape": "hierba",
+   "heightRangeDescription": "hasta 2 mts"
+  }
+ },
+ {
+  "id": "4tVoRuDcW1ZOWkKZT0F1",
+  "taxonomy": {
+   "genus": "Ruta",
+   "family": "Rutaceae",
+   "species": "sp."
+  },
+  "commonNames": [
+   "Ruda"
+  ],
+  "stratumIds": [],
+  "ecologicalZoneIds": [],
+  "ecologicalFunctionIds": [],
+  "additionalFunctionIds": [],
+  "height": {
+   "max": 0,
+   "min": 0
+  },
+  "crownWidth": {
+   "max": 0,
+   "min": 0
+  },
+  "details": {
+   "heightRangeDescription": "hasta 2 mts"
+  }
+ },
+ {
+  "id": "SlNrqwc0H7UoA5Sr7YLd",
+  "taxonomy": {
+   "family": "Arecaceae",
+   "genus": "Sabal",
+   "species": "mexicana"
+  },
+  "commonNames": [
+   "Guano, bonxaan"
+  ],
+  "stratumIds": [],
+  "ecologicalZoneIds": [],
+  "ecologicalFunctionIds": [],
+  "additionalFunctionIds": [],
+  "height": {
+   "min": 0,
+   "max": 0
+  },
+  "crownWidth": {
+   "max": 0,
+   "min": 0
+  },
+  "details": {
+   "nutrientContent": {
+    "vitamins": true
+   },
+   "shape": "palma",
+   "edibleUses": {
+    "fruit": true
+   },
+   "heightRangeDescription": "más de 10 mts"
+  }
+ },
+ {
+  "id": "m5fEfFhT97QS7mxk57xu",
+  "taxonomy": {
+   "species": "oficinarum",
+   "genus": "Sacharum"
+  },
+  "commonNames": [
+   "Caña de azucar"
+  ],
+  "stratumIds": [
+   "3"
+  ],
+  "ecologicalZoneIds": [
+   "1",
+   "3"
+  ],
+  "ecologicalFunctionIds": [],
+  "additionalFunctionIds": [
+   "3",
+   "2"
+  ],
+  "height": {
+   "min": 3,
+   "max": 3
+  },
+  "crownWidth": {
+   "min": 0,
+   "max": 0
+  },
+  "details": {
+   "edibleUses": {
+    "fruit": true
+   },
+   "lightPreference": "H",
+   "lifeCycleDuration": "Hasta 2 años",
+   "lifeCycle": "Secundarias 1",
+   "nutrientContent": {
+    "vitamins": true
+   },
+   "humidityPreference": "M",
+   "shape": "Pasto",
+   "isFrostResistant": false
+  }
+ },
+ {
+  "id": "T6ahN2M3roEv2I2efVAh",
+  "taxonomy": {
+   "genus": "Salix",
+   "species": "spp."
+  },
+  "commonNames": [
+   "Sauce"
+  ],
+  "stratumIds": [],
+  "ecologicalZoneIds": [
+   "3",
+   "4"
+  ],
+  "ecologicalFunctionIds": [],
+  "additionalFunctionIds": [
+   "3",
+   "1"
+  ],
+  "height": {
+   "min": 4,
+   "max": 4
+  },
+  "crownWidth": {
+   "max": 4,
+   "min": 4
+  },
+  "details": {
+   "heightRangeDescription": "de 5 a 10 mts",
+   "nutrientContent": {
+    "medicinalCompounds": true
+   },
+   "lightPreference": "H",
+   "shape": "árbol",
+   "growthHabit": "clumping",
+   "humidityPreference": "H",
+   "isFrostResistant": true
+  }
+ },
+ {
+  "id": "7KW67LMWm7EKgEFBJPuQ",
+  "taxonomy": {
+   "genus": "Salvia",
+   "species": "officinalis"
+  },
+  "commonNames": [
+   "Salvia"
+  ],
+  "stratumIds": [],
+  "ecologicalZoneIds": [
+   "4",
+   "6"
+  ],
+  "ecologicalFunctionIds": [],
+  "additionalFunctionIds": [],
+  "height": {
+   "max": 1.5,
+   "min": 1.5
+  },
+  "crownWidth": {
+   "min": 2,
+   "max": 2
+  },
+  "details": {
+   "shape": "arbusto",
+   "growthHabit": "clumping",
+   "isFrostResistant": true,
+   "heightRangeDescription": "hasta 2 mts",
+   "lightPreference": "H"
+  }
+ },
+ {
+  "id": "YzxJ36uAFj6krJDtn54f",
+  "taxonomy": {
+   "genus": "Sambucus",
+   "species": "mexicana",
+   "family": "Adoxaceae"
+  },
+  "commonNames": [
+   "Sauco"
+  ],
+  "stratumIds": [
+   "1"
+  ],
+  "ecologicalZoneIds": [
+   "3",
+   "4"
+  ],
+  "ecologicalFunctionIds": [],
+  "additionalFunctionIds": [
+   "1"
+  ],
+  "height": {
+   "max": 3,
+   "min": 2
+  },
+  "crownWidth": {
+   "max": 1.5,
+   "min": 1.5
+  },
+  "details": {
+   "lightPreference": "H",
+   "growthHabit": "clumping",
+   "observations": {
+    "toleratesPruning": true
+   },
+   "heightRangeDescription": "hasta 5 mts",
+   "shape": "hierba",
+   "isFrostResistant": true
+  }
+ },
+ {
+  "id": "hd5rhvih3I3SOhrqKQfv",
+  "taxonomy": {
+   "genus": "Sapindus",
+   "family": "Sapindaceae",
+   "species": "saponaria"
+  },
+  "commonNames": [
+   "Jaboncillo, Sululo, pipe, kile"
+  ],
+  "stratumIds": [
+   "3"
+  ],
+  "ecologicalZoneIds": [
+   "1"
+  ],
+  "ecologicalFunctionIds": [],
+  "additionalFunctionIds": [],
+  "height": {
+   "min": 5,
+   "max": 8
+  },
+  "crownWidth": {
+   "min": 6,
+   "max": 6
+  },
+  "details": {
+   "nutrientContent": {
+    "minerals": true,
+    "vitamins": true
+   },
+   "shape": "árbol",
+   "lifeCycleDuration": "Mayor a 80 años",
+   "lifeCycle": "Primarias",
+   "humidityPreference": "M",
+   "heightRangeDescription": "de 5 a 10 mts",
+   "lightPreference": "H",
+   "edibleUses": {
+    "fruit": true
+   },
+   "isFrostResistant": true,
+   "growthHabit": "clumping"
+  }
+ },
+ {
+  "id": "jSoHEAhfcI6KbWor0qzS",
+  "taxonomy": {
+   "family": "Euphorbiaceae",
+   "species": "androgynus",
+   "genus": "Sauropus"
+  },
+  "commonNames": [
+   "Katuk"
+  ],
+  "stratumIds": [
+   "3"
+  ],
+  "ecologicalZoneIds": [
+   "1",
+   "3"
+  ],
+  "ecologicalFunctionIds": [],
+  "additionalFunctionIds": [],
+  "height": {
+   "min": 0,
+   "max": 0
+  },
+  "crownWidth": {
+   "min": 0,
+   "max": 0
+  },
+  "details": {
+   "heightRangeDescription": "hasta 2 mts"
+  }
+ },
+ {
+  "id": "RWDM5HyECMOsYNXw6tT9",
+  "taxonomy": {
+   "species": "princeps",
+   "family": "Arecacea",
+   "genus": "Scheelea"
+  },
+  "commonNames": [
+   "Motacu"
+  ],
+  "stratumIds": [
+   "3"
+  ],
+  "ecologicalZoneIds": [
+   "1"
+  ],
+  "ecologicalFunctionIds": [],
+  "additionalFunctionIds": [],
+  "height": {
+   "max": 0,
+   "min": 0
+  },
+  "crownWidth": {
+   "min": 0,
+   "max": 0
+  },
+  "details": {
+   "nutrientContent": {
+    "vitamins": true,
+    "minerals": true
+   },
+   "edibleUses": {
+    "stemsOrShoots": true
+   },
+   "lifeCycleDuration": "Hasta 80 años",
+   "lifeCycle": "Secundarias 3"
+  }
+ },
+ {
+  "id": "eUxFnMrIs1uQVCx4iH0v",
+  "taxonomy": {
+   "genus": "Schinus",
+   "species": "molle"
+  },
+  "commonNames": [
+   "Pirul"
+  ],
+  "stratumIds": [],
+  "ecologicalZoneIds": [
+   "6"
+  ],
+  "ecologicalFunctionIds": [],
+  "additionalFunctionIds": [],
+  "height": {
+   "min": 0,
+   "max": 0
+  },
+  "crownWidth": {
+   "max": 0,
+   "min": 0
+  },
+  "details": {
+   "heightRangeDescription": "de 5 a 10 mts",
+   "shape": "árbol"
+  }
+ },
+ {
+  "id": "jNs2pP5bW76pM46OWJR4",
+  "taxonomy": {
+   "genus": "Sclerocarya",
+   "species": "birrea",
+   "family": "Anacardiaceae"
+  },
+  "commonNames": [
+   "Marula"
+  ],
+  "stratumIds": [],
+  "ecologicalZoneIds": [],
+  "ecologicalFunctionIds": [],
+  "additionalFunctionIds": [
+   "3",
+   "1",
+   "2"
+  ],
+  "height": {
+   "min": 0,
+   "max": 0
+  },
+  "crownWidth": {
+   "min": 0,
+   "max": 0
+  },
+  "details": {
+   "nutrientContent": {
+    "calories": true
+   },
+   "heightRangeDescription": "más de 10 mts",
+   "edibleUses": {
+    "fruit": true
+   }
+  }
+ },
+ {
+  "id": "on6JwRDS5LGRoxU3MVMu",
+  "taxonomy": {
+   "species": "edule",
+   "genus": "Sechium",
+   "family": "Cucurbitaceae"
+  },
+  "commonNames": [
+   "Chayote, pataste"
+  ],
+  "stratumIds": [
+   "2",
+   "3"
+  ],
+  "ecologicalZoneIds": [
+   "1",
+   "3",
+   "4"
+  ],
+  "ecologicalFunctionIds": [],
+  "additionalFunctionIds": [
+   "1"
+  ],
+  "height": {
+   "min": 10,
+   "max": 10
+  },
+  "crownWidth": {
+   "min": 0,
+   "max": 0
+  },
+  "details": {
+   "shape": "enredadera",
+   "growthHabit": "clumping",
+   "lifeCycleDuration": "Hasta 15 años",
+   "edibleUses": {
+    "nutsAndSeeds": true
+   },
+   "observations": {
+    "toleratesPruning": true
+   },
+   "humidityPreference": "H",
+   "lifeCycle": "Secundarias",
+   "nutrientContent": {
+    "proteins": true
+   },
+   "heightRangeDescription": "enredaderas y trepadoras",
+   "lightPreference": "H"
+  }
+ },
+ {
+  "id": "0hE9SP6rSEFiFL630Dct",
+  "taxonomy": {
+   "species": "martensii",
+   "family": "Selaginellaceae",
+   "genus": "Selaginella"
+  },
+  "commonNames": [
+   "Selaginela, doradilla"
+  ],
+  "stratumIds": [],
+  "ecologicalZoneIds": [
+   "3"
+  ],
+  "ecologicalFunctionIds": [],
+  "additionalFunctionIds": [],
+  "height": {
+   "min": 0.2,
+   "max": 0.3
+  },
+  "crownWidth": {
+   "max": 0,
+   "min": 0
+  },
+  "details": {
+   "edibleUses": {
+    "fruit": true
+   },
+   "shape": "hierba",
+   "humidityPreference": "H",
+   "nutrientContent": {
+    "vitamins": true
+   },
+   "lightPreference": "L",
+   "growthHabit": "invasive",
+   "heightRangeDescription": "coberturas y rastreras"
+  }
+ },
+ {
+  "id": "pFqr5W1slxMuIghyN58a",
+  "taxonomy": {
+   "species": "sp.",
+   "family": "Selaginellaceae",
+   "genus": "Selaginella"
+  },
+  "commonNames": [
+   "Doradilla"
+  ],
+  "stratumIds": [],
+  "ecologicalZoneIds": [],
+  "ecologicalFunctionIds": [],
+  "additionalFunctionIds": [
+   "2"
+  ],
+  "height": {
+   "min": 0,
+   "max": 0
+  },
+  "crownWidth": {
+   "min": 0,
+   "max": 0
+  },
+  "details": {
+   "heightRangeDescription": "hasta 2 mts",
+   "edibleUses": {
+    "nutsAndSeeds": true
+   },
+   "nutrientContent": {
+    "calories": true
+   }
+  }
+ },
+ {
+  "id": "hA1AWJ2ijOdg6gbgX8fV",
+  "taxonomy": {
+   "species": "multiglandulosa",
+   "genus": "Senna"
+  },
+  "commonNames": [
+   "Retama"
+  ],
+  "stratumIds": [],
+  "ecologicalZoneIds": [
+   "4"
+  ],
+  "ecologicalFunctionIds": [],
+  "additionalFunctionIds": [
+   "1"
+  ],
+  "height": {
+   "min": 0,
+   "max": 0
+  },
+  "crownWidth": {
+   "min": 0,
+   "max": 0
+  },
+  "details": {
+   "heightRangeDescription": "hasta 2 mts"
+  }
+ },
+ {
+  "id": "S6wlQoJh7hcvnu2CoF0x",
+  "taxonomy": {
+   "family": "Pedaliaceae",
+   "species": "indicum",
+   "genus": "Sesamum+C13"
+  },
+  "commonNames": [
+   "Ajonjoli"
+  ],
+  "stratumIds": [
+   "3"
+  ],
+  "ecologicalZoneIds": [],
+  "ecologicalFunctionIds": [],
+  "additionalFunctionIds": [],
+  "height": {
+   "min": 0,
+   "max": 0
+  },
+  "crownWidth": {
+   "min": 0,
+   "max": 0
+  },
+  "details": {
+   "lifeCycle": "Pioneras",
+   "lifeCycleDuration": "Varios meses"
+  }
+ },
+ {
+  "id": "d15N4GViiR9T2XWXR7kq",
+  "taxonomy": {
+   "species": "capiri",
+   "genus": "Sideroxylon",
+   "family": "Sapotaceae"
+  },
+  "commonNames": [
+   "Tempisque"
+  ],
+  "stratumIds": [],
+  "ecologicalZoneIds": [],
+  "ecologicalFunctionIds": [],
+  "additionalFunctionIds": [],
+  "height": {
+   "min": 0,
+   "max": 0
+  },
+  "crownWidth": {
+   "max": 0,
+   "min": 0
+  },
+  "details": {
+   "heightRangeDescription": "más de 10 mts"
+  }
+ },
+ {
+  "id": "icwlNbhIiEBVY04uHi4e",
+  "taxonomy": {
+   "genus": "Silybum",
+   "species": "marianum",
+   "family": "Asteraceae"
+  },
+  "commonNames": [
+   "Cardo mariano"
+  ],
+  "stratumIds": [],
+  "ecologicalZoneIds": [
+   "4"
+  ],
+  "ecologicalFunctionIds": [],
+  "additionalFunctionIds": [],
+  "height": {
+   "min": 0,
+   "max": 0
+  },
+  "crownWidth": {
+   "min": 0,
+   "max": 0
+  },
+  "details": {
+   "edibleUses": {
+    "fruit": true
+   },
+   "heightRangeDescription": "hasta 2 mts"
+  }
+ },
+ {
+  "id": "NuUtOux1K39sCy19DyQN",
+  "taxonomy": {
+   "species": "chinensis",
+   "genus": "Simmondsia",
+   "family": "Simmondsiaceae"
+  },
+  "commonNames": [
+   "Jojoba"
+  ],
+  "stratumIds": [],
+  "ecologicalZoneIds": [
+   "6"
+  ],
+  "ecologicalFunctionIds": [],
+  "additionalFunctionIds": [
+   "3"
+  ],
+  "height": {
+   "max": 0,
+   "min": 0
+  },
+  "crownWidth": {
+   "min": 0,
+   "max": 0
+  },
+  "details": {
+   "heightRangeDescription": "hasta 5 mts"
+  }
+ },
+ {
+  "id": "I6qNOy2JaotjNTI3THjO",
+  "taxonomy": {
+   "species": "sonchifolius",
+   "family": "Asteraceae",
+   "genus": "Smallanthus"
+  },
+  "commonNames": [
+   "Yacon"
+  ],
+  "stratumIds": [
+   "3"
+  ],
+  "ecologicalZoneIds": [
+   "3",
+   "4"
+  ],
+  "ecologicalFunctionIds": [],
+  "additionalFunctionIds": [
+   "2"
+  ],
+  "height": {
+   "max": 1.5,
+   "min": 1.5
+  },
+  "crownWidth": {
+   "max": 0.6,
+   "min": 0.6
+  },
+  "details": {
+   "lifeCycleDuration": "12 meses",
+   "shape": "guía",
+   "heightRangeDescription": "hasta 2 mts",
+   "humidityPreference": "M",
+   "lifeCycle": "Pioneras",
+   "lightPreference": "H",
+   "growthHabit": "clumping"
+  }
+ },
+ {
+  "id": "BA3b1rbQUggdyjOwR6Wx",
+  "taxonomy": {
+   "genus": "Smilax",
+   "species": "officinalis"
+  },
+  "commonNames": [
+   "Zarzaparrilla"
+  ],
+  "stratumIds": [
+   "3"
+  ],
+  "ecologicalZoneIds": [
+   "1",
+   "3"
+  ],
+  "ecologicalFunctionIds": [],
+  "additionalFunctionIds": [
+   "2"
+  ],
+  "height": {
+   "max": 0,
+   "min": 0
+  },
+  "crownWidth": {
+   "min": 0,
+   "max": 0
+  },
+  "details": {
+   "heightRangeDescription": "enredaderas y trepadoras",
+   "shape": "guía"
+  }
+ },
+ {
+  "id": "6baEOuX1wntkqeXPwFJY",
+  "taxonomy": {
+   "species": "nigrum",
+   "family": "Solanaceae",
+   "genus": "Solanum"
+  },
+  "commonNames": [
+   "Hierba mora"
+  ],
+  "stratumIds": [],
+  "ecologicalZoneIds": [
+   "1",
+   "3",
+   "4"
+  ],
+  "ecologicalFunctionIds": [],
+  "additionalFunctionIds": [],
+  "height": {
+   "min": 0.6,
+   "max": 0.6
+  },
+  "crownWidth": {
+   "min": 0.6,
+   "max": 0.6
+  },
+  "details": {
+   "heightRangeDescription": "hasta 2 mts",
+   "lightPreference": "M",
+   "humidityPreference": "H",
+   "shape": "hierba",
+   "growthHabit": "clumping"
+  }
+ },
+ {
+  "id": "Dxty05zaEqukopEFrJai",
+  "taxonomy": {
+   "family": "Solanaceae",
+   "genus": "Solanum",
+   "species": "quitoense"
+  },
+  "commonNames": [
+   "Lulo"
+  ],
+  "stratumIds": [
+   "2"
+  ],
+  "ecologicalZoneIds": [
+   "1",
+   "3"
+  ],
+  "ecologicalFunctionIds": [],
+  "additionalFunctionIds": [],
+  "height": {
+   "min": 2,
+   "max": 2
+  },
+  "crownWidth": {
+   "min": 1.5,
+   "max": 1.5
+  },
+  "details": {
+   "growthHabit": "clumping",
+   "isFrostResistant": true,
+   "shape": "arbusto",
+   "heightRangeDescription": "hasta 2 mts",
+   "lightPreference": "M"
+  }
+ },
+ {
+  "id": "jxNDjqNWcRLYOktumK2R",
+  "taxonomy": {
+   "genus": "Sorghum",
+   "species": "spp.",
+   "family": "Poaceae"
+  },
+  "commonNames": [
+   "Sorgo"
+  ],
+  "stratumIds": [
+   "3"
+  ],
+  "ecologicalZoneIds": [
+   "1",
+   "3",
+   "6",
+   "6"
+  ],
+  "ecologicalFunctionIds": [],
+  "additionalFunctionIds": [
+   "3"
+  ],
+  "height": {
+   "min": 0,
+   "max": 0
+  },
+  "crownWidth": {
+   "min": 0,
+   "max": 0
+  },
+  "details": {
+   "lifeCycleDuration": "90 días",
+   "lifeCycle": "Pioneras",
+   "edibleUses": {
+    "flowers": true,
+    "condiments": true
+   }
+  }
+ },
+ {
+  "id": "bJvm9KRJ10ucmgQspZhu",
+  "taxonomy": {
+   "genus": "Spathiphyllum",
+   "species": "sp.",
+   "family": "Araceae"
+  },
+  "commonNames": [
+   "Cuna de moises, chile de gato"
+  ],
+  "stratumIds": [],
+  "ecologicalZoneIds": [
+   "3"
+  ],
+  "ecologicalFunctionIds": [],
+  "additionalFunctionIds": [],
+  "height": {
+   "max": 0,
+   "min": 0
+  },
+  "crownWidth": {
+   "max": 0,
+   "min": 0
+  },
+  "details": {
+   "heightRangeDescription": "hasta 2 mts",
+   "humidityPreference": "H",
+   "shape": "hierba",
+   "growthHabit": "clumping",
+   "lightPreference": "M"
+  }
+ },
+ {
+  "id": "K8wkASVfcysSj3cgOJvg",
+  "taxonomy": {
+   "genus": "Spondias",
+   "species": "mombin",
+   "family": "Anacardiaceae"
+  },
+  "commonNames": [
+   "Jobo, ciruela tropical, cedrillo"
+  ],
+  "stratumIds": [
+   "4"
+  ],
+  "ecologicalZoneIds": [
+   "1"
+  ],
+  "ecologicalFunctionIds": [],
+  "additionalFunctionIds": [
+   "3"
+  ],
+  "height": {
+   "max": 0,
+   "min": 0
+  },
+  "crownWidth": {
+   "min": 0,
+   "max": 0
+  },
+  "details": {
+   "shape": "árbol",
+   "lifeCycleDuration": "Mayor a 80 años",
+   "lightPreference": "H",
+   "edibleUses": {
+    "condiments": true
+   },
+   "growthHabit": "clumping",
+   "isFrostResistant": false,
+   "heightRangeDescription": "de 5 a 10 mts",
+   "lifeCycle": "Primarias"
+  }
+ }
+]

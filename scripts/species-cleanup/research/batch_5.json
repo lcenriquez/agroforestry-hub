@@ -1,0 +1,1143 @@
+[
+  {
+    "id": "DP7VluvbivI93el4r9ws",
+    "name": "Ipomoea batatas (Camote)",
+    "status": "updated",
+    "confidence": "high",
+    "set": {
+      "taxonomy.family": "Convolvulaceae",
+      "crownWidth": {
+        "min": 1,
+        "max": 3
+      },
+      "stratumIds": [
+        "0"
+      ],
+      "ecologicalFunctionIds": [
+        "3"
+      ],
+      "additionalFunctionIds": [
+        "0",
+        "1"
+      ],
+      "details.isFrostResistant": false
+    },
+    "corrections": [
+      {
+        "field": "stratumIds",
+        "old": [
+          "1"
+        ],
+        "new": [
+          "0"
+        ],
+        "reason": "Guía rastrera de 0.3-0.4 m que cubre el suelo; el SPEC usa el camote como ejemplo de Rastrero",
+        "source": "https://plants.ces.ncsu.edu/plants/all/ipomoea-batatas/"
+      },
+      {
+        "field": "details.isFrostResistant",
+        "old": true,
+        "new": false,
+        "reason": "Susceptible a heladas, se maneja como anual en climas fríos",
+        "source": "https://plants.ces.ncsu.edu/plants/all/ipomoea-batatas/"
+      }
+    ],
+    "sources": [
+      "https://plants.ces.ncsu.edu/plants/all/ipomoea-batatas/",
+      "https://landscapeplants.aub.edu.lb/Plants/GetPDF/41e8ea7f-06f7-4ee0-8af0-57ec911c2295",
+      "https://growables.com/informationVeg/IpoEnergyC.htm",
+      "https://ecocrop.apps.fao.org/ecocrop/srv/en/cropView?id=1265"
+    ],
+    "notes": "Se agregó familia, extensión (1-3 m), funciones (cobertura de suelo/erosión; alimento y forraje: las guías tienen valor forrajero comparable a la alfalfa). Se corrigió estrato a Rastrero y resistencia a heladas a false."
+  },
+  {
+    "id": "FWben1ckWjj9xsES0aar",
+    "name": "Jatropha curcas (Piñón)",
+    "status": "updated",
+    "confidence": "high",
+    "set": {
+      "taxonomy.family": "Euphorbiaceae",
+      "stratumIds": [
+        "2"
+      ],
+      "ecologicalFunctionIds": [
+        "0",
+        "4"
+      ],
+      "additionalFunctionIds": [
+        "3"
+      ],
+      "commonNames": [
+        "Jatropa, piñón",
+        "Piñoncillo",
+        "Piñón mexicano"
+      ],
+      "details.isFrostResistant": false,
+      "details.lifeCycleDuration": "Hasta 80 años"
+    },
+    "corrections": [
+      {
+        "field": "details.isFrostResistant",
+        "old": true,
+        "new": false,
+        "reason": "Especie tropical sensible a heladas",
+        "source": "https://apps.worldagroforestry.org/treedb2/AFTPDFS/Jatropha_curcas.PDF"
+      }
+    ],
+    "sources": [
+      "https://apps.worldagroforestry.org/treedb2/AFTPDFS/Jatropha_curcas.PDF",
+      "https://apps.worldagroforestry.org/usefultrees/pdflib/Jatropha_curcas_KEN.pdf",
+      "https://peerj.com/preprints/1587v2.pdf"
+    ],
+    "notes": "Arbusto/arbolito de 3-6 m (estrato Medio), crecimiento rápido, tolera poda, usado como cerco vivo. Estudio en México registra 36 especies de insectos visitantes (abejas sin aguijón). Usos medicinales tradicionales (látex). Semillas tóxicas en variedades no comestibles (existe la variedad no tóxica mexicana 'piñón')."
+  },
+  {
+    "id": "Bat4S1gktk7LEw9Wd65p",
+    "name": "Jubaea chilensis (Palma chilena)",
+    "status": "updated",
+    "confidence": "medium",
+    "set": {
+      "taxonomy.family": "Arecaceae",
+      "height": {
+        "min": 12,
+        "max": 25
+      },
+      "stratumIds": [
+        "3",
+        "4"
+      ],
+      "additionalFunctionIds": [
+        "0"
+      ],
+      "details.lightPreference": "H",
+      "details.humidityPreference": "L",
+      "details.lifeCycle": "Primarias",
+      "details.lifeCycleDuration": "Mayor a 80 años"
+    },
+    "corrections": [],
+    "sources": [
+      "https://temperate.theferns.info/plant/Jubaea+chilensis",
+      "https://www.promessedefleurs.ie/shrubs/shrubs-a-to-z/jubaea-chilensis-chilean-wine-palm.html",
+      "https://jardim.uac.pt/?p=1763"
+    ],
+    "notes": "Palma chilena de crecimiento muy lento (florece a los 40-50 años), 12-25 m de altura; frutos comestibles ('coquitos') y savia para miel de palma. Tolera heladas (-9 a -15 °C). Especie de clima mediterráneo, no nativa de México; la zona ecológica existente (bosque de niebla) es dudosa pero no se modificó."
+  },
+  {
+    "id": "fzcdqunGddcebOtIY6ed",
+    "name": "Juglans neotropica (Nogal andino)",
+    "status": "updated",
+    "confidence": "medium",
+    "set": {
+      "additionalFunctionIds": [
+        "3",
+        "0",
+        "2"
+      ]
+    },
+    "corrections": [],
+    "sources": [
+      "https://en.wikipedia.org/wiki/Juglans_neotropica",
+      "https://publicaciones.inecol.mx/Record/oai:oai.myb.ojs.inecol.mx:article-1560/Description?lng=pt-br"
+    ],
+    "notes": "Se agregaron usos maderable (madera fina, ebanistería; especie En Peligro por sobreexplotación) y alimento (nueces usadas en confitería). Puede alcanzar hasta 40 m en estado silvestre; se mantuvo la altura existente (16-20 m) como típica en cultivo. Especie andina, no nativa de México."
+  },
+  {
+    "id": "yNnv5yqjlLshAjc53hUS",
+    "name": "Juglans pyriformis (Nogal, cedro nogal)",
+    "status": "updated",
+    "confidence": "medium",
+    "set": {
+      "additionalFunctionIds": [
+        "2"
+      ],
+      "details.shape": "árbol"
+    },
+    "corrections": [],
+    "sources": [
+      "https://www.redalyc.org/pdf/634/63450027003.pdf",
+      "https://powo.science.kew.org/taxon/442423-1"
+    ],
+    "notes": "Endémica de México (Hidalgo, Veracruz, Oaxaca), amenazada (NOM-059), del estrato medio-alto del bosque mesófilo; madera muy valorada (muebles finos, instrumentos), usada como sombra en cafetales y cerco vivo. No se encontró una altura/diámetro de copa confiable."
+  },
+  {
+    "id": "9g1tJQVcFQTCYiWFg29y",
+    "name": "Juglans regia (Nogal de castilla)",
+    "status": "updated",
+    "confidence": "high",
+    "set": {
+      "height": {
+        "min": 12,
+        "max": 20
+      },
+      "crownWidth": {
+        "min": 8,
+        "max": 20
+      },
+      "additionalFunctionIds": [
+        "0",
+        "2",
+        "3"
+      ],
+      "details.isFrostResistant": true,
+      "details.humidityPreference": "M"
+    },
+    "corrections": [],
+    "sources": [
+      "https://pfaf.org/plants/english-walnut-juglans-regia/",
+      "https://www.rhs.org.uk/plants/9504/juglans-regia-f/details",
+      "https://www.arboretum.purdue.edu/explorer/?p=14698"
+    ],
+    "notes": "Árbol caducifolio de 12-20 m y copa de 8-20 m; tolera hasta -27 °C en dormancia (brotes sensibles a heladas tardías); polinización por viento. Usos: nuez comestible, madera fina, medicinal (hojas/cáscara, según PFAF)."
+  },
+  {
+    "id": "p2gveF131PdRaWBo68A6",
+    "name": "Kalanchoe sp. (Calanchoe)",
+    "status": "updated",
+    "confidence": "low",
+    "set": {
+      "taxonomy.family": "Crassulaceae",
+      "details.shape": "hierba",
+      "additionalFunctionIds": [
+        "3"
+      ],
+      "details.lightPreference": "H",
+      "details.humidityPreference": "L",
+      "details.isFrostResistant": false,
+      "stratumIds": [
+        "1"
+      ]
+    },
+    "corrections": [],
+    "sources": [
+      "https://www.enciclovida.mx/exoticas/4e705358-c2da-4f70-b772-e2356c7a995b.pdf",
+      "https://www.elsevier.es/es-revista-neurologia-295-pdf-download-S0213485315001590"
+    ],
+    "notes": "Registro a nivel de género; se completaron solo atributos comunes del género (suculenta de sol, tolerante a sequía, sensible a heladas). Si se trata de K. pinnata ('siempreviva', 0.3-2 m) tiene uso medicinal tradicional en México, pero CONABIO la cataloga como exótica invasora de riesgo muy alto. Conviene identificar la especie."
+  },
+  {
+    "id": "9jQGFMmI9ZS08MlaPKgS",
+    "name": "Khaya sp. (Caoba africana)",
+    "status": "updated",
+    "confidence": "low",
+    "set": {
+      "details.shape": "árbol",
+      "additionalFunctionIds": [
+        "2"
+      ],
+      "details.lightPreference": "H",
+      "details.isFrostResistant": false,
+      "commonNames": [
+        "mogno africano",
+        "Caoba africana"
+      ]
+    },
+    "corrections": [],
+    "sources": [
+      "https://apps.worldagroforestry.org/treedb2/speciesprofile.php?Spid=1736",
+      "https://scielo.br/j/floram/a/ztXCHhScKxkN3GT4rmWpn3z/?lang=en"
+    ],
+    "notes": "Registro a nivel de género. Las especies plantadas como 'mogno africano' (K. grandifoliola, K. senegalensis, K. ivorensis) son árboles maderables grandes (K. ivorensis 40-50 m), por lo que el estrato Emergente es coherente. No se fijó altura por depender de la especie."
+  },
+  {
+    "id": "jqCm7QWdBkWa7rcTKOsi",
+    "name": "Lablab purpureus (Dolichos lablab)",
+    "status": "updated",
+    "confidence": "high",
+    "set": {
+      "stratumIds": [
+        "2"
+      ],
+      "ecologicalFunctionIds": [
+        "0",
+        "1",
+        "3"
+      ],
+      "additionalFunctionIds": [
+        "0",
+        "1"
+      ],
+      "commonNames": [
+        "Dolichos lab-lab",
+        "Frijol lablab",
+        "Zarandaja"
+      ],
+      "details.humidityPreference": "L",
+      "details.isFrostResistant": false,
+      "details.lifeCycle": "Pioneras",
+      "details.lifeCycleDuration": "Hasta 2 años"
+    },
+    "corrections": [
+      {
+        "field": "stratumIds",
+        "old": [
+          "3"
+        ],
+        "new": [
+          "2"
+        ],
+        "reason": "Enredadera herbácea de 3-6 m de guía; Alto (árboles 8-25 m) no corresponde. Se alinea con 'Frijol trepador' (estrato 2) del dataset",
+        "source": "https://cms.ctahr.hawaii.edu/soap/Resources/Lablab"
+      }
+    ],
+    "sources": [
+      "https://feedipedia.org/node/18627",
+      "https://cms.ctahr.hawaii.edu/soap/Resources/Lablab",
+      "https://ecocrop.apps.fao.org/ecocrop/srv/en/cropView?id=1311"
+    ],
+    "notes": "Leguminosa trepadora fijadora de N, abono verde y cobertura que reduce erosión, forraje (6-10 t MS/ha), granos y vainas comestibles. Tolera sequía (raíz pivotante), no tolera heladas. POSIBLE DUPLICADO de n2UNcUf99pIELlnqOEAB (misma especie)."
+  },
+  {
+    "id": "n2UNcUf99pIELlnqOEAB",
+    "name": "Lablab purpureus (Frijol lablab)",
+    "status": "updated",
+    "confidence": "high",
+    "set": {
+      "stratumIds": [
+        "2"
+      ],
+      "ecologicalZoneIds": [
+        "1",
+        "3"
+      ],
+      "ecologicalFunctionIds": [
+        "0",
+        "1",
+        "3"
+      ],
+      "additionalFunctionIds": [
+        "0",
+        "1"
+      ],
+      "details.shape": "guía",
+      "details.lightPreference": "H",
+      "details.humidityPreference": "L",
+      "details.isFrostResistant": false,
+      "details.lifeCycle": "Pioneras",
+      "details.lifeCycleDuration": "Hasta 2 años"
+    },
+    "corrections": [],
+    "sources": [
+      "https://feedipedia.org/node/18627",
+      "https://cms.ctahr.hawaii.edu/soap/Resources/Lablab",
+      "https://ecocrop.apps.fao.org/ecocrop/srv/en/cropView?id=1311"
+    ],
+    "notes": "POSIBLE DUPLICADO de jqCm7QWdBkWa7rcTKOsi (Lablab purpureus); se completó con los mismos valores. Leguminosa trepadora (guía 3-6 m) fijadora de N, abono verde, cobertura antierosión, forraje y alimento; zonas copiadas del otro registro. heightRangeDescription 'coberturas y rastreras' difiere del duplicado ('enredaderas y trepadoras')."
+  },
+  {
+    "id": "JXHTYQUkiWiqL2Db9bqi",
+    "name": "Lactuca indica (Lechuga tropical)",
+    "status": "updated",
+    "confidence": "medium",
+    "set": {
+      "taxonomy.family": "Asteraceae",
+      "stratumIds": [
+        "1"
+      ],
+      "additionalFunctionIds": [
+        "0",
+        "1",
+        "3"
+      ],
+      "details.humidityPreference": "M",
+      "details.lifeCycle": "Pioneras",
+      "details.lifeCycleDuration": "Hasta 2 años"
+    },
+    "corrections": [
+      {
+        "field": "stratumIds",
+        "old": [
+          "3"
+        ],
+        "new": [
+          "1"
+        ],
+        "reason": "Hierba de 1-2 m; estrato Alto (árboles) no corresponde",
+        "source": "https://uses.plantnet-project.org/en/Lactuca_indica_(PROSEA)"
+      }
+    ],
+    "sources": [
+      "https://uses.plantnet-project.org/en/Lactuca_indica_(PROSEA)",
+      "https://www.echocommunity.org/resources/35bb811b-2b7e-43e4-8890-fff53ef6bd09",
+      "https://temperate.theferns.info/plant/Lactuca+indica"
+    ],
+    "notes": "Hierba semiperenne de crecimiento rápido, hojas comestibles; forraje (gansos, aves) y usos medicinales tradicionales (tónico, digestivo). Puede volverse maleza por autosiembra."
+  },
+  {
+    "id": "pH1i333oc6Db5A15vbZR",
+    "name": "Lampranthus coccineus (Flor de cristal)",
+    "status": "updated",
+    "confidence": "low",
+    "set": {
+      "crownWidth": {
+        "min": 0.5,
+        "max": 0.7
+      },
+      "stratumIds": [
+        "0"
+      ],
+      "ecologicalFunctionIds": [
+        "3",
+        "4"
+      ],
+      "details.humidityPreference": "L"
+    },
+    "corrections": [],
+    "sources": [
+      "https://www.aucklandbotanicgardens.co.nz/plants-for-auckland/plants/lampranthus-spectabilis/",
+      "https://plantlust.com/plants/12709/lampranthus-stipulaceus"
+    ],
+    "notes": "Datos a nivel de género (no hubo ficha específica de L. coccineus): suculenta cubresuelo de ~20 cm de alto y 50-70 cm de extensión, tolerante a sequía, atractiva para abejas. Uso ornamental."
+  },
+  {
+    "id": "dKYsAAzZNP0vACCANesi",
+    "name": "Laurus nobilis (Laurel)",
+    "status": "updated",
+    "confidence": "medium",
+    "set": {
+      "additionalFunctionIds": [
+        "0",
+        "3"
+      ],
+      "details.lifeCycleDuration": "Mayor a 80 años"
+    },
+    "corrections": [],
+    "sources": [
+      "https://www.rhs.org.uk/advice/profile?pid=251",
+      "https://landscapeplants.aub.edu.lb/Plants/GetPDF/15e09770-dcf8-4980-83f1-5121e9f78fa0",
+      "https://ucanr.edu/blog/under-solano-sun/article/spotlight-bay-laurel-laurus-nobilis"
+    ],
+    "notes": "Hojas usadas como condimento y en medicina tradicional. Sin poda alcanza 7.5-15 m (copa 5-8 m); se mantuvo 2-4 m asumiendo manejo con poda. Resiste ~-5 °C. Nota: el 'laurel' mexicano de cocina suele ser Litsea glaucescens, distinto de L. nobilis."
+  },
+  {
+    "id": "KQnwN6uqKtEGRWqnAjWw",
+    "name": "Lavandula angustifolia (Lavanda)",
+    "status": "updated",
+    "confidence": "high",
+    "set": {
+      "stratumIds": [
+        "1"
+      ],
+      "ecologicalFunctionIds": [
+        "4"
+      ],
+      "additionalFunctionIds": [
+        "3"
+      ],
+      "details.humidityPreference": "L",
+      "details.lifeCycleDuration": "Hasta 15 años"
+    },
+    "corrections": [],
+    "sources": [
+      "https://www.rhs.org.uk/plants/504869/lavandula-angustifolia-beezee-pink-kerbeepink-pbr-beezee-series/details",
+      "https://hayloft.co.uk/lavandula-angustifolia-beezee-light-blue-g-k48145"
+    ],
+    "notes": "Subarbusto aromático de 0.4-1 m, muy visitado por abejas y mariposas (RHS 'plants for pollinators'), tolerante a sequía, resiste -15 °C. Uso medicinal/aromático."
+  },
+  {
+    "id": "VSRFPwLYZMcNJx6Q2e0V",
+    "name": "Leucaena leucocephala (Guaje)",
+    "status": "updated",
+    "confidence": "high",
+    "set": {
+      "ecologicalZoneIds": [
+        "1",
+        "3",
+        "6"
+      ],
+      "ecologicalFunctionIds": [
+        "0",
+        "1",
+        "3",
+        "4"
+      ],
+      "additionalFunctionIds": [
+        "0",
+        "1",
+        "2"
+      ],
+      "details.humidityPreference": "M"
+    },
+    "corrections": [
+      {
+        "field": "ecologicalZoneIds",
+        "old": [
+          "1",
+          "3",
+          "6",
+          "6"
+        ],
+        "new": [
+          "1",
+          "3",
+          "6"
+        ],
+        "reason": "id '6' duplicado",
+        "source": "n/a"
+      }
+    ],
+    "sources": [
+      "https://apps.worldagroforestry.org/usefultrees/pdflib/Leucaena_leucocephala_ETH.pdf",
+      "https://apps.worldagroforestry.org/treedb/AFTPDFS/Leucaena_leucocephala.PDF",
+      "https://www.echocommunity.org/resources/b71ea8dd-7f6b-49f5-ba1f-2bf430caebb3"
+    ],
+    "notes": "Leguminosa fijadora de N de crecimiento rápido, tolera poda/rebrota (abono verde), setos en contorno contra erosión, forraje (máx. 20% de la dieta por mimosina), leña y carbón, forraje apícola; semillas/vainas ('guaje') comestibles en México. Moderadamente tolerante a sequía pero no a sitios muy secos: la zona 'Desierto' es dudosa."
+  },
+  {
+    "id": "RkCx3XsRe67RRfroOPHx",
+    "name": "Leucaena pulverulenta (Tepeguaje)",
+    "status": "updated",
+    "confidence": "medium",
+    "set": {
+      "ecologicalZoneIds": [
+        "1",
+        "3",
+        "6"
+      ],
+      "ecologicalFunctionIds": [
+        "1"
+      ],
+      "commonNames": [
+        "Guaje",
+        "Tepeguaje"
+      ]
+    },
+    "corrections": [
+      {
+        "field": "ecologicalZoneIds",
+        "old": [
+          "1",
+          "3",
+          "6",
+          "6"
+        ],
+        "new": [
+          "1",
+          "3",
+          "6"
+        ],
+        "reason": "id '6' duplicado",
+        "source": "n/a"
+      }
+    ],
+    "sources": [
+      "https://www.npsot.org/?p=80667",
+      "https://worldspecies.org/ntaxa/772393",
+      "https://apps.worldagroforestry.org/treedb2/speciesprofile.php/docs/policydocument.pdf?Spid=1753"
+    ],
+    "notes": "Árbol del noreste de México y sur de Texas ('tepeguaje'); NPSOT reporta 9-17 m (mayor a los 4-10 m registrados) y una base de datos indica tolerancia hasta ~-12 °C (zona USDA 8), lo que contradice isFrostResistant=false; no se corrigió por evidencia limitada. Fijación de N asumida a nivel de género Leucaena (Mimosoideae noduladoras)."
+  },
+  {
+    "id": "WdnmWeNbUvPiPqUAeC8t",
+    "name": "Liquidambar styraciflua (Liquidámbar)",
+    "status": "updated",
+    "confidence": "medium",
+    "set": {
+      "taxonomy.species": "styraciflua",
+      "height": {
+        "min": 20,
+        "max": 40
+      },
+      "stratumIds": [
+        "3",
+        "4"
+      ],
+      "additionalFunctionIds": [
+        "2",
+        "3"
+      ],
+      "commonNames": [
+        "Liquidambar",
+        "Ocozote"
+      ],
+      "details.shape": "árbol",
+      "details.lightPreference": "H",
+      "details.isFrostResistant": true,
+      "details.lifeCycleDuration": "Mayor a 80 años",
+      "details.heightRangeDescription": "más de 10 mts"
+    },
+    "corrections": [
+      {
+        "field": "taxonomy.species",
+        "old": "Styraciflua",
+        "new": "styraciflua",
+        "reason": "El epíteto específico va en minúscula",
+        "source": "https://powo.science.kew.org//taxon/urn:lsid:ipni.org:names:430718-1"
+      }
+    ],
+    "sources": [
+      "https://powo.science.kew.org//taxon/urn:lsid:ipni.org:names:430718-1",
+      "https://www.treesandshrubsonline.org/articles/liquidambar/liquidambar-styraciflua/",
+      "https://revistas.inah.gob.mx/index.php/anales/article/view/6608/7451",
+      "https://phytochem.nal.usda.gov/node/7744"
+    ],
+    "notes": "Árbol de hasta ~40 m de bosques montanos (mesófilo) de México; resina (estoraque/ocozote, náhuatl Ocotzocuahuitl) con usos medicinales tradicionales; madera usada en muebles y contrachapados. Caducifolio de origen templado, tolera heladas."
+  },
+  {
+    "id": "k6zuixtncBgXVRQjml06",
+    "name": "Litchi chinensis (Lichi)",
+    "status": "updated",
+    "confidence": "medium",
+    "set": {
+      "ecologicalFunctionIds": [
+        "4"
+      ],
+      "additionalFunctionIds": [
+        "0"
+      ],
+      "details.lifeCycle": "Secundarias 3",
+      "details.lifeCycleDuration": "Hasta 80 años"
+    },
+    "corrections": [],
+    "sources": [
+      "https://apps.worldagroforestry.org/treedb2/AFTPDFS/Litchi_chinensis.PDF",
+      "https://edis.ifas.ufl.edu/pdffiles/MG/MG05100.pdf",
+      "https://www.gardenia.net/plant/litchi-chinensis-lychee"
+    ],
+    "notes": "Frutal; flores polinizadas por abejas (importantes) y moscas. Alcanza hasta 12 m (Agroforestree), usualmente menor en cultivo. isFrostResistant=true es discutible: árboles jóvenes sensibles a heladas, se recomienda zonas libres de heladas (no se cambió por fuentes contradictorias). Ciclo de vida asignado por analogía con rambután en el dataset."
+  },
+  {
+    "id": "qm6SPzYGBJSYUYjVS8UF",
+    "name": "Luffa aegyptiaca (Estropajo)",
+    "status": "updated",
+    "confidence": "high",
+    "set": {
+      "taxonomy.genus": "Luffa",
+      "taxonomy.species": "aegyptiaca",
+      "taxonomy.synonyms": [
+        "Luffa cylindrica"
+      ],
+      "taxonomy.family": "Cucurbitaceae",
+      "additionalFunctionIds": [
+        "0",
+        "3"
+      ],
+      "details.isFrostResistant": false,
+      "details.lifeCycle": "Pioneras",
+      "details.lifeCycleDuration": "Varios meses"
+    },
+    "corrections": [
+      {
+        "field": "taxonomy.genus",
+        "old": "Lufa",
+        "new": "Luffa",
+        "reason": "Error ortográfico",
+        "source": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:293060-1"
+      },
+      {
+        "field": "taxonomy.species",
+        "old": "cylindria",
+        "new": "aegyptiaca",
+        "reason": "Error ortográfico de 'cylindrica'; POWO acepta Luffa aegyptiaca Mill. (L. cylindrica como sinónimo)",
+        "source": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:293060-1"
+      }
+    ],
+    "sources": [
+      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:293060-1",
+      "https://www.intechopen.com/chapters/78098",
+      "https://www.rhs.org.uk/plants/542541/luffa-aegyptiaca-extra-long/details"
+    ],
+    "notes": "Trepadora anual (guía hasta ~9 m), sensible a heladas; frutos tiernos comestibles, fruto seco como esponja, usos medicinales y cosméticos."
+  },
+  {
+    "id": "JPdjriXs97n1yo0mPfXo",
+    "name": "Luma apiculata (Arrayán)",
+    "status": "updated",
+    "confidence": "medium",
+    "set": {
+      "height": {
+        "min": 8,
+        "max": 12
+      },
+      "stratumIds": [
+        "2",
+        "3"
+      ],
+      "ecologicalFunctionIds": [
+        "4"
+      ],
+      "additionalFunctionIds": [
+        "0"
+      ],
+      "details.shape": "árbol",
+      "details.lightPreference": "H",
+      "details.humidityPreference": "M",
+      "details.isFrostResistant": true,
+      "details.heightRangeDescription": "de 5 a 10 mts"
+    },
+    "corrections": [
+      {
+        "field": "details.heightRangeDescription",
+        "old": "hasta 2 mts",
+        "new": "de 5 a 10 mts",
+        "reason": "Árbol/arbusto grande de 8-12 m en cultivo (10-15 m en su hábitat); solo queda en ~1 m si se congela cada invierno",
+        "source": "https://www.rhs.org.uk/Plants/19921/Luma-apiculata/Details"
+      }
+    ],
+    "sources": [
+      "https://www.rhs.org.uk/Plants/19921/Luma-apiculata/Details",
+      "https://en.wikipedia.org/wiki/Luma_apiculata",
+      "https://www.agroforestry.co.uk/product/myrtus-luma-luma-apiculata%c2%92/",
+      "https://temperate.theferns.info/plant/Luma+apiculata"
+    ],
+    "notes": "Mirtácea chilena; bayas comestibles, flores muy visitadas por abejas (melífera). Resiste ~-10 °C; tolera sequía una vez establecida pero no calor extremo ni encharcamiento. La zona 'Desierto' parece inadecuada (no se modificó)."
+  },
+  {
+    "id": "v9a3YzpA6JGGJgB3ntms",
+    "name": "Lupinus angustifolius (Altramuz)",
+    "status": "updated",
+    "confidence": "high",
+    "set": {
+      "stratumIds": [
+        "1"
+      ],
+      "ecologicalFunctionIds": [
+        "0",
+        "1",
+        "2"
+      ],
+      "additionalFunctionIds": [
+        "1"
+      ],
+      "details.humidityPreference": "M",
+      "details.lifeCycle": "Pioneras",
+      "details.lifeCycleDuration": "Varios meses"
+    },
+    "corrections": [],
+    "sources": [
+      "https://agroatlas.ru/en/content/cultural/Lupinus_angustifolius_K/index.html",
+      "https://scholarworks.uvm.edu/items/748f711b-2da9-45a2-a190-b7356adc9b77",
+      "https://feedipedia.review.fao.org/node/23099",
+      "https://extension.oregonstate.edu/sites/extd8/files/catalog/auto/EM8834.pdf"
+    ],
+    "notes": "Anual de 0.3-1.5 m, fija N (nódulos en raíz pivotante), abono verde con buena biomasa, moviliza fósforo; variedades dulces usadas como forraje. Tolerante al frío. heightRangeDescription 'coberturas y rastreras' no concuerda con 1 m de altura (no se cambió)."
+  },
+  {
+    "id": "Ym8mPOAR7GmmneGplNue",
+    "name": "Lupinus sp. (Lupino)",
+    "status": "updated",
+    "confidence": "medium",
+    "set": {
+      "stratumIds": [
+        "1"
+      ],
+      "ecologicalFunctionIds": [
+        "1"
+      ],
+      "details.shape": "hierba",
+      "details.lightPreference": "H",
+      "details.lifeCycle": "Pioneras"
+    },
+    "corrections": [],
+    "sources": [
+      "https://publicaciones.inecol.mx/Record/oai:oai.abm.ojs.inecol.mx:article-1543/Details?lng=de",
+      "https://www.redalyc.org/journal/574/57469756060/57469756060.pdf"
+    ],
+    "notes": "Registro a nivel de género. México tiene ~110 especies nativas de Lupinus (p.ej. L. exaltatus, L. mexicanus, L. montanus, L. elegans) con fijación de N documentada y uso como abono verde y en rehabilitación de suelos forestales. Se recomienda identificar la especie."
+  },
+  {
+    "id": "NiXkKILouyJSoKHwuxb8",
+    "name": "Lycium barbarum (Goji)",
+    "status": "updated",
+    "confidence": "high",
+    "set": {
+      "taxonomy.family": "Solanaceae",
+      "stratumIds": [
+        "1",
+        "2"
+      ],
+      "ecologicalFunctionIds": [
+        "4"
+      ],
+      "additionalFunctionIds": [
+        "0",
+        "3"
+      ],
+      "details.lightPreference": "H",
+      "details.humidityPreference": "L"
+    },
+    "corrections": [
+      {
+        "field": "details.lightPreference",
+        "old": "L",
+        "new": "H",
+        "reason": "Requiere pleno sol para buena cosecha (tolera sombra ligera)",
+        "source": "https://www.rhs.org.uk/fruit/goji-berries/grow-your-own"
+      }
+    ],
+    "sources": [
+      "https://www.rhs.org.uk/fruit/goji-berries/grow-your-own",
+      "https://hayloft.co.uk/lycium-barbarum-g-k23592",
+      "https://www.gardenia.net/plant/lycium-barbarum"
+    ],
+    "notes": "Arbusto de 1.5-3 m (RHS: 3 x 4 m), resistente a heladas y sequía, atrae abejas; fruto comestible y medicinal (medicina tradicional china). Puede extenderse por hijuelos."
+  },
+  {
+    "id": "AHDXRa0yGYDg3sXHD9ak",
+    "name": "Macadamia integrifolia (Macadamia)",
+    "status": "updated",
+    "confidence": "high",
+    "set": {
+      "additionalFunctionIds": [
+        "0"
+      ],
+      "ecologicalFunctionIds": [
+        "4"
+      ],
+      "details.lifeCycle": "Secundarias 3",
+      "details.lifeCycleDuration": "Hasta 80 años"
+    },
+    "corrections": [
+      {
+        "field": "additionalFunctionIds",
+        "old": [
+          "1"
+        ],
+        "new": [
+          "0"
+        ],
+        "reason": "La macadamia se cultiva por su nuez comestible (alimento), no como forraje",
+        "source": "https://apps.worldagroforestry.org/treedb2/AFTPDFS/Macadamia_integrifolia.PDF"
+      }
+    ],
+    "sources": [
+      "https://apps.worldagroforestry.org/treedb2/AFTPDFS/Macadamia_integrifolia.PDF",
+      "https://landscapeplants.aub.edu.lb/Plants/PlantProfile/19b59ce8-1fc4-4294-8cc9-bcb9eddc1315"
+    ],
+    "notes": "Árbol de 8-18 m (copa hasta 15 m); polinización por insectos, se recomienda introducir abejas. Prefiere clima subtropical sin heladas: isFrostResistant=true es discutible (no se cambió). Ciclo asignado por analogía con otros frutales arbóreos del dataset."
+  },
+  {
+    "id": "htWA3aYfOk4oJT3C6F5O",
+    "name": "Mahonia aquifolium (Mahonia)",
+    "status": "updated",
+    "confidence": "medium",
+    "set": {
+      "taxonomy.family": "Berberidaceae",
+      "stratumIds": [
+        "1"
+      ],
+      "ecologicalFunctionIds": [
+        "4"
+      ],
+      "additionalFunctionIds": [
+        "0",
+        "3"
+      ]
+    },
+    "corrections": [],
+    "sources": [
+      "https://temperate.theferns.info/plant/Mahonia+aquifolium",
+      "https://plantdatabase.kpu.ca/Plant/maaq",
+      "https://plants.ces.ncsu.edu/plants/all/mahonia-aquifolium"
+    ],
+    "notes": "Arbusto siempreverde de 0.5-2.5 m (copa hasta 1.5 m), estrato Bajo. Flores tempranas visitadas por abejas nativas y colibríes; bayas comestibles (mermeladas); raíz y corteza con berberina, uso medicinal tradicional. Nativa del noroeste de EUA/Canadá, no de México; la zona 6 (Desierto) existente es dudosa, no se cambió."
+  },
+  {
+    "id": "Pz89KNn3tHneyP46erkG",
+    "name": "Malpighia emarginata (Acerola)",
+    "status": "updated",
+    "confidence": "high",
+    "set": {
+      "taxonomy.genus": "Malpighia",
+      "taxonomy.family": "Malpighiaceae",
+      "stratumIds": [
+        "2"
+      ],
+      "height": {
+        "min": 2,
+        "max": 6
+      },
+      "ecologicalZoneIds": [
+        "1"
+      ],
+      "additionalFunctionIds": [
+        "0"
+      ],
+      "details.shape": "arbusto",
+      "details.lightPreference": "H",
+      "details.isFrostResistant": false
+    },
+    "corrections": [
+      {
+        "field": "taxonomy.genus",
+        "old": "Malphigia",
+        "new": "Malpighia",
+        "reason": "Error ortográfico",
+        "source": "https://en.wikipedia.org/wiki/Malpighia_emarginata"
+      },
+      {
+        "field": "taxonomy.family",
+        "old": "Malphigiaceae",
+        "new": "Malpighiaceae",
+        "reason": "Error ortográfico",
+        "source": "https://en.wikipedia.org/wiki/Malpighia_emarginata"
+      },
+      {
+        "field": "stratumIds",
+        "old": [
+          "3"
+        ],
+        "new": [
+          "2"
+        ],
+        "reason": "Arbusto o árbol pequeño de 2-3 m (hasta 6 m): corresponde a estrato Medio, no Alto",
+        "source": "https://en.wikipedia.org/wiki/Malpighia_emarginata"
+      }
+    ],
+    "sources": [
+      "https://en.wikipedia.org/wiki/Malpighia_emarginata",
+      "https://www.gbif.org/species/113628140",
+      "https://apps.cals.arizona.edu/arboretum/taxon.aspx?id=1082"
+    ],
+    "notes": "Arbusto/arbolito siempreverde de 2-3 m (hasta 6 m), nativo de Centroamérica y sur de México. Fruto comestible muy rico en vitamina C. Pleno sol, no tolera heladas (< -1 °C). Posible duplicado con el registro Malpighia glabra 'Acerola'."
+  },
+  {
+    "id": "NHUAevaghgtDUxdAgPQ4",
+    "name": "Malpighia glabra (Acerola)",
+    "status": "updated",
+    "confidence": "medium",
+    "set": {
+      "taxonomy.family": "Malpighiaceae",
+      "stratumIds": [
+        "2"
+      ],
+      "additionalFunctionIds": [
+        "0"
+      ]
+    },
+    "corrections": [
+      {
+        "field": "stratumIds",
+        "old": [
+          "3"
+        ],
+        "new": [
+          "2"
+        ],
+        "reason": "Arbusto o árbol pequeño de 2-3(-6) m: estrato Medio, no Alto",
+        "source": "https://apps.worldagroforestry.org/treedb2/AFTPDFS/Malpighia_glabra.PDF"
+      }
+    ],
+    "sources": [
+      "https://apps.worldagroforestry.org/treedb2/AFTPDFS/Malpighia_glabra.PDF",
+      "https://hort.ifas.ufl.edu/database/documents/pdf/shrub_fact_sheets/malglaa.pdf",
+      "https://www.growables.org/information/TropicalFruit/BarbadosCherryJuliaMorton.htm"
+    ],
+    "notes": "Arbusto/arbolito de 2-3(-6) m nativo de las tierras bajas de México, Caribe y Centroamérica; fruto comestible rico en vitamina C. Según Morton, la acerola cultivada suele ser M. emarginata (=M. punicifolia), y M. glabra es un pariente silvestre: posible duplicado/confusión con el registro de M. emarginata. heightRangeDescription 'de 5 a 10 mts' e isFrostResistant=true parecen inexactos (no se cambiaron por falta de fuente directa)."
+  },
+  {
+    "id": "EHZWCbYJExFT30bP2jlD",
+    "name": "Malus domestica (Manzana)",
+    "status": "updated",
+    "confidence": "medium",
+    "set": {
+      "taxonomy.species": "domestica",
+      "taxonomy.synonyms": [
+        "Malus communis"
+      ],
+      "additionalFunctionIds": [
+        "0"
+      ]
+    },
+    "corrections": [
+      {
+        "field": "taxonomy.species",
+        "old": "communis",
+        "new": "domestica",
+        "reason": "Malus communis es sinónimo (bajo M. pumila, a su vez sinónimo de M. domestica, nombre aceptado en POWO)",
+        "source": "https://efloraofindia.com/?p=1371901"
+      }
+    ],
+    "sources": [
+      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:726372-1",
+      "https://efloraofindia.com/?p=1371901"
+    ],
+    "notes": "Se actualizó el nombre al aceptado Malus domestica (sinónimo Malus communis). Se añadió uso como alimento. No se obtuvieron datos de altura en la búsqueda; se mantienen los existentes."
+  },
+  {
+    "id": "mMzpLUlu6kr8c4Z2fFKR",
+    "name": "Mammea americana (Mamey)",
+    "status": "updated",
+    "confidence": "high",
+    "set": {
+      "taxonomy.family": "Calophyllaceae",
+      "additionalFunctionIds": [
+        "0",
+        "2",
+        "3"
+      ]
+    },
+    "corrections": [
+      {
+        "field": "taxonomy.family",
+        "old": "Guttiferáceas",
+        "new": "Calophyllaceae",
+        "reason": "Familia según APG IV (antes Guttiferae/Clusiaceae)",
+        "source": "https://en.wikipedia.org/wiki/Mammea_americana"
+      }
+    ],
+    "sources": [
+      "https://en.wikipedia.org/wiki/Mammea_americana",
+      "https://apps.worldagroforestry.org/treedb2/AFTPDFS/Mammea_americana.PDF",
+      "https://ecocrop.apps.fao.org/ecocrop/srv/en/cropView?id=1414"
+    ],
+    "notes": "Árbol siempreverde de 18-21 m (algunas fuentes 15 m). Fruto comestible; madera densa y dura usada en postes, vigas y tornería; semillas y hojas con usos medicinales tradicionales. Ojo: 'mamey' en México suele referirse a Pouteria sapota; este registro es el mamey de Santo Domingo."
+  },
+  {
+    "id": "pL1S5H3Oqh7pU1IGHM76",
+    "name": "Mangifera indica (Mango)",
+    "status": "updated",
+    "confidence": "high",
+    "set": {
+      "taxonomy.genus": "Mangifera",
+      "ecologicalFunctionIds": [
+        "4"
+      ],
+      "additionalFunctionIds": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "details.humidityPreference": "H",
+      "details.lifeCycle": "Secundarias 3",
+      "details.lifeCycleDuration": "Hasta 80 años"
+    },
+    "corrections": [
+      {
+        "field": "taxonomy.genus",
+        "old": "Manguifera",
+        "new": "Mangifera",
+        "reason": "Error ortográfico",
+        "source": "https://apps.worldagroforestry.org/treedb2/speciesprofile.php?Spid=1112"
+      }
+    ],
+    "sources": [
+      "https://apps.worldagroforestry.org/treedb2/speciesprofile.php?Spid=1112",
+      "https://apps.worldagroforestry.org/usefultrees/pdflib/Mangifera_indica_KEN.pdf",
+      "https://selectree.calpoly.edu/tree-detail/922"
+    ],
+    "notes": "Árbol siempreverde de 10-15 m (hasta 20-25 m), copa redondeada. ICRAF lista fruto, leña, madera para muebles, medicina, forraje y forraje apícola; sombra densa y alta demanda de agua. Ciclo de vida asignado por analogía con el aguacate en el dataset."
+  },
+  {
+    "id": "HW8WfCDxYdqkax3bnSW6",
+    "name": "Manihot esculenta (Yuca)",
+    "status": "updated",
+    "confidence": "high",
+    "set": {
+      "stratumIds": [
+        "2"
+      ],
+      "additionalFunctionIds": [
+        "0",
+        "1"
+      ],
+      "details.isFrostResistant": false
+    },
+    "corrections": [
+      {
+        "field": "stratumIds",
+        "old": [
+          "3",
+          "4"
+        ],
+        "new": [
+          "2"
+        ],
+        "reason": "Arbusto de 1-3 m; no corresponde a estratos Alto/Emergente",
+        "source": "https://plants.ces.ncsu.edu/plants/all/manihot-esculenta"
+      }
+    ],
+    "sources": [
+      "https://plants.ces.ncsu.edu/plants/all/manihot-esculenta",
+      "https://www.feedipedia.org/Node/528"
+    ],
+    "notes": "Arbusto perenne de 1-3 m cultivado como anual por intolerancia a heladas. Raíz comestible; follaje valioso como forraje (cortes cada 2-3 meses, secar/ensilar por compuestos cianogénicos). En laderas puede causar erosión si no se maneja bien."
+  },
+  {
+    "id": "ySP6RAx51TBwrRlDKXVg",
+    "name": "Manilkara zapota (Chicozapote)",
+    "status": "updated",
+    "confidence": "high",
+    "set": {
+      "height": {
+        "min": 9,
+        "max": 15
+      },
+      "crownWidth": {
+        "min": 10,
+        "max": 14
+      },
+      "ecologicalZoneIds": [
+        "1"
+      ],
+      "additionalFunctionIds": [
+        "0"
+      ],
+      "details.shape": "árbol"
+    },
+    "corrections": [],
+    "sources": [
+      "https://apps.worldagroforestry.org/treedb/AFTPDFS/Manilkara_zapota.PDF",
+      "https://hort.ifas.ufl.edu/database/documents/pdf/tree_fact_sheets/manzapa.pdf",
+      "https://sweetgum.nybg.org/science/vh/monographs-details/?irn=12063"
+    ],
+    "notes": "Árbol nativo de México y Centroamérica, codominante del dosel superior de la selva alta perennifolia (silvestre >30 m; cultivado 9-15 m, copa ~10-14 m). Fruto comestible; látex fuente del chicle. No se encontró en la búsqueda información de madera."
+  },
+  {
+    "id": "5tqMs5emH7EQO1dw3CNc",
+    "name": "Maranta arundinacea (Sagú)",
+    "status": "updated",
+    "confidence": "high",
+    "set": {
+      "taxonomy.family": "Marantaceae",
+      "additionalFunctionIds": [
+        "0",
+        "3"
+      ]
+    },
+    "corrections": [
+      {
+        "field": "additionalFunctionIds",
+        "old": [
+          "2"
+        ],
+        "new": [
+          "0",
+          "3"
+        ],
+        "reason": "Hierba rizomatosa: no es maderable; se usa el rizoma como alimento (almidón) y tiene usos medicinales tradicionales",
+        "source": "https://ecocrop.apps.fao.org/ecocrop/srv/en/cropView?id=2335"
+      }
+    ],
+    "sources": [
+      "https://ecocrop.apps.fao.org/ecocrop/srv/en/cropView?id=2335",
+      "https://plants.ces.ncsu.edu/plants/maranta-arundinacea/common-name/arrowroot"
+    ],
+    "notes": "Hierba de 0.3-1.5 m con rizoma comestible rico en almidón (arrurruz); usos medicinales tradicionales (cataplasma, picaduras). Prefiere semisombra y alta humedad (lightPreference H existente es discutible). Nativa de Centro y Sudamérica tropical."
+  },
+  {
+    "id": "PGgOaftQaVm1rTPimj1u",
+    "name": "Mauritia flexuosa (Moriche, buriti)",
+    "status": "updated",
+    "confidence": "medium",
+    "set": {
+      "taxonomy.family": "Arecaceae",
+      "height": {
+        "min": 25,
+        "max": 35
+      },
+      "additionalFunctionIds": [
+        "0"
+      ],
+      "details.shape": "palma",
+      "details.humidityPreference": "H"
+    },
+    "corrections": [],
+    "sources": [
+      "https://www.nparks.gov.sg/florafaunaweb/flora/7/7/7798",
+      "https://ethnobiology.org/sites/default/files/pdfs/JoE/15-2/Gragson1995.pdf",
+      "https://earthpedia.earth.com/plant-encyclopedia/angiosperms/arecaceae/mauritia-flexuosa"
+    ],
+    "notes": "Palma de 25-35 m de pantanos y zonas inundables de Sudamérica tropical (morichales); no nativa de México, por eso no se asignó zona ecológica. Fruto comestible (jugos, dulces, aceite); hojas y fibras para techos y cestería."
+  }
+]

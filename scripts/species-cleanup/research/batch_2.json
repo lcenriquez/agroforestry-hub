@@ -1,0 +1,919 @@
+[
+ {
+  "id": "dHCQcPeiGy1wHTqPfByQ",
+  "name": "Attalea speciosa (Coco de macaco, babasú)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "taxonomy.family": "Arecaceae",
+   "height": {
+    "min": 10,
+    "max": 20
+   },
+   "ecologicalZoneIds": [
+    "1"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "1",
+    "3"
+   ],
+   "details.shape": "palma",
+   "details.lightPreference": "H",
+   "details.isFrostResistant": false,
+   "details.heightRangeDescription": "más de 10 mts"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.family",
+    "old": "Aracaceae",
+    "new": "Arecaceae",
+    "reason": "error ortográfico en el nombre de la familia",
+    "source": "https://en.wikipedia.org/wiki/Babassu"
+   }
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Babassu",
+   "https://link.springer.com/doi/10.1007/s12231-015-9315-x"
+  ],
+  "notes": "Palma amazónica (no nativa de México); zona 1 asignada por equivalencia climática (selva húmeda). Usos: aceite y harina del mesocarpio (alimento), torta de semilla como forraje, medicinal. Altura 10–20 m. No se asignaron funciones ecológicas por falta de evidencia."
+ },
+ {
+  "id": "O70Mfj7d35uoZp2tVVOR",
+  "name": "Averrhoa carambola (Carambolo)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "3"
+   ],
+   "commonNames": [
+    "Carambolo, starfruit",
+    "carambola, fruta estrella"
+   ],
+   "details.humidityPreference": "M"
+  },
+  "corrections": [],
+  "sources": [
+   "https://growables.org/information/TropicalFruit/carambola.htm",
+   "https://www.itfnet.org/gfruit/Templates%20English/carambola.biology.htm"
+  ],
+  "notes": "Datos de altura/copa coherentes (7–10 m, copa 6–7.6 m). Floración abundante atractiva para abejas (polinizadores). Fruta comestible y usos medicinales tradicionales. Se añadieron nombres 'carambola' y 'fruta estrella'."
+ },
+ {
+  "id": "GufFfTdmJfjdnLb2MOkh",
+  "name": "Azadirachta indica (Neem)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "height": {
+    "min": 10,
+    "max": 20
+   },
+   "crownWidth": {
+    "min": 8,
+    "max": 12
+   },
+   "stratumIds": [
+    "3"
+   ],
+   "ecologicalFunctionIds": [
+    "0",
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "1",
+    "2",
+    "3"
+   ],
+   "details.lightPreference": "H",
+   "details.humidityPreference": "L",
+   "details.nutrientExtraction": "L",
+   "details.isFrostResistant": false,
+   "details.shape": "árbol",
+   "details.lifeCycleDuration": "Mayor a 80 años",
+   "details.heightRangeDescription": "más de 10 mts"
+  },
+  "corrections": [
+   {
+    "field": "details.heightRangeDescription",
+    "old": "de 5 a 10 mts",
+    "new": "más de 10 mts",
+    "reason": "altura típica madura 15 m (hasta 30 m) según ICRAF",
+    "source": "https://apps.worldagroforestry.org/treedb/AFTPDFS/Azadirachta_indica.PDF"
+   }
+  ],
+  "sources": [
+   "https://apps.worldagroforestry.org/treedb/AFTPDFS/Azadirachta_indica.PDF",
+   "https://agritech.tnau.ac.in/bio-fuels/Biofuel_Neem.html",
+   "https://training.trees.org/en/comunity_detail/201"
+  ],
+  "notes": "Árbol de 15 (hasta 30) m, copa hasta 10–20 m; tolera sequía y suelos pobres, no tolera heladas ni encharcamiento. Rebrota y tolera poda/desmoche (biomasa), melífero. Forraje (hojas para cabras), madera, medicinal/insecticida. En México se cultiva en zonas cálidas secas (selva baja, sin id disponible)."
+ },
+ {
+  "id": "YPM6lX0hY4hivRkcirMu",
+  "name": "Bactris gasipaes (Pejibaye)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "details.isFrostResistant": false,
+   "additionalFunctionIds": [
+    "0",
+    "2"
+   ]
+  },
+  "corrections": [
+   {
+    "field": "details.isFrostResistant",
+    "old": true,
+    "new": false,
+    "reason": "palma tropical sensible a heladas (zona 10)",
+    "source": "https://ask.ifas.ufl.edu/publication/HS312"
+   }
+  ],
+  "sources": [
+   "https://ask.ifas.ufl.edu/publication/HS312",
+   "https://farmknowledge.info/crops/bactris-gasipaes"
+  ],
+  "notes": "Corregida resistencia a heladas. Fruto y palmito comestibles; madera del tronco usada localmente. Altura registrada (10 m) es baja respecto a 15–20 m reportados, pero se dejó por ser valor existente."
+ },
+ {
+  "id": "WcMqAbk8it86g6Y6qteN",
+  "name": "Bambusa oldhamii (Bambú oldhami)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "taxonomy.species": "oldhamii",
+   "taxonomy.family": "Poaceae",
+   "ecologicalFunctionIds": [
+    "0",
+    "3"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "2"
+   ]
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.species",
+    "old": "oldhami",
+    "new": "oldhamii",
+    "reason": "grafía aceptada (POWO)",
+    "source": "https://www.dimensions.com/element/giant-timber-bamboo-group-bambusa-oldhamii"
+   }
+  ],
+  "sources": [
+   "https://bambubatu.com/bambusa-oldhamii-chinese-timber-bamboo/",
+   "https://www.dimensions.com/element/giant-timber-bamboo-group-bambusa-oldhamii"
+  ],
+  "notes": "Bambú amacollado de 12–18 m, culmos 7–10 cm, tolera hasta ~-7 °C. Gran producción de biomasa y control de erosión; brotes comestibles y culmos para construcción."
+ },
+ {
+  "id": "LwwdQqLcjxnp1pofrWLe",
+  "name": "Basella alba (Espinaca de Malabar)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "taxonomy.subspecies": "",
+   "taxonomy.synonyms": [
+    "Basella rubra"
+   ],
+   "stratumIds": [
+    "2"
+   ],
+   "ecologicalZoneIds": [
+    "1",
+    "3"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "3"
+   ],
+   "commonNames": [
+    "Espinaca de Malabar",
+    "espinaca trepadora"
+   ],
+   "details.lightPreference": "H",
+   "details.humidityPreference": "H",
+   "details.isFrostResistant": false,
+   "details.lifeCycle": "Pioneras",
+   "details.lifeCycleDuration": "Hasta 2 años"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.subspecies",
+    "old": "B. rubra",
+    "new": "",
+    "reason": "Basella rubra es sinónimo de B. alba, no subespecie; se movió a sinónimos",
+    "source": "https://en.wikipedia.org/wiki/Basella_alba"
+   },
+   {
+    "field": "additionalFunctionIds",
+    "old": [
+     "2"
+    ],
+    "new": [
+     "0",
+     "3"
+    ],
+    "reason": "es una hortaliza de hoja (alimento) con uso medicinal ayurvédico; no es maderable",
+    "source": "https://ask.ifas.ufl.edu/publication/HS1371"
+   }
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Basella_alba",
+   "https://ask.ifas.ufl.edu/publication/HS1371",
+   "https://plants.ces.ncsu.edu/plants/basella-alba/common-name/malabar-spinach/"
+  ],
+  "notes": "Enredadera perenne de vida corta, crecimiento rápido (2–10 m), sensible a heladas. Se corrigió 'Maderable' por Alimento/Medicinal. 'B. rubra' se movió a sinónimos. 'espinaca trepadora' es nombre de uso común (verificar)."
+ },
+ {
+  "id": "8U0NAdb4gIFRSKE4Lanq",
+  "name": "Bauhinia variegata (Pata de vaca)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "height": {
+    "min": 6,
+    "max": 12
+   },
+   "crownWidth": {
+    "min": 5,
+    "max": 8
+   },
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "1",
+    "3"
+   ],
+   "details.shape": "árbol",
+   "details.lightPreference": "H",
+   "details.humidityPreference": "M",
+   "details.heightRangeDescription": "de 5 a 10 mts"
+  },
+  "corrections": [],
+  "sources": [
+   "https://apps.worldagroforestry.org/treedb/AFTPDFS/Bauhinia_variegata.PDF",
+   "https://edis.ifas.ufl.edu/publication/ST092/pdf",
+   "https://reference-global.com/download/article/10.2478/ffp-2023-0017.pdf"
+  ],
+  "notes": "Árbol de 6–10 m (hasta 15 m), copa 5–8 m. Hojas excelente forraje; botones florales comestibles; usos medicinales; forraje apícola. No se asignó fijación de N: Bauhinia (Cercidoideae) en general no nodula. Zonas sin asignar: ornamental cultivado ampliamente en México pero sin datos claros por zona."
+ },
+ {
+  "id": "3XFooYhBj5SLU6KOTHxq",
+  "name": "Bertholletia excelsa (Castaña de Brasil)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "height": {
+    "min": 30,
+    "max": 50
+   },
+   "crownWidth": {
+    "min": 10,
+    "max": 20
+   },
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "2"
+   ],
+   "details.shape": "árbol",
+   "details.lightPreference": "H",
+   "details.humidityPreference": "H",
+   "details.isFrostResistant": false,
+   "details.heightRangeDescription": "más de 10 mts"
+  },
+  "corrections": [],
+  "sources": [
+   "https://apps.worldagroforestry.org/treedb/AFTPDFS/Bertholletia_excelsa.PDF",
+   "https://ecocrop.apps.fao.org/ecocrop/srv/en/cropView?id=3699"
+  ],
+  "notes": "Árbol emergente amazónico de 30–50 m (hasta 60 m), copa 10–20 m. Nuez comestible; polinizado por abejas grandes (Euglossini, Xylocopa, Bombus). No nativo de México (zona 1 por equivalencia)."
+ },
+ {
+  "id": "D8xIBZ3w1q4zpAtkk4PL",
+  "name": "Bixa orellana (Achiote)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "taxonomy.genus": "Bixa",
+   "details.isFrostResistant": false,
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "3"
+   ],
+   "commonNames": [
+    "Achiote, urucu",
+    "onoto"
+   ]
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.genus",
+    "old": "Bixia",
+    "new": "Bixa",
+    "reason": "error ortográfico",
+    "source": "https://apps.worldagroforestry.org/treedb/AFTPDFS/Bixa_orellana.pdf"
+   },
+   {
+    "field": "details.isFrostResistant",
+    "old": true,
+    "new": false,
+    "reason": "requiere clima libre de heladas (zonas 10–12)",
+    "source": "https://apps.worldagroforestry.org/treedb/AFTPDFS/Bixa_orellana.pdf"
+   }
+  ],
+  "sources": [
+   "https://apps.worldagroforestry.org/treedb/AFTPDFS/Bixa_orellana.pdf",
+   "https://mastergardener.extension.wisc.edu/files/2018/10/Bixa_orellana.pdf"
+  ],
+  "notes": "Arbusto/árbol de 2–8 m. Flores polinizadas por abejas. Semillas como condimento/colorante (alimento) y usos medicinales tradicionales. Corregidos género y resistencia a heladas."
+ },
+ {
+  "id": "gCo5Mtk6wE5DN6o8VL8k",
+  "name": "Borago officinalis (Borraja)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "taxonomy.species": "officinalis",
+   "taxonomy.family": "Boraginaceae",
+   "height": {
+    "min": 0.6,
+    "max": 0.9
+   },
+   "crownWidth": {
+    "min": 0.3,
+    "max": 0.6
+   },
+   "stratumIds": [
+    "1"
+   ],
+   "ecologicalFunctionIds": [
+    "2",
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "3"
+   ],
+   "details.shape": "hierba",
+   "details.lightPreference": "H",
+   "details.humidityPreference": "M",
+   "details.lifeCycle": "Pioneras",
+   "details.lifeCycleDuration": "Varios meses"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.species",
+    "old": "oficinalis",
+    "new": "officinalis",
+    "reason": "error ortográfico",
+    "source": "https://plants.ces.ncsu.edu/plants/borago-officinalis/common-name/borage/"
+   }
+  ],
+  "sources": [
+   "https://plants.ces.ncsu.edu/plants/borago-officinalis/common-name/borage/",
+   "https://bookstore.ksre.ksu.edu/download/borage_MF2608"
+  ],
+  "notes": "Hierba anual de 60–90 cm, muy melífera. Citada en permacultura como acumuladora dinámica (K, sílice) — evidencia hortícola, no peer-reviewed. Hojas y flores comestibles; uso medicinal tradicional."
+ },
+ {
+  "id": "PUW9A3jGdNKnU2XORCIa",
+  "name": "Alibertia patinoi (Borojó)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "taxonomy.genus": "Alibertia",
+   "taxonomy.family": "Rubiaceae",
+   "taxonomy.synonyms": [
+    "Borojoa patinoi"
+   ],
+   "stratumIds": [
+    "2"
+   ],
+   "ecologicalZoneIds": [
+    "1"
+   ],
+   "additionalFunctionIds": [
+    "0"
+   ],
+   "details.shape": "árbol",
+   "details.humidityPreference": "H",
+   "details.isFrostResistant": false
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.genus",
+    "old": "Borojoa",
+    "new": "Alibertia",
+    "reason": "Borojoa patinoi es sinónimo; nombre aceptado Alibertia patinoi (Cuatrec.) Delprete & C.H.Perss. (POWO)",
+    "source": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77116169-1"
+   }
+  ],
+  "sources": [
+   "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77116169-1",
+   "https://osa-arboretum.org/?p=1056"
+  ],
+  "notes": "Nombre actualizado según POWO. Árbol de la selva húmeda del Chocó (Costa Rica–Ecuador), no nativo de México; zona 1 por equivalencia. Fruto comestible. Alturas reportadas muy variables (3–20 m), no se rellenó altura."
+ },
+ {
+  "id": "tqQdz7hg6ao8N6QVmREM",
+  "name": "Bromelia pinguin (Piñuela)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "taxonomy.family": "Bromeliaceae",
+   "height": {
+    "min": 0.5,
+    "max": 1
+   },
+   "stratumIds": [
+    "1"
+   ],
+   "ecologicalZoneIds": [
+    "1"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "3"
+   ],
+   "commonNames": [
+    "Piñuela, cardon",
+    "timbiriche"
+   ],
+   "details.shape": "hierba",
+   "details.lightPreference": "H",
+   "details.humidityPreference": "L",
+   "details.isFrostResistant": false
+  },
+  "corrections": [],
+  "sources": [
+   "https://enciclovida.mx/especies/156358.pdf",
+   "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:319113-2/general-information",
+   "https://revistafitotecniamexicana.org/documentos/44-4/4a.pdf"
+  ],
+  "notes": "Bromelia terrestre nativa de México a Sudamérica; roseta de hasta ~1 m (hojas 1–2 m). Fruto comestible; usada como cerca viva (Enciclovida); uso medicinal citado por Kew. Común en selva baja/costas (zona sin id)."
+ },
+ {
+  "id": "x7iSakx6BsW42KjycXJU",
+  "name": "Brosimum alicastrum (Ramón, ojoche)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "height": {
+    "min": 20,
+    "max": 40
+   },
+   "ecologicalFunctionIds": [
+    "0"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "commonNames": [
+    "Ojoche o Ramon",
+    "capomo",
+    "ojite"
+   ],
+   "details.shape": "árbol",
+   "details.humidityPreference": "M",
+   "details.isFrostResistant": false
+  },
+  "corrections": [],
+  "sources": [
+   "https://apps.worldagroforestry.org/treedb2/AFTPDFS/Brosimum_alicastrum.PDF",
+   "https://www.feedipedia.org/sites/default/files/public/mendoza-castillo_2000.pdf"
+  ],
+  "notes": "Árbol de 20–40 m nativo de selvas de México. Se desmocha para forraje (rebrota bien: biomasa); semilla comestible; madera. Resistente a sequía."
+ },
+ {
+  "id": "OoEzVh8OFbQLeL3vWKCF",
+  "name": "Brugmansia arborea (Floripondio)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "taxonomy.family": "Solanaceae",
+   "additionalFunctionIds": [
+    "3"
+   ]
+  },
+  "corrections": [],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Brugmansia_arborea",
+   "https://www.brugmansia.us/cold-group-brugmansia/"
+  ],
+  "notes": "Arbusto andino hasta 7 m, tolera heladas ligeras. Polinizado por polillas (no se asignó función de polinizadores). Uso medicinal/ritual tradicional; planta muy tóxica. En México 'floripondio' suele referirse también a B. candida/B. suaveolens."
+ },
+ {
+  "id": "Jmyh67lq9FpXSIj6JVU1",
+  "name": "Bursera simaruba (Palo mulato, chaká)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "height": {
+    "min": 10,
+    "max": 25
+   },
+   "stratumIds": [
+    "3"
+   ],
+   "ecologicalZoneIds": [
+    "1"
+   ],
+   "additionalFunctionIds": [
+    "2",
+    "3"
+   ],
+   "commonNames": [
+    "Palo mulato, chaca",
+    "chacah",
+    "jiote"
+   ],
+   "details.shape": "árbol",
+   "details.lightPreference": "H",
+   "details.humidityPreference": "L",
+   "details.isFrostResistant": false,
+   "details.heightRangeDescription": "más de 10 mts"
+  },
+  "corrections": [
+   {
+    "field": "details.heightRangeDescription",
+    "old": "de 5 a 10 mts",
+    "new": "más de 10 mts",
+    "reason": "altura 18–30 m según ICRAF",
+    "source": "https://apps.worldagroforestry.org/treedb/AFTPDFS/Bursera_simaruba.pdf"
+   }
+  ],
+  "sources": [
+   "https://apps.worldagroforestry.org/treedb/AFTPDFS/Bursera_simaruba.pdf",
+   "https://en.wikipedia.org/wiki/Bursera_simaruba"
+  ],
+  "notes": "Árbol nativo (Yucatán y costa del Pacífico, 0–1000 m), muy usado como cerca viva por estacas. Madera ligera; resina; corteza de uso medicinal tradicional. Tolerante a sequía, caducifolio; también típico de selva baja (sin id)."
+ },
+ {
+  "id": "scnP8QDTcXgUlwjnC7ai",
+  "name": "Byrsonima crassifolia (Nanche)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "taxonomy.family": "Malpighiaceae",
+   "ecologicalFunctionIds": [
+    "2",
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "3"
+   ]
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.family",
+    "old": "Malpigiáceas",
+    "new": "Malpighiaceae",
+    "reason": "nombre de familia en forma latina APG IV",
+    "source": "https://apps.worldagroforestry.org/treedb/AFTPDFS/Byrsonima_crassifolia.pdf"
+   }
+  ],
+  "sources": [
+   "https://apps.worldagroforestry.org/treedb/AFTPDFS/Byrsonima_crassifolia.pdf",
+   "https://aramara.uan.mx/bitstream/123456789/900/1/Propiedades%20Medicinales%20y%20otros%20usos%20del%20Nanche.pdf"
+  ],
+  "notes": "ICRAF: mejora el suelo bajo su copa acumulando materia orgánica y K (acumulación de nutrientes). Flores con aceite visitadas por abejas Centris y meliponinos. Fruto comestible; corteza medicinal (mixes de México)."
+ },
+ {
+  "id": "PjOr7kcwggcYAN5YtxqA",
+  "name": "Cenostigma pluviosum (Momoqui, sibipiruna)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "taxonomy.genus": "Cenostigma",
+   "taxonomy.species": "pluviosum",
+   "taxonomy.family": "Fabaceae",
+   "taxonomy.synonyms": [
+    "Caesalpinia pluviosa"
+   ],
+   "details.shape": "árbol"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.genus/species",
+    "old": "Caesalpinia pluviosa",
+    "new": "Cenostigma pluviosum",
+    "reason": "nombre aceptado según Gagnon et al. 2016 (PhytoKeys 71)",
+    "source": "https://sweetgum.nybg.org/science/vh/specimen-details/?irn=118644"
+   },
+   {
+    "field": "taxonomy.family",
+    "old": "Caesalpinioideae (Leg.)",
+    "new": "Fabaceae",
+    "reason": "Caesalpinioideae es subfamilia; la familia es Fabaceae",
+    "source": "https://sweetgum.nybg.org/science/vh/specimen-details/?irn=118644"
+   }
+  ],
+  "sources": [
+   "https://sweetgum.nybg.org/science/vh/specimen-details/?irn=118644",
+   "https://species-id.net/wiki/Cenostigma"
+  ],
+  "notes": "Taxonomía actualizada. Árbol sudamericano (Bolivia/Brasil), altura muy variable según variedad (3–10 m en ejemplares; grandes hasta >20 m), no se rellenó altura. No se asignó fijación de N (el grupo Caesalpinia s.l. generalmente no nodula). El dato existente de 'fruto comestible' parece dudoso."
+ },
+ {
+  "id": "I9Q1DYzaD5Cn3MwwG4i2",
+  "name": "Cajanus cajan (Gandul)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "taxonomy.family": "Fabaceae",
+   "ecologicalFunctionIds": [
+    "0",
+    "1",
+    "2",
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "1"
+   ],
+   "details.humidityPreference": "L",
+   "commonNames": [
+    "Chicharo de arbol, gandul",
+    "frijol de palo"
+   ]
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.family",
+    "old": "fabaceae",
+    "new": "Fabaceae",
+    "reason": "capitalización",
+    "source": "https://www.feedipedia.org/Node/329"
+   },
+   {
+    "field": "details.humidityPreference",
+    "old": "H",
+    "new": "L",
+    "reason": "especie tolerante a sequía; produce forraje verde al final de la época seca",
+    "source": "https://www.feedipedia.org/Node/329"
+   }
+  ],
+  "sources": [
+   "https://www.feedipedia.org/Node/329",
+   "https://winrock.org/cajanus-cajan-its-more-than-just-a-pulse-crop/",
+   "https://oar.icrisat.org:443/10485/1/Botanical%20Description%20of%20Pigeonpea.pdf"
+  ],
+  "notes": "Arbusto perenne de vida corta, 1–4 m. Fija N (Bradyrhizobium), aporta 40–60 kg N/ha; raíz profunda que moviliza P; mucha biomasa/mantillo; visitado por abejas. Grano comestible y forraje."
+ },
+ {
+  "id": "6MUcBzYN9dAR6KntzyQo",
+  "name": "Calendula officinalis (Caléndula)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "taxonomy.species": "officinalis",
+   "taxonomy.family": "Asteraceae",
+   "stratumIds": [
+    "1"
+   ],
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "3"
+   ],
+   "details.humidityPreference": "M",
+   "details.lifeCycle": "Pioneras",
+   "details.lifeCycleDuration": "Varios meses"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.species",
+    "old": "Persea",
+    "new": "officinalis",
+    "reason": "epíteto erróneo (Persea es un género); la caléndula es Calendula officinalis",
+    "source": "https://temperate.theferns.info/plant/Calendula+officinalis"
+   }
+  ],
+  "sources": [
+   "https://temperate.theferns.info/plant/Calendula+officinalis",
+   "https://ask.ifas.ufl.edu/publication/FP087/pdf"
+  ],
+  "notes": "Hierba anual de 30–70 cm, polinizada por abejas, tolera heladas ligeras. Uso medicinal (antiinflamatorio tópico) y pétalos comestibles."
+ },
+ {
+  "id": "LW8fpHxBi8GXzAJPz5Wt",
+  "name": "Calliandra houstoniana (Caliandra)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "ecologicalFunctionIds": [
+    "0",
+    "1",
+    "3",
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "1"
+   ],
+   "details.humidityPreference": "M"
+  },
+  "corrections": [],
+  "sources": [
+   "https://apps.worldagroforestry.org/treedb2/AFTPDFS/Calliandra_calothyrsus.PDF",
+   "https://www.feedipedia.org/Node/586",
+   "https://en.wikipedia.org/wiki/Calliandra_calothyrsus"
+  ],
+  "notes": "Se asume la var. calothyrsus (= C. calothyrsus), leguminosa nativa del Pacífico de México y Centroamérica: fija N, rebrota tras poda (biomasa), usada en control de erosión, muy visitada por colibríes/abejas; forraje y leña. Altura media 5–6 m (hasta 12 m); el valor registrado 2–4 m es bajo pero se dejó."
+ },
+ {
+  "id": "76IfrQEQ23SLkZ33G7qH",
+  "name": "Camellia sinensis (Té)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "taxonomy.family": "Theaceae",
+   "additionalFunctionIds": [
+    "0",
+    "3"
+   ],
+   "commonNames": [
+    "Te verde",
+    "té"
+   ],
+   "details.humidityPreference": "H",
+   "details.lifeCycleDuration": "Mayor a 80 años"
+  },
+  "corrections": [],
+  "sources": [
+   "https://landscapeplants.aub.edu.lb/Plants/GetPDF/04f6a290-6b96-4255-935c-3e0d776f69dd",
+   "https://www.frontiersin.org/articles/10.3389/fnut.2022.786421/full"
+  ],
+  "notes": "Arbusto que sin poda alcanza 6–8 m, en cultivo se mantiene <2 m. Crece naturalmente bajo dosel (tolera semisombra) y tolera heladas ligeras. Hojas para bebida (alimento) y uso medicinal. Plantas de té viven más de un siglo."
+ },
+ {
+  "id": "Jw5SVH66ID4rKSBNUda9",
+  "name": "Campomanesia phaea (Cambucí)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "height": {
+    "min": 4,
+    "max": 9
+   },
+   "additionalFunctionIds": [
+    "0"
+   ],
+   "details.shape": "árbol",
+   "details.heightRangeDescription": "de 5 a 10 mts"
+  },
+  "corrections": [],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Campomanesia_phaea",
+   "https://www.scielo.br/j/rbf/a/tnHRhh7kNsvD6jjBSHnxR7C/?lang=en"
+  ],
+  "notes": "Árbol semicaducifolio de 4–9 m endémico de la Mata Atlántica (Brasil), no presente en México; no se asignaron zonas. Fruto comestible (jugos, mermeladas). El dato existente 'raíces/tubérculos comestibles' parece erróneo (lo comestible es el fruto)."
+ },
+ {
+  "id": "3ICuWLQb6eiNMCqLRzuC",
+  "name": "Canavalia brasiliensis (Frijol espada, canavalia)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "stratumIds": [
+    "0"
+   ],
+   "ecologicalZoneIds": [
+    "1"
+   ],
+   "ecologicalFunctionIds": [
+    "0",
+    "1",
+    "3"
+   ],
+   "additionalFunctionIds": [
+    "1"
+   ],
+   "details.shape": "guía",
+   "details.lightPreference": "H",
+   "details.humidityPreference": "L",
+   "details.isFrostResistant": false,
+   "details.lifeCycle": "Pioneras",
+   "details.lifeCycleDuration": "Hasta 2 años"
+  },
+  "corrections": [],
+  "sources": [
+   "https://tropicalforages.info/pdf/canavalia_brasiliensis.pdf",
+   "https://alliancebioversityciat.org/publications-data/nitrogen-balances-farmers-fields-under-alternative-uses-cover-crop-legume-case"
+  ],
+  "notes": "Leguminosa rastrera/trepadora usada como abono verde y cobertura, tolerante a sequía (5–6 meses), fija ~69% de su N del aire; forraje de época seca. Nativa de México a Sudamérica."
+ },
+ {
+  "id": "fqf2apG3UpxNCe1QBJOQ",
+  "name": "Canavalia ensiformis (Canavalia, frijol de machete)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "ecologicalFunctionIds": [
+    "0",
+    "1"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "1"
+   ],
+   "details.humidityPreference": "L",
+   "commonNames": [
+    "Canavalia",
+    "frijol de machete",
+    "haba de caballo"
+   ]
+  },
+  "corrections": [
+   {
+    "field": "details.humidityPreference",
+    "old": "H",
+    "new": "L",
+    "reason": "sistema radicular profundo; una de las coberturas/abonos verdes más resistentes a sequía",
+    "source": "https://www.echocommunity.org/resources/5c18a2a7-fb50-4d68-9e72-85a2175fc278"
+   }
+  ],
+  "sources": [
+   "https://www.echocommunity.org/resources/5c18a2a7-fb50-4d68-9e72-85a2175fc278",
+   "https://uses.plantnet-project.org/en/Canavalia_ensiformis_(PROSEA)"
+  ],
+  "notes": "Abono verde: fija N y produce 20–25 t/ha de biomasa verde. Vainas tiernas y semillas comestibles solo cocidas (canavanina y lectinas tóxicas); forraje limitado. Nombres 'frijol de machete' y 'haba de caballo' usados en México."
+ },
+ {
+  "id": "HZiY1wxond0Vtm80UoSj",
+  "name": "Canna indica (Achira)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "taxonomy.species": "indica",
+   "taxonomy.synonyms": [
+    "Canna edulis"
+   ],
+   "stratumIds": [
+    "1"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "3"
+   ],
+   "details.shape": "hierba",
+   "commonNames": [
+    "Achira",
+    "platanillo"
+   ]
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.species",
+    "old": "edulis",
+    "new": "indica",
+    "reason": "Canna edulis se trata como sinónimo de Canna indica (forma cultivada para rizoma)",
+    "source": "https://temperate.theferns.info/plant/Canna+edulis"
+   },
+   {
+    "field": "stratumIds",
+    "old": [
+     "3"
+    ],
+    "new": [
+     "1"
+    ],
+    "reason": "hierba de 0.4–2.5 m; estrato Alto es imposible",
+    "source": "https://cipotato.org/wp-content/uploads/2014/06/11_El_cultivo_achira_alternat_produc.pdf"
+   },
+   {
+    "field": "details.shape",
+    "old": "arbusto",
+    "new": "hierba",
+    "reason": "planta herbácea rizomatosa",
+    "source": "https://cipotato.org/wp-content/uploads/2014/06/11_El_cultivo_achira_alternat_produc.pdf"
+   }
+  ],
+  "sources": [
+   "https://temperate.theferns.info/plant/Canna+edulis",
+   "https://www.cultivariable.com/andean-roots-tubers/achira-canna-edulis/",
+   "https://cipotato.org/wp-content/uploads/2014/06/11_El_cultivo_achira_alternat_produc.pdf"
+  ],
+  "notes": "Taxonomía de la achira no resuelta (C. indica vs. C. discolor); se usa C. indica según tratamiento más común. Rizoma comestible rico en almidón. Hierba de 0.4–2.5 m."
+ }
+]

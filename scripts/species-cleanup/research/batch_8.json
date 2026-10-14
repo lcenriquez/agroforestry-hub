@@ -1,0 +1,1379 @@
+[
+ {
+  "id": "ZenP1bWMl1puWaQ1S6me",
+  "name": "Spondias purpurea (Ciruela, jocote)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "stratumIds": [
+    "2",
+    "3"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "1",
+    "3"
+   ],
+   "ecologicalFunctionIds": [
+    "0"
+   ],
+   "commonNames": [
+    "Ciruela tropical, Jocote",
+    "Ciruela mexicana",
+    "Ciruelo"
+   ],
+   "details.humidityPreference": "L",
+   "details.lifeCycle": "Secundarias 2",
+   "details.lifeCycleDuration": "Hasta 80 años"
+  },
+  "corrections": [
+   {
+    "field": "stratumIds",
+    "old": [
+     "4"
+    ],
+    "new": [
+     "2",
+     "3"
+    ],
+    "reason": "Árbol pequeño de 3–12 m (registro indica 5–10 m); Emergente es incongruente con su altura; se asigna Medio/Alto como guayaba/mango en el dataset",
+    "source": "https://edis.ifas.ufl.edu/publication/MG059"
+   }
+  ],
+  "sources": [
+   "https://edis.ifas.ufl.edu/publication/MG059",
+   "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:71494-1/general-information",
+   "https://toptropicals.com/catalog/uid/Spondias_purpurea.htm"
+  ],
+  "notes": "Árbol caducifolio de 3–12 m, tolerante a sequía, muy usado como cerco vivo (se propaga por estacas grandes, tolera poda → biomasa). Usos: fruto comestible, forraje y medicinal (POWO). Estrato corregido de Emergente a Medio/Alto. También crece en selva baja caducifolia (zona sin id)."
+ },
+ {
+  "id": "nwere6RXNcU34nUOemS2",
+  "name": "Stenocereus queretaroensis (Pitaya)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "height": {
+    "min": 5,
+    "max": 7
+   },
+   "additionalFunctionIds": [
+    "0"
+   ],
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "details.lightPreference": "H",
+   "details.humidityPreference": "L",
+   "details.isFrostResistant": false,
+   "details.shape": "árbol",
+   "details.heightRangeDescription": "de 5 a 10 mts"
+  },
+  "corrections": [],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Stenocereus_queretaroensis",
+   "https://www.rarepalmseeds.com/stenocereus-queretaroensis-rojo",
+   "https://revfitotecnia.mx/index.php/RFM/article/download/1228/1185"
+  ],
+  "notes": "Cactácea columnar arborescente de 5–7 m, endémica del occidente de México (Jalisco, Michoacán, Querétaro); se cultiva por su fruto (pitaya). Flores nocturnas polinizadas por murciélagos y visitadas por abejas. Hábitat: selva baja caducifolia/semiárido (zonas sin id), por eso no se asignó zona ecológica."
+ },
+ {
+  "id": "MhZS2lQTNPH4Li2C93c2",
+  "name": "Sterculia apetala (Palo boya, castaño)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "taxonomy.family": "Malvaceae",
+   "height": {
+    "min": 20,
+    "max": 40
+   },
+   "ecologicalZoneIds": [
+    "1"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "1",
+    "3"
+   ],
+   "details.lightPreference": "H",
+   "details.humidityPreference": "M",
+   "details.isFrostResistant": false,
+   "details.shape": "árbol",
+   "details.heightRangeDescription": "más de 10 mts"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.family",
+    "old": "Sterculioideae",
+    "new": "Malvaceae",
+    "reason": "Sterculioideae es subfamilia; la familia APG IV es Malvaceae",
+    "source": "https://powo.science.kew.org/taxon/245150-2"
+   }
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Sterculia_apetala",
+   "https://powo.science.kew.org/taxon/245150-2",
+   "https://grasasyaceites.revistas.csic.es/index.php/grasasyaceites/article/view/1504",
+   "https://www.uv.mx/prensa/?p=5795"
+  ],
+  "notes": "Árbol de 20–40 m con contrafuertes, nativo de selvas de Veracruz, Tabasco y Chiapas. Semillas consumidas tostadas/hervidas y como alimento animal en el sureste de México (contienen ácidos ciclopropenoides, consumo moderado). POWO reporta usos medicinales. No se agregó 'castaño' como nombre común por falta de fuente sólida."
+ },
+ {
+  "id": "EsYPJrbXXB28TaQ7png0",
+  "name": "Swietenia macrophylla (Caoba)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "height": {
+    "min": 30,
+    "max": 40
+   },
+   "additionalFunctionIds": [
+    "2",
+    "3"
+   ],
+   "details.lightPreference": "H",
+   "details.humidityPreference": "M",
+   "details.isFrostResistant": false,
+   "details.shape": "árbol",
+   "details.heightRangeDescription": "más de 10 mts"
+  },
+  "corrections": [],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Swietenia_macrophylla",
+   "https://www.redalyc.org/journal/617/61763451015/61763451015.pdf"
+  ],
+  "notes": "Árbol maderable de 30–40 m (hasta 60 m) nativo de la selva húmeda del sureste de México; madera preciosa; semillas y corteza con usos medicinales tradicionales. Heliófita, no tolera heladas. Nota: details.edibleUses.fruit=true existente parece erróneo (fruto no comestible), revisar."
+ },
+ {
+  "id": "PORpiq5zb2B19BCmDY95",
+  "name": "Syagrus romanzoffiana (Palma pindó)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "height": {
+    "min": 10,
+    "max": 15
+   },
+   "crownWidth": {
+    "min": 6,
+    "max": 7.5
+   },
+   "additionalFunctionIds": [
+    "0",
+    "1"
+   ],
+   "details.lightPreference": "H",
+   "details.humidityPreference": "M",
+   "details.isFrostResistant": true,
+   "details.shape": "palma",
+   "details.heightRangeDescription": "más de 10 mts"
+  },
+  "corrections": [],
+  "sources": [
+   "https://dimensions.com/element/queen-palm-syagrus-romanzoffiana",
+   "https://www.echocommunity.org/resources/8192ec31-60ea-451b-a682-4cbad72b478e",
+   "https://leafland.co.nz/trees/syagrus-romanzoffiana"
+  ],
+  "notes": "Palma de 10–15 m con copa de 6–7.5 m, nativa del sur de Brasil/Argentina; fruto y palmito comestibles, hojas y frutos como forraje. Tolera heladas ligeras (aprox. -5 °C). Muy cultivada como ornamental en México."
+ },
+ {
+  "id": "V48ZgDmdc1d9BFE4Lgcq",
+  "name": "Symphytum officinale (Consuelda)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "taxonomy.family": "Boraginaceae",
+   "height": {
+    "min": 0.6,
+    "max": 1.2
+   },
+   "stratumIds": [
+    "1"
+   ],
+   "ecologicalFunctionIds": [
+    "0",
+    "2",
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "1",
+    "3"
+   ],
+   "commonNames": [
+    "Consuelda",
+    "Consuelda mayor"
+   ]
+  },
+  "corrections": [
+   {
+    "field": "height",
+    "old": {
+     "min": 0.45,
+     "max": 0.45
+    },
+    "new": {
+     "min": 0.6,
+     "max": 1.2
+    },
+    "reason": "La consuelda alcanza normalmente 0.6–1.2 m en floración",
+    "source": "https://naturblick.museumfuernaturkunde.berlin/species/portrait/468?lang=en"
+   }
+  ],
+  "sources": [
+   "https://naturblick.museumfuernaturkunde.berlin/species/portrait/468?lang=en",
+   "https://www.promessedefleurs.ie/vegetable-gardens/vegetable-seeds/vegetable-seeds-from-a-to-z/symphytum-officinale.html",
+   "https://bernheim.org/news/featured-edible-garden-plant-comfrey/"
+  ],
+  "notes": "Hierba perenne de 0.6–1.2 m; acumuladora dinámica clásica (raíz profunda, K/Ca; nota: el respaldo científico es debatido), produce mucha biomasa con cortes repetidos, muy visitada por abejas y abejorros. Forraje y uso medicinal tradicional (uso interno no recomendado por alcaloides pirrolizidínicos)."
+ },
+ {
+  "id": "jNI1faZFQcn4kT2VyYMb",
+  "name": "Syzygium cumini (Jambolán)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "height": {
+    "min": 10,
+    "max": 30
+   },
+   "ecologicalZoneIds": [
+    "1"
+   ],
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "1",
+    "2",
+    "3"
+   ],
+   "commonNames": [
+    "Jambul, jambolao, jamelao",
+    "Jambolán"
+   ],
+   "details.lightPreference": "H",
+   "details.humidityPreference": "M",
+   "details.isFrostResistant": false,
+   "details.shape": "árbol",
+   "details.heightRangeDescription": "más de 10 mts",
+   "details.lifeCycle": "Secundarias 3",
+   "details.lifeCycleDuration": "Hasta 80 años"
+  },
+  "corrections": [],
+  "sources": [
+   "https://apps.worldagroforestry.org/treedb/AFTPDFS/Syzygium_cuminii.PDF",
+   "https://apps.worldagroforestry.org/usefultrees/pdflib/Syzygium_cuminii_TZA.pdf",
+   "https://apps.worldagroforestry.org/usefultrees/pdflib/Syzygium_cumini_KEN.pdf"
+  ],
+  "notes": "Árbol de 10–30 m (típico 15–18 m), copa densa. Fruto comestible, hojas forrajeras, madera para herramientas/leña, semillas y corteza medicinales; flores melíferas. Ciclo de vida igual al registro duplicado 'Eugenia jambolana' (sinónimo de esta especie) del dataset."
+ },
+ {
+  "id": "kFplePdDzb4VLUmDAwop",
+  "name": "Syzygium jambos (Pomarrosa)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "height": {
+    "min": 7.5,
+    "max": 12
+   },
+   "ecologicalZoneIds": [
+    "1"
+   ],
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "2",
+    "3"
+   ],
+   "details.lightPreference": "H",
+   "details.humidityPreference": "H",
+   "details.isFrostResistant": false,
+   "details.shape": "árbol",
+   "details.heightRangeDescription": "de 5 a 10 mts"
+  },
+  "corrections": [],
+  "sources": [
+   "https://apps.worldagroforestry.org/treedb2/speciesprofile.php?Spid=1744",
+   "https://iucngisd.org/gisd/pdf.php?sc=920",
+   "https://greencoverinitiative.com/trees/syzygium-jambos-rose-apple/"
+  ],
+  "notes": "Árbol de 7.5–12 m con copa densa a menudo más ancha que alta; fruto comestible, uso medicinal tradicional, madera para leña/construcción. Flores muy visitadas por polinizadores. Especie invasora en zonas húmedas (precaución)."
+ },
+ {
+  "id": "GwNJyKOKOcM1JYpnZzbb",
+  "name": "Syzygium malaccense (Manzana malaya)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "height": {
+    "min": 12,
+    "max": 18
+   },
+   "ecologicalZoneIds": [
+    "1"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "3"
+   ],
+   "details.lightPreference": "H",
+   "details.humidityPreference": "H",
+   "details.isFrostResistant": false,
+   "details.shape": "árbol",
+   "details.heightRangeDescription": "más de 10 mts",
+   "details.lifeCycle": "Secundarias 3",
+   "details.lifeCycleDuration": "Hasta 80 años"
+  },
+  "corrections": [],
+  "sources": [
+   "https://growables.org/information/TropicalFruit/MalayAppleJuliaMorton.htm",
+   "https://en.wikipedia.org/wiki/Syzygium_malaccense",
+   "https://nparks.gov.sg/florafaunaweb/flora/3/1/3163"
+  ],
+  "notes": "Árbol de 12–18 m de tierras bajas húmedas (≥1500 mm), no tolera heladas; fruto comestible y usos medicinales tradicionales; usado como sombra en cafetales. Posible DUPLICADO del registro 'Zyzxgium malaccense' (n7qlscoWfXt6EDhW9s5r)."
+ },
+ {
+  "id": "m3Cwv7S4RmA23jky27sI",
+  "name": "Tagetes lucida (Tarete)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "height": {
+    "min": 0.3,
+    "max": 0.9
+   },
+   "stratumIds": [
+    "1"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "3"
+   ],
+   "commonNames": [
+    "Tarete",
+    "Pericón",
+    "Hierba de Santa María"
+   ],
+   "details.lightPreference": "H",
+   "details.humidityPreference": "M",
+   "details.shape": "hierba"
+  },
+  "corrections": [],
+  "sources": [
+   "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:252121-1/general-information",
+   "https://tramil.net/es/plant/tagetes-lucida",
+   "https://www.scielo.org.mx/pdf/bs/v90n3/v90n3a1.pdf"
+  ],
+  "notes": "Hierba perenne aromática de 30–95 cm, nativa de México a Honduras (800–2700 msnm). Condimento (sustituto de estragón, té) y medicinal (dolor de estómago, diarrea, cólicos). DUPLICADO del registro 'Pericon' (qs9IM46xARE2GOol5Gli), misma especie."
+ },
+ {
+  "id": "qs9IM46xARE2GOol5Gli",
+  "name": "Tagetes lucida (Pericón)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "height": {
+    "min": 0.3,
+    "max": 0.9
+   },
+   "stratumIds": [
+    "1"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "3"
+   ],
+   "commonNames": [
+    "Pericon",
+    "Pericón",
+    "Hierba de Santa María",
+    "Tarete"
+   ],
+   "details.lightPreference": "H",
+   "details.humidityPreference": "M",
+   "details.shape": "hierba"
+  },
+  "corrections": [],
+  "sources": [
+   "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:252121-1/general-information",
+   "https://tramil.net/es/plant/tagetes-lucida",
+   "https://www.scielo.org.mx/pdf/bs/v90n3/v90n3a1.pdf"
+  ],
+  "notes": "Hierba perenne aromática de 30–95 cm, nativa de México a Honduras. Condimento y té; uso medicinal (digestivo, cólicos). DUPLICADO del registro 'Tarete' (m3Cwv7S4RmA23jky27sI); se sugiere fusionar."
+ },
+ {
+  "id": "hbh6FTOBJHTKEM4LaOyC",
+  "name": "Tagetes nelsonii (Chilchahua)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "height": {
+    "min": 0.5,
+    "max": 2
+   },
+   "stratumIds": [
+    "1"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "3"
+   ],
+   "details.lightPreference": "H",
+   "details.shape": "hierba"
+  },
+  "corrections": [],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Tagetes_nelsonii",
+   "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:249097-2",
+   "https://polibotanica.mx/index.php/polibotanica/article/view/917"
+  ],
+  "notes": "Hierba aromática/subarbusto de 0.5–2 m, nativa de Chiapas a Guatemala. Hojas y flores comestibles (condimento de aroma cítrico) y uso medicinal en Chiapas. Zona ecológica no asignada por falta de dato claro (probablemente bosque de pino-encino de Chiapas)."
+ },
+ {
+  "id": "RHdsqs5QLDuSGnpOeN5C",
+  "name": "Talisia esculenta (Pitomba)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "height": {
+    "min": 6,
+    "max": 12
+   },
+   "additionalFunctionIds": [
+    "0"
+   ],
+   "details.lightPreference": "H",
+   "details.humidityPreference": "M",
+   "details.isFrostResistant": false,
+   "details.shape": "árbol",
+   "details.heightRangeDescription": "de 5 a 10 mts"
+  },
+  "corrections": [],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Talisia_esculenta",
+   "https://sweetgum.nybg.org/science/vh/monographs-details/?irn=18735",
+   "https://delamazonas.com/en/flora1/fruit/pitomba-talisia-esculenta/"
+  ],
+  "notes": "Árbol frutal sudamericano de 6–12 m (hasta 20 m silvestre); fruto comestible. Poco cultivado en México, por eso no se asignó zona."
+ },
+ {
+  "id": "AuXzHfUvUesu3vk8IjRS",
+  "name": "Tamarindus indica (Tamarindo)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "height": {
+    "min": 12,
+    "max": 20
+   },
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "1",
+    "2",
+    "3"
+   ],
+   "details.humidityPreference": "L",
+   "details.lifeCycleDuration": "Mayor a 80 años"
+  },
+  "corrections": [],
+  "sources": [
+   "https://apps.worldagroforestry.org/treedb/AFTPDFS/Tamarindus_indica.PDF",
+   "https://apps.worldagroforestry.org/usefultrees/pdflib/Tamarindus_indica_KEN.pdf",
+   "https://edis.ifas.ufl.edu/publication/ST618/pdf"
+  ],
+  "notes": "Árbol longevo de 12–20 m (hasta 30 m), muy resistente a sequía. Fruto comestible, hojas y frutos forrajeros, madera dura, usos medicinales; flora apícola. No fija nitrógeno (Detarioideae sin nodulación), por eso no se asignó función 1. También en selva baja caducifolia (sin id)."
+ },
+ {
+  "id": "QPTgVpJinryyx3okprdP",
+  "name": "Taraxacum officinale (Diente de león)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "height": {
+    "min": 0.05,
+    "max": 0.4
+   },
+   "crownWidth": {
+    "min": 0.15,
+    "max": 0.3
+   },
+   "stratumIds": [
+    "0"
+   ],
+   "ecologicalFunctionIds": [
+    "2",
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "3"
+   ],
+   "commonNames": [
+    "Diente de leon",
+    "Diente de león"
+   ],
+   "details.lightPreference": "H",
+   "details.humidityPreference": "M",
+   "details.isFrostResistant": true,
+   "details.shape": "hierba"
+  },
+  "corrections": [],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Taraxacum_officinale",
+   "https://plants.ces.ncsu.edu/plants/taraxacum-officinale/common-name/lions-tooth"
+  ],
+  "notes": "Hierba perenne en roseta de 5–40 cm; raíz pivotante profunda (≥1 m) que rompe suelos compactados (acumuladora en permacultura); néctar y polen tempranos para abejas. Hojas, flores y raíz comestibles y medicinales. Copa (roseta) estimada 15–30 cm, confianza baja en ese dato. Nota: edibleUses.fruit existente no aplica (se comen hojas/flores)."
+ },
+ {
+  "id": "nV2x1LKO8X5Ojzg3VTv2",
+  "name": "Tectona grandis (Teca)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "taxonomy.family": "Lamiaceae",
+   "height": {
+    "min": 25,
+    "max": 40
+   },
+   "additionalFunctionIds": [
+    "2"
+   ],
+   "details.lightPreference": "H",
+   "details.humidityPreference": "M",
+   "details.isFrostResistant": false,
+   "details.shape": "árbol",
+   "details.heightRangeDescription": "más de 10 mts"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.family",
+    "old": "Verbenaceae",
+    "new": "Lamiaceae",
+    "reason": "En APG IV Tectona pertenece a Lamiaceae (Verbenaceae es la ubicación antigua)",
+    "source": "https://colplanta.org/taxon/urn:lsid:ipni.org:names:864923-1/general-information"
+   }
+  ],
+  "sources": [
+   "https://apps.worldagroforestry.org/treedb2/speciesprofile.php?Spid=1603",
+   "https://www.fao.org/3/x4565e/x4565e03.htm",
+   "https://www.nparks.gov.sg/FloraFaunaWeb/Flora/3/1/3178"
+  ],
+  "notes": "Árbol maderable caducifolio de 25–40 m, muy demandante de luz (75–100% sol), no tolera heladas. Introducido; plantado en el trópico húmedo de México. Nota: details.edibleUses.fruit=true existente parece erróneo (fruto no comestible)."
+ },
+ {
+  "id": "oirXRfY4dDkrG0EPgwNu",
+  "name": "Tephrosia vogelii (Tefrosia)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "taxonomy.family": "Fabaceae",
+   "stratumIds": [
+    "2"
+   ],
+   "ecologicalFunctionIds": [
+    "0",
+    "1",
+    "3"
+   ],
+   "details.humidityPreference": "M",
+   "details.lifeCycle": "Secundarias 1",
+   "details.lifeCycleDuration": "Hasta 2 años"
+  },
+  "corrections": [
+   {
+    "field": "stratumIds",
+    "old": [
+     "3"
+    ],
+    "new": [
+     "2"
+    ],
+    "reason": "Arbusto de 0.5–4 m (registro 2–3 m); Alto es incongruente, Medio coincide con otros arbustos del dataset",
+    "source": "https://apps.worldagroforestry.org/treedb/AFTPDFS/Tephrosia_vogelii.PDF"
+   }
+  ],
+  "sources": [
+   "https://apps.worldagroforestry.org/treedb/AFTPDFS/Tephrosia_vogelii.PDF",
+   "https://echocommunity.org/resources/154b7118-0dc9-4ee5-a55e-c3fe343c3964",
+   "https://research.wur.nl/en/publications/six-month-duration-tephrosia-vogelii-hookf-and-tithonia-diversifo/"
+  ],
+  "notes": "Leguminosa arbustiva fijadora de N, de crecimiento rápido y tolerante a poda: abono verde, barbechos mejorados y setos en curvas de nivel (en Guatemala con café). Hojas tóxicas (piscicida/insecticida), no es forraje. Ciclo corto como Cajanus cajan en el dataset."
+ },
+ {
+  "id": "9XRMOz6qQcBWCKtEvTka",
+  "name": "Tetragonia tetragonioides (Espinaca de Nueva Zelanda)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "taxonomy.family": "Aizoaceae",
+   "stratumIds": [
+    "0"
+   ],
+   "crownWidth": {
+    "min": 0.6,
+    "max": 1
+   },
+   "additionalFunctionIds": [
+    "0"
+   ],
+   "commonNames": [
+    "Espinaca N.Z.",
+    "Espinaca de Nueva Zelanda"
+   ],
+   "details.isFrostResistant": false,
+   "details.lifeCycleDuration": "Varios meses"
+  },
+  "corrections": [
+   {
+    "field": "details.isFrostResistant",
+    "old": true,
+    "new": false,
+    "reason": "Planta sensible a heladas (rebrota desde la base al regresar el calor); como mucho tolera heladas ligeras",
+    "source": "https://www.nzpcn.org.nz/flora_details.asp?ID=325"
+   }
+  ],
+  "sources": [
+   "https://www.nzpcn.org.nz/flora_details.asp?ID=325",
+   "https://edis.ifas.ufl.edu/pdffiles/MV/MV13900.pdf",
+   "https://www.rhs.org.uk/plants/161521/wd/details"
+  ],
+  "notes": "Hierba rastrera suculenta, perenne de vida corta cultivada como anual; extiende 0.6–1 m. Hojas comestibles (cocidas). Tolerante al calor."
+ },
+ {
+  "id": "jzwujLK6ckqSOKIa0Hpi",
+  "name": "Theobroma bicolor (Pataxte)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "height": {
+    "min": 3,
+    "max": 12
+   },
+   "ecologicalZoneIds": [
+    "1"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "2"
+   ],
+   "details.lightPreference": "M",
+   "details.humidityPreference": "H",
+   "details.isFrostResistant": false,
+   "details.shape": "árbol",
+   "details.heightRangeDescription": "de 5 a 10 mts"
+  },
+  "corrections": [],
+  "sources": [
+   "https://nparks.gov.sg/florafaunaweb/flora/7/0/7089",
+   "https://en.wikipedia.org/wiki/Theobroma_bicolor",
+   "https://delamazonas.com/en/flora1/mocambo-theobroma-bicolor-jaguar-tree/"
+  ],
+  "notes": "Árbol de 3–8 m en cultivo (hasta 12 m; 25–30 m en sotobosque). Cultivado intercalado con otros cultivos en Chiapas y Oaxaca; semillas y pulpa comestibles (bebidas como el tejate). Se conserva el valor existente 'Maderable' en additionalFunctionIds aunque no es su uso principal."
+ },
+ {
+  "id": "zz2WG2kUrP3KNHelWg3A",
+  "name": "Theobroma cacao (Cacao)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "taxonomy.family": "Malvaceae",
+   "height": {
+    "min": 3,
+    "max": 8
+   },
+   "additionalFunctionIds": [
+    "0",
+    "3"
+   ],
+   "details.lightPreference": "M",
+   "details.humidityPreference": "H",
+   "details.isFrostResistant": false,
+   "details.shape": "árbol",
+   "details.heightRangeDescription": "de 5 a 10 mts"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.family",
+    "old": "Sterculaceae",
+    "new": "Malvaceae",
+    "reason": "Sterculiaceae (mal escrito) está incluida en Malvaceae en APG IV",
+    "source": "https://en.wikipedia.org/wiki/Theobroma_cacao"
+   }
+  ],
+  "sources": [
+   "https://apps.cals.arizona.edu/arboretum/taxon.aspx?id=1219",
+   "https://britannica.com/topic/Forastero",
+   "https://growables.com/information/TropicalFruit/cocoa.htm"
+  ],
+  "notes": "Árbol de sotobosque tolerante a sombra, 3–8 m en cultivo (hasta 12 m), se cultiva en sistemas agroforestales del trópico húmedo (Tabasco, Chiapas). Semillas alimenticias y usos medicinales tradicionales. Polinizado por mosquitas (Forcipomyia)."
+ },
+ {
+  "id": "XKvOxf8kSGg7r1sG0Z84",
+  "name": "Theobroma grandiflorum (Cacao copuazú) — registro con epíteto mal escrito",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "taxonomy.species": "grandiflorum",
+   "taxonomy.family": "Malvaceae",
+   "height": {
+    "min": 5,
+    "max": 8
+   },
+   "additionalFunctionIds": [
+    "0"
+   ],
+   "commonNames": [
+    "Cacao copuazu",
+    "Copoazú",
+    "Cupuazú"
+   ],
+   "details.lightPreference": "M",
+   "details.humidityPreference": "H",
+   "details.isFrostResistant": false,
+   "details.shape": "árbol",
+   "details.heightRangeDescription": "de 5 a 10 mts"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.species",
+    "old": "grandiflora",
+    "new": "grandiflorum",
+    "reason": "Epíteto correcto es grandiflorum (Theobroma es neutro)",
+    "source": "https://ecocrop.apps.fao.org/ecocrop/srv/en/cropView?id=10394"
+   },
+   {
+    "field": "taxonomy.family",
+    "old": "Sterculaceae",
+    "new": "Malvaceae",
+    "reason": "Sterculiaceae incluida en Malvaceae (APG IV)",
+    "source": "https://ecocrop.apps.fao.org/ecocrop/srv/en/cropView?id=10394"
+   }
+  ],
+  "sources": [
+   "https://growables.org/information/TropicalFruit/CupuassuNegCrops.htm",
+   "https://ecocrop.apps.fao.org/ecocrop/srv/en/cropView?id=10394",
+   "https://www.daleysfruit.com.au/Cupuassu-Theobroma-grandiflorum.htm"
+  ],
+  "notes": "DUPLICADO de 'Theobroma grandiflorum' (RsXrxW5Gm92FGzTOlE4h); se sugiere fusionar. Árbol amazónico de 15–20 m silvestre, menos de 8 m en cultivo; pulpa y semillas comestibles. Semisombra en juventud."
+ },
+ {
+  "id": "RsXrxW5Gm92FGzTOlE4h",
+  "name": "Theobroma grandiflorum (Copoazú)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "height": {
+    "min": 5,
+    "max": 8
+   },
+   "additionalFunctionIds": [
+    "0",
+    "1"
+   ],
+   "details.lightPreference": "M",
+   "details.humidityPreference": "H",
+   "details.isFrostResistant": false,
+   "details.shape": "árbol",
+   "details.heightRangeDescription": "de 5 a 10 mts",
+   "details.lifeCycle": "Primarias",
+   "details.lifeCycleDuration": "Mayor a 80 años"
+  },
+  "corrections": [],
+  "sources": [
+   "https://growables.org/information/TropicalFruit/CupuassuNegCrops.htm",
+   "https://ecocrop.apps.fao.org/ecocrop/srv/en/cropView?id=10394",
+   "https://scielo.br/j/aa/a/xPyjgJ956qKQbDyPP7fx9Ty/abstract/?lang=en"
+  ],
+  "notes": "Árbol de 15–20 m silvestre, <8 m en cultivo, de selva amazónica primaria; pulpa y semillas comestibles (se conserva 'Forraje' existente). Plántulas crecen mejor con 50% de sombra. lifeCycle tomado del registro duplicado XKvOxf8kSGg7r1sG0Z84 para consistencia."
+ },
+ {
+  "id": "IhJpp7yIMMrvJJU03Zwa",
+  "name": "Tilia sp. (Tilo)",
+  "status": "updated",
+  "confidence": "low",
+  "set": {
+   "stratumIds": [
+    "3",
+    "4"
+   ],
+   "height": {
+    "min": 15,
+    "max": 35
+   },
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "2",
+    "3"
+   ],
+   "details.shape": "árbol",
+   "details.heightRangeDescription": "más de 10 mts"
+  },
+  "corrections": [
+   {
+    "field": "details.shape",
+    "old": "arbusto",
+    "new": "árbol",
+    "reason": "Las especies de Tilia son árboles; el tilo mexicano (Tilia mexicana / T. americana var. mexicana) alcanza hasta 35 m",
+    "source": "https://www.uaeh.edu.mx/investigacion/icbi/LI_EcologiaCambGlobal/numa_pavon/TiliaMexicana.pdf"
+   },
+   {
+    "field": "height",
+    "old": {
+     "min": 3,
+     "max": 3
+    },
+    "new": {
+     "min": 15,
+     "max": 35
+    },
+    "reason": "Altura de 3 m incongruente con un árbol del dosel de bosque mesófilo",
+    "source": "https://www.uaeh.edu.mx/investigacion/icbi/LI_EcologiaCambGlobal/numa_pavon/TiliaMexicana.pdf"
+   },
+   {
+    "field": "details.heightRangeDescription",
+    "old": "de 5 a 10 mts",
+    "new": "más de 10 mts",
+    "reason": "Consistente con la altura corregida",
+    "source": "https://www.uaeh.edu.mx/investigacion/icbi/LI_EcologiaCambGlobal/numa_pavon/TiliaMexicana.pdf"
+   }
+  ],
+  "sources": [
+   "https://www.uaeh.edu.mx/investigacion/icbi/LI_EcologiaCambGlobal/numa_pavon/TiliaMexicana.pdf",
+   "https://www.rufford.org/projects/aly_valderrama",
+   "https://era.ujat.mx/index.php/rera/article/download/245/201/804"
+  ],
+  "notes": "Asumiendo el tilo nativo (Tilia mexicana, en peligro, NOM-059): árbol de dosel del bosque mesófilo de hasta 35 m; flores e inflorescencias medicinales (sedante), madera usada; Tilia es melífera. Confianza baja porque la especie no está identificada; crownWidth 0.3 m es claramente erróneo pero no se encontró dato fiable para reemplazarlo. Verificar si en realidad se refiere a otra planta."
+ },
+ {
+  "id": "RAqyaT70pi6n4ndSBBJS",
+  "name": "Thymus vulgaris (Tomillo)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "taxonomy.genus": "Thymus",
+   "taxonomy.family": "Lamiaceae",
+   "stratumIds": [
+    "0",
+    "1"
+   ],
+   "height": {
+    "min": 0.15,
+    "max": 0.4
+   },
+   "crownWidth": {
+    "min": 0.2,
+    "max": 0.4
+   },
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "3"
+   ],
+   "details.humidityPreference": "L"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.genus",
+    "old": "Timus",
+    "new": "Thymus",
+    "reason": "Error ortográfico",
+    "source": "https://en.wikipedia.org/wiki/Thymus_vulgaris"
+   },
+   {
+    "field": "additionalFunctionIds",
+    "old": [
+     "2"
+    ],
+    "new": [
+     "0",
+     "3"
+    ],
+    "reason": "El tomillo es un subarbusto aromático (condimento y medicinal), no maderable",
+    "source": "https://pfaf.org/user/Plant.aspx?LatinName=Thymus+vulgaris"
+   },
+   {
+    "field": "height",
+    "old": {
+     "min": 0.4,
+     "max": 0.4
+    },
+    "new": {
+     "min": 0.15,
+     "max": 0.4
+    },
+    "reason": "Rango típico 15–40 cm",
+    "source": "https://pfaf.org/user/Plant.aspx?LatinName=Thymus+vulgaris"
+   }
+  ],
+  "sources": [
+   "https://pfaf.org/user/Plant.aspx?LatinName=Thymus+vulgaris",
+   "https://en.wikipedia.org/wiki/Thymus_vulgaris"
+  ],
+  "notes": "Subarbusto aromático mediterráneo de 15–40 cm, tolerante a sequía, muy melífero. Condimento y medicinal (antiséptico, respiratorio)."
+ },
+ {
+  "id": "9mv66lks0Ez49fluzGPi",
+  "name": "Tithonia diversifolia (Botón de oro, gigantón)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "stratumIds": [
+    "2"
+   ],
+   "height": {
+    "min": 2,
+    "max": 5
+   },
+   "ecologicalFunctionIds": [
+    "0",
+    "2",
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "1",
+    "3"
+   ],
+   "commonNames": [
+    "Giganton",
+    "Botón de oro"
+   ],
+   "details.humidityPreference": "M",
+   "details.shape": "arbusto",
+   "details.isFrostResistant": false,
+   "details.lifeCycle": "Pioneras"
+  },
+  "corrections": [
+   {
+    "field": "stratumIds",
+    "old": [
+     "3"
+    ],
+    "new": [
+     "2"
+    ],
+    "reason": "Arbusto de 1.2–3(–5) m; Alto es incongruente, Medio coincide con su altura",
+    "source": "https://apps.lucidcentral.org/tropical_forages/pdf/tithonia_diversifolia.pdf"
+   },
+   {
+    "field": "height",
+    "old": {
+     "min": 2,
+     "max": 3
+    },
+    "new": {
+     "min": 2,
+     "max": 5
+    },
+    "reason": "Alcanza 2–3 (–5) m",
+    "source": "https://apps.lucidcentral.org/tropical_forages/pdf/tithonia_diversifolia.pdf"
+   },
+   {
+    "field": "details.shape",
+    "old": "hierba",
+    "new": "arbusto",
+    "reason": "Arbusto semileñoso",
+    "source": "https://apps.worldagroforestry.org/treedb2/AFTPDFS/Tithonia_diversifolia.PDF"
+   },
+   {
+    "field": "details.isFrostResistant",
+    "old": true,
+    "new": false,
+    "reason": "Crecimiento óptimo 15–31 °C; muere en temporadas frías (se cultiva como anual en climas fríos)",
+    "source": "https://apps.lucidcentral.org/tropical_forages/pdf/tithonia_diversifolia.pdf"
+   }
+  ],
+  "sources": [
+   "https://apps.worldagroforestry.org/treedb2/AFTPDFS/Tithonia_diversifolia.PDF",
+   "https://apps.lucidcentral.org/tropical_forages/pdf/tithonia_diversifolia.pdf",
+   "https://apps.worldagroforestry.org/usefultrees/pdflib/Tithonia_diversifolia_KEN.pdf"
+  ],
+  "notes": "Arbusto de rápido crecimiento: abono verde (hojas ~3.5% N, 0.4% P, 3.5% K, acumuladora de P y K), corte cada ~4 meses, forraje proteico para rumiantes, flores melíferas. Puede ser invasora. lifeCycle 'Pioneras' (estimado, confianza media)."
+ },
+ {
+  "id": "c1aA52f9k5gad0hdBMRg",
+  "name": "Toona ciliata (Cedro australiano)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "taxonomy.family": "Meliaceae",
+   "height": {
+    "min": 20,
+    "max": 30
+   },
+   "additionalFunctionIds": [
+    "2"
+   ],
+   "details.lightPreference": "H",
+   "details.humidityPreference": "M",
+   "details.shape": "árbol",
+   "details.heightRangeDescription": "más de 10 mts"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.family",
+    "old": "Lecythidaceae",
+    "new": "Meliaceae",
+    "reason": "Toona pertenece a Meliaceae (familia de la caoba y el cedro)",
+    "source": "https://apps.worldagroforestry.org/treedb/AFTPDFS/Toona_ciliata.PDF"
+   }
+  ],
+  "sources": [
+   "https://apps.worldagroforestry.org/treedb/AFTPDFS/Toona_ciliata.PDF",
+   "https://uses.plantnet-project.org/en/Toona_ciliata_(PROTA)",
+   "https://www.stuartxchange.org/Danupra"
+  ],
+  "notes": "Árbol caducifolio de rápido crecimiento, 20–30 m (excepcionalmente 50–60 m), copa amplia; madera de alta calidad (330–600 kg/m³). Introducido en plantaciones en México; zona ecológica no asignada por falta de dato específico."
+ },
+ {
+  "id": "l2mwExv6ufIxZPdVGhce",
+  "name": "Trema micranthum (Ixpepe, capulín)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "taxonomy.species": "micranthum",
+   "taxonomy.family": "Cannabaceae",
+   "taxonomy.synonyms": [
+    "Trema micrantha"
+   ],
+   "height": {
+    "min": 10,
+    "max": 20
+   },
+   "ecologicalZoneIds": [
+    "1",
+    "3"
+   ],
+   "ecologicalFunctionIds": [
+    "0",
+    "4"
+   ],
+   "commonNames": [
+    "Ixpepe",
+    "Capulín"
+   ],
+   "details.lightPreference": "H",
+   "details.shape": "árbol",
+   "details.heightRangeDescription": "más de 10 mts",
+   "details.lifeCycle": "Pioneras",
+   "details.lifeCycleDuration": "Hasta 15 años"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.family",
+    "old": "Canabaceae",
+    "new": "Cannabaceae",
+    "reason": "Error ortográfico",
+    "source": "https://en.wikipedia.org/wiki/Trema_micranthum"
+   },
+   {
+    "field": "taxonomy.species",
+    "old": "Micrantha",
+    "new": "micranthum",
+    "reason": "Epíteto en minúscula; nombre aceptado actual Trema micranthum (L.) Blume (Trema es neutro); 'micrantha' queda como sinónimo ortográfico",
+    "source": "https://en.wikipedia.org/wiki/Trema_micranthum"
+   }
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Trema_micranthum",
+   "https://sweetgum.nybg.org/science/vh/monographs-details/?irn=29327",
+   "https://flora.ipe.org.br/sp/143?pdf=1",
+   "https://scielo.br/j/cflo/a/hzPytGqnrcQGwKB4vHnmgvr/?lang=en"
+  ],
+  "notes": "Árbol pionero de crecimiento muy rápido (hasta 14 m en 2 años; 10–20 m), de vida corta, usado en restauración; flores visitadas por abejas, frutos atraen aves. Corteza usada por otomíes para papel amate (sin categoría de uso). Se agregó selva húmeda por su amplia distribución en el trópico mexicano. Nota: el estrato Emergente existente se mantuvo (como pionera puede dominar temporalmente), revisar si se prefiere Alto."
+ },
+ {
+  "id": "QumMD4OqlKuQCM8h7XyT",
+  "name": "Trichanthera gigantea (Nacedero)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "taxonomy.family": "Acanthaceae",
+   "height": {
+    "min": 3,
+    "max": 6
+   },
+   "ecologicalFunctionIds": [
+    "0",
+    "3"
+   ],
+   "additionalFunctionIds": [
+    "1"
+   ],
+   "details.shape": "arbusto",
+   "details.heightRangeDescription": "hasta 5 mts",
+   "details.lightPreference": "H",
+   "details.humidityPreference": "H"
+  },
+  "corrections": [
+   {
+    "field": "height",
+    "old": {
+     "min": 2,
+     "max": 2
+    },
+    "new": {
+     "min": 3,
+     "max": 6
+    },
+    "reason": "Arbusto/árbol pequeño de generalmente ~5 m (puede llegar a 12–15 m); 2 m solo corresponde a manejo con cortes",
+    "source": "https://www.feedipedia.org/Node/7270"
+   },
+   {
+    "field": "details.shape",
+    "old": "hierba",
+    "new": "arbusto",
+    "reason": "Especie leñosa arbustiva/arbórea",
+    "source": "https://www.feedipedia.org/Node/7270"
+   },
+   {
+    "field": "details.heightRangeDescription",
+    "old": "hasta 2 mts",
+    "new": "hasta 5 mts",
+    "reason": "Consistente con la altura corregida",
+    "source": "https://www.feedipedia.org/Node/7270"
+   }
+  ],
+  "sources": [
+   "https://www.feedipedia.org/Node/7270",
+   "https://www.agriculture.gov.bz/wp-content/uploads/2021/03/Nacedero-BROCHURE.pdf",
+   "https://en.wikipedia.org/wiki/Trichanthera_gigantea",
+   "https://lrrd.org/lrrd3/2/cipav1.htm"
+  ],
+  "notes": "Arbusto forrajero multipropósito (12–22% proteína en MS) para cerdos, conejos y rumiantes en corte y acarreo; rebrota tras cortes frecuentes (biomasa). Tradicionalmente plantado para proteger nacimientos de agua y cauces (control de erosión). Sensible al frío. Nota: details.edibleUses.rootsAndTubers existente parece erróneo."
+ },
+ {
+  "id": "duGoh7diRnU0lFprSWeF",
+  "name": "Trifolium pratense (Trébol rojo)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "height": {
+    "min": 0.3,
+    "max": 0.6
+   },
+   "stratumIds": [
+    "0"
+   ],
+   "ecologicalFunctionIds": [
+    "1",
+    "3",
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "1",
+    "3"
+   ],
+   "details.lightPreference": "H",
+   "details.lifeCycle": "Pioneras"
+  },
+  "corrections": [],
+  "sources": [
+   "https://www.rhs.org.uk/plants/48388/trifolium-pratense/details",
+   "https://plants.ces.ncsu.edu/plants/trifolium-pratense",
+   "https://temperate.theferns.info/plant/Trifolium+pratense",
+   "https://bookstore.ksre.ksu.edu/download/red-clover_MF2625"
+  ],
+  "notes": "Leguminosa perenne de vida corta, 30–60 cm; fija nitrógeno, cultivo de cobertura/abono verde y forraje (pastoreo, heno); muy visitada por abejas; uso medicinal tradicional de las flores (tos, bronquitis). Nota: details.edibleUses.rootsAndTubers existente parece erróneo (se usan flores/hojas)."
+ },
+ {
+  "id": "B2htBSjJcV0cdM0PqvvM",
+  "name": "Trifolium repens (Trébol blanco)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "height": {
+    "min": 0.07,
+    "max": 0.3
+   },
+   "crownWidth": {
+    "min": 0.3,
+    "max": 0.3
+   },
+   "stratumIds": [
+    "0"
+   ],
+   "ecologicalFunctionIds": [
+    "1",
+    "3",
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "1"
+   ]
+  },
+  "corrections": [
+   {
+    "field": "height",
+    "old": {
+     "min": 10,
+     "max": 10
+    },
+    "new": {
+     "min": 0.07,
+     "max": 0.3
+    },
+    "reason": "Hierba rastrera estolonífera de 7–30 cm; 10 m es imposible (probablemente eran cm)",
+    "source": "https://extension.umn.edu/weeds/dutch-white-clover"
+   }
+  ],
+  "sources": [
+   "https://extension.umn.edu/weeds/dutch-white-clover",
+   "https://plants.ces.ncsu.edu/plants/trifolium-repens",
+   "https://illinoiswildflowers.info/weeds/plants/white_clover.htm",
+   "https://www.fs.usda.gov/database/feis/plants/forb/trirep/all.html"
+  ],
+  "notes": "Trébol rastrero con estolones que enraízan en los nudos, forma tapetes (~30 cm); fija nitrógeno; usado como mulch vivo/cobertura que estabiliza el suelo; muy visitado por abejas; forraje de alta palatabilidad (riesgo de timpanismo)."
+ },
+ {
+  "id": "vx1ziVdUrokx3Eg7yy6o",
+  "name": "Tropaeolum majus (Mastuerzo)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "taxonomy.family": "Tropaeolaceae",
+   "stratumIds": [
+    "0"
+   ],
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "3"
+   ],
+   "commonNames": [
+    "Mastuerzo",
+    "Capuchina"
+   ],
+   "details.isFrostResistant": false,
+   "details.lifeCycle": "Pioneras",
+   "details.lifeCycleDuration": "Varios meses"
+  },
+  "corrections": [
+   {
+    "field": "details.isFrostResistant",
+    "old": true,
+    "new": false,
+    "reason": "Planta sensible a heladas, perenne tierna cultivada como anual",
+    "source": "https://growables.org/informationVeg/NasturtiumGarden.htm"
+   }
+  ],
+  "sources": [
+   "https://www.rhs.org.uk/plants/85362/wd/details",
+   "https://plants.ces.ncsu.edu/plants/all/tropaeolum-majus/",
+   "https://growables.org/informationVeg/NasturtiumGarden.htm",
+   "https://shop.mahoneysgarden.com/?p=68007"
+  ],
+  "notes": "Anual (perenne tierna) rastrera/trepadora; variedades enanas ~30–60 cm, las trepadoras alcanzan 1.5–2.5 m. Hojas, flores, botones y semillas comestibles (sabor picante); atrae polinizadores y mariposas; tolera sequía; uso medicinal mencionado. Sensible a heladas."
+ },
+ {
+  "id": "YipCXuZCppQJGHk1lcwl",
+  "name": "Uncaria tomentosa (Uña de gato)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "taxonomy.genus": "Uncaria",
+   "taxonomy.family": "Rubiaceae",
+   "height": {
+    "min": 19,
+    "max": 30
+   },
+   "additionalFunctionIds": [
+    "3"
+   ],
+   "details.shape": "guía",
+   "details.heightRangeDescription": "enredaderas y trepadoras"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.genus",
+    "old": "Uncari",
+    "new": "Uncaria",
+    "reason": "Error tipográfico",
+    "source": "https://wikipedia2007.classicistranieri.com/en/u/n/c/Uncaria_tomentosa.html"
+   },
+   {
+    "field": "taxonomy.family",
+    "old": "Rubiacea",
+    "new": "Rubiaceae",
+    "reason": "Error tipográfico",
+    "source": "https://wikipedia2007.classicistranieri.com/en/u/n/c/Uncaria_tomentosa.html"
+   }
+  ],
+  "sources": [
+   "https://pharmacologyonline.silae.it/files/newsletter/2008/vol2/22.Potawale.pdf",
+   "https://wikipedia2007.classicistranieri.com/en/u/n/c/Uncaria_tomentosa.html",
+   "https://revistafitos.far.fiocruz.br/index.php/revista-fitos/article/download/40/pdf_32/231"
+  ],
+  "notes": "Liana leñosa trepadora con espinas ganchudas, de 19–30 m de longitud, de bosques tropicales de Centro y Sudamérica (prefiere bosque alto y soleado). Corteza de uso medicinal tradicional (antiinflamatorio, gastrointestinal); contraindicada en embarazo. Nota: details.edibleUses.fruit existente parece erróneo; el estrato podría ser 2–3 al trepar al dosel."
+ },
+ {
+  "id": "N2fpTxFnoR9zQrru2ERh",
+  "name": "Urtica dioica (Ortiga)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "taxonomy.family": "Urticaceae",
+   "height": {
+    "min": 0.6,
+    "max": 1.8
+   },
+   "stratumIds": [
+    "1"
+   ],
+   "ecologicalFunctionIds": [
+    "2"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "3"
+   ]
+  },
+  "corrections": [
+   {
+    "field": "height",
+    "old": {
+     "min": 0.6,
+     "max": 0.6
+    },
+    "new": {
+     "min": 0.6,
+     "max": 1.8
+    },
+    "reason": "Altura madura típica 0.9–1.8 m (3–6 pies)",
+    "source": "https://newearthnursery.com/products/stinging-nettle-urtica-dioica-l"
+   },
+   {
+    "field": "stratumIds",
+    "old": [
+     "2"
+    ],
+    "new": [
+     "1"
+    ],
+    "reason": "Hierba de hasta ~2 m, corresponde a estrato Bajo según la convención del catálogo",
+    "source": "https://newearthnursery.com/products/stinging-nettle-urtica-dioica-l"
+   }
+  ],
+  "sources": [
+   "https://newearthnursery.com/products/stinging-nettle-urtica-dioica-l",
+   "https://seedsandplants.co.za/online-store/medicinal-plant-seeds/stinging-nettle-seeds/",
+   "https://ejfa.me/index.php/journal/article/view/971",
+   "https://www.permaculturinginportugal.net/weeds-what-weeds/"
+  ],
+  "notes": "Hierba perenne; acumuladora dinámica de hierro y nitrógeno (purín de ortiga como fertilizante), exigente en N. Hojas jóvenes comestibles (sopas, té), rica en hierro y potasio; usos medicinales tradicionales."
+ }
+]

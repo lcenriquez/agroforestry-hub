@@ -1,0 +1,1149 @@
+[
+ {
+  "id": "EDDIoHu35EpWPvrIF3Rt",
+  "name": "Capsicum chinense (Chile habanero)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "taxonomy.genus": "Capsicum",
+   "taxonomy.species": "chinense",
+   "taxonomy.family": "Solanaceae",
+   "height": {
+    "min": 0.4,
+    "max": 1.5
+   },
+   "crownWidth": {
+    "min": 0.5,
+    "max": 1
+   },
+   "ecologicalZoneIds": [
+    "1"
+   ],
+   "additionalFunctionIds": [
+    "0"
+   ],
+   "details.lightPreference": "H",
+   "details.humidityPreference": "M",
+   "details.isFrostResistant": false,
+   "details.shape": "hierba",
+   "details.heightRangeDescription": "hasta 2 mts"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy",
+    "old": "(vacío)",
+    "new": "Capsicum chinense",
+    "reason": "Taxonomía vacía; 'chile habanero' corresponde inequívocamente a Capsicum chinense",
+    "source": "https://www.cicy.mx/Documentos/CICY/Sitios/Biodiversidad/pdfs/Cap7/04%20Chiles%20cultivados.pdf"
+   }
+  ],
+  "sources": [
+   "https://www.cicy.mx/Documentos/CICY/Sitios/Biodiversidad/pdfs/Cap7/04%20Chiles%20cultivados.pdf",
+   "https://www.cicy.mx/Documentos/CICY/sitios/Habanero/2021_09-Ficha-Tecnica-Chile-Hab_Kisin.pdf"
+  ],
+  "notes": "Identificado como Capsicum chinense. CICY: 0.4–1.0 m a cielo abierto, hasta >1.5 m en agricultura protegida; ~80% de la producción nacional en la península de Yucatán (selva). Es semiperenne; se dejó 'Varios meses' como estaba. Se conserva el estrato existente (relativo al consorcio)."
+ },
+ {
+  "id": "JK8YycpLWDQQPSpXELxV",
+  "name": "Lactuca sativa (Lechuga)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "taxonomy.genus": "Lactuca",
+   "taxonomy.species": "sativa",
+   "taxonomy.family": "Asteraceae",
+   "height": {
+    "min": 0.15,
+    "max": 0.3
+   },
+   "crownWidth": {
+    "min": 0.2,
+    "max": 0.35
+   },
+   "ecologicalZoneIds": [
+    "3",
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0"
+   ],
+   "details.lightPreference": "H",
+   "details.humidityPreference": "M",
+   "details.isFrostResistant": true,
+   "details.shape": "hierba",
+   "details.heightRangeDescription": "hasta 2 mts"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy",
+    "old": "(vacío)",
+    "new": "Lactuca sativa",
+    "reason": "Taxonomía vacía; 'lechuga' cultivada corresponde a Lactuca sativa",
+    "source": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:244587-1"
+   }
+  ],
+  "sources": [
+   "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:244587-1",
+   "https://pfaf.org/user/Plant.aspx?LatinName=Lactuca+sativa"
+  ],
+  "notes": "Identificada como Lactuca sativa. Hortaliza de clima fresco (zonas templadas/altas), tolera heladas ligeras; altura en estado vegetativo. OJO: edibleUses marca 'fruit' pero se consumen las hojas (no se modificó por estar fuera de los campos del spec)."
+ },
+ {
+  "id": "OPGGtdm2RJGOj7qiDCOt",
+  "name": "Salvia hispanica (Chía)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "taxonomy.genus": "Salvia",
+   "taxonomy.species": "hispanica",
+   "taxonomy.family": "Lamiaceae",
+   "height": {
+    "min": 1,
+    "max": 2
+   },
+   "crownWidth": {
+    "min": 0.4,
+    "max": 0.8
+   },
+   "ecologicalZoneIds": [
+    "4"
+   ],
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0"
+   ],
+   "details.lightPreference": "H",
+   "details.humidityPreference": "M",
+   "details.isFrostResistant": false,
+   "details.shape": "hierba",
+   "details.heightRangeDescription": "hasta 2 mts"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy",
+    "old": "(vacío)",
+    "new": "Salvia hispanica",
+    "reason": "Taxonomía vacía; 'chía' corresponde a Salvia hispanica (ejemplo del spec)",
+    "source": "https://cigras.ucr.ac.cr/phocadownload/Repositorio_mesoamericano/Salvia hispanica L.pdf"
+   }
+  ],
+  "sources": [
+   "https://cigras.ucr.ac.cr/phocadownload/Repositorio_mesoamericano/Salvia hispanica L.pdf",
+   "https://www.redalyc.org/journal/1699/169965183010/169965183010.pdf"
+  ],
+  "notes": "Hierba anual de día corto, 1–2 m; nativa de zonas templadas/montaña del occidente y centro de México (bosque de pino-encino), sensible a heladas. Flores visitadas por abejas (polinizadores documentados)."
+ },
+ {
+  "id": "YkCzdfaDq4YNq5c5CU6b",
+  "name": "Amaranthus hypochondriacus (Amaranto)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "taxonomy.genus": "Amaranthus",
+   "taxonomy.species": "hypochondriacus",
+   "taxonomy.family": "Amaranthaceae",
+   "height": {
+    "min": 1,
+    "max": 2.5
+   },
+   "crownWidth": {
+    "min": 0.3,
+    "max": 0.6
+   },
+   "ecologicalZoneIds": [
+    "4"
+   ],
+   "ecologicalFunctionIds": [
+    "0"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "1"
+   ],
+   "details.lightPreference": "H",
+   "details.humidityPreference": "L",
+   "details.isFrostResistant": false,
+   "details.shape": "hierba",
+   "details.lifeCycle": "Pioneras",
+   "details.lifeCycleDuration": "Varios meses",
+   "details.heightRangeDescription": "hasta 2 mts"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy",
+    "old": "(vacío)",
+    "new": "Amaranthus hypochondriacus",
+    "reason": "Taxonomía vacía; el amaranto de grano de las zonas productoras de México (Puebla, Tlaxcala, CDMX) es principalmente A. hypochondriacus (también se cultiva A. cruentus)",
+    "source": "https://www.ecured.cu/Amaranthus_hypochondriacus"
+   }
+  ],
+  "sources": [
+   "https://www.ecured.cu/Amaranthus_hypochondriacus",
+   "https://www.redalyc.org/pdf/610/61009911.pdf",
+   "https://revistafitotecniamexicana.org/documentos/27-1 Especial 1/11r.pdf"
+  ],
+  "notes": "Se asignó A. hypochondriacus (principal amaranto de grano en México); confirmar si se trata de A. cruentus. Planta anual de hasta ~3 m, tolerante a sequía, gran producción de biomasa; grano y hojas comestibles, rastrojo usado como forraje. Hay un registro separado 'Amaranthus sp. (Quelites)'."
+ },
+ {
+  "id": "0RqFU8Sop8xcBm9YII4e",
+  "name": "Campomanesia xanthocarpa (Guabiroba)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "taxonomy.genus": "Campomanesia",
+   "taxonomy.species": "xanthocarpa",
+   "taxonomy.family": "Myrtaceae",
+   "commonNames": [
+    "guabioroba",
+    "guabiroba",
+    "guaviroba"
+   ],
+   "height": {
+    "min": 7,
+    "max": 15
+   },
+   "crownWidth": {
+    "min": 7,
+    "max": 10
+   },
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "2",
+    "3"
+   ],
+   "details.lightPreference": "H",
+   "details.humidityPreference": "M",
+   "details.isFrostResistant": true,
+   "details.shape": "árbol",
+   "details.heightRangeDescription": "más de 10 mts"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy",
+    "old": "- -",
+    "new": "Campomanesia xanthocarpa",
+    "reason": "Taxonomía faltante; 'guabiroba/guabiroba' es el nombre común brasileño de Campomanesia xanthocarpa (el registro forma parte del grupo de especies brasileñas del catálogo)",
+    "source": "https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/1140787/1/Especies-Arboreas-Brasileiras-vol-2-Guaviroveira.pdf"
+   }
+  ],
+  "sources": [
+   "https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/1140787/1/Especies-Arboreas-Brasileiras-vol-2-Guaviroveira.pdf",
+   "https://www.redalyc.org/pdf/4457/445744114012.pdf"
+  ],
+  "notes": "Frutal nativo del sur de Brasil/Paraguay/Argentina, no nativo de México, por eso no se asignaron zonas ecológicas (clima subtropical húmedo con heladas; podría adaptarse a bosque de niebla/pino-encino). Árbol heliófilo, 7–13(15) m, copa 7–10 m; fruta comestible, madera y uso medicinal (hojas), flores melíferas (Embrapa)."
+ },
+ {
+  "id": "RFfGxbCGRzkCT1KasKbe",
+  "name": "Gliricidia sepium (gliridia)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "taxonomy.genus": "Gliricidia",
+   "taxonomy.species": "sepium",
+   "taxonomy.family": "Fabaceae",
+   "commonNames": [
+    "gliridia",
+    "cocoite",
+    "cacahuananche",
+    "madre de cacao",
+    "matarratón"
+   ],
+   "height": {
+    "min": 5,
+    "max": 12
+   },
+   "ecologicalZoneIds": [
+    "1"
+   ],
+   "ecologicalFunctionIds": [
+    "0",
+    "1",
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "1",
+    "2",
+    "3"
+   ],
+   "details.lightPreference": "H",
+   "details.humidityPreference": "M",
+   "details.isFrostResistant": false,
+   "details.shape": "árbol",
+   "details.lifeCycle": "Secundarias 3",
+   "details.lifeCycleDuration": "Hasta 80 años",
+   "details.heightRangeDescription": "de 5 a 10 mts"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy",
+    "old": "- -",
+    "new": "Gliricidia sepium",
+    "reason": "Taxonomía faltante; 'gliridia/gliricidia' = Gliricidia sepium (ejemplo del spec)",
+    "source": "https://apps.worldagroforestry.org/treedb/AFTPDFS/Gliricidia_sepium.PDF"
+   }
+  ],
+  "sources": [
+   "https://apps.worldagroforestry.org/treedb/AFTPDFS/Gliricidia_sepium.PDF",
+   "https://enciclovida.mx/especies/165969-gliricidia-sepium"
+  ],
+  "notes": "POSIBLE DUPLICADO del registro 'Gliricidia sepium (Cocoite, cacahuananche...)'. Árbol de 10–12 m (ICRAF), leguminosa fijadora de N, rebrota tras poda intensa (biomasa), flores melíferas; forraje, postes/leña, usos medicinales. Ciclo/estrato consistentes con el otro registro."
+ },
+ {
+  "id": "UMExbdqsCyh9DS38JEv5",
+  "name": "? (Caferana)",
+  "status": "not_found",
+  "confidence": "low",
+  "set": {},
+  "corrections": [],
+  "sources": [
+   "https://www.tede.ufam.edu.br/bitstream/tede/3071/1/FRANCISCO%20CLEBER%20FELIX%20BARROS.pdf",
+   "https://www.henriettes-herb.com/eclectic/usdisp/tachia.html"
+  ],
+  "notes": "'Caferana' es un nombre brasileño ambiguo: se aplica a Bunchosia armeniaca/B. glandulifera (Malpighiaceae, frutal, la más probable en un contexto agroforestal), a Picrolemma sprucei (Simaroubaceae) y a Tachia guianensis (Gentianaceae). No se asignó taxonomía; confirmar con el responsable."
+ },
+ {
+  "id": "UlFRGpKA1zF5zatLaemB",
+  "name": "? (Huevo de chivo)",
+  "status": "not_found",
+  "confidence": "low",
+  "set": {},
+  "corrections": [],
+  "sources": [],
+  "notes": "No se encontró ninguna fuente que identifique una enredadera llamada 'huevo de chivo'; nombre local ambiguo. Se requiere nombre científico o foto."
+ },
+ {
+  "id": "WjnDqFvSG2z8PDxtUS4i",
+  "name": "? (babosa)",
+  "status": "not_found",
+  "confidence": "low",
+  "set": {},
+  "corrections": [],
+  "sources": [
+   "https://www.rae.es/tdhle/baboso sa"
+  ],
+  "notes": "'Babosa' es ambiguo: en Brasil designa a Aloe vera (ya existe como 'Sabila') y 'babosa-branca' a Cordia superba (árbol, coincidiría con estrato alto); en México 'baboso' también se usa para cactáceas. No se asignó taxonomía."
+ },
+ {
+  "id": "Xr3FH2WWIcl9bbDQinAN",
+  "name": "? (Menta de matón)",
+  "status": "not_found",
+  "confidence": "low",
+  "set": {},
+  "corrections": [],
+  "sources": [],
+  "notes": "No se encontró ninguna referencia a 'menta de matón'; probablemente un nombre local de alguna Mentha o Lamiaceae aromática. Se requiere nombre científico."
+ },
+ {
+  "id": "i2Kfx3u9jq5lQUm3jVKz",
+  "name": "? (Cosamalu)",
+  "status": "not_found",
+  "confidence": "low",
+  "set": {},
+  "corrections": [],
+  "sources": [],
+  "notes": "No se encontró ninguna fuente para 'cosamalu' (ni variantes cosamalo/cozamalo). Posible nombre indígena local de una hierba de bosque de niebla. Se requiere nombre científico."
+ },
+ {
+  "id": "lsANEHtv7MssKLvCSMFQ",
+  "name": "Musa acuminata cv. Morado (Plátano morado)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "taxonomy.genus": "Musa",
+   "taxonomy.species": "acuminata",
+   "taxonomy.subspecies": "cv. Morado (Red, AAA)",
+   "taxonomy.family": "Musaceae",
+   "ecologicalFunctionIds": [
+    "0"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "3"
+   ],
+   "details.lightPreference": "H",
+   "details.humidityPreference": "H",
+   "details.isFrostResistant": false,
+   "details.shape": "hierba"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy",
+    "old": "- -",
+    "new": "Musa acuminata cv. Morado",
+    "reason": "Taxonomía faltante; 'plátano morado' es una de las variedades de plátano cultivadas en México (banano rojo, grupo AAA)",
+    "source": "https://academiaculinaria.org/index.php/gastronomia-cocina/article/download/40/68/315"
+   }
+  ],
+  "sources": [
+   "https://academiaculinaria.org/index.php/gastronomia-cocina/article/download/40/68/315",
+   "https://www.ecured.cu/Bananas"
+  ],
+  "notes": "Se identificó como el plátano morado/rojo (Musa grupo AAA). POSIBLE DUPLICADO de 'Musa acuminata (platano malayo, platano rojo, banana nanica)'. Musáceas: gran producción de biomasa (uso clásico en sintropía), fruta comestible; hojas de uso medicinal tradicional. Se agregó Alimento (0). Shape 'hierba' (hierba gigante); en el catálogo hay otro plátano como 'palma', revisar consistencia."
+ },
+ {
+  "id": "zrCIzxeu6GHfMpLSYiMP",
+  "name": "Acaciella angustissima (Timbre)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "taxonomy.genus": "Acaciella",
+   "taxonomy.synonyms": [
+    "Acacia angustissima (Mill.) Kuntze"
+   ],
+   "ecologicalZoneIds": [
+    "1",
+    "3",
+    "4",
+    "6"
+   ],
+   "ecologicalFunctionIds": [
+    "0",
+    "1"
+   ],
+   "additionalFunctionIds": [
+    "1",
+    "3"
+   ],
+   "details.humidityPreference": "M"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.genus",
+    "old": "Acacia",
+    "new": "Acaciella",
+    "reason": "Nombre aceptado en POWO: Acaciella angustissima (Mill.) Britton & Rose; Acacia angustissima es sinónimo",
+    "source": "https://powo.science.kew.org/results?q=Acaciella%20angustissima"
+   },
+   {
+    "field": "ecologicalZoneIds",
+    "old": [
+     "1",
+     "3",
+     "4",
+     "6",
+     "6"
+    ],
+    "new": [
+     "1",
+     "3",
+     "4",
+     "6"
+    ],
+    "reason": "Id '6' duplicado",
+    "source": "-"
+   }
+  ],
+  "sources": [
+   "https://winrock.org/factnet/fact-net-fact-sheets/acacia-angustissima-a-promising-species-for-agroforestry/",
+   "https://www.scielo.org.mx/pdf/agro/v42n1/v42n1a13.pdf",
+   "https://apps.worldagroforestry.org/treedb2/speciesprofile.php/docs/policydocument.pdf?Spid=1762"
+  ],
+  "notes": "Arbusto o árbol pequeño de 2–7 m (Winrock), crecimiento rápido, fijador de N (nodula con Sinorhizobium), usado como forraje en agroforestería; especie medicinal importante para tzotziles y tzeltales (ICRAF). Se actualizó el género al nombre aceptado y se quitó el id de zona repetido."
+ },
+ {
+  "id": "fyH5V3qzp32LWGxrfpeC",
+  "name": "Vachellia farnesiana (Huizache)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "taxonomy.genus": "Vachellia",
+   "taxonomy.synonyms": [
+    "Acacia farnesiana (L.) Willd."
+   ],
+   "commonNames": [
+    "Huizache",
+    "vinorama"
+   ],
+   "height": {
+    "min": 2,
+    "max": 10
+   },
+   "stratumIds": [
+    "2"
+   ],
+   "ecologicalFunctionIds": [
+    "1",
+    "3",
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "1",
+    "2",
+    "3"
+   ],
+   "details.lightPreference": "H",
+   "details.humidityPreference": "L",
+   "details.shape": "árbol",
+   "details.lifeCycle": "Pioneras"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.genus",
+    "old": "Acacia",
+    "new": "Vachellia",
+    "reason": "Nombre aceptado en POWO: Vachellia farnesiana (L.) Wight & Arn.; Acacia farnesiana es sinónimo",
+    "source": "https://rngr.net/publications/semillas-de-especies-forestales/monografias/vachellia-farnesiana-l.-wight-arn.-fabaceae/at_download/file"
+   }
+  ],
+  "sources": [
+   "https://rngr.net/publications/semillas-de-especies-forestales/monografias/vachellia-farnesiana-l.-wight-arn.-fabaceae/at_download/file",
+   "https://corregidora.gob.mx/ecologia/assets/docs/5/ficha_arbusto_nat.pdf",
+   "https://mexico.inaturalist.org/guide_taxa/929719"
+  ],
+  "notes": "Arbusto o árbol bajo de 2–5 m, hasta 10 m; fijador de N, coloniza suelos degradados y previene erosión (pionera); uso forrajero, leña y medicinal; flores muy perfumadas, visitadas por abejas (melífera conocida en México, confianza media en este punto). También es abundante en selva baja/matorral (zona sin id)."
+ },
+ {
+  "id": "Ilk3GMdaWNrWaxLg9hZC",
+  "name": "Acacia melanoxylon (Acacia negra)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "height": {
+    "min": 10,
+    "max": 30
+   },
+   "crownWidth": {
+    "min": 6,
+    "max": 10
+   },
+   "stratumIds": [
+    "3"
+   ],
+   "ecologicalFunctionIds": [
+    "1"
+   ],
+   "additionalFunctionIds": [
+    "2"
+   ],
+   "details.lightPreference": "H",
+   "details.humidityPreference": "M",
+   "details.isFrostResistant": true,
+   "details.shape": "árbol",
+   "details.heightRangeDescription": "más de 10 mts"
+  },
+  "corrections": [
+   {
+    "field": "details.heightRangeDescription",
+    "old": "de 5 a 10 mts",
+    "new": "más de 10 mts",
+    "reason": "Árbol de 6–45 m (habitualmente 15–30 m)",
+    "source": "https://apps.worldagroforestry.org/treedb2/AFTPDFS/Acacia_melanoxylon.PDF"
+   }
+  ],
+  "sources": [
+   "https://apps.worldagroforestry.org/treedb2/AFTPDFS/Acacia_melanoxylon.PDF",
+   "https://wtlandcare.org/plants/acacia-melanoxylon/"
+  ],
+  "notes": "Árbol australiano de 6–30(45) m, copa densa ~10 m, fijador de N, madera fina muy apreciada; adultos tolerantes a heladas (plántulas sensibles). Introducida, potencialmente invasora fuera de su área nativa."
+ },
+ {
+  "id": "2ip5yu30reXaCJxCQs8Q",
+  "name": "Acanthocereus tetragonus (Cruceta)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "commonNames": [
+    "Cruceta",
+    "jacube",
+    "nopalito"
+   ],
+   "height": {
+    "min": 2,
+    "max": 7
+   },
+   "stratumIds": [
+    "2"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "1",
+    "3"
+   ],
+   "details.lightPreference": "H",
+   "details.humidityPreference": "L",
+   "details.isFrostResistant": false,
+   "details.shape": "arbusto",
+   "details.heightRangeDescription": "hasta 5 mts"
+  },
+  "corrections": [
+   {
+    "field": "details.heightRangeDescription",
+    "old": "hasta 2 mts",
+    "new": "hasta 5 mts",
+    "reason": "Cactus columnar/arqueado de 2–7 m",
+    "source": "https://en.wikipedia.org/wiki/Acanthocereus_tetragonus"
+   }
+  ],
+  "sources": [
+   "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1646-2",
+   "https://revistafitotecniamexicana.org/documentos/35-2/8a.pdf",
+   "https://en.wikipedia.org/wiki/Acanthocereus_tetragonus"
+  ],
+  "notes": "Cactus de tallos 3–5 angulados, arbustivo o semitrepador, 2–7 m; tallos tiernos comestibles (rico en calcio), frutos rojos comestibles; POWO registra usos alimento, forraje y medicinal; usado como cerca viva. Habita selva baja/zonas tropicales secas (zona sin id), por eso no se asignó zona."
+ },
+ {
+  "id": "1aFH61QEXYgFa7vog29H",
+  "name": "Acca sellowiana (Feijoa, guayabo del país)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "height": {
+    "min": 1.5,
+    "max": 4.5
+   },
+   "crownWidth": {
+    "min": 1.5,
+    "max": 4.5
+   },
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0"
+   ],
+   "details.lightPreference": "H",
+   "details.humidityPreference": "M",
+   "details.isFrostResistant": true,
+   "details.shape": "arbusto",
+   "details.heightRangeDescription": "hasta 5 mts"
+  },
+  "corrections": [],
+  "sources": [
+   "https://crfg.org/?p=93626",
+   "https://landscapeplants.aub.edu.lb/Plants/GetPDF/47481791-7bd9-4080-b023-aeb554ca9d12",
+   "https://toptropicals.com/catalog/uid/Feijoa_sellowiana.htm"
+  ],
+  "notes": "Arbusto perenne de crecimiento lento, 1.5–4.5 m de alto y ancho; resiste hasta ~-10 °C; polinizado por abejas y aves. Nativo del sur de Brasil/Uruguay, poco cultivado en México, no se asignó zona (apto para climas templados). commonNames está en una sola cadena separada por comas."
+ },
+ {
+  "id": "oZkXcuXy4jZVNpRJ3MRx",
+  "name": "Achillea millefolium (Milenrama)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "commonNames": [
+    "Milenrama",
+    "plumajillo"
+   ],
+   "height": {
+    "min": 0.5,
+    "max": 1
+   },
+   "crownWidth": {
+    "min": 0.3,
+    "max": 0.6
+   },
+   "stratumIds": [
+    "1"
+   ],
+   "ecologicalFunctionIds": [
+    "3",
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "3"
+   ],
+   "details.humidityPreference": "L",
+   "details.isFrostResistant": true
+  },
+  "corrections": [
+   {
+    "field": "height",
+    "old": {
+     "min": 0.7,
+     "max": 0.7
+    },
+    "new": {
+     "min": 0.5,
+     "max": 1
+    },
+    "reason": "Rango típico 0.5–1 m (RHS) en lugar de valor único",
+    "source": "https://www.rhs.org.uk/plants/311/achillea-millefolium/details"
+   }
+  ],
+  "sources": [
+   "https://www.rhs.org.uk/plants/311/achillea-millefolium/details",
+   "https://plants.ces.ncsu.edu/plants/achillea-millefolium/common-name/yarrow/",
+   "https://plants.usda.gov/DocumentLibrary/plantguide/pdf/pg_acmi2.pdf"
+  ],
+  "notes": "Hierba perenne rizomatosa 0.5–1 m, se extiende formando tapetes (control de erosión, usada en mezclas de revegetación según USDA); muy visitada por polinizadores (RHS: >100 especies de insectos); uso medicinal histórico (heridas). Tolerante a sequía y heladas. A menudo citada en permacultura como acumuladora dinámica, pero no se encontró fuente sólida, no se asignó."
+ },
+ {
+  "id": "2GmdtTaGVLTkwVMyMLtl",
+  "name": "Acrocomia aculeata (Coyol)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "taxonomy.family": "Arecaceae",
+   "stratumIds": [
+    "3"
+   ],
+   "ecologicalZoneIds": [
+    "1"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "1"
+   ],
+   "details.lightPreference": "H",
+   "details.humidityPreference": "M",
+   "details.isFrostResistant": false
+  },
+  "corrections": [],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Acrocomia_aculeata",
+   "https://kimuk.conare.ac.cr/Record/PTEC_021df93c394f8fe32272f0dbcfe9eacd?lng=es"
+  ],
+  "notes": "Palma espinosa de 15–20 m, nativa de las tierras bajas tropicales de México (incl. selvas y vegetación secundaria). Frutos comestibles, vino de coyol y aceite; frutos usados como alimento para ganado. commonNames está en una sola cadena separada por comas."
+ },
+ {
+  "id": "spfpcJeDF9CV1haut3H6",
+  "name": "Actinidia deliciosa (Kiwi)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "stratumIds": [
+    "3"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "1"
+   ],
+   "details.humidityPreference": "M",
+   "details.isFrostResistant": true
+  },
+  "corrections": [],
+  "sources": [
+   "https://homeorchard.ucanr.edu/Fruits_&_Nuts/Kiwifruit/",
+   "https://crfg.org/?p=93684",
+   "https://ishs.org/ishs-article/1431_47/"
+  ],
+  "notes": "Liana caducifolia de 4.5–9 m; en reposo resiste ~-12 °C pero las heladas tardías/tempranas dañan la planta; requiere 300–900 horas frío (en México se cultiva poco, en tierras altas ~1800 m). Se agregó Alimento (0). El Forraje (1) existente es dudoso, se dejó sin cambios. Estrato alto como otras guías del catálogo."
+ },
+ {
+  "id": "jWfMCVRfQ5PPqhZa67F6",
+  "name": "Adansonia sp. (Baobab)",
+  "status": "updated",
+  "confidence": "low",
+  "set": {
+   "height": {
+    "min": 5,
+    "max": 25
+   },
+   "stratumIds": [
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "3"
+   ],
+   "details.lightPreference": "H",
+   "details.humidityPreference": "L",
+   "details.isFrostResistant": false,
+   "details.shape": "árbol",
+   "details.lifeCycleDuration": "Mayor a 80 años"
+  },
+  "corrections": [],
+  "sources": [
+   "https://apps.worldagroforestry.org/treedb/AFTPDFS/Adansonia_digitata.PDF"
+  ],
+  "notes": "Especie no definida; datos tomados de Adansonia digitata (el baobab más cultivado): árbol de 5–25 m, muy longevo (cientos de años), de trópico seco, intolerante a heladas; hojas, frutos y semillas comestibles y amplio uso medicinal (ICRAF). Confirmar la especie."
+ },
+ {
+  "id": "j8CEEH4PSCD4AOgbuRP4",
+  "name": "Agave americana (Maguey)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "taxonomy.family": "Asparagaceae",
+   "height": {
+    "min": 1,
+    "max": 2
+   },
+   "crownWidth": {
+    "min": 1.8,
+    "max": 3
+   },
+   "stratumIds": [
+    "2"
+   ],
+   "ecologicalZoneIds": [
+    "4",
+    "6"
+   ],
+   "ecologicalFunctionIds": [
+    "3",
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "3"
+   ],
+   "details.lightPreference": "H",
+   "details.humidityPreference": "L",
+   "details.isFrostResistant": true,
+   "details.lifeCycleDuration": "Hasta 15 años",
+   "details.heightRangeDescription": "hasta 2 mts"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.family",
+    "old": "Agavaceae",
+    "new": "Asparagaceae",
+    "reason": "En APG IV Agavaceae se incluye en Asparagaceae (subfam. Agavoideae)",
+    "source": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:5973-1"
+   },
+   {
+    "field": "ecologicalZoneIds",
+    "old": [
+     "6",
+     "6"
+    ],
+    "new": [
+     "4",
+     "6"
+    ],
+    "reason": "Id duplicado; se agrega 4: especie común en el altiplano/bosques de pino-encino",
+    "source": "https://ucanr.edu/sites/scmg/Plant_of_the_Month/Agave/"
+   }
+  ],
+  "sources": [
+   "https://worldplants.ca/display.php?id=5275",
+   "https://ucanr.edu/sites/scmg/Plant_of_the_Month/Agave/",
+   "https://www.promessedefleurs.ie/perennials/perennials-by-variety/agave/agave-americana.html"
+  ],
+  "notes": "Roseta de 0.9–2 m de alto y 1.8–3 m de ancho; monocárpica: florece a los 10–25 años con un escapo de 5–10 m (flores visitadas por murciélagos, colibríes y abejas) y muere; resiste ~-5 a -10 °C. Usado en bordos/metepantles contra la erosión. Aguamiel/pulque, usos medicinales tradicionales."
+ },
+ {
+  "id": "uwqQldt6YsOkrSqO1W9T",
+  "name": "Agave mapisaga (Maguey)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "taxonomy.family": "Asparagaceae",
+   "commonNames": [
+    "Maguey",
+    "maguey pulquero",
+    "manso"
+   ],
+   "stratumIds": [
+    "2"
+   ],
+   "ecologicalZoneIds": [
+    "4",
+    "6"
+   ],
+   "ecologicalFunctionIds": [
+    "3",
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "3"
+   ],
+   "details.lightPreference": "H",
+   "details.humidityPreference": "L",
+   "details.isFrostResistant": true,
+   "details.lifeCycleDuration": "Hasta 15 años",
+   "details.heightRangeDescription": "hasta 2 mts"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.family",
+    "old": "Agavaceae",
+    "new": "Asparagaceae",
+    "reason": "APG IV",
+    "source": "https://powo.science.kew.org/"
+   },
+   {
+    "field": "ecologicalZoneIds",
+    "old": [
+     "6",
+     "6"
+    ],
+    "new": [
+     "4",
+     "6"
+    ],
+    "reason": "Id duplicado; se cultiva en el altiplano central (Valle de México, Hidalgo, SLP)",
+    "source": "https://www.botanicalsciences.com.mx/index.php/botanicalSciences/article/view/1350"
+   }
+  ],
+  "sources": [
+   "https://www.botanicalsciences.com.mx/index.php/botanicalSciences/article/view/1350",
+   "https://www.redalyc.org/pdf/577/57706607.pdf",
+   "https://garden.org/plants/view/116438/Manos-Largas-Agave-mapisaga/"
+  ],
+  "notes": "Maguey pulquero cultivado en el altiplano (1800–2400 m) junto con A. salmiana; aguamiel/pulque. No se encontró altura confiable específica, no se llenó. Funciones ecológicas por analogía con los magueyes pulqueros (conservación de suelo, flores para murciélagos/abejas). Hay 5 registros 'Maguey/Agave' en el catálogo: revisar posible duplicación con 'Agave sp.'."
+ },
+ {
+  "id": "Yi32UUIokuA9mP7H8Uao",
+  "name": "Agave salmiana (Maguey)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "taxonomy.family": "Asparagaceae",
+   "commonNames": [
+    "Maguey",
+    "maguey pulquero"
+   ],
+   "height": {
+    "min": 1.5,
+    "max": 2
+   },
+   "crownWidth": {
+    "min": 2,
+    "max": 3.6
+   },
+   "stratumIds": [
+    "2"
+   ],
+   "ecologicalZoneIds": [
+    "4",
+    "6"
+   ],
+   "ecologicalFunctionIds": [
+    "3",
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "1"
+   ],
+   "details.lightPreference": "H",
+   "details.humidityPreference": "L",
+   "details.isFrostResistant": true,
+   "details.lifeCycleDuration": "Hasta 15 años",
+   "details.heightRangeDescription": "hasta 2 mts"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.family",
+    "old": "Agavaceae",
+    "new": "Asparagaceae",
+    "reason": "APG IV",
+    "source": "https://powo.science.kew.org/"
+   },
+   {
+    "field": "ecologicalZoneIds",
+    "old": [
+     "6",
+     "6"
+    ],
+    "new": [
+     "4",
+     "6"
+    ],
+    "reason": "Id duplicado; crece en el altiplano potosino-zacatecano y centro de México 1800–2400 m",
+    "source": "https://www.botanicalsciences.com.mx/index.php/botanicalSciences/article/view/1350"
+   }
+  ],
+  "sources": [
+   "https://www.botanicalsciences.com.mx/index.php/botanicalSciences/article/view/1350",
+   "https://en.wikipedia.org/wiki/Agave_salmiana"
+  ],
+  "notes": "Roseta de ~1.8 m de alto y hasta 3.6 m de diámetro; el agave más usado como forraje en SLP/Zacatecas, también en conservación de suelos, cercos vivos, combustible y construcción; aguamiel/pulque."
+ },
+ {
+  "id": "BQeItwmcjZns8ZZNTkIP",
+  "name": "Agave sp (Maguey)",
+  "status": "updated",
+  "confidence": "low",
+  "set": {
+   "taxonomy.family": "Asparagaceae",
+   "additionalFunctionIds": [
+    "0"
+   ],
+   "details.lightPreference": "H",
+   "details.humidityPreference": "L"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.family",
+    "old": "Agavaceae",
+    "new": "Asparagaceae",
+    "reason": "APG IV",
+    "source": "https://powo.science.kew.org/"
+   }
+  ],
+  "sources": [
+   "https://powo.science.kew.org/"
+  ],
+  "notes": "Especie no definida; solo se corrigió la familia y rasgos comunes al género (heliófilo, tolerante a sequía). POSIBLE DUPLICADO de los otros registros de Maguey (A. americana, A. mapisaga, A. salmiana) y 'Agave sp.'."
+ },
+ {
+  "id": "roves24pUM5GtlAHp7zq",
+  "name": "Agave sp. (Agave)",
+  "status": "updated",
+  "confidence": "low",
+  "set": {
+   "taxonomy.family": "Asparagaceae",
+   "additionalFunctionIds": [
+    "0"
+   ],
+   "details.lightPreference": "H",
+   "details.humidityPreference": "L"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.family",
+    "old": "Agavaceae",
+    "new": "Asparagaceae",
+    "reason": "APG IV",
+    "source": "https://powo.science.kew.org/"
+   }
+  ],
+  "sources": [
+   "https://powo.science.kew.org/"
+  ],
+  "notes": "Especie no definida; solo se corrigió la familia y rasgos comunes al género. POSIBLE DUPLICADO de 'Agave sp (Maguey)'."
+ },
+ {
+  "id": "eev1V8vTiIgzQ8O0eobN",
+  "name": "Albizia procera (Siri blanco)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "taxonomy.genus": "Albizia",
+   "taxonomy.family": "Fabaceae",
+   "stratumIds": [
+    "3"
+   ],
+   "ecologicalFunctionIds": [
+    "0",
+    "1"
+   ],
+   "additionalFunctionIds": [
+    "1",
+    "2"
+   ]
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.genus",
+    "old": "Albizzia",
+    "new": "Albizia",
+    "reason": "ortografía aceptada del género (Albizzia es variante ortográfica)",
+    "source": "https://apps.worldagroforestry.org/treedb/AFTPDFS/Albizia_procera.PDF"
+   }
+  ],
+  "sources": [
+   "https://apps.worldagroforestry.org/treedb/AFTPDFS/Albizia_procera.PDF",
+   "https://winrock.org/factnet/fact-net-fact-sheets/albizia-procera-white-siris-for-reforestation-and-agroforestry/",
+   "https://agritech.tnau.ac.in/forestry/albizia_procera.html"
+  ],
+  "notes": "Leguminosa fijadora de N (Rhizobium), crecimiento rápido y rebrote vigoroso tras poda; forraje y madera/leña. Árbol de ~25-30 m de copa ligera -> estrato Alto. Especie asiática introducida, potencialmente invasora; la zona Desierto existente no se verificó."
+ },
+ {
+  "id": "JiZp7QxotQWnArIcig8U",
+  "name": "Allium fistulosum (Cebolla Welsh)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "stratumIds": [
+    "1"
+   ],
+   "additionalFunctionIds": [
+    "0"
+   ]
+  },
+  "corrections": [],
+  "sources": [
+   "https://www.rhs.org.uk/plants/26473/wd/details",
+   "https://mail.growables.org/informationVeg/documents/OnionWelsh.pdf",
+   "https://temperate.theferns.info/plant/Allium+fistulosum"
+  ],
+  "notes": "Hierba perenne en macollo de 0.3-1 m, hojas y tallos comestibles; resiste heladas ligeras. Estrato Bajo, función Alimento."
+ },
+ {
+  "id": "MNlwakp8xrsg1ooo4nOd",
+  "name": "Allium schoenoprasum (Cebollino)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "taxonomy.species": "schoenoprasum",
+   "stratumIds": [
+    "1"
+   ],
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0"
+   ]
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.species",
+    "old": "sp.",
+    "new": "schoenoprasum",
+    "reason": "'Cebollino' (cebollín, chives) corresponde a Allium schoenoprasum; altura ~0.2-0.3 m concuerda",
+    "source": "https://www.rhs.org.uk/Plants/859/Allium-schoenoprasum/Details"
+   }
+  ],
+  "sources": [
+   "https://www.rhs.org.uk/Plants/859/Allium-schoenoprasum/Details",
+   "https://plants.ces.ncsu.edu/plants/allium-schoenoprasum/",
+   "https://jekkasherbfarm.com/products/chives"
+  ],
+  "notes": "Se identificó como cebollín (A. schoenoprasum). Flores ricas en néctar que atraen abejas y polinizadores. Estrato Bajo, Alimento. Uso medicinal poco documentado, no se asignó."
+ },
+ {
+  "id": "U6HHmFsJ4OFAiZWeDQt7",
+  "name": "Alnus acuminata (Ilite, aile)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "taxonomy.family": "Betulaceae",
+   "stratumIds": [
+    "3"
+   ],
+   "ecologicalFunctionIds": [
+    "1"
+   ],
+   "additionalFunctionIds": [
+    "1",
+    "2",
+    "3"
+   ],
+   "commonNames": [
+    "Ilite, aile",
+    "Aliso"
+   ]
+  },
+  "corrections": [],
+  "sources": [
+   "https://winrock.org/factnet/fact-net-fact-sheets/alnus-acuminata-valuable-timber-tree-for-tropical-highlands/",
+   "https://repositorio.utn.edu.ec/jspui/bitstream/123456789/2040/2/03FOR196%20TESIS.pdf",
+   "https://restoration.elti.yale.edu/node/89077"
+  ],
+  "notes": "Fija nitrógeno en simbiosis con Frankia; muy usado en sistemas agroforestales de montaña (café, potreros); forraje, leña y madera. Altura hasta 25-30 m en estado natural -> estrato Alto. Se agregó nombre 'Aliso' (usado en México)."
+ },
+ {
+  "id": "jCwJrFviGgqYym5S2NG9",
+  "name": "Aloe vera (Sábila)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "taxonomy.family": "Asphodelaceae",
+   "stratumIds": [
+    "1"
+   ],
+   "additionalFunctionIds": [
+    "3"
+   ]
+  },
+  "corrections": [],
+  "sources": [
+   "https://gardeningsolutions.ifas.ufl.edu/plants/ornamentals/aloe-vera/",
+   "https://guide.floragrubb.com/aloe-vera",
+   "https://powo.science.kew.org/"
+  ],
+  "notes": "Suculenta de ~0.5 m, muy tolerante a sequía, uso medicinal ampliamente documentado. Estrato Bajo. Ojo: fuentes indican tolerancia solo a heladas ligeras (~-5 °C) o ninguna; isFrostResistant=true existente es dudoso. humidityPreference podría ser L."
+ }
+]

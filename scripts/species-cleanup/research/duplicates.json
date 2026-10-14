@@ -1,0 +1,597 @@
+{
+  "merges": [
+    {
+      "keep": "WcEOknzboSIEzuq5BVDW",
+      "remove": [
+        "RFfGxbCGRzkCT1KasKbe"
+      ],
+      "names": "Gliricidia sepium (Cocoite...) / 'gliridia' (sin taxonomía)",
+      "reason": "'gliridia' es una variante ortográfica de gliricidia (Gliricidia sepium); el registro sin taxonomía es la misma planta y está casi vacío.",
+      "evidence": [
+        "https://powo.science.kew.org/results?q=Gliricidia%20sepium"
+      ]
+    },
+    {
+      "keep": "ohiuUBgMFdWchwxqhILz",
+      "remove": [
+        "JP1UtQplrmGqzn0IYDIv"
+      ],
+      "names": "Gleditsia triacanthos 'Acacia Negra (Honey locust)' / Gleditsia triacanthos 'Honey locust'",
+      "reason": "Misma especie y mismo nombre común (honey locust); sin variedad indicada. Se conserva el de más detalles.",
+      "evidence": [
+        "https://powo.science.kew.org/results?q=Gleditsia%20triacanthos"
+      ]
+    },
+    {
+      "keep": "OIpypRgdgRQDIe08IHUV",
+      "remove": [
+        "D1NnajDpmY7I9A8BrFB6"
+      ],
+      "names": "Hymenaea courbaril 'Guapinol, curbaril, jatobá…' / Hymenaea courbaril 'Cuapinol, Guapinoli, Paquío'",
+      "reason": "Misma especie y nombres comunes coincidentes (cuapinol/guapinol, paquió). Fusionar; conviene copiar el estrato '3' del registro eliminado.",
+      "evidence": [
+        "https://powo.science.kew.org/results?q=Hymenaea%20courbaril"
+      ]
+    },
+    {
+      "keep": "jqCm7QWdBkWa7rcTKOsi",
+      "remove": [
+        "n2UNcUf99pIELlnqOEAB"
+      ],
+      "names": "Lablab purpureus 'Dolichos lab-lab' / Lablab purpureus 'Frijol lab lab, zarandaja…'",
+      "reason": "Misma especie (frijol lablab), sin cultivar indicado. Conservar el más completo y unir los nombres comunes.",
+      "evidence": [
+        "https://powo.science.kew.org/results?q=Lablab%20purpureus"
+      ]
+    },
+    {
+      "keep": "sExBJWjFglRtV6HrkJ4p",
+      "remove": [
+        "rgGlvchtd2EEij8zhDNt"
+      ],
+      "names": "Psophocarpus tetragonolobus 'Frijol alado' / 'Ejote alado'",
+      "reason": "Misma especie (frijol alado / ejote alado son el mismo cultivo). Unir nombres comunes y detalles.",
+      "evidence": [
+        "https://powo.science.kew.org/results?q=Psophocarpus%20tetragonolobus"
+      ]
+    },
+    {
+      "keep": "YgCHwkLC8oa7gvBIDp4L",
+      "remove": [
+        "1aFH61QEXYgFa7vog29H",
+        "nU4HHPP1IsMmxQ8wY39X"
+      ],
+      "names": "Feijoa sellowiana 'Feijoa' / Acca sellowiana 'Guayabo del país…' / Feijoa '-' 'Feijoa'",
+      "reason": "Feijoa sellowiana es sinónimo de Acca sellowiana (nombre aceptado en POWO); los tres registros son la feijoa. Al conservar, actualizar la taxonomía a Acca sellowiana y unir nombres comunes.",
+      "evidence": [
+        "https://powo.science.kew.org/results?q=Acca%20sellowiana"
+      ]
+    },
+    {
+      "keep": "8KhxNgaEhwkqNV9s5b3L",
+      "remove": [
+        "SIphZdRwzQ0l77nHQrJV"
+      ],
+      "names": "Carissa grandiflora 'Carisa' / Carissa macrocarpa 'Carisa, ciruela natal'",
+      "reason": "Carissa grandiflora es sinónimo de Carissa macrocarpa (ciruela de Natal, nombre aceptado). Mismo nombre común. Conservar el más completo y actualizar la taxonomía a C. macrocarpa.",
+      "evidence": [
+        "https://powo.science.kew.org/results?q=Carissa%20macrocarpa"
+      ]
+    },
+    {
+      "keep": "Ppf9YBkAQ4Ae8dWFKRcH",
+      "remove": [
+        "fyoFJfZ2JPueOq1arPHG"
+      ],
+      "names": "'Cardulobica' palmata 'Iraca' / Carludovica palmata 'Jipijapa'",
+      "reason": "'Cardulobica' es error de escritura de Carludovica; iraca y jipijapa son nombres de la misma palma (Carludovica palmata). Corregir el género en el registro conservado y copiar estrato/zona del eliminado.",
+      "evidence": [
+        "https://powo.science.kew.org/results?q=Carludovica%20palmata"
+      ]
+    },
+    {
+      "keep": "EX0892uRTp09JU2iBfZw",
+      "remove": [
+        "C5aicv696FmYmYhFwkcs"
+      ],
+      "names": "Cinnamomum zeylanicum 'Canela' / Cinnamomum verum 'Canela, cinnamon'",
+      "reason": "Cinnamomum zeylanicum es sinónimo de Cinnamomum verum (canela de Ceilán). Conservar el más completo y actualizar la taxonomía a C. verum.",
+      "evidence": [
+        "https://powo.science.kew.org/results?q=Cinnamomum%20verum"
+      ]
+    },
+    {
+      "keep": "d3P1TwOT7QciXJ248nPp",
+      "remove": [
+        "yVduUplCsNRZjK2VP586"
+      ],
+      "names": "Citrus latifolia 'Limón persa' / Citrus × latifolia 'Limón sin semilla, limão Tahiti'",
+      "reason": "Mismo taxón (Citrus × latifolia, lima persa = lima Tahití, sin semilla); solo difiere el signo de híbrido. Unir nombres comunes y estratos.",
+      "evidence": [
+        "https://powo.science.kew.org/results?q=Citrus%20latifolia"
+      ]
+    },
+    {
+      "keep": "vLK2vj9sfVInh3Ntwt3d",
+      "remove": [
+        "X51MIOJHbwt9EB4gXcBh"
+      ],
+      "names": "Citrus × limonia 'Limón mandarina, limão cravo' / Citrus sp. 'lemon carnation'",
+      "reason": "'Lemon carnation' es traducción literal de 'limão cravo' (lima Rangpur, Citrus × limonia). Misma planta. Corregir familia a Rutaceae en el conservado.",
+      "evidence": [
+        "https://powo.science.kew.org/results?q=Citrus%20limonia"
+      ]
+    },
+    {
+      "keep": "oqIU9Sy02jE9pFtFquLs",
+      "remove": [
+        "YDDHPCpRQ5d2BdKtTQGO"
+      ],
+      "names": "Cydonia vulgaris 'Membrillo' / Cydonia oblonga 'Membrillo, marmelo portugués'",
+      "reason": "Cydonia vulgaris es sinónimo de Cydonia oblonga (membrillo). Conservar el más completo y actualizar la taxonomía a C. oblonga.",
+      "evidence": [
+        "https://powo.science.kew.org/results?q=Cydonia%20oblonga"
+      ]
+    },
+    {
+      "keep": "pqTdhIQb4GIZkesiPzvd",
+      "remove": [
+        "jNI1faZFQcn4kT2VyYMb"
+      ],
+      "names": "Eugenia jambolana 'Jambolán' / Syzygium cumini 'Jambul, jambolão'",
+      "reason": "Eugenia jambolana es sinónimo de Syzygium cumini (jambolán). Conservar el más completo y actualizar la taxonomía a S. cumini.",
+      "evidence": [
+        "https://powo.science.kew.org/results?q=Syzygium%20cumini"
+      ]
+    },
+    {
+      "keep": "atPGqShK49UndT3QtYvG",
+      "remove": [
+        "QVaPpZtRqRL2A1MrsKiF"
+      ],
+      "names": "Euterpe 'oleraceae' 'Asaí brasilero' / Euterpe oleracea 'Huasai, naidí, açaí'",
+      "reason": "Error de escritura del epíteto: ambos son Euterpe oleracea (açaí). Corregir a 'oleracea' y unir nombres comunes.",
+      "evidence": [
+        "https://powo.science.kew.org/results?q=Euterpe%20oleracea"
+      ]
+    },
+    {
+      "keep": "fGKQ8DQLwnrWCbngOEfI",
+      "remove": [
+        "MG7uY1qLHq2idy656gdR"
+      ],
+      "names": "Hevea brasiliensis 'Árbol del caucho' / 'Havea' brasiliensis 'Árbol de caucho, shiringa…'",
+      "reason": "'Havea' es error de escritura de Hevea; misma especie (árbol del caucho). Unir nombres comunes.",
+      "evidence": [
+        "https://powo.science.kew.org/results?q=Hevea%20brasiliensis"
+      ]
+    },
+    {
+      "keep": "iUKoC5lR6ekczQNkQx2N",
+      "remove": [
+        "FoxlCOvYvDCcUpT2DrRx"
+      ],
+      "names": "'Pouteri zapota' 'Zapote mamey' / Pouteria sapota 'Zapote rey, mamey zapote'",
+      "reason": "Ambos son Pouteria sapota (mamey/zapote mamey); 'Pouteri zapota' es error de escritura. Corregir la taxonomía en el conservado y unir nombres.",
+      "evidence": [
+        "https://powo.science.kew.org/results?q=Pouteria%20sapota"
+      ]
+    },
+    {
+      "keep": "n7qlscoWfXt6EDhW9s5r",
+      "remove": [
+        "GwNJyKOKOcM1JYpnZzbb"
+      ],
+      "names": "'Zyzxgium' malaccense 'Pomarosa, manzana brasilera' / Syzygium malaccense 'Manzana de agua, manzana malaya, jambo'",
+      "reason": "'Zyzxgium' es error de escritura de Syzygium; misma especie (manzana malaya / pomarrosa malaya). Corregir género/familia (Myrtaceae) en el conservado. Ojo: 'Pomarrosa' a secas suele referirse a S. jambos (registro aparte kFpleP…), revisar nombres comunes.",
+      "evidence": [
+        "https://powo.science.kew.org/results?q=Syzygium%20malaccense"
+      ]
+    },
+    {
+      "keep": "RsXrxW5Gm92FGzTOlE4h",
+      "remove": [
+        "XKvOxf8kSGg7r1sG0Z84"
+      ],
+      "names": "Theobroma grandiflorum 'Copoazú, cacao blanco' / Theobroma 'grandiflora' 'Cacao copuazú'",
+      "reason": "Misma especie (copoazú, Theobroma grandiflorum); 'grandiflora' es error de terminación. Conservar el de nombre correcto y copiar los detalles del otro (que tiene más 'details').",
+      "evidence": [
+        "https://powo.science.kew.org/results?q=Theobroma%20grandiflorum"
+      ]
+    },
+    {
+      "keep": "HdOHABwQf0feRb3SCLZt",
+      "remove": [
+        "UU7LP5Fw5bnbPCs5UCVf"
+      ],
+      "names": "Eugenia involucrata 'Cerella, cherry of rio grande' / Eugenia aggregata 'Cereza del río grande, cereja do rio grande'",
+      "reason": "Eugenia aggregata es sinónimo (nombre ilegítimo) de Eugenia involucrata, la cereza del río Grande. Ambos registros son la misma planta y están casi vacíos; conservar el de nombre aceptado y unir nombres comunes.",
+      "evidence": [
+        "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:98012-2",
+        "https://en.wikipedia.org/wiki/Eugenia_involucrata"
+      ]
+    },
+    {
+      "keep": "4fkLrL9C4BGb63FlTPRW",
+      "remove": [
+        "r5VSLMp5n8CCADmbKzBx"
+      ],
+      "names": "Diospyros kaki 'Pérsimo, caqui' / Diospyros sp. 'Palo santo, caqui'",
+      "reason": "'Caqui' y 'palo santo' (nombre usado en España/Argentina) designan al caqui, Diospyros kaki. El registro 'Diospyros sp.' está casi vacío y no indica otra variedad.",
+      "evidence": [
+        "https://powo.science.kew.org/results?q=Diospyros%20kaki"
+      ]
+    },
+    {
+      "keep": "qs9IM46xARE2GOol5Gli",
+      "remove": [
+        "m3Cwv7S4RmA23jky27sI"
+      ],
+      "names": "Tagetes lucida 'Pericón' / Tagetes lucida 'Tarete'",
+      "reason": "Misma especie, sin variedad, y datos idénticos (misma zona, mismos detalles). Se conserva 'Pericón' (nombre más difundido) y se añade 'Tarete' como nombre común (no se encontró fuente que confirme 'tarete' como nombre regional; verificar).",
+      "evidence": [
+        "https://en.wikipedia.org/wiki/Tagetes_lucida"
+      ]
+    }
+  ],
+  "notDuplicates": [
+    {
+      "ids": [
+        "1aZWCce2KcX3ZSzehouY",
+        "ZKLtx2A2lvWI8SOKIlAI",
+        "76i0xoBZoP3UesYt2MUG",
+        "6b2lvTd4BXi7L1D4nupj",
+        "VmefiKW4VYs3fXAsMhDj",
+        "HkNLTAa2SZJXMSRpPXEG",
+        "hT76faS4crtc7Mr4S178",
+        "vOuFBWScGSRVHgTOVXlN",
+        "YsMNy2PnuObVTcY3yco3",
+        "qX0LeVyDmudY74HGht7T"
+      ],
+      "names": "Musa: Plátano enano gigante, Plátano enano enano, Banana da terra, Plátano postre (M. balbisiana), Plátano (M. paradisiaca), Plátano manzano, banana gold, banana São Tomé, Guineo, Plátano plateado",
+      "reason": "Distintos cultivares de plátano/banano (Cavendish gigante y enano, Terra, Manzano/Silk, Ouro/Gold, São Tomé, Prata/plateado). Por regla del propietario no se fusionan; guardar el cultivar en taxonomy.subspecies. 'Plátano' (M. paradisiaca), 'Guineo' y 'Plátano postre' son genéricos y no tienen cultivar claro.",
+      "subspeciesLabels": {
+        "1aZWCce2KcX3ZSzehouY": "cv. Enano gigante",
+        "ZKLtx2A2lvWI8SOKIlAI": "cv. Enano",
+        "76i0xoBZoP3UesYt2MUG": "cv. Da Terra",
+        "HkNLTAa2SZJXMSRpPXEG": "cv. Manzano",
+        "hT76faS4crtc7Mr4S178": "cv. Gold",
+        "vOuFBWScGSRVHgTOVXlN": "cv. São Tomé",
+        "qX0LeVyDmudY74HGht7T": "cv. Plateado (Prata)"
+      }
+    },
+    {
+      "ids": [
+        "3dtAnEHdFswFsxH9Yf6I",
+        "8rvNPj8W7QbsKTp35Kk6"
+      ],
+      "names": "Citrus reticulata 'Tangerina ponkan' / Citrus reticulata 'Mandarina'",
+      "reason": "Ponkan es un cultivar específico de mandarina; el otro registro es la mandarina genérica.",
+      "subspeciesLabels": {
+        "3dtAnEHdFswFsxH9Yf6I": "cv. Ponkan"
+      }
+    },
+    {
+      "ids": [
+        "15TiBL05KYQs93m8hHWh",
+        "nmPWDLxC768ehqIMH4iI"
+      ],
+      "names": "Citrus aurantium 'Limón canario, limón criollo' / Citrus aurantium 'Naranja agria'",
+      "reason": "Plantas distintas: la naranja agria es C. aurantium; 'limón criollo/canario' probablemente es otra especie (p. ej. Citrus × aurantiifolia o C. limon). Revisar la taxonomía de 15TiBL…, no fusionar.",
+      "subspeciesLabels": {}
+    },
+    {
+      "ids": [
+        "RQERSMT6Zgjhph70nWFi",
+        "ckUA6ffdZK0ts9YHdrwA"
+      ],
+      "names": "Annona atemoya 'Chirimoya Gefner' / Annona cherimola 'Chirimoya'",
+      "reason": "La atemoya es un híbrido (A. cherimola × A. squamosa) y 'Gefner' es un cultivar de atemoya; distinto de la chirimoya.",
+      "subspeciesLabels": {
+        "RQERSMT6Zgjhph70nWFi": "cv. Gefner"
+      }
+    },
+    {
+      "ids": [
+        "258WeIbhNRmytPvT1qDq",
+        "iGqnen0LFrvyn2zFkllQ"
+      ],
+      "names": "Rosmarinus officinalis 'Romero' / Rosmarinus sp. 'Romero rastrero'",
+      "reason": "El romero rastrero es una forma/cultivar postrado distinto del romero erguido. (Nota: Rosmarinus officinalis hoy se acepta como Salvia rosmarinus en POWO.)",
+      "subspeciesLabels": {
+        "iGqnen0LFrvyn2zFkllQ": "Grupo Prostratus (romero rastrero)"
+      }
+    },
+    {
+      "ids": [
+        "4qX89560usVIEP2t3Ora",
+        "l5V1vcPrNXzKqI3yhQb3"
+      ],
+      "names": "Phaseolus ssp 'Frijol de mata' / Phaseolus ssp 'Frijol trepador'",
+      "reason": "Hábitos de crecimiento distintos (arbustivo vs. guía); tipos varietales diferentes.",
+      "subspeciesLabels": {
+        "4qX89560usVIEP2t3Ora": "frijol de mata (hábito arbustivo)",
+        "l5V1vcPrNXzKqI3yhQb3": "frijol trepador (hábito de guía)"
+      }
+    },
+    {
+      "ids": [
+        "j8CEEH4PSCD4AOgbuRP4",
+        "uwqQldt6YsOkrSqO1W9T",
+        "Yi32UUIokuA9mP7H8Uao"
+      ],
+      "names": "Agave americana / Agave mapisaga / Agave salmiana (todos 'Maguey')",
+      "reason": "Especies distintas que comparten el nombre común 'maguey'.",
+      "subspeciesLabels": {}
+    },
+    {
+      "ids": [
+        "VSRFPwLYZMcNJx6Q2e0V",
+        "RkCx3XsRe67RRfroOPHx"
+      ],
+      "names": "Leucaena leucocephala 'Guaje' / Leucaena pulverulenta 'Guaje'",
+      "reason": "Especies distintas con el mismo nombre común.",
+      "subspeciesLabels": {}
+    },
+    {
+      "ids": [
+        "XZRqdV0cbuyoxjYPSMDC",
+        "gYDptckll60zyO5OWGB0",
+        "o6aGaz7rEhHRCx6eoF6r"
+      ],
+      "names": "Inga edulis / Inga vera (jinicuil) / Inga oerstediana (chalahuite)",
+      "reason": "Especies distintas del género Inga con nombres comunes compartidos.",
+      "subspeciesLabels": {}
+    },
+    {
+      "ids": [
+        "rL2cF4iWfzvvHDNRx3Xj",
+        "y6aJhz0nilPZ1bhJDLgj",
+        "ctN61ODcII9u1hL3cXiU"
+      ],
+      "names": "Prosopis glandulosa / P. juliflora / P. laevigata (todos 'Mezquite')",
+      "reason": "Especies distintas de mezquite.",
+      "subspeciesLabels": {}
+    },
+    {
+      "ids": [
+        "WOLPBlRy6FbzURaxoaa1",
+        "Ww7843oBUJXbAQw93iHg"
+      ],
+      "names": "Handroanthus heptaphyllus / H. impetiginosus ('lapacho rosado')",
+      "reason": "Especies distintas que comparten nombre común.",
+      "subspeciesLabels": {}
+    },
+    {
+      "ids": [
+        "l5shxZ3k8V7fTFKmXgTj",
+        "S7apKEC3difXWHZeXJDY"
+      ],
+      "names": "Coffea arabica / Coffea robusta (ambos 'Café')",
+      "reason": "Especies distintas (arábica vs. robusta = C. canephora). Corregir S7apKE… a Coffea canephora.",
+      "subspeciesLabels": {}
+    },
+    {
+      "ids": [
+        "fqf2apG3UpxNCe1QBJOQ",
+        "3ICuWLQb6eiNMCqLRzuC"
+      ],
+      "names": "Canavalia ensiformis / Canavalia brasiliensis",
+      "reason": "Especies distintas.",
+      "subspeciesLabels": {}
+    },
+    {
+      "ids": [
+        "Ilk3GMdaWNrWaxLg9hZC",
+        "ohiuUBgMFdWchwxqhILz"
+      ],
+      "names": "Acacia melanoxylon 'Acacia negra' / Gleditsia triacanthos 'Acacia Negra (Honey locust)'",
+      "reason": "Solo comparten el nombre común; son especies distintas.",
+      "subspeciesLabels": {}
+    },
+    {
+      "ids": [
+        "jzwujLK6ckqSOKIa0Hpi",
+        "on6JwRDS5LGRoxU3MVMu"
+      ],
+      "names": "Theobroma bicolor 'Pataxte, pataste' / Sechium edule 'Chayote, pataste'",
+      "reason": "Solo comparten el nombre regional 'pataste'; plantas distintas.",
+      "subspeciesLabels": {}
+    },
+    {
+      "ids": [
+        "K8wkASVfcysSj3cgOJvg",
+        "ZenP1bWMl1puWaQ1S6me"
+      ],
+      "names": "Spondias mombin / Spondias purpurea ('ciruela tropical')",
+      "reason": "Especies distintas.",
+      "subspeciesLabels": {}
+    },
+    {
+      "ids": [
+        "RuLdRbFBrzSjSz6wz3n8",
+        "SnN6KJqX9QIYA9V0dC4j"
+      ],
+      "names": "Ribes hirtellum 'Uva espina' / Ribes rubrum 'Grosella espinosa europea'",
+      "reason": "Especies distintas (grosella espinosa americana vs. europea). Nota: 'grosella espinosa europea' es Ribes uva-crispa, no R. rubrum (grosella roja); revisar taxonomía de SnN6KJ….",
+      "subspeciesLabels": {}
+    },
+    {
+      "ids": [
+        "JXHTYQUkiWiqL2Db9bqi",
+        "JK8YycpLWDQQPSpXELxV"
+      ],
+      "names": "Lactuca indica 'Lechuga tropical' / (sin taxonomía) 'Lechuga'",
+      "reason": "Especies distintas (lechuga común = Lactuca sativa).",
+      "subspeciesLabels": {}
+    },
+    {
+      "ids": [
+        "jlkkCggQJFYItcBFvHp0",
+        "9eB1fdlHb32d3uPOZsPa",
+        "Xr3FH2WWIcl9bbDQinAN"
+      ],
+      "names": "Mentha sp. 'Menta' / Mentha spicata 'Hierbabuena' / (sin taxonomía) 'Menta de matón'",
+      "reason": "Plantas distintas del género Mentha (o afines); sin evidencia de duplicado.",
+      "subspeciesLabels": {}
+    },
+    {
+      "ids": [
+        "wwuQEuSKiFZFX5xYRf4H",
+        "V2q2rYfDpQbsqWMchjB2"
+      ],
+      "names": "Cucurbita sp. 'Calabaza' / Cucurbita moschata 'Calabaza melona'",
+      "reason": "Registro genérico vs. especie concreta; no hay coincidencia de variedad.",
+      "subspeciesLabels": {}
+    },
+    {
+      "ids": [
+        "DQm271BdrB1xjrOzFt9e",
+        "ITgvODkcAn0d96mcVENC"
+      ],
+      "names": "Árnica sp. / Verbesina crocata 'Árnica capitaneja'",
+      "reason": "Plantas distintas.",
+      "subspeciesLabels": {}
+    },
+    {
+      "ids": [
+        "EDDIoHu35EpWPvrIF3Rt",
+        "JK8YycpLWDQQPSpXELxV",
+        "OPGGtdm2RJGOj7qiDCOt",
+        "YkCzdfaDq4YNq5c5CU6b",
+        "0RqFU8Sop8xcBm9YII4e",
+        "RFfGxbCGRzkCT1KasKbe",
+        "UMExbdqsCyh9DS38JEv5",
+        "UlFRGpKA1zF5zatLaemB",
+        "WjnDqFvSG2z8PDxtUS4i",
+        "Xr3FH2WWIcl9bbDQinAN",
+        "i2Kfx3u9jq5lQUm3jVKz",
+        "lsANEHtv7MssKLvCSMFQ"
+      ],
+      "names": "Registros con taxonomía vacía o '-': Chile habanero, Lechuga, Chía, Amaranto, guabiroba, gliridia, Caferana, Huevo de chivo, babosa, Menta de matón, Cosamalu, Plátano morado",
+      "reason": "Entre sí son plantas distintas (se identifican por el nombre común). 'gliridia' se fusiona con Gliricidia sepium (ver merges); 'babosa', 'Amaranto' y 'Plátano morado' tienen posibles duplicados en 'uncertain'. Sugerencia de taxonomía: Capsicum chinense, Lactuca sativa, Salvia hispanica, Campomanesia xanthocarpa (guabiroba).",
+      "subspeciesLabels": {}
+    }
+  ],
+  "uncertain": [
+    {
+      "ids": [
+        "mejS8LqwwpYpxFl3lX0i",
+        "qX0LeVyDmudY74HGht7T",
+        "KrROSC9E13vqAJS5kCmh",
+        "HkNLTAa2SZJXMSRpPXEG"
+      ],
+      "names": "Musa sp. 'bananas silver, bread, tropical apple' / 'Plátano plateado, silver banana' / 'banana bread' / 'Plátano manzano, banana apple'",
+      "reason": "mejS8L… mezcla tres nombres (silver = Prata/plateado, bread, tropical apple = manzano) que coinciden con otros registros. Probablemente sea duplicado de 'Plátano plateado' (o de 'banana bread'); el propietario debe decidir a cuál cultivar corresponde y eliminarlo o asignarle uno solo. Todos están casi vacíos."
+    },
+    {
+      "ids": [
+        "HB1pUCYecK7pjobY12my",
+        "lsANEHtv7MssKLvCSMFQ",
+        "ZKLtx2A2lvWI8SOKIlAI"
+      ],
+      "names": "Musa acuminata 'plátano malayo, plátano rojo, banana nanica' / (sin taxonomía) 'Plátano morado' / Musa acuminata 'Plátano enano enano'",
+      "reason": "HB1pUC… mezcla cultivares distintos: 'plátano rojo' coincide con 'Plátano morado' (Red Dacca) y 'banana nanica' es el Cavendish enano (coincide con 'Plátano enano enano'). Revisar y separar/renombrar; posible fusión de 'Plátano morado' con la parte 'plátano rojo'."
+    },
+    {
+      "ids": [
+        "OubbfQc8omznQ8xEo7Qu",
+        "f2Ln2vUvmdBpnn0dZhpj"
+      ],
+      "names": "Persea schiedeana 'Anayo, aguacate criollo' / Persea schiedeana 'Chinene'",
+      "reason": "Misma especie y sin variedad, pero los nombres comunes no coinciden y no se encontró fuente que confirme 'anayo' como nombre de P. schiedeana; 'aguacate criollo' suele referirse a P. americana var. drymifolia. Si ambos son chinene, fusionar conservando f2Ln2v…."
+    },
+    {
+      "ids": [
+        "0CtvqVAlKchzIsVnsQi2",
+        "LDvsFrMNaiJcySoUXjnb"
+      ],
+      "names": "Phaseolus lunatus 'Frijol ibes' / Phaseolus lunatus 'Frijol lima, frijol mantequilla'",
+      "reason": "Ibes es el nombre maya/yucateco del frijol lima; puede ser la misma planta o una variedad criolla (grano pequeño). Decidir si se fusiona o se guarda 'var. criolla ibes' en subspecies."
+    },
+    {
+      "ids": [
+        "Pz89KNn3tHneyP46erkG",
+        "NHUAevaghgtDUxdAgPQ4"
+      ],
+      "names": "Malpighia emarginata 'Acerola, cerecita…' / Malpighia glabra 'Acerola'",
+      "reason": "Ambos registros describen la acerola. La acerola cultivada es M. emarginata; M. glabra es otra especie, aunque con frecuencia el nombre se aplica erróneamente a la acerola. Si NHUAev… es acerola, fusionar conservando NHUAev… (más completo) con taxonomía corregida a M. emarginata."
+    },
+    {
+      "ids": [
+        "gFOhtU6KJCmh4am3F97l",
+        "jtMXLa1EfJCI20MuE226",
+        "by7PIhL9v0BInozy5342"
+      ],
+      "names": "Garcinia gardneriana 'Bacupari' / Garcinia sp. 'Bacupari, bacupari miúdo' / Garcinia sp. 'Mangostán amarillo'",
+      "reason": "'Bacupari-miúdo' y 'mangostão-amarelo' se aplican a G. gardneriana y a G. brasiliensis según la fuente (Embrapa vs. EPAMIG). Podrían ser duplicados de G. gardneriana o corresponder a G. brasiliensis; además 'mangostán amarillo' también se usa para G. xanthochymus. Identificar la especie antes de fusionar."
+    },
+    {
+      "ids": [
+        "6fKS5vo7e9NF14KORiif",
+        "plB49IMLaw1gBhNqGKVy",
+        "KFqo6vHeYcsUvVyMrEEA",
+        "bFNyjfPE2Dxhtx44S49K"
+      ],
+      "names": "Opuntia indica 'Nopal' / Opuntia ficus-indica 'Tuna' / Opuntia sp. 'Nopal de tuna' / Opuntia cochinea 'Nopal'",
+      "reason": "'Opuntia indica' no es un nombre aceptado (probablemente O. ficus-indica). Nopal verdura, nopal tunero y nopal de cochinilla (O. cochenillifera) suelen ser cultivares/especies distintos. Revisar si 6fKS5v y KFqo6v son cultivares de O. ficus-indica (p. ej. 'cv. Milpa Alta' para verdura) o duplicados."
+    },
+    {
+      "ids": [
+        "BQeItwmcjZns8ZZNTkIP",
+        "roves24pUM5GtlAHp7zq"
+      ],
+      "names": "Agave sp 'Maguey' / Agave sp. 'Agave'",
+      "reason": "Dos registros genéricos de Agave con detalles casi idénticos; probablemente duplicados, pero sin especie no se puede confirmar. Decidir qué agave representa cada uno."
+    },
+    {
+      "ids": [
+        "ulviLKuxLqvYKVHMOeY8",
+        "m9ceZosLoy0wDpSEX6v8"
+      ],
+      "names": "Vaccinium corymbosum 'Mora azul' / Vaccinium sp. 'Arándano'",
+      "reason": "'Mora azul' y 'arándano' designan al arándano azul; el registro genérico probablemente es el mismo cultivo (fusión hacia ulviLK…), salvo que se refiera a arándano rojo (V. macrocarpon)."
+    },
+    {
+      "ids": [
+        "YkCzdfaDq4YNq5c5CU6b",
+        "UzBU5iAlzmYQMxKi7idF"
+      ],
+      "names": "(sin taxonomía) 'Amaranto' / Amaranthus sp. 'Quelites'",
+      "reason": "Ambos son Amaranthus, pero 'amaranto' (grano, A. hypochondriacus/cruentus) y 'quelites' (verdura de hoja) pueden ser especies o usos distintos. Revisar."
+    },
+    {
+      "ids": [
+        "WjnDqFvSG2z8PDxtUS4i",
+        "jCwJrFviGgqYym5S2NG9"
+      ],
+      "names": "(sin taxonomía) 'babosa' / Aloe vera 'Sábila'",
+      "reason": "'Babosa' es el nombre portugués/brasileño de Aloe vera, pero también se usa para otras plantas. Si es aloe, fusionar conservando jCwJrF…."
+    },
+    {
+      "ids": [
+        "0hE9SP6rSEFiFL630Dct",
+        "pFqr5W1slxMuIghyN58a"
+      ],
+      "names": "Selaginella martensii 'Selaginela, doradilla' / Selaginella sp. 'Doradilla'",
+      "reason": "Ambos 'doradilla'; en México la doradilla suele ser S. lepidophylla, distinta de S. martensii. Revisar si son la misma planta."
+    },
+    {
+      "ids": [
+        "W9CKabFkPEgQg8oEtvGS",
+        "cIvPmZoELDskJosk2k1l"
+      ],
+      "names": "Pyrus communis 'Perón' / Pirus sp. 'Pera'",
+      "reason": "Ambos perales; 'perón' puede ser un cultivar de P. communis. Posible duplicado (fusionar hacia W9CKab…) o distinto cultivar ('cv. Perón')."
+    },
+    {
+      "ids": [
+        "wvPL9UnL6ulZ9ZrQQixU",
+        "56AQL5tS9PoKKi8oKTON",
+        "DN4tgZ23BSgls6kDK52P"
+      ],
+      "names": "Morus sp 'Morera' / Morus alba / Morus nigra",
+      "reason": "Morus sp. es genérico; podría duplicar M. alba o M. nigra. Identificar la especie."
+    }
+  ]
+}

@@ -1,0 +1,725 @@
+[
+ {
+  "id": "X51MIOJHbwt9EB4gXcBh",
+  "name": "Citrus × limonia (Limón rangpur / limão cravo)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "taxonomy.species": "× limonia",
+   "commonNames": [
+    "lemon carnation",
+    "Limón rangpur",
+    "Limón mandarina"
+   ],
+   "height": {
+    "min": 3,
+    "max": 5
+   },
+   "crownWidth": {
+    "min": 2,
+    "max": 4
+   },
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0"
+   ],
+   "details.lightPreference": "H",
+   "details.humidityPreference": "M",
+   "details.shape": "árbol",
+   "details.lifeCycle": "Secundarias 3",
+   "details.lifeCycleDuration": "Hasta 80 años",
+   "details.heightRangeDescription": "hasta 5 mts"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.species",
+    "old": "sp.",
+    "new": "× limonia",
+    "reason": "'lemon carnation' es traducción literal de 'limão cravo' (portugués), nombre de Citrus × limonia Osbeck (Rangpur lime)",
+    "source": "https://www.evergreentrees.com.au/products/citrus-x-limonia-rangpur-lime"
+   }
+  ],
+  "sources": [
+   "https://www.evergreentrees.com.au/products/citrus-x-limonia-rangpur-lime",
+   "https://woodlanders.net/products/citrus-reticulata-var-austera-rangpur"
+  ],
+  "notes": "Identificado como Citrus × limonia (limão cravo). POSIBLE DUPLICADO de vLK2vj9sfVInh3Ntwt3d (Citrus × limonia, 'Limon mandarina, limao cravo'). Altura 3–5 m según viveros; ciclo y estrato alineados con otros cítricos del catálogo."
+ },
+ {
+  "id": "AReOZOa5Z4LZ0JNXM2uJ",
+  "name": "Citrus × floridana (Limequat)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "taxonomy.species": "× floridana",
+   "taxonomy.synonyms": "× Citrofortunella floridana",
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0"
+   ],
+   "details.lifeCycle": "Secundarias 3",
+   "details.lifeCycleDuration": "Hasta 80 años"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.species",
+    "old": "× Fortunella",
+    "new": "× floridana",
+    "reason": "'× Fortunella' es un nombre de género, no un epíteto; el limequat es Citrus × floridana (sin. × Citrofortunella floridana)",
+    "source": "https://www.rhs.org.uk/plants/320513/citrus-x-floridana-(f)/details"
+   }
+  ],
+  "sources": [
+   "https://www.rhs.org.uk/plants/320513/citrus-x-floridana-(f)/details",
+   "https://temperate.theferns.info/plant/Citrofortunella+x+floridana"
+  ],
+  "notes": "Nombre corregido a Citrus × floridana. RHS indica altura de 1.5–2.5 m (el registro tiene 4 m; no se cambió, revisar). Uso comestible del fruto (edibleUses marca 'nutsAndSeeds', probablemente debería ser 'fruit')."
+ },
+ {
+  "id": "yVduUplCsNRZjK2VP586",
+  "name": "Citrus × latifolia (Limón persa)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "commonNames": [
+    "Limon sin semilla, limao thaiti",
+    "Limón persa"
+   ],
+   "height": {
+    "min": 3,
+    "max": 5
+   },
+   "crownWidth": {
+    "min": 4,
+    "max": 5
+   },
+   "ecologicalZoneIds": [
+    "1"
+   ],
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0"
+   ],
+   "details.lightPreference": "H",
+   "details.humidityPreference": "M",
+   "details.isFrostResistant": false,
+   "details.shape": "árbol",
+   "details.lifeCycle": "Secundarias 3",
+   "details.lifeCycleDuration": "Hasta 80 años",
+   "details.heightRangeDescription": "hasta 5 mts"
+  },
+  "corrections": [],
+  "sources": [
+   "https://ask.ifas.ufl.edu/publication/CH093",
+   "https://www.darwin.nt.gov.au/sites/default/files/old_7_publications_files/tahitian_lime_0.pdf"
+  ],
+  "notes": "Limón persa/Tahití: árbol de 3–5 m, copa 4.5–5 m (UF/IFAS, NT Gov). Sensible a heladas. Se cultiva ampliamente en zonas cálido-húmedas (Veracruz). POSIBLE DUPLICADO del registro 'Citrus latifolia' (sin ×) existente en el catálogo."
+ },
+ {
+  "id": "GOwRWMY5Vm5kNKCUkDe1",
+  "name": "Citrus × limetta (Lima dulce)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "commonNames": [
+    "Lima",
+    "Lima dulce"
+   ],
+   "height": {
+    "min": 3,
+    "max": 5
+   },
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0"
+   ],
+   "details.humidityPreference": "M"
+  },
+  "corrections": [],
+  "sources": [
+   "https://www.gob.mx/cms/uploads/attachment/file/838441/Lima_monografi_a_2023.pdf",
+   "https://toptropicals.com/catalog/uid/Citrus_limetta.htm"
+  ],
+  "notes": "Monografía SIAP: rara vez supera 5 m; TopTropicals 3–6 m. Flores visitadas por abejas como otros cítricos."
+ },
+ {
+  "id": "CsV0gGLrsieOtuFHYa7M",
+  "name": "Citrus × limon (Limón amarillo)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "commonNames": [
+    "Limon americano",
+    "Limón amarillo",
+    "Limón real"
+   ],
+   "height": {
+    "min": 3,
+    "max": 6
+   },
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "3"
+   ],
+   "details.lightPreference": "H",
+   "details.humidityPreference": "M",
+   "details.isFrostResistant": false,
+   "details.shape": "árbol",
+   "details.lifeCycle": "Secundarias 3",
+   "details.lifeCycleDuration": "Hasta 80 años"
+  },
+  "corrections": [],
+  "sources": [
+   "https://edis.ifas.ufl.edu/publication/HS402/pdf",
+   "https://temperate.theferns.info/plant/Citrus+limon"
+  ],
+  "notes": "UF/IFAS: árbol de 3–6 m; abejas visitan las flores con frecuencia. Sensible a heladas. Uso medicinal tradicional documentado."
+ },
+ {
+  "id": "vLK2vj9sfVInh3Ntwt3d",
+  "name": "Citrus × limonia (Limón mandarina / limão cravo)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "taxonomy.family": "Rutaceae",
+   "commonNames": [
+    "Limon mandarina, limao cravo",
+    "Limón rangpur"
+   ],
+   "height": {
+    "min": 3,
+    "max": 5
+   },
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0"
+   ],
+   "details.lightPreference": "H",
+   "details.humidityPreference": "M",
+   "details.shape": "árbol",
+   "details.lifeCycle": "Secundarias 3",
+   "details.lifeCycleDuration": "Hasta 80 años",
+   "details.heightRangeDescription": "hasta 5 mts"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.family",
+    "old": "Rosaceae",
+    "new": "Rutaceae",
+    "reason": "Citrus pertenece a Rutaceae",
+    "source": "https://www.evergreentrees.com.au/products/citrus-x-limonia-rangpur-lime"
+   }
+  ],
+  "sources": [
+   "https://www.evergreentrees.com.au/products/citrus-x-limonia-rangpur-lime",
+   "https://woodlanders.net/products/citrus-reticulata-var-austera-rangpur"
+  ],
+  "notes": "Familia corregida. Altura 3–5 m. POSIBLE DUPLICADO de X51MIOJHbwt9EB4gXcBh ('lemon carnation' = limão cravo). edibleUses marca hojas y raíces, lo cual parece erróneo (el uso es el fruto)."
+ },
+ {
+  "id": "PgZkI7KgILRRiV6zbT4g",
+  "name": "Citrus × paradisi (Toronja)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "taxonomy.species": "× paradisi",
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "1",
+    "2",
+    "0"
+   ],
+   "details.humidityPreference": "M"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.species",
+    "old": "× paradisii",
+    "new": "× paradisi",
+    "reason": "error ortográfico; nombre aceptado Citrus × paradisi Macfad.",
+    "source": "https://powo.science.kew.org/results?q=Citrus%20paradisi"
+   }
+  ],
+  "sources": [
+   "https://edis.ifas.ufl.edu/publication/HS402/pdf",
+   "https://powo.science.kew.org/results?q=Citrus%20paradisi"
+  ],
+  "notes": "Epíteto corregido. Se agregó Alimento. Las funciones existentes Forraje y Maderable parecen dudosas para toronja (revisar). La altura registrada (3.5–4 m) es baja: la toronja suele alcanzar 5–6 m o más; no se cambió."
+ },
+ {
+  "id": "n3zoMjNy3E6u4fg7v70m",
+  "name": "Clitoria fairchildiana (Sombreiro)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "taxonomy.species": "fairchildiana",
+   "height": {
+    "min": 8,
+    "max": 15
+   },
+   "ecologicalFunctionIds": [
+    "0",
+    "1"
+   ],
+   "details.shape": "árbol",
+   "details.lightPreference": "H",
+   "details.heightRangeDescription": "más de 10 mts"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.species",
+    "old": "sp.",
+    "new": "fairchildiana",
+    "reason": "'sombreiro' es el nombre común brasileño de Clitoria fairchildiana R.A.Howard, árbol leguminoso usado en SAF y sombra",
+    "source": "https://www.nparks.gov.sg/florafaunaweb/flora/2/8/2814"
+   }
+  ],
+  "sources": [
+   "https://www.nparks.gov.sg/florafaunaweb/flora/2/8/2814",
+   "https://scielo.br/j/asagr/a/3GcYnbDfSNTrPJmTQM8W4wj/?lang=en",
+   "https://apct.sede.embrapa.br/pab/article/view/7554"
+  ],
+  "notes": "Identificado como Clitoria fairchildiana (sombreiro), nativo de Brasil (no de México pese al nombre 'mexican'); árbol de 8–15 m (hasta 20), nodula con Bradyrhizobium, recomendado para SAF y recuperación de áreas degradadas. Verificar identificación con los responsables. No se asignaron zonas mexicanas."
+ },
+ {
+  "id": "gumz085oT0LnAX8xZie7",
+  "name": "Cnidoscolus aconitifolius (Chaya)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "taxonomy.family": "Euphorbiaceae",
+   "ecologicalFunctionIds": [
+    "0",
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "1",
+    "3"
+   ]
+  },
+  "corrections": [],
+  "sources": [
+   "https://www.echocommunity.org/resources/502dce92-7450-44eb-9f14-02e9a3052f6b",
+   "https://scholarworks.montana.edu/server/api/core/bitstreams/60c62aa6-9ca4-44bd-ae16-20c5ec70ad6c/content",
+   "https://orders.fairchildgarden.org/collections/all/products/cnidoscolus-aconitifolius"
+  ],
+  "notes": "Arbusto perenne de rápido crecimiento (≈3 m, hasta 6 m), tolera poda fuerte; usos alimenticio (hojas cocidas), forrajero y medicinal maya (Ebel et al.). Flores visitadas por abejas y mariposas (fuente de vivero). El estrato 'Emergente' parece inconsistente con 2.5 m de altura; no se cambió por ser posición relativa en el consorcio — revisar. isFrostResistant=true parece dudoso (especie tropical)."
+ },
+ {
+  "id": "Xmuoa5K8XYokTkCeKtlf",
+  "name": "Cocos nucifera (Cocotero)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "height": {
+    "min": 20,
+    "max": 30
+   },
+   "crownWidth": {
+    "min": 5,
+    "max": 10
+   },
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "3",
+    "1",
+    "0",
+    "2"
+   ],
+   "commonNames": [
+    "Cocotero",
+    "Coco",
+    "Palma de coco"
+   ]
+  },
+  "corrections": [],
+  "sources": [
+   "https://apps.worldagroforestry.org/treedb/AFTPDFS/Cocos_nucifera.PDF",
+   "https://growables.com/information/TropicalFruit/CocosAgroforestry.htm",
+   "https://dimensions.com/element/coconut-palm-cocos-nucifera"
+  ],
+  "notes": "Agroforestree: variedades altas 24–30 m (existen enanas), madera de estípite usada en construcción, flores melíferas. Copa 4.6–10 m según fuentes. Se agregaron Alimento y Maderable."
+ },
+ {
+  "id": "l5shxZ3k8V7fTFKmXgTj",
+  "name": "Coffea arabica (Café)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "taxonomy.family": "Rubiaceae",
+   "commonNames": [
+    "Cafe",
+    "Café arábica",
+    "Cafeto"
+   ],
+   "height": {
+    "min": 3,
+    "max": 4.5
+   },
+   "stratumIds": [
+    "1",
+    "2"
+   ],
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0"
+   ],
+   "details.lightPreference": "M",
+   "details.humidityPreference": "M",
+   "details.isFrostResistant": false,
+   "details.shape": "arbusto",
+   "details.heightRangeDescription": "hasta 5 mts"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.family",
+    "old": "Rubiacea",
+    "new": "Rubiaceae",
+    "reason": "error ortográfico del nombre de familia",
+    "source": "https://hort.ifas.ufl.edu/database/documents/pdf/shrub_fact_sheets/cofaraa.pdf"
+   }
+  ],
+  "sources": [
+   "https://hort.ifas.ufl.edu/database/documents/pdf/shrub_fact_sheets/cofaraa.pdf",
+   "https://desert-tropicals.com/Plants/Rubiaceae/Coffea_arabica.html",
+   "https://www.mnhn.fr/en/arabica-coffee"
+  ],
+  "notes": "UF/IFAS: 3–4.5 m (10–15 ft), semisombra; dañado por helada a 0 °C. Silvestre puede alcanzar 9–12 m, en cultivo se poda. Se añadió estrato Medio (el SPEC lo ubica ahí) conservando Bajo. Flores visitadas por abejas."
+ },
+ {
+  "id": "S7apKEC3difXWHZeXJDY",
+  "name": "Coffea canephora (Café robusta)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "taxonomy.species": "canephora",
+   "taxonomy.synonyms": "Coffea robusta L.Linden",
+   "commonNames": [
+    "Cafe",
+    "Café robusta"
+   ],
+   "height": {
+    "min": 4,
+    "max": 8
+   },
+   "stratumIds": [
+    "1",
+    "2"
+   ],
+   "ecologicalZoneIds": [
+    "1"
+   ],
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0"
+   ],
+   "details.lightPreference": "M",
+   "details.humidityPreference": "H",
+   "details.isFrostResistant": false,
+   "details.shape": "arbusto",
+   "details.heightRangeDescription": "de 5 a 10 mts"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.species",
+    "old": "robusta",
+    "new": "canephora",
+    "reason": "Coffea robusta L.Linden es sinónimo de Coffea canephora Pierre ex A.Froehner (POWO)",
+    "source": "https://powo.science.kew.org/taxon/747247-1"
+   }
+  ],
+  "sources": [
+   "https://powo.science.kew.org/taxon/747247-1",
+   "https://ecocrop.apps.fao.org/ecocrop/srv/en/cropView?id=750",
+   "https://www.rhs.org.uk/plants/158002/wd/details"
+  ],
+  "notes": "Nombre actualizado a C. canephora. Arbusto o arbolito de 2–9 m (EcoCrop), 4–8 m (RHS); se cultiva en tierras bajas cálido-húmedas (Chiapas, Veracruz). Sin tolerancia a heladas."
+ },
+ {
+  "id": "UdHIpTUNJoEOUAZhgWrD",
+  "name": "Colocasia esculenta (Malanga, taro)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "taxonomy.family": "Araceae",
+   "details.isFrostResistant": false,
+   "additionalFunctionIds": [
+    "0"
+   ]
+  },
+  "corrections": [
+   {
+    "field": "details.isFrostResistant",
+    "old": true,
+    "new": false,
+    "reason": "RHS la describe como perenne tuberosa 'frost tender'",
+    "source": "https://www.rhs.org.uk/plants/359375/colocasia-esculenta-hawaiian-punch-royal-hawaiian-series/details"
+   }
+  ],
+  "sources": [
+   "https://www.rhs.org.uk/plants/359375/colocasia-esculenta-hawaiian-punch-royal-hawaiian-series/details",
+   "https://www.rhs.org.uk/plants/133485/colocasia-esculenta-black-magic/details"
+  ],
+  "notes": "Familia Araceae agregada; resistencia a heladas corregida a false. Altura 1–2 m consistente con RHS (1–2.5 m). Con 1–2 m quizá el estrato correcto sea Bajo en vez de Medio (no se cambió)."
+ },
+ {
+  "id": "SqWcJoq2g1kXDw5AJ27i",
+  "name": "Commelina erecta (Matlali)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "taxonomy.species": "erecta",
+   "taxonomy.synonyms": "Commelina elegans Kunth",
+   "taxonomy.family": "Commelinaceae",
+   "additionalFunctionIds": [
+    "0",
+    "3"
+   ],
+   "commonNames": [
+    "Matlali",
+    "Hierba del pollo"
+   ]
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.species",
+    "old": "elegans",
+    "new": "erecta",
+    "reason": "Commelina elegans Kunth es sinónimo de Commelina erecta L.",
+    "source": "https://www.nparks.gov.sg/florafaunaweb/flora/9/0/9003"
+   }
+  ],
+  "sources": [
+   "https://www.nparks.gov.sg/florafaunaweb/flora/9/0/9003",
+   "https://en.wikipedia.org/wiki/Commelina_erecta",
+   "https://www.tramil.net/en/plant/commelina-elegans"
+  ],
+  "notes": "Nombre actualizado a C. erecta. Uso medicinal documentado por TRAMIL; hojas tiernas consumidas como quelite. Nota: en el centro de México 'matlali/matlalín' también designa a Commelina coelestis/C. tuberosa; verificar qué planta se refiere."
+ },
+ {
+  "id": "Hyo1XSiNRonCjQoR2Xf3",
+  "name": "Copaifera officinalis (Copaíba)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "additionalFunctionIds": [
+    "3"
+   ],
+   "details.shape": "árbol"
+  },
+  "corrections": [],
+  "sources": [
+   "https://colplanta.org/taxon/urn:lsid:ipni.org:names:64940-2/general-information",
+   "https://pmc.ncbi.nlm.nih.gov/articles/PMC5983702"
+  ],
+  "notes": "Árbol nativo de Venezuela al NE de Brasil y Bolivia (200–500 m s.n.m., bioma tropical estacionalmente seco); no nativo de México, por lo que no se asignaron zonas. Oleorresina (aceite de copaíba) de uso medicinal. No se encontró fuente fiable de altura/copa específica; no se asignó fijación de N (el género Copaifera, Detarioideae, generalmente no nodula)."
+ },
+ {
+  "id": "xDmj1cVOVIOR9VeJJUY9",
+  "name": "Cordia alliodora (Laurel)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "height": {
+    "min": 20,
+    "max": 35
+   },
+   "stratumIds": [
+    "3",
+    "4"
+   ],
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "2"
+   ],
+   "details.shape": "árbol",
+   "details.lightPreference": "H",
+   "details.isFrostResistant": false,
+   "details.heightRangeDescription": "más de 10 mts"
+  },
+  "corrections": [],
+  "sources": [
+   "https://apps.worldagroforestry.org/treedb/AFTPDFS/Cordia_alliodora.PDF",
+   "https://prosea.prota4u.org/view.aspx?id=2997",
+   "https://sidalc.net/search/Record/KOHA-OAI-BVE:126125"
+  ],
+  "notes": "Árbol maderable de hasta 40 m, fuste limpio, copa compacta; muy usado como sombra de café y cacao. Flores fuente importante de néctar para apicultores (PROSEA). Se añadió estrato Emergente."
+ },
+ {
+  "id": "Xxq3dcMhZ920F5cuIdpS",
+  "name": "Cordia dodecandra (Ciricote)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "taxonomy.family": "Boraginaceae",
+   "height": {
+    "min": 10,
+    "max": 30
+   },
+   "stratumIds": [
+    "3"
+   ],
+   "ecologicalZoneIds": [
+    "1"
+   ],
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "2",
+    "3"
+   ],
+   "details.shape": "árbol",
+   "details.lightPreference": "H"
+  },
+  "corrections": [],
+  "sources": [
+   "https://tabasco.gob.mx/sites/default/files/users/usercomesfortabasco/CIRICOTE.pdf",
+   "https://www.revista.ccba.uady.mx/ojs/index.php/BAC/article/view/5833",
+   "https://www.redalyc.org/pdf/617/61743002003.pdf"
+  ],
+  "notes": "Árbol caducifolio de hasta 30 m de la Península de Yucatán; fruto comestible (dulce de ciricote), madera dura muy apreciada, corteza medicinal (tos, diarrea); documentado como recurso para polinizadores. Especie vulnerable. Crece en selvas medianas/bajas sobre suelo calcáreo (zona 'Selva baja' no disponible; se asignó Selva húmeda)."
+ },
+ {
+  "id": "GXCXQ7zHgQhsEJhwV3SD",
+  "name": "Cordiera sessilis (Marmelada de cachorro)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "taxonomy.family": "Rubiaceae",
+   "taxonomy.synonyms": "Alibertia sessilis",
+   "additionalFunctionIds": [
+    "0"
+   ],
+   "details.shape": "arbusto"
+  },
+  "corrections": [],
+  "sources": [
+   "https://www.redalyc.org/journal/1871/187148891014/html/",
+   "https://ojs.brazilianjournals.com.br/ojs/index.php/BRJD/article/download/15093/12456/39015"
+  ],
+  "notes": "Arbusto ramificado de copa baja del Cerrado brasileño; fruto comestible fresco y en dulces; madera para leña. No nativo de México (sin zonas). No se encontró altura fiable."
+ },
+ {
+  "id": "2v7QclBvSVH1koaEauJv",
+  "name": "Corylus avellana (Avellano)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "height": {
+    "min": 3,
+    "max": 6
+   },
+   "crownWidth": {
+    "min": 3,
+    "max": 5
+   },
+   "stratumIds": [
+    "2"
+   ],
+   "ecologicalFunctionIds": [
+    "0",
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0"
+   ],
+   "details.shape": "arbusto",
+   "details.isFrostResistant": true
+  },
+  "corrections": [],
+  "sources": [
+   "https://www.gardenia.net/plant/corylus-avellana",
+   "https://wlgf.org/wild-plants/woody-plants/trees-and-shrubs/small-garden-trees/hazel/",
+   "https://www.permaculture.co.uk/?p=1357"
+  ],
+  "notes": "Arbusto multitallo de 3–6 m (hasta 8–10), tradicionalmente manejado en tallar (coppice) para varas; polen temprano valioso para abejas melíferas. Especie templada, resistente a heladas; poco cultivada en México."
+ },
+ {
+  "id": "bNKuiUz7LSVMj3hFfYNu",
+  "name": "Crataegus mexicana (Tejocote)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "taxonomy.species": "mexicana",
+   "stratumIds": [
+    "2"
+   ],
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "3"
+   ]
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.species",
+    "old": "mexinaca",
+    "new": "mexicana",
+    "reason": "error ortográfico; nombre aceptado Crataegus mexicana Moc. & Sessé ex DC. (POWO)",
+    "source": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:723791-1"
+   }
+  ],
+  "sources": [
+   "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:723791-1",
+   "https://temperate.theferns.info/plant/Crataegus+mexicana",
+   "https://en.wikipedia.org/wiki/Crataegus_mexicana"
+  ],
+  "notes": "Epíteto corregido. Árbol pequeño de 4–7 m (ocasionalmente 10), nativo de México a Guatemala. Fruto comestible; uso medicinal tradicional (tos, vías respiratorias). Flores de rosácea visitadas por abejas."
+ },
+ {
+  "id": "WRoAHiBl6GsfryR0m1IO",
+  "name": "Crescentia cujete (Jícaro, güira)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "height": {
+    "min": 6,
+    "max": 10
+   },
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "1",
+    "3"
+   ],
+   "details.shape": "árbol",
+   "details.lightPreference": "H"
+  },
+  "corrections": [],
+  "sources": [
+   "https://www.ambientico.una.ac.cr/wp-content/uploads/tainacan-items/5/13136/130_22.pdf",
+   "https://pmc.ncbi.nlm.nih.gov/articles/PMC8282368",
+   "https://www.engormix.com/lecheria/sistema-silvopastoril/importancia-arbol-morro-crescentia_a45233/"
+  ],
+  "notes": "Árbol de 6–10 m (hasta 12). Frutos maduros consumidos por ganado bovino y caballos; amplio uso medicinal tradicional (revisión PMC). Polinizado por murciélagos (se asignó atracción de polinizadores). No confundir con C. alata (morro)."
+ }
+]

@@ -1,0 +1,1492 @@
+[
+ {
+  "id": "A7sIR35JcZJBAGj4E1aC",
+  "name": "Plinia cauliflora (Jaboticaba)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "taxonomy.genus": "Plinia",
+   "taxonomy.synonyms": [
+    "Myrciaria cauliflora (Mart.) O.Berg"
+   ],
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "3"
+   ],
+   "commonNames": [
+    "Jaboticaba, Guapuru, jaboticaba da mata atlántica",
+    "Jabuticaba"
+   ],
+   "details.lifeCycle": "Secundarias 3",
+   "details.lifeCycleDuration": "Hasta 80 años",
+   "details.nutrientExtraction": "M"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.genus",
+    "old": "Myrciaria",
+    "new": "Plinia",
+    "reason": "Myrciaria cauliflora es sinónimo; nombre aceptado en POWO: Plinia cauliflora (Mart.) Kausel",
+    "source": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:203847-2"
+   }
+  ],
+  "sources": [
+   "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:203847-2",
+   "https://www.nparks.gov.sg/florafaunaweb/flora/3/2/3216",
+   "https://ask.ifas.ufl.edu/publication/HS1519/pdf"
+  ],
+  "notes": "Nombre actualizado a Plinia cauliflora (Myrciaria cauliflora como sinónimo). Flores melíferas visitadas por abejas; fruto comestible y cáscara usada como astringente en medicina tradicional brasileña. Ojo: altura registrada 3.5 m pero heightRangeDescription dice 'de 5 a 10 mts'; en cultivo 3-5 m (Florida), hasta 9-15 m en hábitat. No se cambió altura."
+ },
+ {
+  "id": "PuNwwTx9aKAhy0E1UzVS",
+  "name": "Myrciaria glazioviana (Cabeludinha)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "height": {
+    "min": 3,
+    "max": 6
+   },
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0"
+   ],
+   "details.shape": "arbusto",
+   "details.lightPreference": "H",
+   "details.humidityPreference": "M",
+   "details.heightRangeDescription": "hasta 5 mts",
+   "details.lifeCycleDuration": "Hasta 80 años"
+  },
+  "corrections": [],
+  "sources": [
+   "https://growables.org/information/TropicalFruit/JaboticabaYellow.htm",
+   "https://en.wikipedia.org/wiki/Myrciaria_glazioviana",
+   "https://echocommunity.org/es/resources/1bc89ee5-e73e-4439-8e07-b0ac4af516dc"
+  ],
+  "notes": "Arbusto grande o arbolito de 3-6 m (Growables, ECHO), nativo de la Mata Atlántica de Brasil; fruto comestible. Flores de Myrtaceae visitadas por abejas. No se asignó zona ecológica: su cultivo en México es marginal (sería Selva húmeda)."
+ },
+ {
+  "id": "Ql37DXf0HJZEpCLEqtkm",
+  "name": "Myroxylon balsamum (Bálsamo)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "taxonomy.family": "Fabaceae",
+   "height": {
+    "min": 15,
+    "max": 35
+   },
+   "ecologicalFunctionIds": [
+    "1"
+   ],
+   "additionalFunctionIds": [
+    "2",
+    "3"
+   ],
+   "commonNames": [
+    "Arbol del bálsamo, Quina quina",
+    "Bálsamo",
+    "Palo de bálsamo",
+    "Nabal"
+   ],
+   "details.shape": "árbol",
+   "details.lightPreference": "H",
+   "details.humidityPreference": "M",
+   "details.isFrostResistant": false,
+   "details.heightRangeDescription": "más de 10 mts"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.family",
+    "old": "Papilionaceae (Leg.)",
+    "new": "Fabaceae",
+    "reason": "Nombre de familia APG IV",
+    "source": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:166483-2/general-information"
+   }
+  ],
+  "sources": [
+   "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:166483-2/general-information",
+   "https://winrock.org/myroxylon-balsam-and-much-more/",
+   "https://apps.worldagroforestry.org/treedb2/AFTPDFS/Myroxylon_balsamum.PDF"
+  ],
+  "notes": "Árbol de 15-35 m (POWO: (8-)15-50 m), nativo del sur de México a Sudamérica. Nodula y fija nitrógeno; usado como sombra de café. Madera fina para ebanistería; bálsamo de uso medicinal (tos, asma) y en perfumería. Nombre en México: nabal."
+ },
+ {
+  "id": "gGiWusPKwpFVUpkHGepD",
+  "name": "Myrtillocactus geometrizans (Garambullo)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "height": {
+    "min": 2,
+    "max": 5
+   },
+   "stratumIds": [
+    "2"
+   ],
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "3"
+   ],
+   "commonNames": [
+    "Garambuyo",
+    "Garambullo"
+   ],
+   "details.shape": "arbusto",
+   "details.lightPreference": "H",
+   "details.humidityPreference": "L",
+   "details.heightRangeDescription": "hasta 5 mts"
+  },
+  "corrections": [
+   {
+    "field": "details.heightRangeDescription",
+    "old": "de 5 a 10 mts",
+    "new": "hasta 5 mts",
+    "reason": "Cactácea columnar ramificada de 2-4.5 m (hasta ~7 m excepcionalmente)",
+    "source": "https://www.redalyc.org/pdf/610/61003004.pdf"
+   }
+  ],
+  "sources": [
+   "https://www.redalyc.org/pdf/610/61003004.pdf",
+   "https://www.lifeder.com/garambullo/",
+   "https://repository.uaeh.edu.mx/revistas/index.php/icea/article/view/16110"
+  ],
+  "notes": "Cactácea arborescente endémica de México, 2-5 m. Frutos (garambullos) y flores comestibles; uso medicinal tradicional. Flores visitadas por abejas. Forma 'cactus' no está en el catálogo; se usó 'arbusto'. Se añadió la grafía correcta 'Garambullo'."
+ },
+ {
+  "id": "il1OXNdeGouTmhgIjB1V",
+  "name": "Nephelium lappaceum (Rambután)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "height": {
+    "min": 10,
+    "max": 20
+   },
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "3"
+   ],
+   "details.shape": "árbol",
+   "details.lightPreference": "H",
+   "details.humidityPreference": "H",
+   "details.isFrostResistant": false,
+   "details.heightRangeDescription": "más de 10 mts"
+  },
+  "corrections": [],
+  "sources": [
+   "https://apps.worldagroforestry.org/treedb/AFTPDFS/Nephelium_lappaceum.PDF",
+   "https://worldplants.ca/display0.php?id=10171",
+   "https://stuartxchange.com/Rambutan"
+  ],
+  "notes": "Árbol de 10-12 m en cultivo (ICRAF), hasta 20-25 m silvestre; trópico húmedo (cultivado en Soconusco, Chiapas). Flores muy visitadas por abejas (fuente de néctar). Fruto comestible; usos medicinales tradicionales en Asia."
+ },
+ {
+  "id": "HFmtiwqFi4N9N5HM8Xel",
+  "name": "Ochroma pyramidale (Balsa)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "height": {
+    "min": 20,
+    "max": 30
+   },
+   "ecologicalFunctionIds": [
+    "0",
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "2"
+   ],
+   "details.shape": "árbol",
+   "details.lightPreference": "H",
+   "details.humidityPreference": "H",
+   "details.isFrostResistant": false,
+   "details.heightRangeDescription": "más de 10 mts"
+  },
+  "corrections": [],
+  "sources": [
+   "https://prosea.prota4u.org/view.aspx?id=5998",
+   "https://www2.mdpi.com/1999-4907/11/3/313",
+   "https://core-cms.cambridgecore.org/core/journals/journal-of-tropical-ecology/article/can-a-fastgrowing-earlysuccessional-tree-ochroma-pyramidale-malvaceae-accelerate-forest-succession/EFAAE5C8046A18F5050980A164155269"
+  ],
+  "notes": "Pionera típica de crecimiento muy rápido (hasta 30-40 m), copa estrecha y hojas grandes de vida corta: alta producción de biomasa. Flores nocturnas ricas en néctar visitadas por murciélagos, aves y otros polinizadores. Madera ligera (balsa). Precipitación 1250-3000 mm, <1000 msnm."
+ },
+ {
+  "id": "dTgbXjAGCfrC0C87Xoux",
+  "name": "Ocotea longifolia (Canela)",
+  "status": "updated",
+  "confidence": "low",
+  "set": {
+   "height": {
+    "min": 4,
+    "max": 20
+   },
+   "details.shape": "árbol"
+  },
+  "corrections": [],
+  "sources": [
+   "https://eol.org/pages/5393768",
+   "https://sweetgum.nybg.org/science/vh/specimen-details/?irn=988427"
+  ],
+  "notes": "Información escasa. Árbol sudamericano (Amazonía/Cerrado) de 4-20 m según ejemplares de herbario y EOL. No se confirmó uso alimenticio del fruto (edibleUses.fruit existente es dudoso). Los nombres comunes parecen brasileños; no se asignó zona ecológica en México."
+ },
+ {
+  "id": "TmVxHFeCqg7iAUb2OUVY",
+  "name": "Oenocarpus bataua (Majo, ungurahui)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "taxonomy.family": "Arecaceae",
+   "height": {
+    "min": 10,
+    "max": 25
+   },
+   "additionalFunctionIds": [
+    "0",
+    "3"
+   ],
+   "details.shape": "palma",
+   "details.humidityPreference": "H",
+   "details.isFrostResistant": false,
+   "details.heightRangeDescription": "más de 10 mts"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.family",
+    "old": "Palmae",
+    "new": "Arecaceae",
+    "reason": "Nombre de familia APG IV (Palmae es nombre alternativo)",
+    "source": "https://colplanta.org/taxon/urn:lsid:ipni.org:names:668510-1/general-information"
+   }
+  ],
+  "sources": [
+   "https://colplanta.org/taxon/urn:lsid:ipni.org:names:668510-1/general-information",
+   "https://wikipedia.com/wiki/Patawa",
+   "https://delamazonas.com/en/flora1/palms/pataua-oenocarpus-bataua/"
+  ],
+  "notes": "Palma amazónica de 10-25 m, selvas húmedas <1000 msnm. Fruto comestible con aceite de alta calidad; aceite usado en medicina tradicional (afecciones respiratorias). No es nativa de México."
+ },
+ {
+  "id": "q2iM3YWdelEc08bH0QtX",
+  "name": "Oenothera macrocarpa (Onagra de Missouri)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "taxonomy.species": "macrocarpa",
+   "taxonomy.synonyms": [
+    "Oenothera missouriensis Sims"
+   ],
+   "taxonomy.family": "Onagraceae",
+   "height": {
+    "min": 0.15,
+    "max": 0.45
+   },
+   "stratumIds": [
+    "0"
+   ],
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "details.shape": "hierba",
+   "details.humidityPreference": "L"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.species",
+    "old": "missouriensis",
+    "new": "macrocarpa",
+    "reason": "O. missouriensis es sinónimo de Oenothera macrocarpa",
+    "source": "https://mdc.mo.gov/discover-nature/field-guide/missouri-evening-primrose"
+   },
+   {
+    "field": "height",
+    "old": {
+     "min": 0.7,
+     "max": 0.7
+    },
+    "new": {
+     "min": 0.15,
+     "max": 0.45
+    },
+    "reason": "Herbácea perenne baja de tallos rastreros, 15-45 cm",
+    "source": "https://www.rhs.org.uk/plants/70730/wd/details"
+   },
+   {
+    "field": "details.shape",
+    "old": "arbusto",
+    "new": "hierba",
+    "reason": "Es una herbácea perenne, no un arbusto",
+    "source": "https://www.rhs.org.uk/plants/70730/wd/details"
+   }
+  ],
+  "sources": [
+   "https://www.rhs.org.uk/plants/70730/wd/details",
+   "https://mdc.mo.gov/discover-nature/field-guide/missouri-evening-primrose",
+   "https://frontrange.wildones.org/wp-content/images/sites/105/2025/06/Oenothera-macrocarpa-full-page-reduced-file-size.pdf"
+  ],
+  "notes": "Herbácea perenne rastrera de 15-45 cm, extensión 0.3-0.6 m, tolerante a sequía, nativa del centro-sur de EUA. Flores grandes polinizadas por esfinges (polillas). Uso principalmente ornamental."
+ },
+ {
+  "id": "fESZHDCzW2anYeTTlyxc",
+  "name": "Olea europaea (Olivo)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "taxonomy.species": "europaea",
+   "taxonomy.family": "Oleaceae",
+   "additionalFunctionIds": [
+    "0",
+    "2",
+    "3"
+   ],
+   "details.humidityPreference": "L",
+   "details.lifeCycleDuration": "Mayor a 80 años"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.species",
+    "old": "europeaea",
+    "new": "europaea",
+    "reason": "Error ortográfico",
+    "source": "https://cvb.ehu.es/documents/1686888/3913390/57.+Olea+europaea.pdf"
+   },
+   {
+    "field": "taxonomy.family",
+    "old": "Olaceae",
+    "new": "Oleaceae",
+    "reason": "Error ortográfico",
+    "source": "https://cvb.ehu.es/documents/1686888/3913390/57.+Olea+europaea.pdf"
+   }
+  ],
+  "sources": [
+   "https://cvb.ehu.es/documents/1686888/3913390/57.+Olea+europaea.pdf",
+   "https://www.lifeder.com/olivo-olea-europaea/",
+   "https://zaragoza.es/sede/portal/medioambiente/elbosquedeloszaragozanos/plantas/olivo"
+  ],
+  "notes": "Árbol mediterráneo muy longevo, tolerante a sequía y heladas ocasionales. Fruto y aceite comestibles, madera apreciada, hoja de uso medicinal (hipotensora). Polinización por viento, por eso no se marcó atracción de polinizadores. En México se cultiva en zonas áridas/semiáridas (BC, Sonora)."
+ },
+ {
+  "id": "bFNyjfPE2Dxhtx44S49K",
+  "name": "Opuntia cochenillifera (Nopal de cochinilla)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "taxonomy.species": "cochenillifera",
+   "taxonomy.synonyms": [
+    "Nopalea cochenillifera (L.) Salm-Dyck"
+   ],
+   "height": {
+    "min": 3,
+    "max": 4.5
+   },
+   "ecologicalZoneIds": [
+    "6"
+   ],
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "1",
+    "3"
+   ],
+   "commonNames": [
+    "Nopal",
+    "Nopal de cochinilla",
+    "Nopalillo"
+   ],
+   "details.shape": "arbusto",
+   "details.lightPreference": "H",
+   "details.humidityPreference": "L",
+   "details.isFrostResistant": false,
+   "details.heightRangeDescription": "hasta 5 mts"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.species",
+    "old": "cochinea",
+    "new": "cochenillifera",
+    "reason": "'cochinea' no es un epíteto válido; corresponde a Opuntia cochenillifera (nopal de la cochinilla), nombre aceptado en POWO",
+    "source": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1008816-2"
+   },
+   {
+    "field": "ecologicalZoneIds",
+    "old": [
+     "6",
+     "6"
+    ],
+    "new": [
+     "6"
+    ],
+    "reason": "Id duplicado",
+    "source": "-"
+   }
+  ],
+  "sources": [
+   "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1008816-2",
+   "https://biokic3.rc.asu.edu/seinet/ecoflora/portal/taxa/index.php?tid=209737",
+   "https://www.manzanillosun.com/i-planted-roots-in-mexico-cochineal-cactus-nopalea-cochenillifera/"
+  ],
+  "notes": "Se interpretó 'Opuntia cochinea' como O. cochenillifera (sin. Nopalea cochenillifera), nativa de México, hospedera tradicional de la grana cochinilla; arbusto/arbolito de 3-4.5 m. Cladodios tiernos comestibles y usados como forraje; uso medicinal tradicional. Flores rojas visitadas por colibríes. Es de selva baja/matorral seco más que de desierto. Confianza media en la identificación."
+ },
+ {
+  "id": "plB49IMLaw1gBhNqGKVy",
+  "name": "Opuntia ficus-indica (Nopal tunero)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "stratumIds": [
+    "2"
+   ],
+   "ecologicalZoneIds": [
+    "4",
+    "6"
+   ],
+   "ecologicalFunctionIds": [
+    "3",
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "1",
+    "3"
+   ],
+   "commonNames": [
+    "Tuna",
+    "Nopal",
+    "Nopal tunero"
+   ],
+   "details.shape": "arbusto",
+   "details.humidityPreference": "L"
+  },
+  "corrections": [
+   {
+    "field": "details.shape",
+    "old": "cactus",
+    "new": "arbusto",
+    "reason": "'cactus' no está en el catálogo de formas; cactácea arbustiva de 2-5 m",
+    "source": "https://apps.lucidcentral.org/tropical_forages/pdf/opuntia_ficusindica.pdf"
+   }
+  ],
+  "sources": [
+   "https://apps.lucidcentral.org/tropical_forages/pdf/opuntia_ficusindica.pdf",
+   "https://ucanr.edu/node/126489",
+   "https://bmeditores.mx/entorno-pecuario/produccion-y-uso-de-opuntia-nopal-como-forraje-en-el-centro-norte-de-mexico/"
+  ],
+  "notes": "Se usa en setos de contorno para control de erosión y como cortavientos; forraje importante en el norte de México; nopalitos y tunas comestibles; uso medicinal (glucosa). Flores amarillas muy visitadas por abejas. Se añadió zona Desierto."
+ },
+ {
+  "id": "6fKS5vo7e9NF14KORiif",
+  "name": "Opuntia ficus-indica? ('Opuntia indica', Nopal)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "taxonomy.species": "ficus-indica",
+   "ecologicalZoneIds": [
+    "6"
+   ],
+   "ecologicalFunctionIds": [
+    "3",
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "1",
+    "3"
+   ],
+   "details.lifeCycleDuration": "Hasta 80 años"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.species",
+    "old": "indica",
+    "new": "ficus-indica",
+    "reason": "'Opuntia indica' no es un nombre aceptado; el nopal cultivado es Opuntia ficus-indica",
+    "source": "https://apps.lucidcentral.org/tropical_forages/pdf/opuntia_ficusindica.pdf"
+   },
+   {
+    "field": "ecologicalZoneIds",
+    "old": [
+     "6",
+     "6"
+    ],
+    "new": [
+     "6"
+    ],
+    "reason": "Id duplicado",
+    "source": "-"
+   }
+  ],
+  "sources": [
+   "https://apps.lucidcentral.org/tropical_forages/pdf/opuntia_ficusindica.pdf",
+   "https://ucanr.edu/node/126489"
+  ],
+  "notes": "Probable DUPLICADO de Opuntia ficus-indica (Tuna, id plB49IMLaw1gBhNqGKVy) y de 'Opuntia sp.' (Nopal de tuna). Altura registrada 0.5-1 m corresponde a nopal de verdura podado; heightRangeDescription 'hasta 5 mts'. Estrato '3' (Alto) parece alto para un nopal; revisar."
+ },
+ {
+  "id": "XhBi2S0TZtO9LWBYTFR3",
+  "name": "Opuntia joconostle (Xoconostle)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "height": {
+    "min": 2,
+    "max": 3
+   },
+   "stratumIds": [
+    "2"
+   ],
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "2",
+    "3"
+   ],
+   "details.shape": "arbusto",
+   "details.lightPreference": "H",
+   "details.humidityPreference": "L"
+  },
+  "corrections": [],
+  "sources": [
+   "https://colplanta.org/taxon/urn:lsid:ipni.org:names:60461063-2",
+   "https://vinculacion.dgire.unam.mx/vinculacion-1/Congreso-Trabajos-pagina/Trabajos-2015/Ciencias-biologicas/Medio-ambiente/2. CIN2015A10006.pdf",
+   "https://www.mexicodesconocido.com.mx/xoconostle.html"
+  ],
+  "notes": "Arbusto de 2-3 m del centro de México (tuna agria). Fruto comestible; uso medicinal tradicional (diabetes, colesterol). Flores visitadas por abejas. La función adicional existente '2' (Maderable) parece incorrecta; se dejó por la regla de no borrar, revisar. Algunas listas lo tratan como sinónimo de O. ficus-indica; Villaseñor (2016) lo acepta."
+ },
+ {
+  "id": "KFqo6vHeYcsUvVyMrEEA",
+  "name": "Opuntia sp. (Nopal de tuna)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "ecologicalZoneIds": [
+    "1",
+    "3",
+    "4",
+    "6"
+   ],
+   "ecologicalFunctionIds": [
+    "3",
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "1",
+    "3"
+   ]
+  },
+  "corrections": [
+   {
+    "field": "ecologicalZoneIds",
+    "old": [
+     "1",
+     "3",
+     "4",
+     "6",
+     "6"
+    ],
+    "new": [
+     "1",
+     "3",
+     "4",
+     "6"
+    ],
+    "reason": "Id duplicado",
+    "source": "-"
+   }
+  ],
+  "sources": [
+   "https://apps.lucidcentral.org/tropical_forages/pdf/opuntia_ficusindica.pdf",
+   "https://ucanr.edu/node/126489"
+  ],
+  "notes": "Funciones basadas en el género (nopal tunero, probablemente O. ficus-indica): setos de contorno contra erosión, flores melíferas, alimento, forraje y medicinal. Posible DUPLICADO de Opuntia ficus-indica (Tuna)."
+ },
+ {
+  "id": "ByLcAbYHu4veqtSLUyBo",
+  "name": "Origanum spp. (Orégano)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "taxonomy.genus": "Origanum",
+   "taxonomy.family": "Lamiaceae",
+   "stratumIds": [
+    "1"
+   ],
+   "crownWidth": {
+    "min": 0.3,
+    "max": 0.6
+   },
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "2",
+    "3"
+   ],
+   "details.lightPreference": "H",
+   "details.humidityPreference": "L"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.genus",
+    "old": "Oreganum",
+    "new": "Origanum",
+    "reason": "Error ortográfico",
+    "source": "https://www.rhs.org.uk/plants/11923/origanum-vulgare/details"
+   },
+   {
+    "field": "details.lightPreference",
+    "old": "L",
+    "new": "H",
+    "reason": "El orégano requiere pleno sol",
+    "source": "https://plants.ces.ncsu.edu/plants/all/origanum-vulgare/"
+   }
+  ],
+  "sources": [
+   "https://www.rhs.org.uk/plants/11923/origanum-vulgare/details",
+   "https://plants.ces.ncsu.edu/plants/all/origanum-vulgare/"
+  ],
+  "notes": "Hierba aromática perenne de pleno sol, tolerante a sequía; flores muy visitadas por abejas y mariposas. Culinaria y medicinal. Nota: el 'orégano mexicano' es Lippia graveolens (Verbenaceae), especie distinta; confirmar cuál se pretende. La función adicional existente '2' (Maderable) parece incorrecta; se dejó."
+ },
+ {
+  "id": "llmO6gbmGUkwJv86q2pb",
+  "name": "Oryza sativa (Arroz)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "taxonomy.genus": "Oryza",
+   "taxonomy.species": "sativa",
+   "height": {
+    "min": 1,
+    "max": 1.5
+   },
+   "ecologicalZoneIds": [
+    "1"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "1"
+   ],
+   "details.shape": "pasto",
+   "details.lightPreference": "H",
+   "details.humidityPreference": "H",
+   "details.isFrostResistant": false,
+   "details.heightRangeDescription": "hasta 2 mts"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.genus",
+    "old": "Oriza",
+    "new": "Oryza",
+    "reason": "Error ortográfico",
+    "source": "https://www.nparks.gov.sg/florafaunaweb/flora/5/2/5218"
+   },
+   {
+    "field": "taxonomy.species",
+    "old": "Sativa",
+    "new": "sativa",
+    "reason": "El epíteto va en minúscula",
+    "source": "https://www.nparks.gov.sg/florafaunaweb/flora/5/2/5218"
+   }
+  ],
+  "sources": [
+   "https://www.nparks.gov.sg/florafaunaweb/flora/5/2/5218",
+   "https://repository.ui.edu.ng/items/0a4c3da3-1d2f-4bab-b2ec-60e12ac7c61c"
+  ],
+  "notes": "Cereal anual de ~1-1.5 m, requiere mucha agua y sol, sin tolerancia a heladas. Grano alimento; paja usada como forraje y cama. Estrato '3' existente parece alto para un cereal de 1-1.5 m (se dejó; en consorcio de placenta podría ser relativo)."
+ },
+ {
+  "id": "XYA1dSOTTgGYZ6Cw5ZtA",
+  "name": "Otatea acuminata (Otate)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "taxonomy.family": "Poaceae",
+   "ecologicalFunctionIds": [
+    "0",
+    "3"
+   ],
+   "additionalFunctionIds": [
+    "2"
+   ],
+   "commonNames": [
+    "Bambu otatea",
+    "Otate"
+   ],
+   "details.isFrostResistant": false
+  },
+  "corrections": [],
+  "sources": [
+   "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1081783-2/general-information",
+   "https://botanicalsciences.com.mx/index.php/botanicalSciences/article/view/3330",
+   "https://en.wikipedia.org/wiki/Mexican_weeping_bamboo"
+  ],
+  "notes": "Bambú nativo de México (culmos 2-10 m, POWO). Material de construcción tradicional (bajareque), cestería y bastones. Bambú amacollado que produce biomasa y sus rizomas sujetan el suelo. isFrostResistant=false con confianza media (tolera heladas ligeras según viveros; revisar)."
+ },
+ {
+  "id": "VmocNdSL7hkfdF0GFz7c",
+  "name": "Pachyrhizus erosus (Jícama)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "taxonomy.family": "Fabaceae",
+   "stratumIds": [
+    "1"
+   ],
+   "ecologicalFunctionIds": [
+    "1"
+   ],
+   "additionalFunctionIds": [
+    "0"
+   ],
+   "details.lightPreference": "H",
+   "details.humidityPreference": "M",
+   "details.isFrostResistant": false,
+   "details.lifeCycle": "Pioneras",
+   "details.lifeCycleDuration": "Varios meses"
+  },
+  "corrections": [],
+  "sources": [
+   "https://echocommunity.org/resources/2aca5dd9-d86c-4004-9aa7-9ac5bce60eec",
+   "https://ageconsearch.umn.edu/record/258790/files/30_52.pdf",
+   "https://www.scielo.org.mx/pdf/agritm/v35n3/v35n3a4.pdf"
+  ],
+  "notes": "Leguminosa trepadora (hasta 10 m de guía), cultivada como anual (5-9 meses) por su raíz tuberosa comestible. Fija nitrógeno (163-216 kg N/ha en ensayos). Semillas y follaje tóxicos (rotenona). edibleUses.fruit existente es impreciso: lo comestible es la raíz."
+ },
+ {
+  "id": "tQwYFsoieVivQ3xw7SFw",
+  "name": "Cenchrus purpureus (Pasto elefante)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "taxonomy.genus": "Cenchrus",
+   "taxonomy.species": "purpureus",
+   "taxonomy.synonyms": [
+    "Pennisetum purpureum Schumach."
+   ],
+   "height": {
+    "min": 2,
+    "max": 4
+   },
+   "ecologicalFunctionIds": [
+    "0",
+    "3"
+   ],
+   "additionalFunctionIds": [
+    "1"
+   ],
+   "commonNames": [
+    "Pasto elefate",
+    "Pasto elefante",
+    "Zacate elefante",
+    "Napier"
+   ],
+   "details.shape": "pasto",
+   "details.lightPreference": "H",
+   "details.humidityPreference": "M",
+   "details.isFrostResistant": false,
+   "details.heightRangeDescription": "hasta 5 mts"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.genus",
+    "old": "Panicum",
+    "new": "Cenchrus",
+    "reason": "El pasto elefante es Pennisetum purpureum, hoy Cenchrus purpureus (Morrone); no es un Panicum",
+    "source": "https://www.feedipedia.org/Node/395"
+   },
+   {
+    "field": "taxonomy.species",
+    "old": "Purpureum",
+    "new": "purpureus",
+    "reason": "Concordancia del epíteto con Cenchrus y minúscula",
+    "source": "https://www.feedipedia.org/Node/395"
+   }
+  ],
+  "sources": [
+   "https://www.feedipedia.org/Node/395",
+   "https://lml-database.icimod.org/detail/cenchrus-purpureus"
+  ],
+  "notes": "Pasto perenne amacollado de 2-4 m (hasta 7 m). Forraje de corte muy productivo; gran producción de biomasa para acolchado en sintrópica; usado en barreras vivas contra erosión. edibleUses.fruit existente no aplica."
+ },
+ {
+  "id": "Doza9qNXB6rYAzVIYYnZ",
+  "name": "Passiflora edulis f. flavicarpa (Maracuyá amarillo)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "height": {
+    "min": 3,
+    "max": 10
+   },
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "3"
+   ],
+   "commonNames": [
+    "Maracuya amarillo, pasionaria, passionfruit",
+    "Maracuyá",
+    "Fruta de la pasión"
+   ],
+   "details.humidityPreference": "M",
+   "details.lifeCycle": "Secundarias 1",
+   "details.lifeCycleDuration": "Hasta 15 años"
+  },
+  "corrections": [
+   {
+    "field": "height",
+    "old": {
+     "min": 50,
+     "max": 80
+    },
+    "new": {
+     "min": 3,
+     "max": 10
+    },
+    "reason": "50-80 m es irreal (dato de un vendedor de semillas para tallos sin soporte); trepadora de 3-10 m (NParks hasta 15 m)",
+    "source": "https://www.nparks.gov.sg/florafaunaweb/flora/3/3/3332"
+   }
+  ],
+  "sources": [
+   "https://www.nparks.gov.sg/florafaunaweb/flora/3/3/3332",
+   "https://earthpedia.earth.com/plant-encyclopedia/angiosperms/passifloraceae/passiflora-edulis",
+   "https://www.plant-world-seeds.com/store/view_seed_item/5912"
+  ],
+  "notes": "Altura corregida a longitud de guía realista. Polinizada principalmente por abejorros carpinteros (Xylocopa). Fruto comestible; hojas/flores usadas como sedante en medicina tradicional. Ojo: isFrostResistant=true existente es dudoso, la forma amarilla es sensible a heladas (no se cambió sin fuente específica). Ciclo de vida: comercialmente productiva 3-5 años; se asignó Secundarias 1 / Hasta 15 años, coherente con P. ligularis."
+ },
+ {
+  "id": "p0ZivChPLJuyK342bEp6",
+  "name": "Passiflora ligularis (Granadilla)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0"
+   ],
+   "commonNames": [
+    "Granadilla",
+    "Granadita de China"
+   ],
+   "details.humidityPreference": "M",
+   "details.isFrostResistant": false
+  },
+  "corrections": [],
+  "sources": [
+   "https://colplanta.org/taxon/urn:lsid:ipni.org:names:675142-1/general-information",
+   "https://www.redalyc.org/journal/1799/179967414002/179967414002.pdf"
+  ],
+  "notes": "Pasiflora andina de altura (1500-2600 msnm, 15-23 °C), coherente con Bosque de niebla; daños por granizo y sequía; sin tolerancia documentada a heladas. Flores polinizadas por abejas grandes. Fruto comestible. No se encontró dato confiable de altura/longitud de guía. 'Granadita de China' es nombre usado en México (Veracruz/Puebla)."
+ },
+ {
+  "id": "eG6xVugsXhWy6NvQSmtj",
+  "name": "Passiflora quadrangularis (Granadilla gigante, badea)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "height": {
+    "min": 10,
+    "max": 15
+   },
+   "ecologicalZoneIds": [
+    "4",
+    "1"
+   ],
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0"
+   ],
+   "commonNames": [
+    "Maracuya flor vino",
+    "Granadilla real",
+    "Badea",
+    "Tumbo"
+   ],
+   "details.shape": "guía",
+   "details.lightPreference": "H",
+   "details.humidityPreference": "H",
+   "details.isFrostResistant": false
+  },
+  "corrections": [
+   {
+    "field": "details.shape",
+    "old": "guia",
+    "new": "guía",
+    "reason": "Ortografía del valor del catálogo",
+    "source": "-"
+   }
+  ],
+  "sources": [
+   "https://nparks.gov.sg/florafaunaweb/flora/7/0/7076",
+   "https://aihd.ku.edu/foods/giant_granadilla.html",
+   "https://growables.org/information/TropicalFruit/Granadilla.htm"
+  ],
+  "notes": "Trepadora semileñosa vigorosa de 10-15 m, de trópico cálido-húmedo; se añadió zona Selva húmeda. La zona existente '4' (Pino-encino) es poco probable para esta especie de tierras bajas; revisar. Fruto comestible; flores grandes polinizadas por abejorros carpinteros."
+ },
+ {
+  "id": "pF98QWhVOzKledE45N6x",
+  "name": "Passiflora tripartita var. mollissima (Curuba)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "taxonomy.species": "tripartita",
+   "taxonomy.subspecies": "var. mollissima",
+   "taxonomy.synonyms": [
+    "Passiflora mollissima (Kunth) L.H.Bailey"
+   ],
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "1"
+   ],
+   "commonNames": [
+    "Curuba",
+    "Curuba de Castilla",
+    "Tumbo"
+   ],
+   "details.shape": "guía",
+   "details.lightPreference": "H"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.species",
+    "old": "sp.",
+    "new": "tripartita",
+    "reason": "'Curuba' corresponde a Passiflora tripartita var. mollissima (sin. P. mollissima), nombre aceptado en POWO",
+    "source": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:282224-2"
+   }
+  ],
+  "sources": [
+   "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:282224-2",
+   "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:185076-2"
+  ],
+  "notes": "Identificada por nombre común 'curuba' (Andes, Panamá a Perú); también existe P. tarminiana llamada curuba, por eso confianza media. Flor tubular larga polinizada por colibríes (Ensifera). Fruto comestible. Se conservó la función existente '1'."
+ },
+ {
+  "id": "KkkMmS5AGgoEyopn3htN",
+  "name": "Paullinia cupana (Guaraná)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "height": {
+    "min": 1.5,
+    "max": 2.5
+   },
+   "crownWidth": {
+    "min": 3,
+    "max": 5
+   },
+   "ecologicalZoneIds": [
+    "1"
+   ],
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "3"
+   ],
+   "commonNames": [
+    "Guarana",
+    "Guaraná"
+   ],
+   "details.shape": "arbusto",
+   "details.humidityPreference": "H",
+   "details.isFrostResistant": false,
+   "details.heightRangeDescription": "hasta 2 mts"
+  },
+  "corrections": [],
+  "sources": [
+   "https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/667780/1/art3A10.10072FBF02859006.pdf",
+   "https://apps.worldagroforestry.org/treedb/AFTPDFS/Paullinia_cupana.PDF",
+   "https://plantpono.org/wp-content/uploads/Paullinia-cupana.pdf"
+  ],
+  "notes": "Liana amazónica que en cultivo se maneja como arbusto extendido de ~2 m con copa del doble de ancho (Erickson et al. 1984). Semilla estimulante (bebidas) y medicinal. Flores visitadas por abejas meliponinas. El estrato existente '3' (Alto) parece alto para el cultivo podado; revisar (en estado silvestre trepa al dosel)."
+ },
+ {
+  "id": "oET9owcIfJlkly0hrU84",
+  "name": "Paulownia tomentosa (Paulonia, kiri)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "taxonomy.genus": "Paulownia",
+   "taxonomy.species": "tomentosa",
+   "height": {
+    "min": 10,
+    "max": 15
+   },
+   "crownWidth": {
+    "min": 9,
+    "max": 12
+   },
+   "stratumIds": [
+    "3"
+   ],
+   "ecologicalFunctionIds": [
+    "0",
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "1",
+    "2"
+   ],
+   "details.shape": "árbol",
+   "details.lightPreference": "H",
+   "details.humidityPreference": "M",
+   "details.isFrostResistant": true,
+   "details.heightRangeDescription": "más de 10 mts"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.genus",
+    "old": "Paulonia",
+    "new": "Paulownia",
+    "reason": "Error ortográfico",
+    "source": "https://edis.ifas.ufl.edu/publication/ST433/pdf"
+   },
+   {
+    "field": "taxonomy.species",
+    "old": "tormentosa",
+    "new": "tomentosa",
+    "reason": "Error ortográfico",
+    "source": "https://edis.ifas.ufl.edu/publication/ST433/pdf"
+   }
+  ],
+  "sources": [
+   "https://edis.ifas.ufl.edu/publication/ST433/pdf",
+   "https://www.vdberk.co.uk/trees/paulownia-tomentosa/",
+   "https://lml-database.icimod.org/detail/paulownia-tomentosa"
+  ],
+  "notes": "Árbol caducifolio de crecimiento muy rápido, 10-15 (20) m, copa semiabierta ~9-12 m. Melífero; hojas usadas como forraje para cabras; madera ligera valiosa. Tolera heladas (yemas pueden dañarse en inviernos duros). Advertencia: invasora en climas cálidos (IFAS)."
+ },
+ {
+  "id": "z5r5nwQMoTEOL0TktNSU",
+  "name": "Persea americana (Aguacate)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "taxonomy.family": "Lauraceae",
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "3"
+   ]
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.family",
+    "old": "Lauráceas",
+    "new": "Lauraceae",
+    "reason": "Nombre científico de familia (APG IV)",
+    "source": "https://powo.science.kew.org/results?q=Persea%20americana"
+   }
+  ],
+  "sources": [
+   "https://powo.science.kew.org/results?q=Persea%20americana",
+   "https://www.redalyc.org/pdf/609/60913280005.pdf"
+  ],
+  "notes": "Fruto alimento; hojas de aguacate criollo usadas en medicina tradicional mexicana. Flores muy visitadas por abejas (miel de aguacate; polinización por abejas en huertos de Michoacán). Resto de datos completos."
+ },
+ {
+  "id": "OubbfQc8omznQ8xEo7Qu",
+  "name": "Persea schiedeana (Chinene, anayo)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "taxonomy.family": "Lauraceae",
+   "ecologicalZoneIds": [
+    "3",
+    "1"
+   ],
+   "ecologicalFunctionIds": [
+    "3"
+   ],
+   "additionalFunctionIds": [
+    "0"
+   ],
+   "commonNames": [
+    "Anayo, aguacate criollo",
+    "Chinene",
+    "Chinini",
+    "Pahua"
+   ],
+   "details.lifeCycleDuration": "Hasta 80 años"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.family",
+    "old": "Lauráceas",
+    "new": "Lauraceae",
+    "reason": "Nombre científico de familia (APG IV)",
+    "source": "https://p.gyb.elementfx.com/2071-1050/6/1/99"
+   }
+  ],
+  "sources": [
+   "https://pronaturaveracruz.org/capturacarbono/wp-content/uploads/Poliptico_Chinini_abril2023.pdf",
+   "https://www.redalyc.org/pdf/609/60913280005.pdf",
+   "https://p.gyb.elementfx.com/2071-1050/6/1/99"
+  ],
+  "notes": "DUPLICADO de Persea schiedeana 'Chinene' (id f2Ln2vUvmdBpnn0dZhpj); conviene fusionarlos. Nativa del sur de México a Panamá, bosques húmedos cálidos 0-2000 msnm (Los Tuxtlas, Chinantla): se añadió Selva húmeda. Usada como sombra de café y control de erosión (Pronatura). Altura registrada 8 m; en hábitat 15-20 m (no se cambió)."
+ },
+ {
+  "id": "f2Ln2vUvmdBpnn0dZhpj",
+  "name": "Persea schiedeana (Chinene)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "taxonomy.family": "Lauraceae",
+   "stratumIds": [
+    "3"
+   ],
+   "ecologicalZoneIds": [
+    "3",
+    "1"
+   ],
+   "ecologicalFunctionIds": [
+    "3"
+   ],
+   "additionalFunctionIds": [
+    "0"
+   ],
+   "commonNames": [
+    "Chinene",
+    "Chinini",
+    "Anayo",
+    "Pahua"
+   ],
+   "details.lifeCycleDuration": "Hasta 80 años"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.family",
+    "old": "Lauráceas",
+    "new": "Lauraceae",
+    "reason": "Nombre científico de familia (APG IV)",
+    "source": "https://p.gyb.elementfx.com/2071-1050/6/1/99"
+   }
+  ],
+  "sources": [
+   "https://pronaturaveracruz.org/capturacarbono/wp-content/uploads/Poliptico_Chinini_abril2023.pdf",
+   "https://www.redalyc.org/pdf/609/60913280005.pdf"
+  ],
+  "notes": "DUPLICADO de Persea schiedeana 'Anayo, aguacate criollo' (id OubbfQc8omznQ8xEo7Qu). Árbol de 15-20 m en hábitat (registrado 8-10 m). Sombra de café, control de erosión, fruto oleaginoso comestible."
+ },
+ {
+  "id": "OBHgCOlrpNlYxEISVDeV",
+  "name": "Phaseolus coccineus (Frijol ayocote)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "taxonomy.species": "coccineus",
+   "ecologicalFunctionIds": [
+    "1",
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0"
+   ],
+   "commonNames": [
+    "Frijol ayocote, gordo o botil",
+    "Ayocote",
+    "Patol"
+   ],
+   "details.humidityPreference": "M",
+   "details.isFrostResistant": false,
+   "details.lifeCycle": "Pioneras",
+   "details.lifeCycleDuration": "Varios meses"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.species",
+    "old": "coccineous",
+    "new": "coccineus",
+    "reason": "Error ortográfico",
+    "source": "https://en.wikipedia.org/wiki/Phaseolus_coccineus"
+   }
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Phaseolus_coccineus",
+   "https://www.scielo.org.mx/pdf/remexca/v3n6/v3n6a14.pdf"
+  ],
+  "notes": "Enredadera perenne de raíz tuberosa, cultivada como anual en zonas altas (>1800 msnm). Leguminosa fijadora de N; flores rojas visitadas por abejorros y colibríes. La parte aérea no tolera heladas pero la raíz rebrota. Zona Selva húmeda existente es poco típica (especie de tierras altas templadas)."
+ },
+ {
+  "id": "0CtvqVAlKchzIsVnsQi2",
+  "name": "Phaseolus lunatus (Frijol ibes)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "height": {
+    "min": 2,
+    "max": 6
+   },
+   "stratumIds": [
+    "2"
+   ],
+   "ecologicalZoneIds": [
+    "1"
+   ],
+   "ecologicalFunctionIds": [
+    "1"
+   ],
+   "additionalFunctionIds": [
+    "0"
+   ],
+   "details.shape": "guía",
+   "details.lightPreference": "H",
+   "details.lifeCycle": "Pioneras",
+   "details.lifeCycleDuration": "Hasta 2 años"
+  },
+  "corrections": [],
+  "sources": [
+   "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:513918-1/general-information",
+   "https://temperate.theferns.info/plant/Phaseolus+lunatus",
+   "https://www.echocommunity.org/resources/1b3d6918-ac5c-4fb5-a95e-f42836b197c8"
+  ],
+  "notes": "Trepadora anual o perenne de vida corta, nativa de México a Perú; formas trepadoras de 2–6 m de guía (forma de mata 0.25–1 m). Leguminosa fijadora de N, usada también como cobertura. Estrato Medio por consistencia con 'Frijol trepador'. Posible duplicado de 'Frijol lima' (LDvsFrMNaiJcySoUXjnb). No se confirmó el nombre maya 'ib' en las fuentes."
+ },
+ {
+  "id": "LDvsFrMNaiJcySoUXjnb",
+  "name": "Phaseolus lunatus (Frijol lima)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "height": {
+    "min": 2,
+    "max": 6
+   },
+   "stratumIds": [
+    "2"
+   ],
+   "ecologicalZoneIds": [
+    "4",
+    "1"
+   ],
+   "ecologicalFunctionIds": [
+    "1"
+   ],
+   "additionalFunctionIds": [
+    "0"
+   ],
+   "details.shape": "guía",
+   "details.lightPreference": "H",
+   "details.lifeCycle": "Pioneras",
+   "details.lifeCycleDuration": "Hasta 2 años"
+  },
+  "corrections": [],
+  "sources": [
+   "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:513918-1/general-information",
+   "https://temperate.theferns.info/plant/Phaseolus+lunatus",
+   "https://www.echocommunity.org/resources/1b3d6918-ac5c-4fb5-a95e-f42836b197c8"
+  ],
+  "notes": "Misma especie que 'Frijol ibes' (0CtvqVAlKchzIsVnsQi2): posible duplicado. Trepadora de 2–6 m (formas de mata 0.25–1 m), nativa de México a Perú, fijadora de N. Se añadió Selva húmeda por su área nativa tropical."
+ },
+ {
+  "id": "4qX89560usVIEP2t3Ora",
+  "name": "Phaseolus vulgaris (Frijol de mata)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "taxonomy.species": "vulgaris",
+   "height": {
+    "min": 0.2,
+    "max": 0.6
+   },
+   "ecologicalFunctionIds": [
+    "1"
+   ],
+   "additionalFunctionIds": [
+    "0"
+   ],
+   "details.shape": "hierba",
+   "details.lightPreference": "H",
+   "details.heightRangeDescription": "hasta 2 mts"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.species",
+    "old": "ssp",
+    "new": "vulgaris",
+    "reason": "Epíteto genérico placeholder; 'frijol de mata' corresponde al frijol común de hábito arbustivo (P. vulgaris)",
+    "source": "https://en.wikipedia.org/wiki/Phaseolus_vulgaris"
+   }
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Phaseolus_vulgaris",
+   "https://extension.illinois.edu/sites/default/files/pole_vs_bush_beans.pdf",
+   "https://www.echocommunity.org/resources/f8778f8b-73d5-41f6-b4af-75c4644c32a6"
+  ],
+  "notes": "Frijol común de mata: planta erecta de 20–60 cm, leguminosa fijadora de N. Se asignó P. vulgaris (variedades de mata); verificar si el registro pretendía agrupar varias especies."
+ },
+ {
+  "id": "l5V1vcPrNXzKqI3yhQb3",
+  "name": "Phaseolus vulgaris (Frijol trepador)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "taxonomy.species": "vulgaris",
+   "taxonomy.family": "Fabaceae",
+   "height": {
+    "min": 2,
+    "max": 3
+   },
+   "ecologicalFunctionIds": [
+    "1"
+   ],
+   "additionalFunctionIds": [
+    "0"
+   ],
+   "details.shape": "guía",
+   "details.lightPreference": "H",
+   "details.heightRangeDescription": "enredaderas y trepadoras"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.species",
+    "old": "ssp",
+    "new": "vulgaris",
+    "reason": "Epíteto genérico placeholder; 'frijol trepador/de guía' corresponde al frijol común de hábito trepador",
+    "source": "https://en.wikipedia.org/wiki/Phaseolus_vulgaris"
+   },
+   {
+    "field": "taxonomy.family",
+    "old": "fabaceae",
+    "new": "Fabaceae",
+    "reason": "Mayúscula inicial",
+    "source": "https://en.wikipedia.org/wiki/Phaseolus_vulgaris"
+   }
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Phaseolus_vulgaris",
+   "https://extension.illinois.edu/sites/default/files/pole_vs_bush_beans.pdf",
+   "https://www.echocommunity.org/resources/f8778f8b-73d5-41f6-b4af-75c4644c32a6"
+  ],
+  "notes": "Frijol común de guía: tallos de 2–3 m (algunas variedades más), fijador de N. Se asignó P. vulgaris; el ayocote (P. coccineus) y el lima tienen registros propios."
+ },
+ {
+  "id": "6Wob09Wt7aLFZZiVmwML",
+  "name": "Phoenix dactylifera (Dátil)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "taxonomy.species": "dactylifera",
+   "taxonomy.family": "Arecaceae",
+   "stratumIds": [
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0"
+   ],
+   "details.humidityPreference": "L",
+   "commonNames": [
+    "Datil",
+    "Palma datilera"
+   ]
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.species",
+    "old": "datilifera",
+    "new": "dactylifera",
+    "reason": "Error ortográfico",
+    "source": "https://apps.cals.arizona.edu/arboretum/taxon.aspx?id=207"
+   },
+   {
+    "field": "taxonomy.family",
+    "old": "Palmáceas",
+    "new": "Arecaceae",
+    "reason": "Nombre de familia APG IV",
+    "source": "https://growables.org/information/TropicalFruit/PalmDateAgroForest.htm"
+   }
+  ],
+  "sources": [
+   "https://apps.cals.arizona.edu/arboretum/taxon.aspx?id=207",
+   "https://growables.org/information/TropicalFruit/PalmDateAgroForest.htm",
+   "https://sunset.com/garden/flowers-plants/giant-above-60-feet-except-as-noted"
+  ],
+  "notes": "Palma de 15–30 m (hasta 45 m), copa hasta 12 m; tolerante a sequía y a heladas ligeras (~-9 °C). Estrato emergente como otras palmas altas. Fruto comestible. Polinización por viento/manual, no se asignan funciones ecológicas."
+ },
+ {
+  "id": "aKPLIHblvRmUneNrcmQP",
+  "name": "Phormium tenax (Fornio)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "stratumIds": [
+    "1",
+    "2"
+   ],
+   "ecologicalFunctionIds": [
+    "3",
+    "4"
+   ],
+   "details.shape": "hierba",
+   "details.lifeCycle": "Pioneras",
+   "commonNames": [
+    "Fornio",
+    "Lino de Nueva Zelanda"
+   ]
+  },
+  "corrections": [],
+  "sources": [
+   "https://worldplants.ca/display.php?id=2995",
+   "https://www.gardenia.net/plant/phormium-tenax-new-zealand-flax",
+   "https://iucngisd.org/gisd/pdf.php?sc=1424"
+  ],
+  "notes": "Herbácea perenne en macolla de 2–3 m (vara floral hasta 4 m), resistente a heladas, viento y suelos secos o húmedos. Usada para control de erosión en taludes; flores con néctar visitadas por aves y abejas. Uso principal: fibra (no está en el catálogo). Especie pionera en restauración; puede ser invasora fuera de NZ. Falta familia (Asphodelaceae) — no confirmada en las fuentes consultadas; heightRangeDescription 'hasta 2 mts' algo bajo."
+ },
+ {
+  "id": "2RcnZFDnnEsCMYo5Tvnz",
+  "name": "Phyllanthus acidus (Grosella)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "height": {
+    "min": 2,
+    "max": 9
+   },
+   "stratumIds": [
+    "2"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "3"
+   ],
+   "details.shape": "árbol"
+  },
+  "corrections": [],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Phyllanthus_acidus",
+   "https://nparks.gov.sg/florafaunaweb/flora/3/6/3669",
+   "https://growables.org/information/TropicalFruit/OtaheitePROSEA.htm"
+  ],
+  "notes": "Arbusto o árbol pequeño de 2–9 m; fruto ácido comestible; usos medicinales tradicionales (hojas, frutos). Es tropical: la zona 'Bosque de pino y encino' existente parece dudosa, revisar."
+ }
+]

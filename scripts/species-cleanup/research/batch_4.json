@@ -1,0 +1,1146 @@
+[
+ {
+  "id": "H7PlmHVk8KfB3b7eoxAU",
+  "name": "Eucalyptus cinerea (Dólar)",
+  "confidence": "medium",
+  "set": {
+   "height": {
+    "min": 8,
+    "max": 15
+   },
+   "crownWidth": {
+    "min": 5,
+    "max": 8
+   },
+   "stratumIds": [
+    "3"
+   ],
+   "ecologicalFunctionIds": [
+    "0",
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "3"
+   ],
+   "commonNames": [
+    "Dolar",
+    "Eucalipto dólar",
+    "Eucalipto plateado"
+   ],
+   "details.heightRangeDescription": "más de 10 mts",
+   "details.lightPreference": "H",
+   "details.humidityPreference": "L",
+   "details.isFrostResistant": true,
+   "details.shape": "árbol"
+  },
+  "corrections": [
+   {
+    "field": "details.heightRangeDescription",
+    "old": "hasta 5 mts",
+    "new": "más de 10 mts",
+    "reason": "La especie alcanza 8-15 m de altura en cultivo",
+    "source": "https://www.rhs.org.uk/plants/19957/eucalyptus-cinerea/details"
+   }
+  ],
+  "sources": [
+   "https://www.rhs.org.uk/plants/19957/eucalyptus-cinerea/details",
+   "https://plantselector.botanicgardens.sa.gov.au/Plants/Details/17850",
+   "https://www.treesandshrubsonline.org/articles/eucalyptus/eucalyptus-cinerea/"
+  ],
+  "notes": "Árbol de 8-15 m (copa 5-8 m), tolerante a sequía y heladas, rebrota tras poda. Usos: ornamental/follaje de floristería y aceite esencial (cineol, medicinal). Los edibleUses existentes (semillas, raíces) no tienen sustento; se recomienda revisarlos.",
+  "status": "updated"
+ },
+ {
+  "id": "oaRwYUpdyPT7FslPII84",
+  "name": "Eucalyptus sp. (Eucalipto)",
+  "confidence": "medium",
+  "set": {
+   "ecologicalZoneIds": [
+    "1",
+    "4",
+    "6"
+   ],
+   "ecologicalFunctionIds": [
+    "0",
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "2",
+    "3"
+   ],
+   "details.lifeCycleDuration": "Hasta 80 años",
+   "details.lightPreference": "H",
+   "details.shape": "árbol"
+  },
+  "corrections": [
+   {
+    "field": "ecologicalZoneIds",
+    "old": [
+     "1",
+     "4",
+     "6",
+     "6"
+    ],
+    "new": [
+     "1",
+     "4",
+     "6"
+    ],
+    "reason": "id duplicado",
+    "source": "-"
+   },
+   {
+    "field": "details.lifeCycleDuration",
+    "old": "Mas o menos 70 años",
+    "new": "Hasta 80 años",
+    "reason": "Valor fuera del catálogo; se normaliza al valor equivalente",
+    "source": "-"
+   }
+  ],
+  "sources": [
+   "https://www.redalyc.org/journal/617/61753521006/html/",
+   "https://apps.worldagroforestry.org/treedb2/AFTPDFS/Eucalyptus_tereticornis.PDF"
+  ],
+  "notes": "Registro a nivel de género: no se fijan alturas por la gran variación entre especies. Eucaliptos plantados en México (E. camaldulensis, E. tereticornis, etc.) para leña/madera; crecimiento rápido y rebrote (biomasa), melíferos, aceite esencial medicinal. Posible duplicado conceptual con los registros de especies de Eucalyptus.",
+  "status": "updated"
+ },
+ {
+  "id": "2utoP3oxqqQvUuv8uxwc",
+  "name": "Eucalyptus tereticornis (Eucalipto de Mysore)",
+  "confidence": "medium",
+  "set": {
+   "stratumIds": [
+    "3",
+    "4"
+   ],
+   "ecologicalFunctionIds": [
+    "0",
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "2",
+    "3"
+   ],
+   "commonNames": [
+    "Eucalipto de Mysore",
+    "Eucalipto rojo"
+   ],
+   "details.humidityPreference": "M"
+  },
+  "corrections": [
+   {
+    "field": "additionalFunctionIds",
+    "old": [
+     "1"
+    ],
+    "new": [
+     "2",
+     "3"
+    ],
+    "reason": "No se documenta uso como forraje; sus usos principales son leña, carbón, postes, madera y pulpa, y aceite esencial",
+    "source": "https://apps.worldagroforestry.org/treedb2/AFTPDFS/Eucalyptus_tereticornis.PDF"
+   }
+  ],
+  "sources": [
+   "https://apps.worldagroforestry.org/treedb2/AFTPDFS/Eucalyptus_tereticornis.PDF",
+   "https://prosea.prota4u.org/view.aspx?id=3011",
+   "https://www.redalyc.org/journal/617/61753521006/html/"
+  ],
+  "notes": "Árbol de rápido crecimiento (hasta 35-45 m en sitios favorables), probado en plantaciones del noreste de México. Importante fuente de néctar y polen (miel), leña, carbón y madera. Se retiró 'Forraje' por falta de evidencia.",
+  "status": "updated"
+ },
+ {
+  "id": "UU7LP5Fw5bnbPCs5UCVf",
+  "name": "Eugenia involucrata (syn. E. aggregata) (Cereza del Río Grande)",
+  "confidence": "medium",
+  "set": {
+   "taxonomy.species": "involucrata",
+   "taxonomy.synonyms": [
+    "Eugenia aggregata"
+   ],
+   "height": {
+    "min": 3,
+    "max": 8
+   },
+   "additionalFunctionIds": [
+    "0"
+   ],
+   "details.lightPreference": "H",
+   "details.shape": "árbol"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.species",
+    "old": "aggregata",
+    "new": "involucrata",
+    "reason": "Eugenia aggregata (Vell.) Kiaersk. es nombre ilegítimo, sinónimo de Eugenia involucrata según POWO",
+    "source": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:98012-2"
+   }
+  ],
+  "sources": [
+   "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:98012-2",
+   "https://tradewindsfruit.com/content/cherry-of-the-rio-grande.htm",
+   "https://www.esalq.usp.br/d-plant/node/2769"
+  ],
+  "notes": "Sinónimo de E. involucrata: este registro DUPLICA al de Eugenia involucrata (HdOHABwQf0feRb3SCLZt); se sugiere fusionarlos. Árbol pequeño de 3-8 m en cultivo, fruto comestible.",
+  "status": "updated"
+ },
+ {
+  "id": "LHVpU7txg3JAtnVan7e5",
+  "name": "Eugenia brasiliensis (Grumixama)",
+  "confidence": "medium",
+  "set": {
+   "height": {
+    "min": 3,
+    "max": 7
+   },
+   "additionalFunctionIds": [
+    "0"
+   ],
+   "commonNames": [
+    "Cereza de brasil, grumixama",
+    "Grumichama"
+   ],
+   "details.lightPreference": "H",
+   "details.humidityPreference": "H",
+   "details.shape": "árbol",
+   "details.heightRangeDescription": "de 5 a 10 mts"
+  },
+  "corrections": [],
+  "sources": [
+   "https://growables.org/information/TropicalFruit/Grumichama12Fruit.htm",
+   "https://www.tradewindsfruit.com/grumichama.htm",
+   "https://www.nparks.gov.sg/florafaunaweb/flora/2/8/2889"
+  ],
+  "notes": "Árbol frutal de lento crecimiento, 3-7 m en cultivo (hasta 14 m silvestre); pleno sol a media sombra, requiere humedad constante. Fruto comestible.",
+  "status": "updated"
+ },
+ {
+  "id": "PHdJAE1awQp4SO35KrJ8",
+  "name": "Eugenia dysenterica (Cagaita)",
+  "confidence": "medium",
+  "set": {
+   "height": {
+    "min": 4,
+    "max": 11
+   },
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "3"
+   ],
+   "details.lightPreference": "H",
+   "details.humidityPreference": "L",
+   "details.shape": "árbol",
+   "details.heightRangeDescription": "de 5 a 10 mts"
+  },
+  "corrections": [],
+  "sources": [
+   "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1038578/1/ComunicadoTecnico3582015.pdf",
+   "https://livrariaepamig.com.br/wp-content/uploads/2023/02/Cagaita.pdf",
+   "https://revistas.cff.org.br/infarma/article/download/770/pdf_30/3131"
+  ],
+  "notes": "Árbol del Cerrado brasileño de 4-11 m, tronco tortuoso; considerada melífera (Embrapa). Fruto comestible (laxante en exceso); hojas y corteza de uso medicinal tradicional (antidiarreico). Especie de sabana seca estacional: pleno sol, tolerante a sequía. No es nativa de México.",
+  "status": "updated"
+ },
+ {
+  "id": "HdOHABwQf0feRb3SCLZt",
+  "name": "Eugenia involucrata (Cereza del Río Grande)",
+  "confidence": "medium",
+  "set": {
+   "height": {
+    "min": 5,
+    "max": 15
+   },
+   "additionalFunctionIds": [
+    "0"
+   ],
+   "commonNames": [
+    "Cerella, cherry of rio grande",
+    "Cereza del Río Grande"
+   ],
+   "details.shape": "árbol",
+   "details.isFrostResistant": true
+  },
+  "corrections": [],
+  "sources": [
+   "https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/1136623/1/Especies-Arboreas-Brasileiras-vol-3-Cerejeira.pdf",
+   "https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/578092/1/CerejeiraMato.pdf",
+   "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:98012-2"
+  ],
+  "notes": "Árbol del sur de Brasil (clima templado, bosques con Araucaria) de hasta 15 m, copa estrecha y alargada; tolera frío/heladas ligeras. Fruto comestible. DUPLICADO: Eugenia aggregata (UU7LP5Fw5bnbPCs5UCVf) es sinónimo de esta especie.",
+  "status": "updated"
+ },
+ {
+  "id": "pqTdhIQb4GIZkesiPzvd",
+  "name": "Syzygium cumini (syn. Eugenia jambolana) (Jambolán)",
+  "confidence": "high",
+  "set": {
+   "taxonomy.genus": "Syzygium",
+   "taxonomy.species": "cumini",
+   "taxonomy.family": "Myrtaceae",
+   "taxonomy.synonyms": [
+    "Eugenia jambolana"
+   ],
+   "height": {
+    "min": 8,
+    "max": 15
+   },
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "2",
+    "3"
+   ],
+   "commonNames": [
+    "Jambolan, Aceituna tropical",
+    "Jambolán",
+    "Ciruela de Java"
+   ],
+   "details.lightPreference": "H",
+   "details.shape": "árbol",
+   "details.isFrostResistant": false,
+   "details.heightRangeDescription": "más de 10 mts"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.genus",
+    "old": "Eugenia",
+    "new": "Syzygium",
+    "reason": "Eugenia jambolana es sinónimo de Syzygium cumini (nombre aceptado en POWO)",
+    "source": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:601603-1/general-information"
+   },
+   {
+    "field": "taxonomy.species",
+    "old": "jambolana",
+    "new": "cumini",
+    "reason": "sinónimo",
+    "source": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:601603-1/general-information"
+   },
+   {
+    "field": "taxonomy.family",
+    "old": "Mirtaceae",
+    "new": "Myrtaceae",
+    "reason": "error ortográfico",
+    "source": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:601603-1/general-information"
+   }
+  ],
+  "sources": [
+   "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:601603-1/general-information",
+   "https://www.iucngisd.org/gisd/species.php?sc=505",
+   "https://landscapeplants.aub.edu.lb/Plants/PlantProfile/f020dce5-1fa8-49d6-9e61-8d3866d46a8d"
+  ],
+  "notes": "Árbol perenne de 6-15 m (hasta 30 m), fruto comestible, madera y uso medicinal (semilla antidiabética tradicional); atrae abejas. Es invasora en varias islas tropicales. DUPLICADO del registro Syzygium cumini (jNI1faZFQcn4kT2VyYMb); se sugiere fusionar.",
+  "status": "updated"
+ },
+ {
+  "id": "5YOPqA3v94JJBJh4OumM",
+  "name": "Eugenia leitonii (Araçá-piranga)",
+  "confidence": "low",
+  "set": {
+   "height": {
+    "min": 8,
+    "max": 14
+   },
+   "additionalFunctionIds": [
+    "0",
+    "2"
+   ],
+   "details.shape": "árbol",
+   "details.heightRangeDescription": "más de 10 mts"
+  },
+  "corrections": [],
+  "sources": [
+   "https://www.tradewindsfruit.com/eugenia-leitonii-araca-piranga-seeds",
+   "https://ausgenebank.agriculture.vic.gov.au/gringlobal/taxon/taxonomydetail?id=416883"
+  ],
+  "notes": "Árbol semicaducifolio de 8-14 m con copa piramidal abierta (fuentes de viveros); fruto comestible. Se añade Alimento manteniendo Maderable existente. Ojo: GRIN marca el nombre 'Eugenia leitonii' como nom. inval.; además 'ubajai' corresponde a otra especie (Eugenia myrcianthes / Hexachlamys edulis).",
+  "status": "updated"
+ },
+ {
+  "id": "3unKpfa0bzJXl6aP2JB3",
+  "name": "Eugenia pyriformis (Uvaia)",
+  "confidence": "medium",
+  "set": {
+   "height": {
+    "min": 5,
+    "max": 10
+   },
+   "additionalFunctionIds": [
+    "0"
+   ],
+   "details.shape": "árbol",
+   "details.lightPreference": "H",
+   "details.heightRangeDescription": "de 5 a 10 mts"
+  },
+  "corrections": [],
+  "sources": [
+   "https://www.rj.gov.br/pesagro/sites/default/files/arquivos_paginas/online111.pdf",
+   "https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/1140269/1/Especies-Arboreas-Brasileiras-vol-4-Uvaieira.pdf"
+  ],
+  "notes": "Árbol frutal de la Mata Atlántica, hasta ~10 m (algunas fuentes hasta 15 m), adaptado a altitudes de hasta 1000 m. Fruto comestible. Tolerancia a heladas citada solo en fuente de divulgación (no se llenó).",
+  "status": "updated"
+ },
+ {
+  "id": "EoUkeEqCP0FkQFX0ajZx",
+  "name": "Eugenia stipitata (Arazá)",
+  "confidence": "medium",
+  "set": {
+   "height": {
+    "min": 2.5,
+    "max": 6
+   },
+   "additionalFunctionIds": [
+    "0"
+   ],
+   "commonNames": [
+    "Guayaba amazonica, arasaboy",
+    "Arazá"
+   ],
+   "details.lightPreference": "M",
+   "details.humidityPreference": "H",
+   "details.isFrostResistant": false,
+   "details.shape": "arbusto",
+   "details.heightRangeDescription": "hasta 5 mts"
+  },
+  "corrections": [],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Eugenia_stipitata",
+   "https://toptropicals.com/store/item/3068.htm",
+   "https://revistas.ucr.ac.cr/index.php/agromeso/article/view/28759"
+  ],
+  "notes": "Arbusto o árbol pequeño amazónico (2.5 m hasta 15 m excepcionalmente; en cultivo ~2-6 m), crece mejor bajo sombra de árboles más altos; se intercala con cultivos anuales en los primeros años. Fruto comestible. El edibleUses 'leaves' existente parece erróneo (se come el fruto).",
+  "status": "updated"
+ },
+ {
+  "id": "raZZLjDUT6kKpKKPdHpe",
+  "name": "Eugenia uniflora (Pitanga)",
+  "confidence": "high",
+  "set": {
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "3"
+   ],
+   "commonNames": [
+    "Pitanga, cereza de Cayena",
+    "Cereza de Surinam"
+   ],
+   "details.humidityPreference": "M",
+   "details.lifeCycleDuration": "Hasta 80 años"
+  },
+  "corrections": [],
+  "sources": [
+   "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:596263-1/general-information",
+   "https://www.iucngisd.org/gisd/pdf.php?sc=983",
+   "https://apps.cals.arizona.edu/arboretum/taxon.aspx?id=976",
+   "https://edis.ifas.ufl.edu/publication/FP202/pdf"
+  ],
+  "notes": "Arbusto/árbol pequeño (hasta 8-10 m), fruto comestible; hojas en decocción como remedio para resfriado y febrífugo. Flores ricas en polen visitadas por abejas. Es invasora en algunas regiones tropicales.",
+  "status": "updated"
+ },
+ {
+  "id": "TWREN2WomkfgcG773FyL",
+  "name": "Euterpe edulis (Palmito juçara)",
+  "confidence": "medium",
+  "set": {
+   "height": {
+    "min": 8,
+    "max": 20
+   },
+   "additionalFunctionIds": [
+    "0",
+    "3"
+   ],
+   "details.lightPreference": "M",
+   "details.humidityPreference": "H",
+   "details.isFrostResistant": true,
+   "details.shape": "palma",
+   "details.heightRangeDescription": "más de 10 mts"
+  },
+  "corrections": [],
+  "sources": [
+   "https://nzpalms.co.nz/species/Euterpe-edulis.html",
+   "https://repositoriosdigitales.mincyt.gob.ar/vufind/Record/CONICETDig_a5cde8d2675dbf9ba2ae7456b63c391c",
+   "https://biblioteca.incaper.es.gov.br/digital/bitstream/123456789/3132/1/BRT-EmergenceandvigorofEuterpeedulisseedlingsundershading-.pdf"
+  ],
+  "notes": "Palma solitaria de sotobosque de la Mata Atlántica, 8-20 m, tolerante a sombra (sobre todo joven) y a heladas ligeras (plántulas soportan sobreenfriamiento hasta ~-10 °C). Palmito y fruto comestibles; se añade Alimento manteniendo Medicinal existente. No nativa de México.",
+  "status": "updated"
+ },
+ {
+  "id": "QVaPpZtRqRL2A1MrsKiF",
+  "name": "Euterpe oleracea (Açaí)",
+  "confidence": "medium",
+  "set": {
+   "height": {
+    "min": 15,
+    "max": 24
+   },
+   "ecologicalZoneIds": [
+    "1"
+   ],
+   "additionalFunctionIds": [
+    "0"
+   ],
+   "details.lightPreference": "H",
+   "details.humidityPreference": "H",
+   "details.isFrostResistant": false,
+   "details.shape": "palma",
+   "details.heightRangeDescription": "más de 10 mts"
+  },
+  "corrections": [],
+  "sources": [
+   "https://apct.sede.embrapa.br/pab/article/view/6008",
+   "https://plantpono.org/?p=3747",
+   "https://fao.org/4/i2360e/i2360e04.pdf"
+  ],
+  "notes": "Palma multicaule (en macollos) de 15-24 m, de llanuras inundables del estuario amazónico; fruto (açaí) y palmito comestibles. DUPLICADO con 'Euterpe oleraceae' (atPGqShK49UndT3QtYvG); se sugiere fusionar.",
+  "status": "updated"
+ },
+ {
+  "id": "atPGqShK49UndT3QtYvG",
+  "name": "Euterpe oleracea (Asaí brasilero)",
+  "confidence": "medium",
+  "set": {
+   "taxonomy.species": "oleracea",
+   "taxonomy.family": "Arecaceae",
+   "height": {
+    "min": 15,
+    "max": 24
+   },
+   "additionalFunctionIds": [
+    "0"
+   ],
+   "commonNames": [
+    "Asai brasilero",
+    "Açaí"
+   ],
+   "details.lightPreference": "H",
+   "details.humidityPreference": "H",
+   "details.isFrostResistant": false,
+   "details.shape": "palma",
+   "details.heightRangeDescription": "más de 10 mts"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.species",
+    "old": "oleraceae",
+    "new": "oleracea",
+    "reason": "error ortográfico del epíteto",
+    "source": "https://powo.science.kew.org/results?q=Euterpe%20oleracea"
+   },
+   {
+    "field": "taxonomy.family",
+    "old": "Palmae",
+    "new": "Arecaceae",
+    "reason": "nombre de familia APG IV",
+    "source": "https://powo.science.kew.org/results?q=Euterpe%20oleracea"
+   }
+  ],
+  "sources": [
+   "https://apct.sede.embrapa.br/pab/article/view/6008",
+   "https://plantpono.org/?p=3747"
+  ],
+  "notes": "Mismos datos que Euterpe oleracea. DUPLICADO de QVaPpZtRqRL2A1MrsKiF; se sugiere fusionar (conservar lifeCycle de este registro).",
+  "status": "updated"
+ },
+ {
+  "id": "4uwYFdTJpdgy1C1Qd3WS",
+  "name": "Euterpe precatoria (Asaí nativo)",
+  "confidence": "medium",
+  "set": {
+   "taxonomy.family": "Arecaceae",
+   "height": {
+    "min": 3,
+    "max": 20
+   },
+   "additionalFunctionIds": [
+    "0",
+    "2",
+    "3"
+   ],
+   "commonNames": [
+    "Asai nativo",
+    "Açaí solitario"
+   ],
+   "details.humidityPreference": "H",
+   "details.isFrostResistant": false,
+   "details.shape": "palma",
+   "details.heightRangeDescription": "más de 10 mts"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.family",
+    "old": "Palmae",
+    "new": "Arecaceae",
+    "reason": "nombre de familia APG IV",
+    "source": "https://colplanta.org/taxon/urn:lsid:ipni.org:names:666949-1/general-information"
+   }
+  ],
+  "sources": [
+   "https://en.wikipedia.org/wiki/Euterpe_precatoria",
+   "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12349038/",
+   "https://floracostaricensis.myspecies.info/taxonomy/term/16206/descriptions"
+  ],
+  "notes": "Palma generalmente solitaria de 3-20 m (var. longivaginata de Centroamérica más baja, a veces cespitosa). Fruto (açaí) y palmito comestibles, tallos para construcción, raíces medicinales. Llega a Centroamérica; no se asignan otras zonas.",
+  "status": "updated"
+ },
+ {
+  "id": "cdK0zFVyKtDdrfH0FUE6",
+  "name": "Eysenhardtia polystachya (Palo dulce)",
+  "confidence": "high",
+  "set": {
+   "taxonomy.genus": "Eysenhardtia",
+   "taxonomy.family": "Fabaceae",
+   "height": {
+    "min": 2,
+    "max": 8
+   },
+   "stratumIds": [
+    "2"
+   ],
+   "ecologicalZoneIds": [
+    "4",
+    "6"
+   ],
+   "ecologicalFunctionIds": [
+    "1",
+    "3",
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "1",
+    "2",
+    "3"
+   ],
+   "details.lightPreference": "H",
+   "details.humidityPreference": "L",
+   "details.shape": "árbol",
+   "details.heightRangeDescription": "de 5 a 10 mts"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.genus",
+    "old": "Eysenhartdia",
+    "new": "Eysenhardtia",
+    "reason": "error ortográfico",
+    "source": "https://npn.rngr.net/publications/semillas-de-especies-forestales/monografias/eysenhardtia-polystachya-ort.-sarg.-fabaceae/at_download/file"
+   },
+   {
+    "field": "taxonomy.family",
+    "old": "fabaceae",
+    "new": "Fabaceae",
+    "reason": "mayúscula inicial",
+    "source": "-"
+   },
+   {
+    "field": "ecologicalZoneIds",
+    "old": [
+     "4",
+     "6",
+     "6"
+    ],
+    "new": [
+     "4",
+     "6"
+    ],
+    "reason": "id duplicado",
+    "source": "-"
+   }
+  ],
+  "sources": [
+   "https://npn.rngr.net/publications/semillas-de-especies-forestales/monografias/eysenhardtia-polystachya-ort.-sarg.-fabaceae/at_download/file",
+   "https://www.scielo.org.mx/pdf/remexca/v16n5/2007-0934-remexca-16-05-e3770.pdf",
+   "https://www.redalyc.org/pdf/634/63438963008.pdf"
+  ],
+  "notes": "Árbol/arbusto caducifolio nativo de México (SE Arizona a Oaxaca), 2-8 m. Nódulos fijadores de N desde los 30 días; reduce pérdida de suelo en restauración; muy visitado por abejas (mucho néctar). Forraje apetecido (~22% proteína), leña/postes y uso medicinal tradicional (afecciones renales). Probablemente también zona 'Selva baja' (id desconocido).",
+  "status": "updated"
+ },
+ {
+  "id": "X5bij5sXiihRKv7KAUFn",
+  "name": "Fagopyrum esculentum (Trigo sarraceno)",
+  "confidence": "high",
+  "set": {
+   "height": {
+    "min": 0.6,
+    "max": 1.2
+   },
+   "crownWidth": {
+    "min": 0.3,
+    "max": 0.5
+   },
+   "ecologicalFunctionIds": [
+    "0",
+    "2",
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "3"
+   ],
+   "commonNames": [
+    "Trigo Sarraceno",
+    "Alforfón"
+   ],
+   "details.lifeCycleDuration": "Varios meses",
+   "details.lightPreference": "H",
+   "details.humidityPreference": "M",
+   "details.isFrostResistant": false,
+   "details.shape": "hierba",
+   "details.heightRangeDescription": "hasta 2 mts"
+  },
+  "corrections": [
+   {
+    "field": "details.lifeCycleDuration",
+    "old": "120 dias",
+    "new": "Varios meses",
+    "reason": "Valor fuera del catálogo; ciclo de ~3-4 meses",
+    "source": "https://www.sare.org/publications/managing-cover-crops-profitably/nonlegume-cover-crops/buckwheat/"
+   }
+  ],
+  "sources": [
+   "https://www.sare.org/publications/managing-cover-crops-profitably/nonlegume-cover-crops/buckwheat/",
+   "https://kidsgardening.org/growing-guide-buckwheat-cover-crop/",
+   "https://eorganic.org/node/467"
+  ],
+  "notes": "Hierba anual de 0.6-1.2 m, cultivo de cobertura muy rápido (flor a los 35-40 días). Extrae fósforo del suelo mejor que otros cultivos de cobertura (acumulador), flores abundantes muy atractivas para polinizadores. Grano comestible. Sensible a heladas y sequía. El estrato 'Alto' existente parece alto para su porte (quizá relativo en consorcio pionero); no se cambió. crownWidth estimado como extensión de planta.",
+  "status": "updated"
+ },
+ {
+  "id": "Vf4Z6vUKEUvuZr9AnjfU",
+  "name": "Faidherbia albida (Espino de invierno)",
+  "confidence": "high",
+  "set": {
+   "height": {
+    "min": 15,
+    "max": 30
+   },
+   "stratumIds": [
+    "3",
+    "4"
+   ],
+   "ecologicalFunctionIds": [
+    "1"
+   ],
+   "additionalFunctionIds": [
+    "1",
+    "2"
+   ],
+   "details.lightPreference": "H",
+   "details.humidityPreference": "L",
+   "details.shape": "árbol"
+  },
+  "corrections": [],
+  "sources": [
+   "https://apps.worldagroforestry.org/treedb2/AFTPDFS/Faidherbia_albida.PDF",
+   "https://www.frontiersin.org/journals/environmental-science/articles/10.3389/fenvs.2019.00146/pdf",
+   "https://winrock.org/faidherbia-albida-inverted-phenology-supports-dryzone-agroforestry/"
+  ],
+  "notes": "Leguminosa africana de 15-30 m, copa amplia redondeada, fijadora de N (nódulos). Fenología invertida: pierde hojas en lluvias, no compite con cultivos (aumenta rendimiento de maíz). Vainas y hojas forrajeras en época seca. Zonas secas/aluviales; no nativa de México (no se asignan zonas).",
+  "status": "updated"
+ },
+ {
+  "id": "nU4HHPP1IsMmxQ8wY39X",
+  "name": "Acca sellowiana (Feijoa)",
+  "confidence": "medium",
+  "set": {
+   "taxonomy.genus": "Acca",
+   "taxonomy.species": "sellowiana",
+   "taxonomy.synonyms": [
+    "Feijoa sellowiana"
+   ],
+   "height": {
+    "min": 3,
+    "max": 5
+   },
+   "crownWidth": {
+    "min": 3,
+    "max": 4.5
+   },
+   "stratumIds": [
+    "2"
+   ],
+   "ecologicalZoneIds": [
+    "3",
+    "4",
+    "6"
+   ],
+   "additionalFunctionIds": [
+    "0"
+   ],
+   "commonNames": [
+    "Feijoa",
+    "Guayabo del país"
+   ],
+   "details.lightPreference": "H",
+   "details.humidityPreference": "M",
+   "details.isFrostResistant": true,
+   "details.shape": "arbusto",
+   "details.heightRangeDescription": "hasta 5 mts"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.species",
+    "old": "-",
+    "new": "sellowiana",
+    "reason": "Nombre común 'Feijoa' identifica sin ambigüedad a la especie",
+    "source": "https://worldplants.ca/display0.php?id=2717"
+   },
+   {
+    "field": "taxonomy.genus",
+    "old": "Feijoa",
+    "new": "Acca",
+    "reason": "Feijoa sellowiana es sinónimo de Acca sellowiana (nombre aceptado)",
+    "source": "https://worldplants.ca/display0.php?id=2717"
+   },
+   {
+    "field": "details.heightRangeDescription",
+    "old": "de 5 a 10 mts",
+    "new": "hasta 5 mts",
+    "reason": "Arbusto de 1-7 m, habitualmente ~4.5 m",
+    "source": "https://landscapeplants.aub.edu.lb/Plants/GetPDF/47481791-7bd9-4080-b023-aeb554ca9d12"
+   }
+  ],
+  "sources": [
+   "https://worldplants.ca/display0.php?id=2717",
+   "https://landscapeplants.aub.edu.lb/Plants/GetPDF/47481791-7bd9-4080-b023-aeb554ca9d12",
+   "https://crfg.org/?p=93626"
+  ],
+  "notes": "Arbusto frutal de ~4.5 m de alto y ancho (1-7 m), resiste heladas hasta -7/-10 °C, prefiere climas frescos y húmedos. Fruto (y pétalos) comestibles. Zona 6 existente se conserva. TRIPLE DUPLICADO: Feijoa sellowiana (YgCHwkLC8oa7gvBIDp4L) y Acca sellowiana (1aFH61QEXYgFa7vog29H).",
+  "status": "updated"
+ },
+ {
+  "id": "YgCHwkLC8oa7gvBIDp4L",
+  "name": "Acca sellowiana (Feijoa)",
+  "confidence": "medium",
+  "set": {
+   "taxonomy.genus": "Acca",
+   "taxonomy.synonyms": [
+    "Feijoa sellowiana"
+   ],
+   "stratumIds": [
+    "2"
+   ],
+   "additionalFunctionIds": [
+    "0"
+   ],
+   "commonNames": [
+    "Feijoa",
+    "Guayabo del país"
+   ]
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.genus",
+    "old": "Feijoa",
+    "new": "Acca",
+    "reason": "Feijoa sellowiana es sinónimo de Acca sellowiana (nombre aceptado)",
+    "source": "https://worldplants.ca/display0.php?id=2717"
+   }
+  ],
+  "sources": [
+   "https://worldplants.ca/display0.php?id=2717",
+   "https://landscapeplants.aub.edu.lb/Plants/GetPDF/47481791-7bd9-4080-b023-aeb554ca9d12",
+   "https://crfg.org/?p=93626"
+  ],
+  "notes": "Datos existentes (4 m, copa 5 m, resistente a heladas, pleno sol) coherentes con las fuentes. Se actualiza el género y se asigna estrato Medio (como Acca sellowiana del dataset). DUPLICADO de Acca sellowiana (1aFH61QEXYgFa7vog29H) y de 'Feijoa -' (nU4HHPP1IsMmxQ8wY39X).",
+  "status": "updated"
+ },
+ {
+  "id": "tNbrPlVNPxxogAnouV7W",
+  "name": "Ficus carica (Higo)",
+  "confidence": "high",
+  "set": {
+   "crownWidth": {
+    "min": 3,
+    "max": 8
+   },
+   "additionalFunctionIds": [
+    "0"
+   ],
+   "commonNames": [
+    "Higo",
+    "Higuera"
+   ]
+  },
+  "corrections": [
+   {
+    "field": "crownWidth",
+    "old": {
+     "min": 10,
+     "max": 10
+    },
+    "new": {
+     "min": 3,
+     "max": 8
+    },
+    "reason": "La higuera común alcanza 3-8 m de alto y de ancho en madurez; 10 m de copa con 4 m de altura es incoherente",
+    "source": "https://landscapeplants.aub.edu.lb/Plants/GetPDF/421a8f50-461a-46b0-b62f-d30e9e7b72de"
+   }
+  ],
+  "sources": [
+   "https://landscapeplants.aub.edu.lb/Plants/GetPDF/421a8f50-461a-46b0-b62f-d30e9e7b72de",
+   "https://growables.org/information/TropicalFruit/Fig.htm"
+  ],
+  "notes": "Árbol pequeño de 3-8 m de alto y ancho, tolerante a sequía una vez establecido (aunque fructifica mal con estrés hídrico). Fruto comestible. Se corrige la copa.",
+  "status": "updated"
+ },
+ {
+  "id": "cMEvsDz9sOYowUyC5PYr",
+  "name": "Flemingia macrophylla (Flemingia)",
+  "confidence": "high",
+  "set": {
+   "taxonomy.family": "Fabaceae",
+   "ecologicalFunctionIds": [
+    "0",
+    "1",
+    "3"
+   ]
+  },
+  "corrections": [],
+  "sources": [
+   "https://tropicalforages.info/text/entities/flemingia_macrophylla.htm",
+   "https://apps.worldagroforestry.org/treedb2/AFTPDFS/Flemingia_macrophylla.PDF",
+   "https://winrock.org/flemingia-macrophylla-a-valuable-species-in-soil-conservation/"
+  ],
+  "notes": "Arbusto leñoso de raíz profunda (~2.5-4 m), fija N con Bradyrhizobium (~75 kg N/ha/año), plantado en setos en curvas de nivel contra la erosión; su mulch se descompone lento y conserva humedad. Forraje pobre (taninos), no se añadió Forraje. El edibleUses 'fruit' existente no tiene sustento.",
+  "status": "updated"
+ },
+ {
+  "id": "rs4qq1R5x2rOlyLA5yV0",
+  "name": "Foeniculum vulgare (Hinojo)",
+  "confidence": "high",
+  "set": {
+   "height": {
+    "min": 1.5,
+    "max": 2.4
+   },
+   "stratumIds": [
+    "1"
+   ],
+   "ecologicalFunctionIds": [
+    "4"
+   ],
+   "additionalFunctionIds": [
+    "0",
+    "3"
+   ],
+   "details.lightPreference": "H",
+   "details.isFrostResistant": true,
+   "details.shape": "hierba"
+  },
+  "corrections": [
+   {
+    "field": "additionalFunctionIds",
+    "old": [
+     "2"
+    ],
+    "new": [
+     "0",
+     "3"
+    ],
+    "reason": "El hinojo es una hierba aromática (alimento y medicinal), no maderable",
+    "source": "https://www.agroforestry.co.uk/product/foeniculum-vulgare/"
+   }
+  ],
+  "sources": [
+   "https://www.agroforestry.co.uk/product/foeniculum-vulgare/",
+   "https://medicinalgardens.web.unc.edu/bronze-fennel",
+   "https://www.nwcb.wa.gov/images/weeds/Foeniculum-vulgare-final.pdf"
+  ],
+  "notes": "Hierba perenne (o bienal) de 1.5-2.4 m con raíz pivotante; flores atraen abejas e insectos benéficos (sírfidos, avispas parasitoides). Hojas y semillas comestibles y medicinales. Puede ser maleza invasora.",
+  "status": "updated"
+ },
+ {
+  "id": "guuHakZuJYte8IVFblax",
+  "name": "Fragaria vesca (Fresa silvestre)",
+  "confidence": "high",
+  "set": {
+   "height": {
+    "min": 0.07,
+    "max": 0.23
+   },
+   "crownWidth": {
+    "min": 0.23,
+    "max": 0.3
+   },
+   "stratumIds": [
+    "0"
+   ],
+   "ecologicalFunctionIds": [
+    "3"
+   ],
+   "additionalFunctionIds": [
+    "0"
+   ]
+  },
+  "corrections": [
+   {
+    "field": "height",
+    "old": {
+     "min": 10,
+     "max": 10
+    },
+    "new": {
+     "min": 0.07,
+     "max": 0.23
+    },
+    "reason": "Altura imposible (10 m); la planta mide 7-23 cm (probablemente se capturó en cm)",
+    "source": "https://worldplants.ca/display.php?id=3149"
+   }
+  ],
+  "sources": [
+   "https://worldplants.ca/display.php?id=3149",
+   "https://arboretum.ucdavis.edu/node/28096",
+   "https://www.rhsplants.co.uk/plants/_/fragaria-vesca/classid.2000017268/"
+  ],
+  "notes": "Hierba rastrera de 7-23 cm, se extiende por estolones como cobertura en sombra parcial (fructifica mejor a pleno sol). Fruto comestible.",
+  "status": "updated"
+ },
+ {
+  "id": "hBnJ4nblO2VAA25ZmQpY",
+  "name": "Fraxinus uhdei (Fresno)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "taxonomy.species": "uhdei",
+   "taxonomy.family": "Oleaceae",
+   "height": {
+    "min": 10,
+    "max": 20
+   },
+   "stratumIds": [
+    "3"
+   ],
+   "additionalFunctionIds": [
+    "2"
+   ],
+   "details.shape": "árbol",
+   "details.heightRangeDescription": "más de 10 mts"
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.species",
+    "old": "uhedi",
+    "new": "uhdei",
+    "reason": "error tipográfico",
+    "source": "https://media.rufford.org/media/project_reports/Ficha%20T%C3%A9cnica%20Fraxinus%20uhdei.pdf"
+   },
+   {
+    "field": "taxonomy.family",
+    "old": "Olaceae",
+    "new": "Oleaceae",
+    "reason": "error tipográfico",
+    "source": "https://media.rufford.org/media/project_reports/Ficha%20T%C3%A9cnica%20Fraxinus%20uhdei.pdf"
+   }
+  ],
+  "sources": [
+   "https://media.rufford.org/media/project_reports/Ficha%20T%C3%A9cnica%20Fraxinus%20uhdei.pdf",
+   "https://npn.rngr.net/publications/manual-de-semillas-de-arboles-tropicales/parte-ii/especies-f/at_download/file",
+   "https://www.lifeder.com/fraxinus-uhdei/"
+  ],
+  "notes": "Árbol nativo de México de 10-20 m (hasta 30 m). Madera para artesanía e implementos agrícolas; muy usado para sombra. Se corrigió epíteto y familia."
+ },
+ {
+  "id": "Wi7zrrGcR6uWKDa9q3XP",
+  "name": "Gallesia integrifolia (Palo de ajo)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "height": {
+    "min": 5,
+    "max": 20
+   },
+   "additionalFunctionIds": [
+    "2",
+    "3"
+   ],
+   "details.shape": "árbol",
+   "details.heightRangeDescription": "más de 10 mts"
+  },
+  "corrections": [],
+  "sources": [
+   "https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/1140105/1/Especies-Arboreas-Brasileiras-vol-1-Pau-Dalho.pdf",
+   "https://www.scielo.br/j/rbfar/a/nV8jpqJjCPvCgV8PyMzVv9j/?lang=pt"
+  ],
+  "notes": "Árbol perennifolio de 5-20 m (hasta 30 m) según Embrapa. Madera para tablas, cajas y embalaje; corteza usada en medicina tradicional (gripe, tos, reumatismo). Especie sudamericana; sin datos de copa."
+ },
+ {
+  "id": "gFOhtU6KJCmh4am3F97l",
+  "name": "Garcinia gardneriana (Bacupari)",
+  "status": "updated",
+  "confidence": "medium",
+  "set": {
+   "height": {
+    "min": 4.5,
+    "max": 9
+   },
+   "additionalFunctionIds": [
+    "0"
+   ],
+   "details.shape": "árbol",
+   "details.heightRangeDescription": "de 5 a 10 mts"
+  },
+  "corrections": [],
+  "sources": [
+   "https://www.tradewindsfruit.com/bacupari.htm",
+   "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:972610-1/general-information"
+  ],
+  "notes": "Árbol perennifolio de 4.5-9 m (15-30 ft), fruto comestible fresco. Nativo de Sudamérica (bioma tropical húmedo); no se asignó zona de México."
+ },
+ {
+  "id": "87KpGBj0LTDQnK3lVIhR",
+  "name": "Garcinia mangostana (Mangostán)",
+  "status": "updated",
+  "confidence": "high",
+  "set": {
+   "taxonomy.family": "Clusiaceae",
+   "height": {
+    "min": 8,
+    "max": 10
+   },
+   "additionalFunctionIds": [
+    "0",
+    "3"
+   ]
+  },
+  "corrections": [
+   {
+    "field": "taxonomy.family",
+    "old": "Guttiferáceas",
+    "new": "Clusiaceae",
+    "reason": "Guttiferae es nombre alternativo; APG IV usa Clusiaceae",
+    "source": "https://prosea.prota4u.org/view.aspx?id=1509"
+   }
+  ],
+  "sources": [
+   "https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/999909/1/mangostaocultivo.pdf",
+   "https://prosea.prota4u.org/view.aspx?id=1509",
+   "https://peerj.com/articles/15329"
+  ],
+  "notes": "Árbol de 8-10 m en cultivo (Embrapa; PROSEA indica 6-25 m). Fruto comestible; cáscara de uso medicinal tradicional. Se añadió Alimento."
+ },
+ {
+  "id": "by7PIhL9v0BInozy5342",
+  "name": "Garcinia sp. (Mangostán amarillo)",
+  "status": "updated",
+  "confidence": "low",
+  "set": {
+   "additionalFunctionIds": [
+    "0"
+   ]
+  },
+  "corrections": [],
+  "sources": [
+   "https://scielo.br/j/rbf/a/BQkBDbLpqkHkZjLCh8M4mJy/?lang=en",
+   "https://green.macfast.org/?p=6291"
+  ],
+  "notes": "'Mangostão amarelo' corresponde probablemente a Garcinia xanthochymus (fruto comestible, fuente de vitamina C), pero no se cambió la taxonomía por falta de confirmación. Solo se añadió Alimento."
+ }
+]
