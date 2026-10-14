@@ -96,5 +96,33 @@ service cloud.firestore {
 
       allow update: if isAdmin();
     }
+
+    // Diseños de SAF hechos en el Diseñador (/disenador). Son privados: sólo
+    // su autor puede leerlos, modificarlos o borrarlos. Cada planta guarda
+    // sólo el id de la especie y su posición (el resto se resuelve contra el
+    // catálogo `species`), con un tope de 1000 plantas por diseño.
+    match /designs/{designId} {
+      function isValidDesign(data) {
+        return data.name is string
+          && data.name.size() > 0
+          && data.name.size() <= 120
+          && (!('description' in data) || (data.description is string && data.description.size() <= 2000))
+          && data.plot is map
+          && data.plants is list
+          && data.plants.size() <= 1000;
+      }
+
+      allow read, delete: if request.auth != null && resource.data.authorId == request.auth.uid;
+
+      allow create: if request.auth != null
+        && request.resource.data.authorId == request.auth.uid
+        && isValidDesign(request.resource.data);
+
+      // El autor no puede cambiar: el diseño sigue siendo de quien lo creó.
+      allow update: if request.auth != null
+        && resource.data.authorId == request.auth.uid
+        && request.resource.data.authorId == resource.data.authorId
+        && isValidDesign(request.resource.data);
+    }
   }
 }
