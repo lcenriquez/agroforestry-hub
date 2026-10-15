@@ -1,5 +1,6 @@
 import { MAX_DESIGN_NAME_LENGTH, MAX_DESIGN_PLANTS } from '../../interfaces/Design';
 import { normalizeBackground } from './background';
+import { managedFields, plantSpec } from './managedSize';
 import { formatNumber, shortLabel } from './strata';
 import { newPlantId, PLOT_MAX, PLOT_MIN, roundCoord } from './useDesignState';
 
@@ -38,8 +39,9 @@ export function buildPlanSvg({ name, plot, plants, specFor, strata, gridSpacing 
 	let minY = 0;
 	let maxX = plot.width;
 	let maxY = plot.length;
+	const sizedSpec = (plant: DesignPlant) => plantSpec(specFor(plant.speciesId), plant);
 	for (const plant of plants) {
-		const r = specFor(plant.speciesId).crown / 2;
+		const r = sizedSpec(plant).crown / 2;
 		minX = Math.min(minX, plant.x - r);
 		minY = Math.min(minY, plant.y - r);
 		maxX = Math.max(maxX, plant.x + r);
@@ -78,9 +80,9 @@ export function buildPlanSvg({ name, plot, plants, specFor, strata, gridSpacing 
 		if (d) parts.push(`<path d="${d}" stroke="#c5d6b5" stroke-width="1" fill="none"/>`);
 	}
 
-	const sorted = [...plants].sort((a, b) => specFor(b.speciesId).height - specFor(a.speciesId).height);
+	const sorted = [...plants].sort((a, b) => sizedSpec(b).height - sizedSpec(a).height);
 	for (const plant of sorted) {
-		const spec = specFor(plant.speciesId);
+		const spec = sizedSpec(plant);
 		const r = Math.max(0.05, spec.crown / 2) * ppm;
 		parts.push(
 			`<circle cx="${X(plant.x)}" cy="${Y(plant.y)}" r="${r.toFixed(1)}" fill="${spec.stratum.color}" fill-opacity="0.45" stroke="${spec.stratum.color}" stroke-width="1.5"${
@@ -90,7 +92,7 @@ export function buildPlanSvg({ name, plot, plants, specFor, strata, gridSpacing 
 		);
 	}
 	for (const plant of sorted) {
-		const spec = specFor(plant.speciesId);
+		const spec = sizedSpec(plant);
 		if (spec.crown * ppm < 44) continue;
 		parts.push(
 			`<text x="${X(plant.x)}" y="${(oy + plant.y * ppm + 14).toFixed(1)}" font-size="11" text-anchor="middle" fill="#1a202c" stroke="#ffffff" stroke-width="3" paint-order="stroke">${escapeXml(
@@ -191,7 +193,13 @@ export function designToJson(
 			plot: content.plot,
 			plants: content.plants.map(plant => {
 				const spec = specFor(plant.speciesId);
-				return { speciesId: plant.speciesId, x: plant.x, y: plant.y, species: spec.missing ? undefined : `${spec.name} (${spec.scientificName})` };
+				return {
+					speciesId: plant.speciesId,
+					x: plant.x,
+					y: plant.y,
+					...managedFields(plant),
+					species: spec.missing ? undefined : `${spec.name} (${spec.scientificName})`
+				};
 			}),
 			background: content.background ? { ...content.background, storagePath: undefined } : undefined,
 			layers
@@ -231,7 +239,8 @@ export function parseDesignJson(text: string): ImportedDesign {
 		const x = toNumber(entry.x);
 		const y = toNumber(entry.y);
 		if (typeof entry.speciesId !== 'string' || !entry.speciesId || x === null || y === null) continue;
-		plants.push({ id: newPlantId(), speciesId: entry.speciesId, x: roundCoord(x), y: roundCoord(y) });
+		// Tamaño con manejo inválido (≤ 0, no numérico, enorme): se ignora y la planta usa el del catálogo.
+		plants.push({ id: newPlantId(), speciesId: entry.speciesId, x: roundCoord(x), y: roundCoord(y), ...managedFields(entry) });
 	}
 
 	const name = typeof raw.name === 'string' && raw.name.trim() ? raw.name.trim().slice(0, MAX_DESIGN_NAME_LENGTH) : 'Diseño importado';

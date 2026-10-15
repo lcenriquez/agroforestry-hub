@@ -6,6 +6,7 @@ import { CornersOutIcon, MagnifyingGlassMinusIcon, MagnifyingGlassPlusIcon } fro
 import { clamp } from './analysis';
 import { backgroundSize } from './background';
 import { niceStep } from './exporters';
+import { plantSpec } from './managedSize';
 import { formatNumber, shortLabel } from './strata';
 
 import type { DesignBackground, DesignLayers, DesignPlant, DesignPlot } from '../../interfaces/Design';
@@ -517,7 +518,7 @@ export default function PlanView({
 
 	// Las plantas altas se dibujan primero para que las bajas queden encima y se puedan tocar.
 	const ordered = useMemo(
-		() => plants.map(plant => ({ plant, spec: specFor(plant.speciesId) })).sort((a, b) => b.spec.height - a.spec.height),
+		() => plants.map(plant => ({ plant, spec: plantSpec(specFor(plant.speciesId), plant) })).sort((a, b) => b.spec.height - a.spec.height),
 		[plants, specFor]
 	);
 

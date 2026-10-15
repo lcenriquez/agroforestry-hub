@@ -3,6 +3,7 @@ import { memo, useEffect, useMemo, useRef, useState } from 'react';
 import { Box } from '@chakra-ui/react';
 
 import { niceStep } from './exporters';
+import { plantSpec } from './managedSize';
 import { CANVAS_COLORS } from './PlanView';
 import { formatNumber } from './strata';
 
@@ -90,7 +91,7 @@ const Silhouette = memo(function Silhouette({
 
 	return (
 		<g style={{ cursor: 'pointer' }} onClick={() => onSelect(plant.id)}>
-			<title>{`${spec.name} · ${formatNumber(spec.height, 1)} m de alto · copa ${formatNumber(spec.crown, 1)} m`}</title>
+			<title>{`${spec.name} · ${formatNumber(spec.height, 1)} m de alto · copa ${formatNumber(spec.crown, 1)} m${spec.managed ? ' (con manejo)' : ''}`}</title>
 			{shape}
 		</g>
 	);
@@ -119,7 +120,7 @@ export default function ProfileView({ plot, plants, specFor, selectedId, onSelec
 	const ordered = useMemo(
 		() =>
 			plants
-				.map(plant => ({ plant, spec: specFor(plant.speciesId) }))
+				.map(plant => ({ plant, spec: plantSpec(specFor(plant.speciesId), plant) }))
 				// Más altas atrás; a igual altura, las más lejanas (y menor) atrás.
 				.sort((a, b) => b.spec.height - a.spec.height || a.plant.y - b.plant.y),
 		[plants, specFor]

@@ -174,6 +174,7 @@ export interface PlantSpec {
 	crownLabel: string;
 	functionIds: string[]; // `eco:<id>` y `add:<id>`
 	lightPreference?: 'H' | 'M' | 'L';
+	managed?: boolean; // altura o copa con manejo (poda) de la planta, ver managedSize.ts
 }
 
 export function scientificName(species: SpeciesType): string {

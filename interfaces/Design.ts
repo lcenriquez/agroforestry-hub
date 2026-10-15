@@ -1,5 +1,6 @@
 // Diseño de un SAF hecho en el Diseñador (/disenador). Sólo se guarda la
-// especie (por id) y la posición de cada planta: altura, copa, estrato y
+// especie (por id), la posición y, si se maneja con poda, el tamaño con manejo
+// de cada planta: altura y copa de adulta, estrato y
 // funciones se resuelven contra el catálogo `species` al abrir el diseño, así
 // el diseño refleja las correcciones que se hagan al catálogo.
 
@@ -11,11 +12,17 @@ export interface DesignPlot {
 }
 
 // Posición en metros desde la esquina superior izquierda del terreno.
+// `pruneHeight` y `pruneCrown` (opcionales, en metros) son el tamaño con
+// manejo (poda): si están, se dibuja y analiza la planta con ellos en lugar de
+// la altura y copa de adulta sin podar del catálogo. Si no se usan, se omiten
+// (nunca `undefined`: Firestore lo rechaza dentro de la lista de plantas).
 export interface DesignPlant {
 	id: string;
 	speciesId: string;
 	x: number;
 	y: number;
+	pruneHeight?: number;
+	pruneCrown?: number;
 }
 
 // Imagen de fondo (foto aérea, plano) calibrada a escala. Se dibuja con su

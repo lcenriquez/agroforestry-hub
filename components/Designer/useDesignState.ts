@@ -1,8 +1,10 @@
 import { useCallback, useMemo, useReducer } from 'react';
 
 import { MAX_DESIGN_PLANTS } from '../../interfaces/Design';
+import { withManagedSize } from './managedSize';
 
 import type { DesignBackground, DesignContent, DesignPlant, DesignPlot } from '../../interfaces/Design';
+import type { ManagedSize } from './managedSize';
 
 // Estado del diseño con historial para deshacer/rehacer. Sólo el contenido
 // (terreno + plantas) entra al historial; nombre, selección y vista no.
@@ -27,6 +29,7 @@ export type DesignAction =
 	| { type: 'addPlants'; plants: DesignPlant[] }
 	| { type: 'removePlants'; ids: string[] }
 	| { type: 'movePlants'; moves: { id: string; x: number; y: number }[] }
+	| { type: 'setManagedSize'; ids: string[]; size: ManagedSize }
 	| { type: 'setBackground'; background: DesignBackground | null }
 	| { type: 'moveBackground'; x: number; y: number }
 	| { type: 'replaceBackgroundSrc'; from: string; src: string; storagePath?: string }
@@ -94,6 +97,19 @@ function reducer(state: HistoryState, action: DesignAction): HistoryState {
 			// Durante un arrastre se actualiza en vivo sin tocar el historial.
 			if (state.dragOrigin) return { ...state, present: next };
 			return commit(state, next);
+		}
+		case 'setManagedSize': {
+			const ids = new Set(action.ids);
+			let changed = false;
+			const plants = present.plants.map(p => {
+				if (!ids.has(p.id)) return p;
+				const next = withManagedSize(p, action.size);
+				if (next.pruneHeight === p.pruneHeight && next.pruneCrown === p.pruneCrown) return p;
+				changed = true;
+				return next;
+			});
+			if (!changed) return state;
+			return commit(state, { ...present, plants });
 		}
 		case 'setBackground':
 			return commit(state, { ...present, background: action.background });

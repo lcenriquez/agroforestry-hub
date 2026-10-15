@@ -87,11 +87,12 @@ interface AnalysisPanelProps {
 	suggestions: Suggestion[];
 	nameOfPlant: (plantId: string) => string;
 	onSelectPlant: (plantId: string) => void;
+	onSoloStratum: (stratumId: string) => void;
 	onPickSpecies: (speciesId: string) => void;
 	onRemoveMissing: () => void;
 }
 
-function AnalysisPanel({ analysis, suggestions, nameOfPlant, onSelectPlant, onPickSpecies, onRemoveMissing }: AnalysisPanelProps) {
+function AnalysisPanel({ analysis, suggestions, nameOfPlant, onSelectPlant, onSoloStratum, onPickSpecies, onRemoveMissing }: AnalysisPanelProps) {
 	const { plantCount } = analysis;
 	const hasIssues =
 		analysis.missingStrata.length +
@@ -122,7 +123,15 @@ function AnalysisPanel({ analysis, suggestions, nameOfPlant, onSelectPlant, onPi
 						{analysis.coverage.map(({ stratum, percent, plantCount: count }) => (
 							<Stack key={stratum._id} gap={1}>
 								<HStack justify="space-between" fontSize="sm" gap={2}>
-									<HStack gap={1.5} minW={0}>
+									<HStack
+										as="button"
+										gap={1.5}
+										minW={0}
+										cursor="pointer"
+										title={`Ver sólo el estrato ${stratum.name.toLowerCase()} en el plano`}
+										onClick={() => onSoloStratum(stratum._id)}
+										_hover={{ textDecoration: 'underline' }}
+									>
 										<StratumDot color={stratum.color} />
 										<Text truncate>{stratum.name}</Text>
 										<Text color="fg.muted" fontSize="xs" flexShrink={0}>

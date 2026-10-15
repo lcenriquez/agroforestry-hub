@@ -31,6 +31,7 @@ export interface DesignerPrefs {
 	showGrid?: boolean;
 	snap?: boolean;
 	gridSpacing?: number;
+	hiddenStrata?: string[];
 }
 
 function storage(): Storage | null {

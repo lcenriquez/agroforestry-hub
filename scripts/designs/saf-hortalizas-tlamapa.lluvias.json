@@ -1,0 +1,1740 @@
+{
+	"format": "saf-hub-design",
+	"version": 1,
+	"name": "SAF hortalizas · Tlamapa · lluvias",
+	"description": "San Martín Tlamapa, Puebla · 18.970935, -98.406331.\nTemplado subhúmedo: lluvias jun–sep, secas oct–may, heladas dic–feb, viento fuerte del norte. Agua sólo de lluvia (tanque de 100,000 L); goteo + mulch.\nMódulo 15 × 4 m (eje largo oriente-poniente). El terreno incluye 1.3 m extra al norte para el rompevientos: el módulo va de y = 1.3 a 5.3. Temporada: lluvias (jun–sep). Cama sur: emergente maíz criollo y girasol; alto chile y jitomate; medio frijol ayocote (trepa en el maíz), amaranto, epazote; bajo calabaza de mata. Cama norte todo el año: lechuga, acelga, betabel, cilantro, arúgula.\nFranjas (y del diseño, de norte a sur): rompevientos 0–1.3 · pasillo 1.3–1.7 · cama norte 1.7–2.9 · línea de árboles 2.9–3.5 (eje 3.2) · cama sur 3.5–4.7 · pasillo 4.7–5.3.\nGuaje: planta EXISTENTE (3 m), desmoche a 1.5 m. Línea central: poda a 1.5–2 m, lo podado va picado sobre las camas.\nRompevientos: seto poroso (~50%), abierto abajo para que drene el aire frío.\nCalendario: oct 2026 formar camas (15–20 cm de zacate + composta), estacas de gigantón y morera con goteo, poda ligera del guaje, consorcio de secas frías, plátanos con mulch y protección antiheladas · dic–feb proteger plátanos y brotes · feb–mar 2027 desmoche fuerte del guaje a 1.5 m · jun 2027 rompevientos, frutales y consorcio de lluvias · en lluvias, cada 2–3 meses podar la línea y picar sobre las camas.\nFaltan en el catálogo (no se incluyeron): Acelga (Beta vulgaris var. cicla), Betabel (Beta vulgaris), Cilantro (Coriandrum sativum), Arúgula (Eruca vesicaria), Girasol (Helianthus annuus), Chile (Capsicum annuum), Jitomate (Solanum lycopersicum).",
+	"plot": {
+		"width": 15,
+		"length": 5.3
+	},
+	"plants": [
+		{
+			"speciesId": "plB49IMLaw1gBhNqGKVy",
+			"x": 0.5,
+			"y": 3.2,
+			"pruneHeight": 1.5,
+			"pruneCrown": 1,
+			"species": "Nopal (Opuntia ficus-indica)"
+		},
+		{
+			"speciesId": "V48ZgDmdc1d9BFE4Lgcq",
+			"x": 0.25,
+			"y": 3.2,
+			"pruneHeight": 0.5,
+			"pruneCrown": 0.4,
+			"species": "Consuelda (Symphytum officinale)"
+		},
+		{
+			"speciesId": "V48ZgDmdc1d9BFE4Lgcq",
+			"x": 0.75,
+			"y": 3.2,
+			"pruneHeight": 0.5,
+			"pruneCrown": 0.4,
+			"species": "Consuelda (Symphytum officinale)"
+		},
+		{
+			"speciesId": "V48ZgDmdc1d9BFE4Lgcq",
+			"x": 0.5,
+			"y": 2.95,
+			"pruneHeight": 0.5,
+			"pruneCrown": 0.4,
+			"species": "Consuelda (Symphytum officinale)"
+		},
+		{
+			"speciesId": "V48ZgDmdc1d9BFE4Lgcq",
+			"x": 0.5,
+			"y": 3.45,
+			"pruneHeight": 0.5,
+			"pruneCrown": 0.4,
+			"species": "Consuelda (Symphytum officinale)"
+		},
+		{
+			"speciesId": "tNbrPlVNPxxogAnouV7W",
+			"x": 2.5,
+			"y": 3.2,
+			"pruneHeight": 2,
+			"pruneCrown": 1.2,
+			"species": "Higuera (Ficus carica)"
+		},
+		{
+			"speciesId": "V48ZgDmdc1d9BFE4Lgcq",
+			"x": 2.25,
+			"y": 3.2,
+			"pruneHeight": 0.5,
+			"pruneCrown": 0.4,
+			"species": "Consuelda (Symphytum officinale)"
+		},
+		{
+			"speciesId": "V48ZgDmdc1d9BFE4Lgcq",
+			"x": 2.75,
+			"y": 3.2,
+			"pruneHeight": 0.5,
+			"pruneCrown": 0.4,
+			"species": "Consuelda (Symphytum officinale)"
+		},
+		{
+			"speciesId": "V48ZgDmdc1d9BFE4Lgcq",
+			"x": 2.5,
+			"y": 2.95,
+			"pruneHeight": 0.5,
+			"pruneCrown": 0.4,
+			"species": "Consuelda (Symphytum officinale)"
+		},
+		{
+			"speciesId": "V48ZgDmdc1d9BFE4Lgcq",
+			"x": 2.5,
+			"y": 3.45,
+			"pruneHeight": 0.5,
+			"pruneCrown": 0.4,
+			"species": "Consuelda (Symphytum officinale)"
+		},
+		{
+			"speciesId": "VmefiKW4VYs3fXAsMhDj",
+			"x": 5,
+			"y": 3.2,
+			"pruneHeight": 2,
+			"pruneCrown": 1.5,
+			"species": "Plátano (Musa paradisiaca)"
+		},
+		{
+			"speciesId": "V48ZgDmdc1d9BFE4Lgcq",
+			"x": 4.75,
+			"y": 3.2,
+			"pruneHeight": 0.5,
+			"pruneCrown": 0.4,
+			"species": "Consuelda (Symphytum officinale)"
+		},
+		{
+			"speciesId": "V48ZgDmdc1d9BFE4Lgcq",
+			"x": 5.25,
+			"y": 3.2,
+			"pruneHeight": 0.5,
+			"pruneCrown": 0.4,
+			"species": "Consuelda (Symphytum officinale)"
+		},
+		{
+			"speciesId": "V48ZgDmdc1d9BFE4Lgcq",
+			"x": 5,
+			"y": 2.95,
+			"pruneHeight": 0.5,
+			"pruneCrown": 0.4,
+			"species": "Consuelda (Symphytum officinale)"
+		},
+		{
+			"speciesId": "V48ZgDmdc1d9BFE4Lgcq",
+			"x": 5,
+			"y": 3.45,
+			"pruneHeight": 0.5,
+			"pruneCrown": 0.4,
+			"species": "Consuelda (Symphytum officinale)"
+		},
+		{
+			"speciesId": "VSRFPwLYZMcNJx6Q2e0V",
+			"x": 7.5,
+			"y": 3.2,
+			"pruneHeight": 1.5,
+			"pruneCrown": 1,
+			"species": "Guaje (Leucaena leucocephala)"
+		},
+		{
+			"speciesId": "V48ZgDmdc1d9BFE4Lgcq",
+			"x": 7.25,
+			"y": 3.2,
+			"pruneHeight": 0.5,
+			"pruneCrown": 0.4,
+			"species": "Consuelda (Symphytum officinale)"
+		},
+		{
+			"speciesId": "V48ZgDmdc1d9BFE4Lgcq",
+			"x": 7.75,
+			"y": 3.2,
+			"pruneHeight": 0.5,
+			"pruneCrown": 0.4,
+			"species": "Consuelda (Symphytum officinale)"
+		},
+		{
+			"speciesId": "V48ZgDmdc1d9BFE4Lgcq",
+			"x": 7.5,
+			"y": 2.95,
+			"pruneHeight": 0.5,
+			"pruneCrown": 0.4,
+			"species": "Consuelda (Symphytum officinale)"
+		},
+		{
+			"speciesId": "V48ZgDmdc1d9BFE4Lgcq",
+			"x": 7.5,
+			"y": 3.45,
+			"pruneHeight": 0.5,
+			"pruneCrown": 0.4,
+			"species": "Consuelda (Symphytum officinale)"
+		},
+		{
+			"speciesId": "VmefiKW4VYs3fXAsMhDj",
+			"x": 10,
+			"y": 3.2,
+			"pruneHeight": 2,
+			"pruneCrown": 1.5,
+			"species": "Plátano (Musa paradisiaca)"
+		},
+		{
+			"speciesId": "V48ZgDmdc1d9BFE4Lgcq",
+			"x": 9.75,
+			"y": 3.2,
+			"pruneHeight": 0.5,
+			"pruneCrown": 0.4,
+			"species": "Consuelda (Symphytum officinale)"
+		},
+		{
+			"speciesId": "V48ZgDmdc1d9BFE4Lgcq",
+			"x": 10.25,
+			"y": 3.2,
+			"pruneHeight": 0.5,
+			"pruneCrown": 0.4,
+			"species": "Consuelda (Symphytum officinale)"
+		},
+		{
+			"speciesId": "V48ZgDmdc1d9BFE4Lgcq",
+			"x": 10,
+			"y": 2.95,
+			"pruneHeight": 0.5,
+			"pruneCrown": 0.4,
+			"species": "Consuelda (Symphytum officinale)"
+		},
+		{
+			"speciesId": "V48ZgDmdc1d9BFE4Lgcq",
+			"x": 10,
+			"y": 3.45,
+			"pruneHeight": 0.5,
+			"pruneCrown": 0.4,
+			"species": "Consuelda (Symphytum officinale)"
+		},
+		{
+			"speciesId": "iJfEYRTtvnpnO538fAa2",
+			"x": 12.5,
+			"y": 3.2,
+			"pruneHeight": 1.8,
+			"pruneCrown": 1.2,
+			"species": "Durazno (Prunus persica)"
+		},
+		{
+			"speciesId": "V48ZgDmdc1d9BFE4Lgcq",
+			"x": 12.25,
+			"y": 3.2,
+			"pruneHeight": 0.5,
+			"pruneCrown": 0.4,
+			"species": "Consuelda (Symphytum officinale)"
+		},
+		{
+			"speciesId": "V48ZgDmdc1d9BFE4Lgcq",
+			"x": 12.75,
+			"y": 3.2,
+			"pruneHeight": 0.5,
+			"pruneCrown": 0.4,
+			"species": "Consuelda (Symphytum officinale)"
+		},
+		{
+			"speciesId": "V48ZgDmdc1d9BFE4Lgcq",
+			"x": 12.5,
+			"y": 2.95,
+			"pruneHeight": 0.5,
+			"pruneCrown": 0.4,
+			"species": "Consuelda (Symphytum officinale)"
+		},
+		{
+			"speciesId": "V48ZgDmdc1d9BFE4Lgcq",
+			"x": 12.5,
+			"y": 3.45,
+			"pruneHeight": 0.5,
+			"pruneCrown": 0.4,
+			"species": "Consuelda (Symphytum officinale)"
+		},
+		{
+			"speciesId": "9mv66lks0Ez49fluzGPi",
+			"x": 1.5,
+			"y": 3.2,
+			"pruneHeight": 1.5,
+			"pruneCrown": 0.8,
+			"species": "Gigantón (Tithonia diversifolia)"
+		},
+		{
+			"speciesId": "9mv66lks0Ez49fluzGPi",
+			"x": 4,
+			"y": 3.2,
+			"pruneHeight": 1.5,
+			"pruneCrown": 0.8,
+			"species": "Gigantón (Tithonia diversifolia)"
+		},
+		{
+			"speciesId": "9mv66lks0Ez49fluzGPi",
+			"x": 6.5,
+			"y": 3.2,
+			"pruneHeight": 1.5,
+			"pruneCrown": 0.8,
+			"species": "Gigantón (Tithonia diversifolia)"
+		},
+		{
+			"speciesId": "9mv66lks0Ez49fluzGPi",
+			"x": 9,
+			"y": 3.2,
+			"pruneHeight": 1.5,
+			"pruneCrown": 0.8,
+			"species": "Gigantón (Tithonia diversifolia)"
+		},
+		{
+			"speciesId": "9mv66lks0Ez49fluzGPi",
+			"x": 11.5,
+			"y": 3.2,
+			"pruneHeight": 1.5,
+			"pruneCrown": 0.8,
+			"species": "Gigantón (Tithonia diversifolia)"
+		},
+		{
+			"speciesId": "9mv66lks0Ez49fluzGPi",
+			"x": 14,
+			"y": 3.2,
+			"pruneHeight": 1.5,
+			"pruneCrown": 0.8,
+			"species": "Gigantón (Tithonia diversifolia)"
+		},
+		{
+			"speciesId": "56AQL5tS9PoKKi8oKTON",
+			"x": 3.5,
+			"y": 3.2,
+			"pruneHeight": 1.5,
+			"pruneCrown": 0.8,
+			"species": "Morera (Morus alba)"
+		},
+		{
+			"speciesId": "56AQL5tS9PoKKi8oKTON",
+			"x": 6,
+			"y": 3.2,
+			"pruneHeight": 1.5,
+			"pruneCrown": 0.8,
+			"species": "Morera (Morus alba)"
+		},
+		{
+			"speciesId": "56AQL5tS9PoKKi8oKTON",
+			"x": 8.5,
+			"y": 3.2,
+			"pruneHeight": 1.5,
+			"pruneCrown": 0.8,
+			"species": "Morera (Morus alba)"
+		},
+		{
+			"speciesId": "56AQL5tS9PoKKi8oKTON",
+			"x": 11,
+			"y": 3.2,
+			"pruneHeight": 1.5,
+			"pruneCrown": 0.8,
+			"species": "Morera (Morus alba)"
+		},
+		{
+			"speciesId": "56AQL5tS9PoKKi8oKTON",
+			"x": 13.5,
+			"y": 3.2,
+			"pruneHeight": 1.5,
+			"pruneCrown": 0.8,
+			"species": "Morera (Morus alba)"
+		},
+		{
+			"speciesId": "56AQL5tS9PoKKi8oKTON",
+			"x": 14.5,
+			"y": 3.2,
+			"pruneHeight": 1.5,
+			"pruneCrown": 0.8,
+			"species": "Morera (Morus alba)"
+		},
+		{
+			"speciesId": "g1fGwLW03TJqP3hbCldG",
+			"x": 0.25,
+			"y": 0.7,
+			"pruneHeight": 2.5,
+			"pruneCrown": 0.6,
+			"species": "Tagasaste (Chamaecytisus palmensis)"
+		},
+		{
+			"speciesId": "YzxJ36uAFj6krJDtn54f",
+			"x": 0.73,
+			"y": 0.7,
+			"pruneHeight": 2.5,
+			"pruneCrown": 0.6,
+			"species": "Saúco (Sambucus canadensis)"
+		},
+		{
+			"speciesId": "zrCIzxeu6GHfMpLSYiMP",
+			"x": 1.21,
+			"y": 0.7,
+			"pruneHeight": 2,
+			"pruneCrown": 0.6,
+			"species": "Timbre (Acaciella angustissima)"
+		},
+		{
+			"speciesId": "BQeItwmcjZns8ZZNTkIP",
+			"x": 1.69,
+			"y": 0.7,
+			"pruneHeight": 1.2,
+			"pruneCrown": 0.8,
+			"species": "Maguey (Agave sp.)"
+		},
+		{
+			"speciesId": "g1fGwLW03TJqP3hbCldG",
+			"x": 2.17,
+			"y": 0.7,
+			"pruneHeight": 2.5,
+			"pruneCrown": 0.6,
+			"species": "Tagasaste (Chamaecytisus palmensis)"
+		},
+		{
+			"speciesId": "YzxJ36uAFj6krJDtn54f",
+			"x": 2.65,
+			"y": 0.7,
+			"pruneHeight": 2.5,
+			"pruneCrown": 0.6,
+			"species": "Saúco (Sambucus canadensis)"
+		},
+		{
+			"speciesId": "zrCIzxeu6GHfMpLSYiMP",
+			"x": 3.13,
+			"y": 0.7,
+			"pruneHeight": 2,
+			"pruneCrown": 0.6,
+			"species": "Timbre (Acaciella angustissima)"
+		},
+		{
+			"speciesId": "plB49IMLaw1gBhNqGKVy",
+			"x": 3.61,
+			"y": 0.7,
+			"pruneHeight": 1.5,
+			"pruneCrown": 0.6,
+			"species": "Nopal (Opuntia ficus-indica)"
+		},
+		{
+			"speciesId": "g1fGwLW03TJqP3hbCldG",
+			"x": 4.09,
+			"y": 0.7,
+			"pruneHeight": 2.5,
+			"pruneCrown": 0.6,
+			"species": "Tagasaste (Chamaecytisus palmensis)"
+		},
+		{
+			"speciesId": "YzxJ36uAFj6krJDtn54f",
+			"x": 4.57,
+			"y": 0.7,
+			"pruneHeight": 2.5,
+			"pruneCrown": 0.6,
+			"species": "Saúco (Sambucus canadensis)"
+		},
+		{
+			"speciesId": "zrCIzxeu6GHfMpLSYiMP",
+			"x": 5.05,
+			"y": 0.7,
+			"pruneHeight": 2,
+			"pruneCrown": 0.6,
+			"species": "Timbre (Acaciella angustissima)"
+		},
+		{
+			"speciesId": "BQeItwmcjZns8ZZNTkIP",
+			"x": 5.53,
+			"y": 0.7,
+			"pruneHeight": 1.2,
+			"pruneCrown": 0.8,
+			"species": "Maguey (Agave sp.)"
+		},
+		{
+			"speciesId": "g1fGwLW03TJqP3hbCldG",
+			"x": 6.01,
+			"y": 0.7,
+			"pruneHeight": 2.5,
+			"pruneCrown": 0.6,
+			"species": "Tagasaste (Chamaecytisus palmensis)"
+		},
+		{
+			"speciesId": "YzxJ36uAFj6krJDtn54f",
+			"x": 6.49,
+			"y": 0.7,
+			"pruneHeight": 2.5,
+			"pruneCrown": 0.6,
+			"species": "Saúco (Sambucus canadensis)"
+		},
+		{
+			"speciesId": "zrCIzxeu6GHfMpLSYiMP",
+			"x": 6.97,
+			"y": 0.7,
+			"pruneHeight": 2,
+			"pruneCrown": 0.6,
+			"species": "Timbre (Acaciella angustissima)"
+		},
+		{
+			"speciesId": "plB49IMLaw1gBhNqGKVy",
+			"x": 7.45,
+			"y": 0.7,
+			"pruneHeight": 1.5,
+			"pruneCrown": 0.6,
+			"species": "Nopal (Opuntia ficus-indica)"
+		},
+		{
+			"speciesId": "g1fGwLW03TJqP3hbCldG",
+			"x": 7.93,
+			"y": 0.7,
+			"pruneHeight": 2.5,
+			"pruneCrown": 0.6,
+			"species": "Tagasaste (Chamaecytisus palmensis)"
+		},
+		{
+			"speciesId": "YzxJ36uAFj6krJDtn54f",
+			"x": 8.41,
+			"y": 0.7,
+			"pruneHeight": 2.5,
+			"pruneCrown": 0.6,
+			"species": "Saúco (Sambucus canadensis)"
+		},
+		{
+			"speciesId": "zrCIzxeu6GHfMpLSYiMP",
+			"x": 8.89,
+			"y": 0.7,
+			"pruneHeight": 2,
+			"pruneCrown": 0.6,
+			"species": "Timbre (Acaciella angustissima)"
+		},
+		{
+			"speciesId": "BQeItwmcjZns8ZZNTkIP",
+			"x": 9.37,
+			"y": 0.7,
+			"pruneHeight": 1.2,
+			"pruneCrown": 0.8,
+			"species": "Maguey (Agave sp.)"
+		},
+		{
+			"speciesId": "g1fGwLW03TJqP3hbCldG",
+			"x": 9.85,
+			"y": 0.7,
+			"pruneHeight": 2.5,
+			"pruneCrown": 0.6,
+			"species": "Tagasaste (Chamaecytisus palmensis)"
+		},
+		{
+			"speciesId": "YzxJ36uAFj6krJDtn54f",
+			"x": 10.33,
+			"y": 0.7,
+			"pruneHeight": 2.5,
+			"pruneCrown": 0.6,
+			"species": "Saúco (Sambucus canadensis)"
+		},
+		{
+			"speciesId": "zrCIzxeu6GHfMpLSYiMP",
+			"x": 10.81,
+			"y": 0.7,
+			"pruneHeight": 2,
+			"pruneCrown": 0.6,
+			"species": "Timbre (Acaciella angustissima)"
+		},
+		{
+			"speciesId": "plB49IMLaw1gBhNqGKVy",
+			"x": 11.29,
+			"y": 0.7,
+			"pruneHeight": 1.5,
+			"pruneCrown": 0.6,
+			"species": "Nopal (Opuntia ficus-indica)"
+		},
+		{
+			"speciesId": "g1fGwLW03TJqP3hbCldG",
+			"x": 11.77,
+			"y": 0.7,
+			"pruneHeight": 2.5,
+			"pruneCrown": 0.6,
+			"species": "Tagasaste (Chamaecytisus palmensis)"
+		},
+		{
+			"speciesId": "YzxJ36uAFj6krJDtn54f",
+			"x": 12.25,
+			"y": 0.7,
+			"pruneHeight": 2.5,
+			"pruneCrown": 0.6,
+			"species": "Saúco (Sambucus canadensis)"
+		},
+		{
+			"speciesId": "zrCIzxeu6GHfMpLSYiMP",
+			"x": 12.73,
+			"y": 0.7,
+			"pruneHeight": 2,
+			"pruneCrown": 0.6,
+			"species": "Timbre (Acaciella angustissima)"
+		},
+		{
+			"speciesId": "BQeItwmcjZns8ZZNTkIP",
+			"x": 13.21,
+			"y": 0.7,
+			"pruneHeight": 1.2,
+			"pruneCrown": 0.8,
+			"species": "Maguey (Agave sp.)"
+		},
+		{
+			"speciesId": "g1fGwLW03TJqP3hbCldG",
+			"x": 13.69,
+			"y": 0.7,
+			"pruneHeight": 2.5,
+			"pruneCrown": 0.6,
+			"species": "Tagasaste (Chamaecytisus palmensis)"
+		},
+		{
+			"speciesId": "YzxJ36uAFj6krJDtn54f",
+			"x": 14.17,
+			"y": 0.7,
+			"pruneHeight": 2.5,
+			"pruneCrown": 0.6,
+			"species": "Saúco (Sambucus canadensis)"
+		},
+		{
+			"speciesId": "zrCIzxeu6GHfMpLSYiMP",
+			"x": 14.65,
+			"y": 0.7,
+			"pruneHeight": 2,
+			"pruneCrown": 0.6,
+			"species": "Timbre (Acaciella angustissima)"
+		},
+		{
+			"speciesId": "258WeIbhNRmytPvT1qDq",
+			"x": 0.2,
+			"y": 1.2,
+			"pruneHeight": 0.6,
+			"pruneCrown": 0.4,
+			"species": "Romero (Salvia rosmarinus)"
+		},
+		{
+			"speciesId": "258WeIbhNRmytPvT1qDq",
+			"x": 0.59,
+			"y": 1.2,
+			"pruneHeight": 0.6,
+			"pruneCrown": 0.4,
+			"species": "Romero (Salvia rosmarinus)"
+		},
+		{
+			"speciesId": "258WeIbhNRmytPvT1qDq",
+			"x": 0.99,
+			"y": 1.2,
+			"pruneHeight": 0.6,
+			"pruneCrown": 0.4,
+			"species": "Romero (Salvia rosmarinus)"
+		},
+		{
+			"speciesId": "258WeIbhNRmytPvT1qDq",
+			"x": 1.38,
+			"y": 1.2,
+			"pruneHeight": 0.6,
+			"pruneCrown": 0.4,
+			"species": "Romero (Salvia rosmarinus)"
+		},
+		{
+			"speciesId": "258WeIbhNRmytPvT1qDq",
+			"x": 1.78,
+			"y": 1.2,
+			"pruneHeight": 0.6,
+			"pruneCrown": 0.4,
+			"species": "Romero (Salvia rosmarinus)"
+		},
+		{
+			"speciesId": "258WeIbhNRmytPvT1qDq",
+			"x": 2.17,
+			"y": 1.2,
+			"pruneHeight": 0.6,
+			"pruneCrown": 0.4,
+			"species": "Romero (Salvia rosmarinus)"
+		},
+		{
+			"speciesId": "258WeIbhNRmytPvT1qDq",
+			"x": 2.57,
+			"y": 1.2,
+			"pruneHeight": 0.6,
+			"pruneCrown": 0.4,
+			"species": "Romero (Salvia rosmarinus)"
+		},
+		{
+			"speciesId": "258WeIbhNRmytPvT1qDq",
+			"x": 2.96,
+			"y": 1.2,
+			"pruneHeight": 0.6,
+			"pruneCrown": 0.4,
+			"species": "Romero (Salvia rosmarinus)"
+		},
+		{
+			"speciesId": "258WeIbhNRmytPvT1qDq",
+			"x": 3.36,
+			"y": 1.2,
+			"pruneHeight": 0.6,
+			"pruneCrown": 0.4,
+			"species": "Romero (Salvia rosmarinus)"
+		},
+		{
+			"speciesId": "258WeIbhNRmytPvT1qDq",
+			"x": 3.75,
+			"y": 1.2,
+			"pruneHeight": 0.6,
+			"pruneCrown": 0.4,
+			"species": "Romero (Salvia rosmarinus)"
+		},
+		{
+			"speciesId": "258WeIbhNRmytPvT1qDq",
+			"x": 4.15,
+			"y": 1.2,
+			"pruneHeight": 0.6,
+			"pruneCrown": 0.4,
+			"species": "Romero (Salvia rosmarinus)"
+		},
+		{
+			"speciesId": "258WeIbhNRmytPvT1qDq",
+			"x": 4.54,
+			"y": 1.2,
+			"pruneHeight": 0.6,
+			"pruneCrown": 0.4,
+			"species": "Romero (Salvia rosmarinus)"
+		},
+		{
+			"speciesId": "258WeIbhNRmytPvT1qDq",
+			"x": 4.94,
+			"y": 1.2,
+			"pruneHeight": 0.6,
+			"pruneCrown": 0.4,
+			"species": "Romero (Salvia rosmarinus)"
+		},
+		{
+			"speciesId": "258WeIbhNRmytPvT1qDq",
+			"x": 5.33,
+			"y": 1.2,
+			"pruneHeight": 0.6,
+			"pruneCrown": 0.4,
+			"species": "Romero (Salvia rosmarinus)"
+		},
+		{
+			"speciesId": "258WeIbhNRmytPvT1qDq",
+			"x": 5.72,
+			"y": 1.2,
+			"pruneHeight": 0.6,
+			"pruneCrown": 0.4,
+			"species": "Romero (Salvia rosmarinus)"
+		},
+		{
+			"speciesId": "258WeIbhNRmytPvT1qDq",
+			"x": 6.12,
+			"y": 1.2,
+			"pruneHeight": 0.6,
+			"pruneCrown": 0.4,
+			"species": "Romero (Salvia rosmarinus)"
+		},
+		{
+			"speciesId": "258WeIbhNRmytPvT1qDq",
+			"x": 6.51,
+			"y": 1.2,
+			"pruneHeight": 0.6,
+			"pruneCrown": 0.4,
+			"species": "Romero (Salvia rosmarinus)"
+		},
+		{
+			"speciesId": "258WeIbhNRmytPvT1qDq",
+			"x": 6.91,
+			"y": 1.2,
+			"pruneHeight": 0.6,
+			"pruneCrown": 0.4,
+			"species": "Romero (Salvia rosmarinus)"
+		},
+		{
+			"speciesId": "258WeIbhNRmytPvT1qDq",
+			"x": 7.3,
+			"y": 1.2,
+			"pruneHeight": 0.6,
+			"pruneCrown": 0.4,
+			"species": "Romero (Salvia rosmarinus)"
+		},
+		{
+			"speciesId": "258WeIbhNRmytPvT1qDq",
+			"x": 7.7,
+			"y": 1.2,
+			"pruneHeight": 0.6,
+			"pruneCrown": 0.4,
+			"species": "Romero (Salvia rosmarinus)"
+		},
+		{
+			"speciesId": "258WeIbhNRmytPvT1qDq",
+			"x": 8.09,
+			"y": 1.2,
+			"pruneHeight": 0.6,
+			"pruneCrown": 0.4,
+			"species": "Romero (Salvia rosmarinus)"
+		},
+		{
+			"speciesId": "258WeIbhNRmytPvT1qDq",
+			"x": 8.49,
+			"y": 1.2,
+			"pruneHeight": 0.6,
+			"pruneCrown": 0.4,
+			"species": "Romero (Salvia rosmarinus)"
+		},
+		{
+			"speciesId": "258WeIbhNRmytPvT1qDq",
+			"x": 8.88,
+			"y": 1.2,
+			"pruneHeight": 0.6,
+			"pruneCrown": 0.4,
+			"species": "Romero (Salvia rosmarinus)"
+		},
+		{
+			"speciesId": "258WeIbhNRmytPvT1qDq",
+			"x": 9.28,
+			"y": 1.2,
+			"pruneHeight": 0.6,
+			"pruneCrown": 0.4,
+			"species": "Romero (Salvia rosmarinus)"
+		},
+		{
+			"speciesId": "258WeIbhNRmytPvT1qDq",
+			"x": 9.67,
+			"y": 1.2,
+			"pruneHeight": 0.6,
+			"pruneCrown": 0.4,
+			"species": "Romero (Salvia rosmarinus)"
+		},
+		{
+			"speciesId": "258WeIbhNRmytPvT1qDq",
+			"x": 10.06,
+			"y": 1.2,
+			"pruneHeight": 0.6,
+			"pruneCrown": 0.4,
+			"species": "Romero (Salvia rosmarinus)"
+		},
+		{
+			"speciesId": "258WeIbhNRmytPvT1qDq",
+			"x": 10.46,
+			"y": 1.2,
+			"pruneHeight": 0.6,
+			"pruneCrown": 0.4,
+			"species": "Romero (Salvia rosmarinus)"
+		},
+		{
+			"speciesId": "258WeIbhNRmytPvT1qDq",
+			"x": 10.85,
+			"y": 1.2,
+			"pruneHeight": 0.6,
+			"pruneCrown": 0.4,
+			"species": "Romero (Salvia rosmarinus)"
+		},
+		{
+			"speciesId": "258WeIbhNRmytPvT1qDq",
+			"x": 11.25,
+			"y": 1.2,
+			"pruneHeight": 0.6,
+			"pruneCrown": 0.4,
+			"species": "Romero (Salvia rosmarinus)"
+		},
+		{
+			"speciesId": "258WeIbhNRmytPvT1qDq",
+			"x": 11.64,
+			"y": 1.2,
+			"pruneHeight": 0.6,
+			"pruneCrown": 0.4,
+			"species": "Romero (Salvia rosmarinus)"
+		},
+		{
+			"speciesId": "258WeIbhNRmytPvT1qDq",
+			"x": 12.04,
+			"y": 1.2,
+			"pruneHeight": 0.6,
+			"pruneCrown": 0.4,
+			"species": "Romero (Salvia rosmarinus)"
+		},
+		{
+			"speciesId": "258WeIbhNRmytPvT1qDq",
+			"x": 12.43,
+			"y": 1.2,
+			"pruneHeight": 0.6,
+			"pruneCrown": 0.4,
+			"species": "Romero (Salvia rosmarinus)"
+		},
+		{
+			"speciesId": "258WeIbhNRmytPvT1qDq",
+			"x": 12.83,
+			"y": 1.2,
+			"pruneHeight": 0.6,
+			"pruneCrown": 0.4,
+			"species": "Romero (Salvia rosmarinus)"
+		},
+		{
+			"speciesId": "258WeIbhNRmytPvT1qDq",
+			"x": 13.22,
+			"y": 1.2,
+			"pruneHeight": 0.6,
+			"pruneCrown": 0.4,
+			"species": "Romero (Salvia rosmarinus)"
+		},
+		{
+			"speciesId": "258WeIbhNRmytPvT1qDq",
+			"x": 13.62,
+			"y": 1.2,
+			"pruneHeight": 0.6,
+			"pruneCrown": 0.4,
+			"species": "Romero (Salvia rosmarinus)"
+		},
+		{
+			"speciesId": "258WeIbhNRmytPvT1qDq",
+			"x": 14.01,
+			"y": 1.2,
+			"pruneHeight": 0.6,
+			"pruneCrown": 0.4,
+			"species": "Romero (Salvia rosmarinus)"
+		},
+		{
+			"speciesId": "258WeIbhNRmytPvT1qDq",
+			"x": 14.41,
+			"y": 1.2,
+			"pruneHeight": 0.6,
+			"pruneCrown": 0.4,
+			"species": "Romero (Salvia rosmarinus)"
+		},
+		{
+			"speciesId": "258WeIbhNRmytPvT1qDq",
+			"x": 14.8,
+			"y": 1.2,
+			"pruneHeight": 0.6,
+			"pruneCrown": 0.4,
+			"species": "Romero (Salvia rosmarinus)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 0.3,
+			"y": 1.95,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 0.65,
+			"y": 1.95,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 1,
+			"y": 1.95,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 1.35,
+			"y": 1.95,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 1.7,
+			"y": 1.95,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 2.05,
+			"y": 1.95,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 2.4,
+			"y": 1.95,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 2.75,
+			"y": 1.95,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 3.1,
+			"y": 1.95,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 3.45,
+			"y": 1.95,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 3.8,
+			"y": 1.95,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 4.15,
+			"y": 1.95,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 4.5,
+			"y": 1.95,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 4.85,
+			"y": 1.95,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 5.2,
+			"y": 1.95,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 5.55,
+			"y": 1.95,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 5.9,
+			"y": 1.95,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 6.25,
+			"y": 1.95,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 6.6,
+			"y": 1.95,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 6.95,
+			"y": 1.95,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 7.3,
+			"y": 1.95,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 7.65,
+			"y": 1.95,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 8,
+			"y": 1.95,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 8.35,
+			"y": 1.95,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 8.7,
+			"y": 1.95,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 9.05,
+			"y": 1.95,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 9.4,
+			"y": 1.95,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 9.75,
+			"y": 1.95,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 10.1,
+			"y": 1.95,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 10.45,
+			"y": 1.95,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 10.8,
+			"y": 1.95,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 11.15,
+			"y": 1.95,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 11.5,
+			"y": 1.95,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 11.85,
+			"y": 1.95,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 12.2,
+			"y": 1.95,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 12.55,
+			"y": 1.95,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 12.9,
+			"y": 1.95,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 13.25,
+			"y": 1.95,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 13.6,
+			"y": 1.95,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 13.95,
+			"y": 1.95,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 14.3,
+			"y": 1.95,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 14.65,
+			"y": 1.95,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 0.3,
+			"y": 2.65,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 0.65,
+			"y": 2.65,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 1,
+			"y": 2.65,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 1.35,
+			"y": 2.65,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 1.7,
+			"y": 2.65,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 2.05,
+			"y": 2.65,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 2.4,
+			"y": 2.65,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 2.75,
+			"y": 2.65,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 3.1,
+			"y": 2.65,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 3.45,
+			"y": 2.65,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 3.8,
+			"y": 2.65,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 4.15,
+			"y": 2.65,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 4.5,
+			"y": 2.65,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 4.85,
+			"y": 2.65,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 5.2,
+			"y": 2.65,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 5.55,
+			"y": 2.65,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 5.9,
+			"y": 2.65,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 6.25,
+			"y": 2.65,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 6.6,
+			"y": 2.65,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 6.95,
+			"y": 2.65,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 7.3,
+			"y": 2.65,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 7.65,
+			"y": 2.65,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 8,
+			"y": 2.65,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 8.35,
+			"y": 2.65,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 8.7,
+			"y": 2.65,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 9.05,
+			"y": 2.65,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 9.4,
+			"y": 2.65,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 9.75,
+			"y": 2.65,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 10.1,
+			"y": 2.65,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 10.45,
+			"y": 2.65,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 10.8,
+			"y": 2.65,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 11.15,
+			"y": 2.65,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 11.5,
+			"y": 2.65,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 11.85,
+			"y": 2.65,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 12.2,
+			"y": 2.65,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 12.55,
+			"y": 2.65,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 12.9,
+			"y": 2.65,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 13.25,
+			"y": 2.65,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 13.6,
+			"y": 2.65,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 13.95,
+			"y": 2.65,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 14.3,
+			"y": 2.65,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "JK8YycpLWDQQPSpXELxV",
+			"x": 14.65,
+			"y": 2.65,
+			"species": "Lechuga (Lactuca sativa)"
+		},
+		{
+			"speciesId": "biFOWDCqpKGPPyHlT8kV",
+			"x": 0.4,
+			"y": 3.75,
+			"species": "Maíz criollo (Zea mays)"
+		},
+		{
+			"speciesId": "OBHgCOlrpNlYxEISVDeV",
+			"x": 0.52,
+			"y": 3.85,
+			"species": "Frijol ayocote (Phaseolus coccineus)"
+		},
+		{
+			"speciesId": "biFOWDCqpKGPPyHlT8kV",
+			"x": 1.6,
+			"y": 3.75,
+			"species": "Maíz criollo (Zea mays)"
+		},
+		{
+			"speciesId": "OBHgCOlrpNlYxEISVDeV",
+			"x": 1.72,
+			"y": 3.85,
+			"species": "Frijol ayocote (Phaseolus coccineus)"
+		},
+		{
+			"speciesId": "biFOWDCqpKGPPyHlT8kV",
+			"x": 2.8,
+			"y": 3.75,
+			"species": "Maíz criollo (Zea mays)"
+		},
+		{
+			"speciesId": "OBHgCOlrpNlYxEISVDeV",
+			"x": 2.92,
+			"y": 3.85,
+			"species": "Frijol ayocote (Phaseolus coccineus)"
+		},
+		{
+			"speciesId": "biFOWDCqpKGPPyHlT8kV",
+			"x": 4,
+			"y": 3.75,
+			"species": "Maíz criollo (Zea mays)"
+		},
+		{
+			"speciesId": "OBHgCOlrpNlYxEISVDeV",
+			"x": 4.12,
+			"y": 3.85,
+			"species": "Frijol ayocote (Phaseolus coccineus)"
+		},
+		{
+			"speciesId": "biFOWDCqpKGPPyHlT8kV",
+			"x": 5.2,
+			"y": 3.75,
+			"species": "Maíz criollo (Zea mays)"
+		},
+		{
+			"speciesId": "OBHgCOlrpNlYxEISVDeV",
+			"x": 5.32,
+			"y": 3.85,
+			"species": "Frijol ayocote (Phaseolus coccineus)"
+		},
+		{
+			"speciesId": "biFOWDCqpKGPPyHlT8kV",
+			"x": 6.4,
+			"y": 3.75,
+			"species": "Maíz criollo (Zea mays)"
+		},
+		{
+			"speciesId": "OBHgCOlrpNlYxEISVDeV",
+			"x": 6.52,
+			"y": 3.85,
+			"species": "Frijol ayocote (Phaseolus coccineus)"
+		},
+		{
+			"speciesId": "biFOWDCqpKGPPyHlT8kV",
+			"x": 7.6,
+			"y": 3.75,
+			"species": "Maíz criollo (Zea mays)"
+		},
+		{
+			"speciesId": "OBHgCOlrpNlYxEISVDeV",
+			"x": 7.72,
+			"y": 3.85,
+			"species": "Frijol ayocote (Phaseolus coccineus)"
+		},
+		{
+			"speciesId": "biFOWDCqpKGPPyHlT8kV",
+			"x": 8.8,
+			"y": 3.75,
+			"species": "Maíz criollo (Zea mays)"
+		},
+		{
+			"speciesId": "OBHgCOlrpNlYxEISVDeV",
+			"x": 8.92,
+			"y": 3.85,
+			"species": "Frijol ayocote (Phaseolus coccineus)"
+		},
+		{
+			"speciesId": "biFOWDCqpKGPPyHlT8kV",
+			"x": 10,
+			"y": 3.75,
+			"species": "Maíz criollo (Zea mays)"
+		},
+		{
+			"speciesId": "OBHgCOlrpNlYxEISVDeV",
+			"x": 10.12,
+			"y": 3.85,
+			"species": "Frijol ayocote (Phaseolus coccineus)"
+		},
+		{
+			"speciesId": "biFOWDCqpKGPPyHlT8kV",
+			"x": 11.2,
+			"y": 3.75,
+			"species": "Maíz criollo (Zea mays)"
+		},
+		{
+			"speciesId": "OBHgCOlrpNlYxEISVDeV",
+			"x": 11.32,
+			"y": 3.85,
+			"species": "Frijol ayocote (Phaseolus coccineus)"
+		},
+		{
+			"speciesId": "biFOWDCqpKGPPyHlT8kV",
+			"x": 12.4,
+			"y": 3.75,
+			"species": "Maíz criollo (Zea mays)"
+		},
+		{
+			"speciesId": "OBHgCOlrpNlYxEISVDeV",
+			"x": 12.52,
+			"y": 3.85,
+			"species": "Frijol ayocote (Phaseolus coccineus)"
+		},
+		{
+			"speciesId": "biFOWDCqpKGPPyHlT8kV",
+			"x": 13.6,
+			"y": 3.75,
+			"species": "Maíz criollo (Zea mays)"
+		},
+		{
+			"speciesId": "OBHgCOlrpNlYxEISVDeV",
+			"x": 13.72,
+			"y": 3.85,
+			"species": "Frijol ayocote (Phaseolus coccineus)"
+		},
+		{
+			"speciesId": "biFOWDCqpKGPPyHlT8kV",
+			"x": 14.8,
+			"y": 3.75,
+			"species": "Maíz criollo (Zea mays)"
+		},
+		{
+			"speciesId": "OBHgCOlrpNlYxEISVDeV",
+			"x": 14.92,
+			"y": 3.85,
+			"species": "Frijol ayocote (Phaseolus coccineus)"
+		},
+		{
+			"speciesId": "YkCzdfaDq4YNq5c5CU6b",
+			"x": 0.4,
+			"y": 4.3,
+			"species": "Amaranto (Amaranthus hypochondriacus)"
+		},
+		{
+			"speciesId": "npmixKBBhzPFXGdb3QJa",
+			"x": 1.15,
+			"y": 4.3,
+			"species": "Epazote (Dysphania ambrosioides)"
+		},
+		{
+			"speciesId": "YkCzdfaDq4YNq5c5CU6b",
+			"x": 1.9,
+			"y": 4.3,
+			"species": "Amaranto (Amaranthus hypochondriacus)"
+		},
+		{
+			"speciesId": "npmixKBBhzPFXGdb3QJa",
+			"x": 2.65,
+			"y": 4.3,
+			"species": "Epazote (Dysphania ambrosioides)"
+		},
+		{
+			"speciesId": "YkCzdfaDq4YNq5c5CU6b",
+			"x": 3.4,
+			"y": 4.3,
+			"species": "Amaranto (Amaranthus hypochondriacus)"
+		},
+		{
+			"speciesId": "npmixKBBhzPFXGdb3QJa",
+			"x": 4.15,
+			"y": 4.3,
+			"species": "Epazote (Dysphania ambrosioides)"
+		},
+		{
+			"speciesId": "YkCzdfaDq4YNq5c5CU6b",
+			"x": 4.9,
+			"y": 4.3,
+			"species": "Amaranto (Amaranthus hypochondriacus)"
+		},
+		{
+			"speciesId": "npmixKBBhzPFXGdb3QJa",
+			"x": 5.65,
+			"y": 4.3,
+			"species": "Epazote (Dysphania ambrosioides)"
+		},
+		{
+			"speciesId": "YkCzdfaDq4YNq5c5CU6b",
+			"x": 6.4,
+			"y": 4.3,
+			"species": "Amaranto (Amaranthus hypochondriacus)"
+		},
+		{
+			"speciesId": "npmixKBBhzPFXGdb3QJa",
+			"x": 7.15,
+			"y": 4.3,
+			"species": "Epazote (Dysphania ambrosioides)"
+		},
+		{
+			"speciesId": "YkCzdfaDq4YNq5c5CU6b",
+			"x": 7.9,
+			"y": 4.3,
+			"species": "Amaranto (Amaranthus hypochondriacus)"
+		},
+		{
+			"speciesId": "npmixKBBhzPFXGdb3QJa",
+			"x": 8.65,
+			"y": 4.3,
+			"species": "Epazote (Dysphania ambrosioides)"
+		},
+		{
+			"speciesId": "YkCzdfaDq4YNq5c5CU6b",
+			"x": 9.4,
+			"y": 4.3,
+			"species": "Amaranto (Amaranthus hypochondriacus)"
+		},
+		{
+			"speciesId": "npmixKBBhzPFXGdb3QJa",
+			"x": 10.15,
+			"y": 4.3,
+			"species": "Epazote (Dysphania ambrosioides)"
+		},
+		{
+			"speciesId": "YkCzdfaDq4YNq5c5CU6b",
+			"x": 10.9,
+			"y": 4.3,
+			"species": "Amaranto (Amaranthus hypochondriacus)"
+		},
+		{
+			"speciesId": "npmixKBBhzPFXGdb3QJa",
+			"x": 11.65,
+			"y": 4.3,
+			"species": "Epazote (Dysphania ambrosioides)"
+		},
+		{
+			"speciesId": "YkCzdfaDq4YNq5c5CU6b",
+			"x": 12.4,
+			"y": 4.3,
+			"species": "Amaranto (Amaranthus hypochondriacus)"
+		},
+		{
+			"speciesId": "npmixKBBhzPFXGdb3QJa",
+			"x": 13.15,
+			"y": 4.3,
+			"species": "Epazote (Dysphania ambrosioides)"
+		},
+		{
+			"speciesId": "YkCzdfaDq4YNq5c5CU6b",
+			"x": 13.9,
+			"y": 4.3,
+			"species": "Amaranto (Amaranthus hypochondriacus)"
+		},
+		{
+			"speciesId": "npmixKBBhzPFXGdb3QJa",
+			"x": 14.65,
+			"y": 4.3,
+			"species": "Epazote (Dysphania ambrosioides)"
+		},
+		{
+			"speciesId": "wwuQEuSKiFZFX5xYRf4H",
+			"x": 1.25,
+			"y": 4.55,
+			"pruneHeight": 0.5,
+			"pruneCrown": 1.2,
+			"species": "Calabaza (Cucurbita sp.)"
+		},
+		{
+			"speciesId": "wwuQEuSKiFZFX5xYRf4H",
+			"x": 3.75,
+			"y": 4.55,
+			"pruneHeight": 0.5,
+			"pruneCrown": 1.2,
+			"species": "Calabaza (Cucurbita sp.)"
+		},
+		{
+			"speciesId": "wwuQEuSKiFZFX5xYRf4H",
+			"x": 6.25,
+			"y": 4.55,
+			"pruneHeight": 0.5,
+			"pruneCrown": 1.2,
+			"species": "Calabaza (Cucurbita sp.)"
+		},
+		{
+			"speciesId": "wwuQEuSKiFZFX5xYRf4H",
+			"x": 8.75,
+			"y": 4.55,
+			"pruneHeight": 0.5,
+			"pruneCrown": 1.2,
+			"species": "Calabaza (Cucurbita sp.)"
+		},
+		{
+			"speciesId": "wwuQEuSKiFZFX5xYRf4H",
+			"x": 11.25,
+			"y": 4.55,
+			"pruneHeight": 0.5,
+			"pruneCrown": 1.2,
+			"species": "Calabaza (Cucurbita sp.)"
+		},
+		{
+			"speciesId": "wwuQEuSKiFZFX5xYRf4H",
+			"x": 13.75,
+			"y": 4.55,
+			"pruneHeight": 0.5,
+			"pruneCrown": 1.2,
+			"species": "Calabaza (Cucurbita sp.)"
+		}
+	],
+	"layers": {
+		"background": {
+			"visible": true,
+			"locked": true,
+			"opacity": 0.6
+		},
+		"plants": {
+			"visible": true,
+			"locked": false,
+			"opacity": 1
+		}
+	}
+}

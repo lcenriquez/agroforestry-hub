@@ -32,19 +32,21 @@ import DesignToolbar from './DesignToolbar';
 import { loadDraft, loadPrefs, saveDraft, savePrefs } from './draftStorage';
 import { buildPlanSvg, designToJson, downloadBlob, parseDesignJson, slugify, svgToPngBlob } from './exporters';
 import LayersPanel from './LayersPanel';
+import { managedFields, plantSpec } from './managedSize';
 import PlantInspector from './PlantInspector';
 import PlanView from './PlanView';
 import PlotSettings from './PlotSettings';
 import ProfileView from './ProfileView';
 import SavedDesignsDialog from './SavedDesignsDialog';
 import SpeciesPalette, { StratumDot } from './SpeciesPalette';
-import { buildPlantSpec, buildStrata, missingPlantSpec } from './strata';
+import { buildPlantSpec, buildStrata, missingPlantSpec, UNKNOWN_STRATUM_ID } from './strata';
+import StrataFilter from './StrataFilter';
 import { DEFAULT_PLOT, emptyContent, newPlantId, PLOT_MAX, PLOT_MIN, useDesignState } from './useDesignState';
 
 import type { Design, DesignContent, DesignLayerId, DesignLayers, DesignLayerState, DesignPlant } from '../../interfaces/Design';
 import type { SpeciesType } from '../../interfaces/Species';
 import type { DesignerTool } from './PlanView';
-import type { PlantSpec } from './strata';
+import type { PlantSpec, StratumInfo } from './strata';
 
 const DEFAULT_NAME = 'Mi diseño de SAF';
 
@@ -62,7 +64,13 @@ function contentFromDesign(design: Design): DesignContent {
 	const plants: DesignPlant[] = (Array.isArray(design.plants) ? design.plants : [])
 		.filter(p => p && typeof p.speciesId === 'string' && Number.isFinite(Number(p.x)) && Number.isFinite(Number(p.y)))
 		.slice(0, MAX_DESIGN_PLANTS)
-		.map(p => ({ id: typeof p.id === 'string' && p.id ? p.id : newPlantId(), speciesId: p.speciesId, x: Number(p.x), y: Number(p.y) }));
+		.map(p => ({
+			id: typeof p.id === 'string' && p.id ? p.id : newPlantId(),
+			speciesId: p.speciesId,
+			x: Number(p.x),
+			y: Number(p.y),
+			...managedFields(p)
+		}));
 	return {
 		plot: {
 			width: Number.isFinite(width) ? Math.min(PLOT_MAX, Math.max(PLOT_MIN, width)) : DEFAULT_PLOT.width,
@@ -105,6 +113,10 @@ export default function DesignerWorkspace({ species }: { species: SpeciesType[] 
 	const [showGrid, setShowGrid] = useState(initial.prefs.showGrid ?? true);
 	const [snap, setSnap] = useState(initial.prefs.snap ?? false);
 	const [gridSpacing, setGridSpacing] = useState(initial.prefs.gridSpacing ?? 1);
+	// Estratos ocultos en el plano y el perfil (preferencia de vista, no entra al historial).
+	const [hiddenStrata, setHiddenStrata] = useState<Set<string>>(
+		() => new Set(Array.isArray(initial.prefs.hiddenStrata) ? initial.prefs.hiddenStrata.filter(id => typeof id === 'string') : [])
+	);
 	const [lineSpacing, setLineSpacing] = useState(3);
 	const [loadCount, setLoadCount] = useState(0);
 	const [mobilePanel, setMobilePanel] = useState<MobilePanel>('diseno');
@@ -148,8 +160,39 @@ export default function DesignerWorkspace({ species }: { species: SpeciesType[] 
 	}, [analysis]);
 	const alertCount = analysis.missingStrata.length + analysis.overlaps.length + analysis.outside.length + analysis.missingSpeciesPlants.length;
 
+	// --- Filtro por estrato (sólo vista: el análisis usa todas las plantas) ----
+	const stratumOf = useCallback((plant: DesignPlant) => specFor(plant.speciesId).stratum, [specFor]);
+	const designStrata = useMemo(() => {
+		const counts = new Map<string, { stratum: StratumInfo; count: number }>();
+		for (const plant of plants) {
+			const stratum = stratumOf(plant);
+			const entry = counts.get(stratum._id);
+			if (entry) entry.count++;
+			else counts.set(stratum._id, { stratum, count: 1 });
+		}
+		return [...counts.values()].sort((a, b) => a.stratum.rank - b.stratum.rank);
+	}, [plants, stratumOf]);
+	const visiblePlants = useMemo(
+		() => (hiddenStrata.size ? plants.filter(plant => !hiddenStrata.has(stratumOf(plant)._id)) : plants),
+		[plants, hiddenStrata, stratumOf]
+	);
+	const toggleStratum = useCallback((id: string) => {
+		setHiddenStrata(current => {
+			const next = new Set(current);
+			if (!next.delete(id)) next.add(id);
+			return next;
+		});
+	}, []);
+	const soloStratum = useCallback(
+		(id: string) => setHiddenStrata(new Set([...strata.map(s => s._id), UNKNOWN_STRATUM_ID].filter(other => other !== id))),
+		[strata]
+	);
+	const showAllStrata = useCallback(() => setHiddenStrata(new Set()), []);
+
 	const plantsById = useMemo(() => new Map(plants.map(p => [p.id, p])), [plants]);
 	const selectedPlant = selectedId ? (plantsById.get(selectedId) ?? null) : null;
+	// Una planta de un estrato oculto no queda seleccionada (no se ve ni se puede mover).
+	if (selectedPlant && hiddenStrata.has(stratumOf(selectedPlant)._id)) setSelectedId(null);
 	// Para el análisis (diferido) basta con el índice diferido: no cambia en cada cuadro de un arrastre.
 	const deferredPlantsById = useMemo(() => new Map(deferredContent.plants.map(p => [p.id, p])), [deferredContent]);
 	const nameOfPlant = useCallback(
@@ -187,8 +230,8 @@ export default function DesignerWorkspace({ species }: { species: SpeciesType[] 
 	}, [name, description, content, layers, cloud, cloudSnapshot]);
 
 	useEffect(() => {
-		savePrefs({ hideOnboarding: !showOnboarding, showGrid, snap, gridSpacing });
-	}, [showOnboarding, showGrid, snap, gridSpacing]);
+		savePrefs({ hideOnboarding: !showOnboarding, showGrid, snap, gridSpacing, hiddenStrata: [...hiddenStrata] });
+	}, [showOnboarding, showGrid, snap, gridSpacing, hiddenStrata]);
 
 	useEffect(
 		() => () => {
@@ -204,12 +247,23 @@ export default function DesignerWorkspace({ species }: { species: SpeciesType[] 
 	}, []);
 
 	// --- Acciones sobre el diseño -------------------------------------------
-	const pickSpecies = useCallback((speciesId: string) => {
-		setActiveSpeciesId(speciesId);
-		setTool(current => (current === 'line' ? 'line' : 'plant'));
-		setSelectedId(null);
-		setMobilePanel('diseno');
-	}, []);
+	const pickSpecies = useCallback(
+		(speciesId: string) => {
+			// Lo que se plante debe verse: si su estrato está oculto, se muestra.
+			const stratumId = specFor(speciesId).stratum._id;
+			setHiddenStrata(current => {
+				if (!current.has(stratumId)) return current;
+				const next = new Set(current);
+				next.delete(stratumId);
+				return next;
+			});
+			setActiveSpeciesId(speciesId);
+			setTool(current => (current === 'line' ? 'line' : 'plant'));
+			setSelectedId(null);
+			setMobilePanel('diseno');
+		},
+		[specFor]
+	);
 
 	const placePlants = useCallback(
 		(points: { x: number; y: number }[]) => {
@@ -288,11 +342,18 @@ export default function DesignerWorkspace({ species }: { species: SpeciesType[] 
 		dispatch({ type: 'setPlot', plot: { width, length } });
 	}
 	const selectPlant = useCallback((id: string | null) => setSelectedId(id), []);
-	const focusPlant = useCallback((id: string) => {
-		setSelectedId(id);
-		setTool('select');
-		setMobilePanel('diseno');
-	}, []);
+	const focusPlant = useCallback(
+		(id: string) => {
+			// Si la planta está en un estrato oculto, se vuelve a mostrar ese estrato.
+			const plant = plantsById.get(id);
+			const stratumId = plant ? stratumOf(plant)._id : null;
+			if (stratumId && hiddenStrata.has(stratumId)) toggleStratum(stratumId);
+			setSelectedId(id);
+			setTool('select');
+			setMobilePanel('diseno');
+		},
+		[plantsById, stratumOf, hiddenStrata, toggleStratum]
+	);
 
 	const deleteSelected = useCallback(() => {
 		if (!selectedId) return;
@@ -306,8 +367,14 @@ export default function DesignerWorkspace({ species }: { species: SpeciesType[] 
 			showStatus({ type: 'warning', text: `Llegaste al máximo de ${MAX_DESIGN_PLANTS} plantas por diseño.` });
 			return;
 		}
-		const offset = Math.max(0.5, specFor(selectedPlant.speciesId).crown / 2);
-		const copy = { id: newPlantId(), speciesId: selectedPlant.speciesId, x: selectedPlant.x + offset, y: selectedPlant.y + offset };
+		const offset = Math.max(0.5, plantSpec(specFor(selectedPlant.speciesId), selectedPlant).crown / 2);
+		const copy = {
+			id: newPlantId(),
+			speciesId: selectedPlant.speciesId,
+			x: selectedPlant.x + offset,
+			y: selectedPlant.y + offset,
+			...managedFields(selectedPlant)
+		};
 		dispatch({ type: 'addPlants', plants: [copy] });
 		setSelectedId(copy.id);
 	}, [selectedPlant, plants.length, specFor, dispatch, showStatus]);
@@ -703,9 +770,10 @@ export default function DesignerWorkspace({ species }: { species: SpeciesType[] 
 							</Button>
 						</HStack>
 					)}
+					<StrataFilter strata={designStrata} hidden={hiddenStrata} onToggle={toggleStratum} onSolo={soloStratum} onShowAll={showAllStrata} />
 					<PlanView
 						plot={plot}
-						plants={plants}
+						plants={visiblePlants}
 						specFor={specFor}
 						selectedId={selectedId}
 						flaggedIds={flaggedIds}
@@ -733,6 +801,14 @@ export default function DesignerWorkspace({ species }: { species: SpeciesType[] 
 						<PlantInspector
 							plant={selectedPlant}
 							spec={specFor(selectedPlant.speciesId)}
+							sameSpeciesCount={plants.filter(p => p.speciesId === selectedPlant.speciesId).length}
+							onManagedSize={(size, allOfSpecies) =>
+								dispatch({
+									type: 'setManagedSize',
+									ids: allOfSpecies ? plants.filter(p => p.speciesId === selectedPlant.speciesId).map(p => p.id) : [selectedPlant.id],
+									size
+								})
+							}
 							onMove={(x, y) => dispatch({ type: 'movePlants', moves: [{ id: selectedPlant.id, x, y }] })}
 							onDuplicate={duplicateSelected}
 							onDelete={deleteSelected}
@@ -747,10 +823,11 @@ export default function DesignerWorkspace({ species }: { species: SpeciesType[] 
 					)}
 					<Stack gap={1}>
 						<Heading size="sm">Vista de perfil</Heading>
-						<ProfileView plot={plot} plants={plants} specFor={specFor} selectedId={selectedId} onSelect={focusPlant} />
+						<ProfileView plot={plot} plants={visiblePlants} specFor={specFor} selectedId={selectedId} onSelect={focusPlant} />
 						<Text fontSize="xs" color="fg.muted">
 							Corte lateral a escala, visto desde el borde inferior del plano: las plantas más altas quedan atrás. Altura y copa usan el promedio del
-							rango del catálogo; el borde punteado indica que falta el dato y se usa un tamaño típico de su estrato.
+							rango del catálogo, o el tamaño con manejo (poda) si la planta lo tiene; el borde punteado indica que falta el dato y se usa un tamaño
+							típico de su estrato.
 						</Text>
 					</Stack>
 				</Stack>
@@ -762,6 +839,7 @@ export default function DesignerWorkspace({ species }: { species: SpeciesType[] 
 							suggestions={suggestions}
 							nameOfPlant={nameOfPlant}
 							onSelectPlant={focusPlant}
+							onSoloStratum={soloStratum}
 							onPickSpecies={pickSpecies}
 							onRemoveMissing={removeMissing}
 						/>

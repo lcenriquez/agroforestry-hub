@@ -1,4 +1,5 @@
 import { normalize } from '../../lib/text';
+import { plantSpec } from './managedSize';
 import { UNKNOWN_STRATUM_ID } from './strata';
 
 import type { DesignPlant, DesignPlot } from '../../interfaces/Design';
@@ -103,7 +104,7 @@ export function isOutside(plant: { x: number; y: number }, plot: DesignPlot): bo
 
 interface Placed {
 	plant: DesignPlant;
-	spec: PlantSpec;
+	spec: PlantSpec; // con el tamaño con manejo de la planta, si lo tiene
 	r: number;
 }
 
@@ -217,7 +218,7 @@ export function analyzeDesign(
 	functionCatalog: FunctionInfo[]
 ): DesignAnalysis {
 	const placed: Placed[] = plants.map(plant => {
-		const spec = specFor(plant.speciesId);
+		const spec = plantSpec(specFor(plant.speciesId), plant);
 		return { plant, spec, r: spec.crown / 2 };
 	});
 
@@ -244,7 +245,8 @@ export function analyzeDesign(
 		if (isOutside(plant, plot)) outside.push(plant.id);
 		const entry = countsBySpecies.get(plant.speciesId);
 		if (entry) entry.count++;
-		else countsBySpecies.set(plant.speciesId, { spec, count: 1 });
+		// El conteo por especie muestra los datos del catálogo, no los de una planta podada.
+		else countsBySpecies.set(plant.speciesId, { spec: specFor(plant.speciesId), count: 1 });
 	}
 
 	const coverageStrata = unknownStratum ? [...strata, unknownStratum] : strata;
