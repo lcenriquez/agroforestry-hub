@@ -44,3 +44,6 @@ yarn-error.log*
 
 # respaldos generados por scripts/species-cleanup/apply-species-cleanup.mjs
 scripts/species-cleanup/backup-*.json
+
+# Diseños de prueba interna generados por script (no se publican)
+scripts/designs/
