@@ -8,6 +8,9 @@
 //   --site=<ruta>      módulo con la configuración del sitio (`export default` de un SiteConfig):
 //                      archivos, ids de documento, especies y tamaños con manejo. Va en
 //                      scripts/design-import/sites/, fuera de git, como los datos del terreno.
+//   --sin-fondo        no sube el plano del sitio (p. ej. si Storage no está disponible);
+//                      el fondo que ya tenga cada diseño se conserva. Volver a correrlo
+//                      sin esta opción lo agrega.
 //   --input=<carpeta>  dónde están los JSON (por defecto scripts/design-import/input/, fuera de git)
 //
 // - Idempotente: cada diseño tiene un id de documento fijo (en la configuración del sitio).
@@ -362,7 +365,8 @@ function convert(
 	site: SiteConfig,
 	entry: SiteConfig['designs'][number],
 	source: SourceDesign,
-	species: Map<string, SpeciesType | null>
+	species: Map<string, SpeciesType | null>,
+	withBackground: boolean
 ): Omit<Converted, 'description' | 'dropped'> & { sections: Section[] } {
 	const b = bounds(source.limite);
 	const origin: Point = [b.minX, b.minY];
@@ -408,7 +412,7 @@ function convert(
 		title: 'Coordenadas',
 		text:
 			`comunes del sitio en m (x poniente→oriente, y norte→sur, y < 0 = colinita${rotation ? `; ejes a ${rotation}° de E–O` : ''}). ` +
-			`Origen local = (${fmt(origin[0])}, ${fmt(origin[1])}): x_común = x ${plus(origin[0])}, y_común = y ${plus(origin[1])}. Fondo: plano del sitio compartido, alineado.`,
+			`Origen local = (${fmt(origin[0])}, ${fmt(origin[1])}): x_común = x ${plus(origin[0])}, y_común = y ${plus(origin[1])}. ${withBackground ? 'Fondo: plano del sitio compartido, alineado.' : 'El plano del sitio se agrega de fondo al reimportar.'}`,
 		priority: 0
 	});
 	if (!isRectangle(source.limite)) {
@@ -506,15 +510,27 @@ function findInput(dir: string, file: string): string {
 	return join(dir, match);
 }
 
+// Firestore no conserva el orden de las claves de los mapas: se comparan ordenadas.
+function stableStringify(value: unknown): string {
+	if (Array.isArray(value)) return `[${value.map(stableStringify).join(',')}]`;
+	if (value && typeof value === 'object')
+		return `{${Object.keys(value)
+			.sort()
+			.map(key => `${JSON.stringify(key)}:${stableStringify((value as Record<string, unknown>)[key])}`)
+			.join(',')}}`;
+	return JSON.stringify(value ?? null);
+}
+
 function sameContent(a: Partial<NewDesign>, b: Partial<NewDesign>) {
 	const pick = (design: Partial<NewDesign>) =>
-		JSON.stringify([design.name, design.description, design.plot, design.plants, design.background ?? null, design.authorId]);
+		stableStringify([design.name, design.description, design.plot, design.plants, design.background, design.authorId]);
 	return pick(a) === pick(b);
 }
 
 async function main() {
 	const args = process.argv.slice(2);
 	const apply = args.includes('--apply');
+	const withBackground = !args.includes('--sin-fondo');
 	const inputArg = args.find(arg => arg.startsWith('--input='));
 	const inputDir = inputArg ? inputArg.slice('--input='.length) : join(__dirname, 'input');
 	const outDir = join(__dirname, 'out');
@@ -545,7 +561,7 @@ async function main() {
 	const svgFile = `import-${site.key}-sitio-${svgHash}.svg`;
 
 	const designs: Converted[] = sources.map(({ entry, source }) => {
-		const { sections, ...rest } = convert(site, entry, source, species);
+		const { sections, ...rest } = convert(site, entry, source, species, withBackground);
 		const { text, dropped } = buildDescription(sections);
 		return { ...rest, description: text, dropped };
 	});
@@ -600,7 +616,7 @@ async function main() {
 	const storagePath = `designs/${uid}/${svgFile}`;
 	const reuse = [...existing.values()].find(item => item?.background?.storagePath === storagePath)?.background;
 	let src = reuse?.src;
-	if (!src) {
+	if (withBackground && !src) {
 		const uploaded = await uploadDesignBackground(uid, new Blob([site_.svg], { type: 'image/svg+xml' }), svgFile);
 		src = uploaded.url;
 		console.log(`\n↑ plano del sitio subido a ${uploaded.path}`);
@@ -609,7 +625,8 @@ async function main() {
 	const now = Date.now();
 	for (const design of designs) {
 		const current = existing.get(design.docId);
-		const background: DesignBackground = { ...backgroundFor(design, site_, src), storagePath };
+		const background: DesignBackground | null =
+			withBackground && src ? { ...backgroundFor(design, site_, src), storagePath } : (current?.background ?? null);
 		const next: NewDesign = {
 			name: design.name,
 			description: design.description,
@@ -633,7 +650,7 @@ async function main() {
 	// Versiones anteriores del plano del sitio que ya no usa ningún diseño.
 	const prefix = `designs/${uid}/import-${site.key}-sitio-`;
 	const stale = unique([...existing.values()].map(item => item?.background?.storagePath)).filter(
-		path => path.startsWith(prefix) && path !== storagePath
+		path => withBackground && path.startsWith(prefix) && path !== storagePath
 	);
 	for (const path of stale) {
 		await deleteDesignBackground(path).catch(error => console.warn(`⚠ no se pudo borrar ${path}: ${error.code ?? error}`));
