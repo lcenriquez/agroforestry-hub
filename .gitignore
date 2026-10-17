@@ -55,3 +55,6 @@ scripts/design-import/out/
 # logs de los emuladores de Firebase (firebase.emulators.json)
 firebase-debug.log*
 firestore-debug.log*
+# Configuración por sitio de scripts/design-import y datos de especies de scripts/species-add (específicos de cada diseño)
+scripts/design-import/sites/
+scripts/species-add/*.json

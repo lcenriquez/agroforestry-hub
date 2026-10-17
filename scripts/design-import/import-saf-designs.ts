@@ -3,11 +3,14 @@
 // (adapters/designs.ts y adapters/storage.ts).
 //
 // Uso:
-//   npx tsx scripts/design-import/import-saf-designs.ts                    # simulación + vista previa
-//   IMPORT_EMAIL=... IMPORT_PASSWORD=... npx tsx scripts/design-import/import-saf-designs.ts --apply [--project=<id>]
+//   npx tsx scripts/design-import/import-saf-designs.ts --site=<config.ts>          # simulación + vista previa
+//   IMPORT_EMAIL=... IMPORT_PASSWORD=... npx tsx scripts/design-import/import-saf-designs.ts --site=<config.ts> --apply [--project=<id>]
+//   --site=<ruta>      módulo con la configuración del sitio (`export default` de un SiteConfig):
+//                      archivos, ids de documento, especies y tamaños con manejo. Va en
+//                      scripts/design-import/sites/, fuera de git, como los datos del terreno.
 //   --input=<carpeta>  dónde están los JSON (por defecto scripts/design-import/input/, fuera de git)
 //
-// - Idempotente: cada diseño tiene un id de documento fijo (ver sites/*.ts).
+// - Idempotente: cada diseño tiene un id de documento fijo (en la configuración del sitio).
 //   Volver a correrlo actualiza el mismo documento, conserva `createdAt` y no
 //   escribe nada si no cambió. El plano del sitio se sube con un nombre que
 //   depende de su contenido y las versiones anteriores se borran.
@@ -33,10 +36,9 @@
 //   se listan en la descripción.
 import { createHash } from 'node:crypto';
 import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
-import { join } from 'node:path';
+import { join, resolve } from 'node:path';
 
 import { assertWriteTarget, connectFirebase, signIn } from '../lib/firebase-node';
-import { tlamapa } from './sites/tlamapa';
 
 import type { DesignBackground, DesignPlant, NewDesign } from '../../interfaces/Design';
 import type { SpeciesType } from '../../interfaces/Species';
@@ -516,7 +518,10 @@ async function main() {
 	const inputArg = args.find(arg => arg.startsWith('--input='));
 	const inputDir = inputArg ? inputArg.slice('--input='.length) : join(__dirname, 'input');
 	const outDir = join(__dirname, 'out');
-	const site = tlamapa;
+	const siteArg = args.find(arg => arg.startsWith('--site='))?.slice('--site='.length);
+	if (!siteArg) throw new Error('Falta --site=<ruta a la configuración del sitio> (ver SiteConfig).');
+	// eslint-disable-next-line @typescript-eslint/no-require-imports
+	const site: SiteConfig = require(resolve(siteArg)).default;
 
 	const sources = site.designs.map(entry => {
 		const data = JSON.parse(readFileSync(findInput(inputDir, entry.file), 'utf8'));

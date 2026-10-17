@@ -1,11 +1,10 @@
 // Da de alta en el catálogo `species` las especies de un archivo JSON
-// (`{ description, species: SpeciesInput[] }`, p. ej. tlamapa-2026-10.json).
+// (`{ description, species: SpeciesInput[] }`).
 // Usa la capa de datos de la app (adapters/firestore.ts).
 //
 // Uso:
-//   npx tsx scripts/species-add/add-species.ts                            # simulación
-//   ADMIN_EMAIL=... ADMIN_PASSWORD=... npx tsx scripts/species-add/add-species.ts --apply [--project=<id>]
-//   --file=<ruta>   otro archivo de especies (por defecto tlamapa-2026-10.json)
+//   npx tsx scripts/species-add/add-species.ts --file=<especies.json>              # simulación
+//   ADMIN_EMAIL=... ADMIN_PASSWORD=... npx tsx scripts/species-add/add-species.ts --file=<especies.json> --apply [--project=<id>]
 //   --update        reemplaza también las que ya existen (por defecto se omiten)
 //
 // - Idempotente: busca cada especie por género+especie (`taxonomyKey`, igual
@@ -14,7 +13,6 @@
 // - Con FIRESTORE_EMULATOR_HOST etc. escribe en el emulador; si no, exige
 //   --project=<id> (ver scripts/lib/firebase-node.ts).
 import { readFileSync } from 'node:fs';
-import { join } from 'node:path';
 
 import { assertWriteTarget, connectFirebase, signIn } from '../lib/firebase-node';
 
@@ -25,7 +23,8 @@ async function main() {
 	const apply = args.includes('--apply');
 	const update = args.includes('--update');
 	const fileArg = args.find(arg => arg.startsWith('--file='));
-	const path = fileArg ? fileArg.slice('--file='.length) : join(__dirname, 'tlamapa-2026-10.json');
+	if (!fileArg) throw new Error('Falta --file=<archivo de especies>.');
+	const path = fileArg.slice('--file='.length);
 	const { species: rows } = JSON.parse(readFileSync(path, 'utf8')) as { species: SpeciesInput[] };
 
 	await connectFirebase();
