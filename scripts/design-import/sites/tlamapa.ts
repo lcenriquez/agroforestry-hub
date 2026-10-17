@@ -57,6 +57,8 @@ export const tlamapa: SiteConfig = {
 		'Symphytum officinale': { id: 'V48ZgDmdc1d9BFE4Lgcq' }
 	},
 	managed: {
+		// Base del seto, a 1 m entre plantas: no la copa de adulta de 3 m del catálogo.
+		'Agave spp.': [1.2, 1],
 		'Barkleyanthus salicifolius': [1.5, 0.8],
 		'Cupressus lusitanica': [3, 1.5],
 		'Buddleja cordata': [3, 1.5],
