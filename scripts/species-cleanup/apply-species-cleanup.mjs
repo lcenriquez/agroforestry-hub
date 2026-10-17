@@ -44,7 +44,14 @@ if (!apiKey || !projectId) {
 	process.exit(1);
 }
 
-const base = `https://firestore.googleapis.com/v1/projects/${projectId}/databases/(default)/documents`;
+// Con FIRESTORE_EMULATOR_HOST / FIREBASE_AUTH_EMULATOR_HOST escribe en los
+// emuladores (firebase.emulators.json) en lugar de producción.
+const firestoreHost = process.env.FIRESTORE_EMULATOR_HOST;
+const authHost = process.env.FIREBASE_AUTH_EMULATOR_HOST;
+const base = firestoreHost
+	? `http://${firestoreHost}/v1/projects/${projectId}/databases/(default)/documents`
+	: `https://firestore.googleapis.com/v1/projects/${projectId}/databases/(default)/documents`;
+const identityBase = authHost ? `http://${authHost}/identitytoolkit.googleapis.com/v1` : 'https://identitytoolkit.googleapis.com/v1';
 
 // --- Conversión JSON <-> valores de Firestore -------------------------------
 
@@ -75,7 +82,7 @@ async function signIn() {
 		console.error('Para --apply define ADMIN_EMAIL y ADMIN_PASSWORD (una cuenta registrada en la colección `admins`).');
 		process.exit(1);
 	}
-	const res = await request(`https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${apiKey}`, {
+	const res = await request(`${identityBase}/accounts:signInWithPassword?key=${apiKey}`, {
 		method: 'POST',
 		body: JSON.stringify({ email, password, returnSecureToken: true })
 	});
@@ -97,7 +104,9 @@ async function getDoc(id, token) {
 
 const changes = JSON.parse(readFileSync(changesPath, 'utf8'));
 const { updates = [], deletes = [] } = changes;
-console.log(`${apply ? 'APLICANDO' : 'SIMULACIÓN (usa --apply para escribir)'} — ${updates.length} actualizaciones, ${deletes.length} borrados`);
+console.log(
+	`${apply ? `APLICANDO en ${firestoreHost ? `emulador (${projectId})` : projectId}` : 'SIMULACIÓN (usa --apply para escribir)'} — ${updates.length} actualizaciones, ${deletes.length} borrados`
+);
 console.log(`Archivo: ${changesPath} (generado ${changes.generatedAt ?? 'sin fecha'})\n`);
 
 const token = apply ? await signIn() : null;

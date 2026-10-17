@@ -1,0 +1,37 @@
+{
+ "generatedAt": "2026-10-17T18:00:00+00:00",
+ "note": "Estratos evidentemente erróneos detectados al importar los diseños de Tlamapa (scripts/design-import).",
+ "updates": [
+  {
+   "id": "gumz085oT0LnAX8xZie7",
+   "name": "Cnidoscolus aconitifolius (Chaya): estrato Emergente → Medio (arbusto de 2.5 m)",
+   "updateTime": "2026-10-14T14:37:21.034315Z",
+   "fields": {
+    "stratums": [
+     {
+      "_id": "2",
+      "name": {
+       "es_mx": "Medio"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "YzxJ36uAFj6krJDtn54f",
+   "name": "Sambucus canadensis (Saúco): estrato Bajo → Medio",
+   "updateTime": "2026-10-14T19:23:15.923894Z",
+   "fields": {
+    "stratums": [
+     {
+      "_id": "2",
+      "name": {
+       "es_mx": "Medio"
+      }
+     }
+    ]
+   }
+  }
+ ],
+ "deletes": []
+}
