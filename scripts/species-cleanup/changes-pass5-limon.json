@@ -1,0 +1,34 @@
+{
+ "generatedAt": "2026-10-17T18:00:00+00:00",
+ "note": "PROPUESTA, sin aplicar: 15TiBL… se llama limón criollo/canario pero tenía la taxonomía de la naranja agria (Citrus aurantium, que ya es nmPWDLxC768ehqIMH4iI). Se corrige a Citrus × aurantiifolia y se marca sensible a heladas.",
+ "updates": [
+  {
+   "id": "15TiBL05KYQs93m8hHWh",
+   "name": "Citrus aurantium → Citrus × aurantiifolia (Limón criollo)",
+   "updateTime": "2026-10-14T19:23:16.097277Z",
+   "fields": {
+    "taxonomy": {
+     "family": "Rutaceae",
+     "genus": "Citrus",
+     "species": "× aurantiifolia"
+    },
+    "commonNames": {
+     "es_mx": [
+      "Limón criollo",
+      "Limón mexicano",
+      "Limón canario"
+     ]
+    },
+    "details": {
+     "humidityPreference": "M",
+     "heightRangeDescription": "hasta 5 mts",
+     "shape": "árbol",
+     "isFrostResistant": false,
+     "growthHabit": "clumping",
+     "lightPreference": "H"
+    }
+   }
+  }
+ ],
+ "deletes": []
+}
