@@ -47,3 +47,11 @@ scripts/species-cleanup/backup-*.json
 
 # Diseños de prueba interna generados por script (no se publican)
 scripts/designs/
+
+# Entrada (datos del terreno) y vista previa de scripts/design-import (no se publican)
+scripts/design-import/input/
+scripts/design-import/out/
+
+# logs de los emuladores de Firebase (firebase.emulators.json)
+firebase-debug.log*
+firestore-debug.log*

@@ -1,4 +1,4 @@
-import { getDownloadURL, ref, uploadBytes } from 'firebase/storage';
+import { deleteObject, getDownloadURL, ref, uploadBytes } from 'firebase/storage';
 
 import { storage } from '../firebase-config';
 import { MAX_BACKGROUND_BYTES } from '../interfaces/Design';
@@ -33,11 +33,16 @@ export async function uploadExperiencePhotos(speciesId: string, authorId: string
 
 // Imagen de fondo de un diseño del Diseñador de SAF. Va en la carpeta del
 // autor (designs/{uid}/...), que sólo él puede leer y escribir (storage.rules).
-export async function uploadDesignBackground(authorId: string, blob: Blob): Promise<{ url: string; path: string }> {
+// `fileName` fijo lo usan los scripts de importación para no duplicar archivos.
+export async function uploadDesignBackground(authorId: string, blob: Blob, fileName?: string): Promise<{ url: string; path: string }> {
 	if (!blob.type.startsWith('image/')) throw new PhotoValidationError('La imagen de fondo no es válida');
 	if (blob.size > MAX_BACKGROUND_BYTES) throw new PhotoValidationError('La imagen de fondo pesa más de 10MB');
-	const path = `designs/${authorId}/${Date.now()}-${Math.random().toString(36).slice(2, 8)}.jpg`;
+	const path = `designs/${authorId}/${fileName ?? `${Date.now()}-${Math.random().toString(36).slice(2, 8)}.jpg`}`;
 	const fileRef = ref(storage, path);
 	await uploadBytes(fileRef, blob, { contentType: blob.type });
 	return { url: await getDownloadURL(fileRef), path };
+}
+
+export async function deleteDesignBackground(path: string): Promise<void> {
+	await deleteObject(ref(storage, path));
 }

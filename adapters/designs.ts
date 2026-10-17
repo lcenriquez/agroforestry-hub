@@ -1,4 +1,4 @@
-import { addDoc, collection, deleteDoc, doc, getDocs, query, updateDoc, where } from 'firebase/firestore';
+import { addDoc, collection, deleteDoc, doc, getDoc, getDocs, query, setDoc, updateDoc, where } from 'firebase/firestore';
 
 import { database } from '../firebase-config';
 
@@ -18,6 +18,24 @@ export async function createDesign(design: NewDesign): Promise<string> {
 	const instance = collection(database, 'designs');
 	const created = await addDoc(instance, stripUndefined(design));
 	return created.id;
+}
+
+// Diseño con id fijo, para los scripts de importación (scripts/design-import):
+// así volver a importar actualiza el mismo documento en vez de duplicarlo.
+// Si el documento no existe (o es de otro autor), las reglas niegan la
+// lectura: se trata como inexistente y la escritura decide.
+export async function getDesignById(id: string): Promise<Design | null> {
+	try {
+		const snapshot = await getDoc(doc(database, 'designs', id));
+		return snapshot.exists() ? { ...(snapshot.data() as NewDesign), _id: snapshot.id } : null;
+	} catch (error) {
+		if ((error as { code?: string }).code === 'permission-denied') return null;
+		throw error;
+	}
+}
+
+export async function saveDesignWithId(id: string, design: NewDesign): Promise<void> {
+	await setDoc(doc(database, 'designs', id), stripUndefined(design));
 }
 
 export async function updateDesign(id: string, data: DesignUpdate): Promise<void> {
